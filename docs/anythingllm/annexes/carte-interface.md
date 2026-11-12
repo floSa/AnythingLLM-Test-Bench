@@ -10,23 +10,28 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 |---|---|---|---|
 | Assistant de premier lancement | `/onboarding` (premier lancement) | « Bienvenue », « Commencer », Préférence LLM, Configuration utilisateur (« Juste moi », « Mon équipe »), Gestion des données, enquête (« Ignorer l'enquête ») | [03](../manuel/03-premiers-pas.md) |
 | Connexion | `/login` | « Mot de passe » (mono-utilisateur) ou « Nom d'utilisateur » et « Mot de passe » (multi-utilisateur), « Connexion », « Mot de passe oublié? Réinitialiser » | [03](../manuel/03-premiers-pas.md), [13](../manuel/13-comptes-equipe-et-widget.md) |
-| Écran principal | `/` | message d'accueil, zone « Envoyer un message », « Créer un agent », « Modifier l'espace de travail », « Télécharger un document » | [03](../manuel/03-premiers-pas.md) |
-| Barre latérale | toutes les pages | « Rechercher », « + » (Nouvel Espace de Travail), liste des espaces, icône d'envoi, roue dentée de l'espace, fils (« New Thread », « Rename », « Delete Thread »), liens GitHub, Docs, Discord, bouton des paramètres | [03](../manuel/03-premiers-pas.md), [06](../manuel/06-poser-des-questions-et-lire-les-sources.md) |
+| Écran principal | `/` | message d'accueil, zone « Envoyer un message », « Outils » | [03](../manuel/03-premiers-pas.md) |
+| Actions rapides de l'écran principal | `/`, sous la zone de saisie | « Créer un agent », « Modifier l'espace de travail », « Télécharger un document » | Non couvert : raccourcis vers des pages décrites ailleurs (chapitres 10, 07 et 05) |
+| Barre latérale | toutes les pages | « + » (Nouvel Espace de Travail), liste des espaces, icône d'envoi, roue dentée de l'espace, fils (« New Thread », « Rename », « Delete Thread »), bouton des paramètres | [03](../manuel/03-premiers-pas.md), [06](../manuel/06-poser-des-questions-et-lire-les-sources.md) |
+| Barre latérale, éléments secondaires | toutes les pages | « Rechercher », bouton qui replie la barre, poignées de réordonnancement des espaces, liens GitHub, Docs et Discord | Non couvert : confort d'affichage et liens vers des sites en ligne |
 | Fenêtre « Nouvel Espace de Travail » | barre latérale › « + » | « Nom des espaces de travail », « Save » | [04](../manuel/04-premiere-question.md) |
-| Discussion d'un espace | `/workspace/<espace>` | zone « Envoyer un message », « Envoyer », « Outils » (« Commandes abrégées », « Compétences des agents »), pièce jointe, micro, sélecteur de modèle, menu des réglages du chat (« Taille du texte », « Souvenirs », « Exporter la conversation au format... ») | [04](../manuel/04-premiere-question.md), [06](../manuel/06-poser-des-questions-et-lire-les-sources.md) |
+| Discussion d'un espace | `/workspace/<espace>` | zone « Envoyer un message », « Envoyer », « Outils » (« Commandes abrégées », « Compétences des agents »), « @ » (agent), menu des réglages du chat (« Taille du texte », « Souvenirs », « Exporter la conversation au format... ») | [04](../manuel/04-premiere-question.md), [06](../manuel/06-poser-des-questions-et-lire-les-sources.md), [10](../manuel/10-agents-et-outils.md) |
+| Discussion, micro et sélecteur de modèle | `/workspace/<espace>` | micro (dictée), nom du modèle (« Sélectionner le modèle ») | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
+| Discussion, pièce jointe | `/workspace/<espace>`, « + » de la zone de saisie | fichier joint à la conversation sans intégration | Non couvert : non essayé ; l'ajout de documents passe par la fenêtre des documents (chapitre 05) |
 | Réponse et sources | sous chaque réponse | « Sources », panneau « Sources », fenêtre d'extrait (pourcentage « match »), « Copier », « Régénérer », « Bonne réponse », modification, « Plus d'actions » (« Dupliquer », « Supprimer »), réflexion repliée | [04](../manuel/04-premiere-question.md), [06](../manuel/06-poser-des-questions-et-lire-les-sources.md) |
 | Gestionnaire de documents, onglet « Documents » | barre latérale › icône d'envoi de l'espace | « Mes documents », « Rechercher un document », « Nouveau dossier », zone d'envoi, « ou soumettre un lien », « Déplacer vers l'espace de travail », déplacer vers un dossier, corbeille, « Sauvegarder et intégrer », épingle, retrait | [05](../manuel/05-ajouter-et-organiser-ses-documents.md) |
 | Gestionnaire de documents, onglet « Connecteurs de données » | même fenêtre | GitHub, GitLab, Gitea, YouTube, site web, Confluence, Drupal Wiki, Obsidian, Paperless-ngx | [09](../manuel/09-sources-externes.md) |
 | Souvenirs | discussion › menu des réglages du chat › « Souvenirs » | onglets « Espace de travail » et « Global », « Activer la personnalisation », « Souvenirs automatisés », « Créer un souvenir » | [11](../manuel/11-memoires-taches-et-routage.md) |
 | Menu du compte | pastille aux initiales (multi-utilisateur) | « Compte », « Support », « Déconnexion » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Compte | menu du compte (multi-utilisateur) › « Compte » | photo, nom d'utilisateur, mot de passe, « Thème », « Langue », « Mettre à jour le compte » | [13](../manuel/13-comptes-equipe-et-widget.md) |
+| Codes de récupération | première connexion d'un compte (multi-utilisateur) | fenêtre « Recovery Codes », « Download », « Close » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 
 ## Réglages d'un espace de travail
 
 | Page ou menu | Chemin d'accès | Éléments (boutons, onglets, réglages) | Manuel qui le couvre |
 |---|---|---|---|
 | Paramètres généraux | roue dentée de l'espace › « Paramètres généraux » | « Nom des espaces de travail », « Messages de chat suggérés », « Supprimer l'espace de travail » | [07](../manuel/07-regler-un-espace-de-travail.md) |
-| Paramètres du chat | › « Paramètres du chat » | fournisseur et modèle de l'espace, mode (« Agent », « Chat », « Requête »), « Historique des chats », invite système, « Réponse de refus en mode requête », « Température LLM » | [07](../manuel/07-regler-un-espace-de-travail.md) |
+| Paramètres du chat | › « Paramètres du chat » | fournisseur et modèle de l'espace, mode (« Agent », « Chat », « Requête »), « Historique des chats », invite système et « View History », « Réponse de refus en mode requête », « Température LLM » | [07](../manuel/07-regler-un-espace-de-travail.md) |
 | Base de données vectorielle | › « Base de données vectorielle » | identifiant, « Nombre de vecteurs », préférence de recherche (« Default », « Accuracy Optimized »), « Nombre maximum de contextes », « Seuil de similarité des documents », « Réinitialiser la base de données vectorielle » | [07](../manuel/07-regler-un-espace-de-travail.md) |
 | Membres | › « Membres » (multi-utilisateur) | liste des membres, « Manage Users » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Configuration de l'agent | › « Configuration de l'agent » | fournisseur et modèle de l'agent de l'espace, « Configure Agent Skills » | [07](../manuel/07-regler-un-espace-de-travail.md), [10](../manuel/10-agents-et-outils.md) |
@@ -41,31 +46,35 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Diviseur de texte et découpage | › « Diviseur de texte et découpage » | « Taille des segments de texte », « Chevauchement des segments de texte » | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
 | Génération d'images | › « Génération d'images » | fournisseur d'images | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
 | Voix et Parole | › « Voix et Parole » | « Speech-to-text Preference », synthèse vocale (System native, PiperTTS, OpenAI Compatible…) | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
-| Modèle de transcription | › « Modèle de transcription » | OpenAI, OpenAI Compatible, AnythingLLM Built-In | [03](../manuel/03-premiers-pas.md) |
+| Modèle de transcription | › « Modèle de transcription » | OpenAI, OpenAI Compatible, AnythingLLM Built-In ; « Base URL », « API Key », « Transcription Model », « Save changes » | [03](../manuel/03-premiers-pas.md) |
 | Routeur modèle | › « Routeur modèle » | « Nouveau routeur », règles, plan de secours | [11](../manuel/11-memoires-taches-et-routage.md) |
 | Utilisateurs | Paramètres › Admin › « Utilisateurs » (multi-utilisateur) | « Add user », rôles Default, Manager, Administrator, « Edit », « Suspend », « Delete » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Espaces de travail | › « Espaces de travail » | « New Workspace », liste, suppression | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Chat de l'espace de travail | › « Chat de l'espace de travail » | historique de toutes les conversations, « Exporter », « Clear Chats » | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Invitation | › « Invitation » (multi-utilisateur) | « Create Invite Link », « Copy Invite Link » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Default System Prompt | › « Default System Prompt » | « System Prompt », « Save Changes » | [12](../manuel/12-personnaliser-et-administrer.md) |
-| Compétences de l'agent | Paramètres › « Compétences de l'agent » | compétences intégrées, « Agent Flows », « Serveurs MCP » | [10](../manuel/10-agents-et-outils.md) |
+| Compétences de l'agent | Paramètres › « Compétences de l'agent » | compétences intégrées (« Agent Skills »), « Agent Flows » (« Create Flow » puis « Open Builder »), « Serveurs MCP » (« Rafraîchir ») | [10](../manuel/10-agents-et-outils.md) |
+| Compétences de l'agent, éléments non décrits | même page | section « App Integrations » (Connecteur GMail, Google Calendar, Outlook), compétence « Créer des tâches planifiées », bouton à curseurs d'« Agent Skills » | Non couvert : connecteurs vers des comptes en ligne (hors périmètre) ; réglages avancés non essayés |
 | Compétences personnalisées | même page, « Custom Skills » | import de compétences écrites en code | Non couvert : aucune compétence personnalisée importée (demande du code tiers à relire) |
-| Éditeur d'agent flow | › « Agent Flows » › « Create Flow » | blocs, enregistrement | [10](../manuel/10-agents-et-outils.md) |
+| Éditeur d'agent flow | › « Agent Flows » › « Create Flow » (ou « Open Builder » quand un flow existe) | « Flow Name », « Description », « Add Block », « Save », « Publish », flèche « < » de retour | [10](../manuel/10-agents-et-outils.md) |
 | Centre communautaire | Paramètres › « Centre communautaire » | « Découvrez les tendances », « Votre compte », « Importer » | Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périmètre (aucun compte en ligne) |
 | Interface | Paramètres › Apparence › « Interface » | « Thème », « Palette de couleurs », « Langue d'affichage » | [03](../manuel/03-premiers-pas.md), [12](../manuel/12-personnaliser-et-administrer.md) |
 | Personnalisation | › « Personnalisation » | onglets Identité, Couleurs, Barre latérale, Navigateur ; nom de l'application, logo, e-mail de support | [12](../manuel/12-personnaliser-et-administrer.md) |
-| Chat (apparence) | › « Chat » | envoi et lecture automatiques, correction orthographique, barre de défilement, rendu HTML | [12](../manuel/12-personnaliser-et-administrer.md) |
+| Chat (apparence) | › « Chat » | « Soumission automatique », lecture automatique, correction orthographique, barre de défilement, « Désactiver le défilement automatique », « Rendu HTML » | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Canaux, Telegram | Paramètres › « Canaux » (mono-utilisateur) | connexion d'un robot Telegram | Non couvert : demande un compte Telegram en ligne (hors périmètre) ; page montrée au [chapitre 12](../manuel/12-personnaliser-et-administrer.md) |
-| Widgets de chat intégrés | Paramètres › Outils › « Widgets de chat intégrés » | « Créer un widget intégré », onglets « Widgets » et « History » | [13](../manuel/13-comptes-equipe-et-widget.md) |
-| Journaux d'événements | › « Journaux d'événements » | liste des événements, « Effacer les journaux d'événements » | [12](../manuel/12-personnaliser-et-administrer.md) |
+| Widgets de chat intégrés | Paramètres › Outils › « Widgets de chat intégrés » | « Créer un widget intégré », onglets « Widgets » et « History », actions « Code », « Disable », « Delete » | [13](../manuel/13-comptes-equipe-et-widget.md) |
+| Journaux d'événements | › « Journaux d'événements » | liste des événements, « show », « Effacer les journaux d'événements », pages suivantes | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Tâches planifiées | › « Tâches planifiées » (mono-utilisateur seulement) | création d'une tâche, exécutions | [11](../manuel/11-memoires-taches-et-routage.md) |
 | Clés API | › « Clés API » | « Générer une nouvelle clé API », documentation de l'API | [12](../manuel/12-personnaliser-et-administrer.md) |
-| Variables de prompt système | › « Variables de prompt système » | variables de la consigne | [12](../manuel/12-personnaliser-et-administrer.md) |
+| Variables de prompt système | › « Variables de prompt système » | variables de la consigne, « Add Variable » | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Extension de navigateur | › « Extension de navigateur » | « Generate New API Key » | [12](../manuel/12-personnaliser-et-administrer.md) |
-| AnythingLLM Mobile | › « AnythingLLM Mobile » | appareils connectés | Non couvert : demande l'application mobile (hors périmètre de la fiche) ; page montrée au [chapitre 12](../manuel/12-personnaliser-et-administrer.md) |
+| AnythingLLM Mobile | › « AnythingLLM Mobile » | appareils connectés, « Register New Device » | Non couvert : demande l'application mobile (hors périmètre de la fiche) ; page montrée au [chapitre 12](../manuel/12-personnaliser-et-administrer.md) |
 | Sécurité | Paramètres › « Sécurité » (mono-utilisateur) | mot de passe de l'instance, « Mode multi-utilisateurs » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Confidentialité et données | lien en bas du menu des paramètres | fournisseurs et ce qu'ils voient, télémétrie | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
-| Fonctionnalités expérimentales | Ctrl maintenu 3 s dans les paramètres | « Live Document Sync » | [12](../manuel/12-personnaliser-et-administrer.md) |
+| Bas du menu des paramètres | menu « Paramètres de l'instance » | flèche de retour vers l'écran principal | [03](../manuel/03-premiers-pas.md) |
+| Contacter le Support | lien en bas du menu des paramètres | adresse de contact de l'éditeur | Non couvert : lien vers un service en ligne |
+| Documentation de l'API | adresse `/api/docs` (lien « Lisez la documentation de l'API » de la page « Clés API ») | « Authorize », routes regroupées par thème | [12](../manuel/12-personnaliser-et-administrer.md) |
+| Fonctionnalités expérimentales | Paramètres › « Fonctionnalités Expérimentales » (entrée visible en multi-utilisateur ; en mode « Juste moi », après Ctrl maintenu 3 s) | fenêtre des conditions (« I understand », « Reject & close »), « Live Document Sync » | [12](../manuel/12-personnaliser-et-administrer.md) |
 
 ## Écrans secondaires
 

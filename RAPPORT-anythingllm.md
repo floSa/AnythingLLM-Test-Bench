@@ -7,7 +7,7 @@ Mission `kit/PROMPT.md`, fiche `kit/fiches/04-anythingllm.md`, exécutée le 12 
 | Élément | Version |
 |---|---|
 | AnythingLLM (édition Docker) | 1.19.0, image `mintplexlabs/anythingllm:1.19.0@sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e` (3,39 Go), conteneur `rag-anythingllm` |
-| Site de test | `nginx:alpine`, conteneur `rag-anythingllm-site`, sans port publié |
+| Site de test | `nginx:alpine`, conteneur `rag-anythingllm-site`, sans port publié ; arrêté en fin de mission (relance : `outils/anythingllm/essais/site.sh start`) |
 | Captures | `mcr.microsoft.com/playwright/python:v1.65.1-noble@sha256:0ab41a37431309d72b7a26f40ef1fdb464a62740196b2143965a2f59dc090409` |
 | Service de modèles | LLM-Service (géré à part, non modifié) : LiteLLM v1.109.0, llama-swap v272 (llama.cpp build 12282), speaches 0.8.3 ; profil `gpu` |
 | Modèles utilisés | `chat` = Qwen3.5-4B Q4_K_M (réflexion activée, 16 384 jetons), `embed` = bge-m3 Q8_0 (1 024 dimensions), `transcribe` = faster-whisper-small ; `rerank` = bge-reranker-v2-m3 disponible mais **non utilisable** par AnythingLLM |
