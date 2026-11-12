@@ -16,7 +16,7 @@ Les trois cas utilisent les documents fictifs de l'entreprise Vélanor : une FAQ
 
 **Étape 1. Proposer des questions toutes prêtes**
 *Où* : réglages de l'espace « Démo Vélanor » › « Paramètres généraux ».
-Cliquer sur « Ajouter un nouveau message » (pastille 2) : une carte d'exemple « Expliquez-moi les avantages de AnythingLLM » apparaît. Cliquer sur cette carte, remplacer le texte du champ « Message » par une question fréquente (par exemple `Quelle est la durée de garantie du cadre et de la batterie ?`), puis cliquer sur « Enregistrer les messages ».
+Cliquer sur « Ajouter un nouveau message » (pastille 2) : une carte d'exemple « Expliquez-moi les avantages de AnythingLLM » apparaît.
 
 ![Messages suggérés](../img/14-cas-pratiques/01-messages-suggeres.png)
 *Écran : « Paramètres généraux », messages de chat suggérés.*
@@ -26,7 +26,22 @@ Cliquer sur « Ajouter un nouveau message » (pastille 2) : une carte d'exemple 
 | 1 | « Messages de chat suggérés » | questions proposées en boutons sur l'écran vide de l'espace (4 au plus) |
 | 2 | « Ajouter un nouveau message » | ajoute une question |
 
-*Résultat* : le champ « Message » et le bouton « Enregistrer les messages » apparaissent sous la liste après le clic sur la carte (non montrés sur la capture) ; une fois enregistrées, les questions apparaissent en boutons quand un fil vide est ouvert, et un clic les envoie (vérifié pendant les essais).
+*Résultat* : une carte d'exemple s'ajoute à la liste.
+
+**Étape 1 (suite). Écrire la question**
+*Où* : même page, sur la carte ajoutée.
+Cliquer sur la carte (pastille 1) : un seul champ, « Message », s'ouvre dessous (pastille 2). Effacer tout son texte, y compris « Expliquez-moi », taper la question fréquente (par exemple `Quelle est la durée de garantie du cadre et de la batterie ?`), puis cliquer sur « Enregistrer les messages » (pastille 3).
+
+![Édition d'une question suggérée](../img/14-cas-pratiques/01b-editer-une-question.png)
+*Écran : « Paramètres généraux », question suggérée en cours d'édition.*
+
+| N° | Élément | Rôle |
+|---|---|---|
+| 1 | carte de la question | question telle qu'elle s'affichera en bouton |
+| 2 | « Message » | texte de la question, à remplacer entièrement |
+| 3 | « Enregistrer les messages » | enregistre les questions suggérées |
+
+*Résultat* : une fois enregistrées, les questions apparaissent en boutons quand un fil vide est ouvert, et un clic les envoie.
 
 **Étape 2. Interroger la FAQ**
 *Où* : espace « Démo Vélanor », nouveau fil « FAQ — garantie ».

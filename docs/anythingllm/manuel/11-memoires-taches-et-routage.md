@@ -25,7 +25,7 @@ Basculer « Activer la personnalisation » (pastille 1).
 |---|---|---|
 | 1 | « Activer la personnalisation » | autorise l'assistant à garder et utiliser des souvenirs |
 
-*Résultat* : l'interrupteur « Souvenirs automatisés » apparaît (création automatique en arrière-plan), ainsi que la liste des souvenirs de l'espace, vide (« 0/20 »).
+*Résultat* : l'interrupteur « Souvenirs automatisés » apparaît, déjà activé (vert) : l'application crée alors des souvenirs en arrière-plan après les conversations. Le laisser pour l'essai ; le couper (un clic) sur un poste sans carte graphique, où ce travail ralentit les réponses suivantes. La liste des souvenirs de l'espace est vide (« 0/20 »).
 
 **Étape 2. Écrire un souvenir**
 *Où* : panneau « Souvenirs » › lien « créer un nouveau souvenir ».

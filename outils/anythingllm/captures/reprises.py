@@ -192,9 +192,20 @@ def widget_espace(s):
     p.keyboard.press("Escape")
 
 
+def suggestion_editeur(s):
+    p = s.page; s.chapitre = "14-cas-pratiques"
+    s.aller("/workspace/demo-velanor/settings/general-appearance"); p.wait_for_timeout(1500)
+    p.get_by_text("Quelle est la durée de garantie", exact=False).first.click(); p.wait_for_timeout(800)
+    champ = p.locator("input[name=message]")
+    v = champ.input_value(); champ.fill(v + " "); champ.fill(v); p.wait_for_timeout(500)  # fait apparaître le bouton d'enregistrement
+    s.note("champs de l'éditeur : " + str([i.get_attribute("name") for i in p.locator("input:visible").all()]))
+    s.cap_souple("01b-editer-une-question", [(p.get_by_text("Quelle est la durée de garantie", exact=False).first, "carte de la question"),
+                                             (champ, "Message"), (p.get_by_role("button", name="Enregistrer les messages"), "Enregistrer les messages")])
+
+
 if __name__ == "__main__":
     s = Scenario("reprises")
     try:
-        etapes([widget_espace, envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
+        etapes([suggestion_editeur, widget_espace, envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
     finally:
         s.fermer()

@@ -66,5 +66,25 @@
   ],
   "note": "",
   "heure": "13:56:15"
+ },
+ {
+  "capture": "14-cas-pratiques/01b-editer-une-question.png",
+  "url": "/workspace/demo-velanor/settings/general-appearance",
+  "pastilles": [
+   [
+    1,
+    "carte de la question"
+   ],
+   [
+    2,
+    "Message"
+   ],
+   [
+    3,
+    "Enregistrer les messages"
+   ]
+  ],
+  "note": "",
+  "heure": "15:07:43"
  }
 ]
