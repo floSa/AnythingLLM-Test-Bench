@@ -1,0 +1,41 @@
+1
+ Container rag-anythingllm Stopping 
+ Container rag-anythingllm Stopped 
+AnythingLLM arrêté.
+ Container rag-anythingllm Starting 
+ Container rag-anythingllm Started 
+AnythingLLM prêt : http://127.0.0.1:3001 (6 s)
+OCR fra,eng : False True False True
+CONTRAT D'APPROVISIONNEMENT N° BX-2025-117
+Entre : Vélanor SAS, 12 quai de la Fosse, 44000 Nantes (I'Acheteur)
+Et : Batterix GmbH, Bréme, Allemagne (le Fournisseur)
+Article 1 - Objet
+
+Fourniture de batteries 48 V 14 Ah, référence BAT-48V-14Ah.
+Article 2 - Durée
+
+Trois ans a compter du ler mars 2025.
+[collector] info: -- Working contrat-ocr-fra.pdf --
+[collector] info: [asPDF] No text content found for contrat-ocr-fra.pdf. Will attempt OCR parse.
+[collector] info: [OCRLoader] OCRLoader initialized with language support for: English
+[collector] info: [OCRLoader] Starting OCR of contrat-ocr-fra.pdf
+eng.traineddata
+
+== essai 2 : TARGET_OCR_LANG passé au conteneur (donnees/anythingllm/options.env)
+ Container rag-anythingllm Recreate 
+ Container rag-anythingllm Recreated 
+ Container rag-anythingllm Starting 
+ Container rag-anythingllm Started 
+AnythingLLM prêt : http://127.0.0.1:3001 (6 s)
+fra,eng
+OCR fra,eng : True False True False
+CONTRAT D'APPROVISIONNEMENT N° BX-2025-117
+Entre : Vélanor SAS, 12 quai de la Fosse, 44000 Nantes (l'Acheteur)
+Et : Batterix GmbH, Brême, Allemagne (le Fournisseur)
+Article 1 - Objet
+
+Fourniture de batteries 48 V 14 Ah, référence BAT-48V-14Ah.
+Article 2 - Duré
+[collector] info: [OCRLoader] OCRLoader initialized with language support for: French, English
+eng.traineddata
+fra.traineddata

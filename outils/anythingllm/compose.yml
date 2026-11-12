@@ -20,6 +20,11 @@ services:
       - "127.0.0.1:3001:3001"
     environment:
       STORAGE_DIR: /app/server/storage
+    # Options facultatives passées au conteneur (ex. TARGET_OCR_LANG=fra,eng pour l'OCR en français) : la variable
+    # écrite dans storage/.env n'atteint pas le collecteur (essai du 12 novembre 2026, ocr-fra-2026-11-12.log).
+    env_file:
+      - path: ../../donnees/anythingllm/options.env
+        required: false
     volumes:
       - ../../donnees/anythingllm/storage:/app/server/storage
       - ../../donnees/anythingllm/storage/.env:/app/server/.env

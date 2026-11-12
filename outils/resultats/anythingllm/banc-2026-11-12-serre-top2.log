@@ -1,0 +1,54 @@
+               total        used        free      shared  buff/cache   available
+Mem:           32098        9564        2935         914       20963       22534
+  bge-m3 (embedding)
+  bge-reranker-v2-m3 (rerank)
+  faster-whisper-small (audio_transcription)
+== chat (réflexion coupée pour l'essai)
+  Salut
+== embed
+  dimensions : 1024
+== rerank
+  doc 0 score 9.05
+  doc 1 score -8.63
+== transcribe (corpus/documents/message-vocal-production.mp3)
+  Message vocale de Julien Moreau, directeur de production chez Vélanor, enregistrait le 3 novembre VVTSEC. La ligne d'assoblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars VVTSI pour maintenance. Pe
+indexation : 0.2 s
+Q01 tableau         OK    13.0s  "Le chiffre d'affaires de Vélanor en 2025 est de 48,6 M€."
+Q02 fait simple     OK     8.5s  'Vélanor a été fondée en 2014.'
+Q03 fait simple     OK     8.7s  'La présidente de Vélanor est Hélène Marchais.'
+Q04 fait simple     OK    10.1s  "L'adresse du siège de Vélanor est au 12 quai de la Fosse, à Nantes."
+Q05 tableau         OK    13.4s  'Vélanor compte 412 salariés au 31 décembre 2025.'
+Q06 tableau         OK    17.1s  "Selon le rapport annuel 2025, le chiffre d'affaires du troisième trimestre 2025 était de *"
+Q07 tableau         OK    15.8s  'Selon le rapport annuel 2025, **15 400 unités** du modèle Sèvre Trail ont été produites en'
+Q08 tableau         OK    14.6s  'Le prix public TTC du modèle Erdre Cargo est de 4 290 €.'
+Q09 tableau         OK    21.2s  'Selon le rapport annuel 2025, il y avait 97 salariés sur le site de Cholet au 31 décembre '
+Q10 fait simple     OK    13.1s  "D'après le contexte fourni, la part d'aluminium recyclé dans les cadres est de **82 %**."
+Q11 fait simple     OK    11.2s  'Le taux de recyclage des batteries usagées collectées atteint 96 %.'
+Q12 tableau         NON  103.5s  "D'après les documents fournis, le fournisseur qui livre les moteurs est **Motodrive Co.** "
+Q13 tableau         OK    13.5s  'Selon le document fourni (page 3), Vélanor a dégagé un résultat net de **3,1 M€** en 2025.'
+Q14 fait simple     OK    12.3s  "Le taux de retour sous garantie s'établit à 1,8 % des vélos vendus."
+Q15 scan            OK    19.2s  'Le prix unitaire des batteries prévu par le contrat est de 212 euros HT (Article 4).'
+Q16 scan            OK    19.9s  "Selon l'article 5 du contrat d'approvisionnement, le délai de livraison est de **21 jours "
+Q17 scan            OK    16.0s  "Le plafond des pénalités de retard est de 8 % du montant de la commande, conformément à l'"
+Q18 scan            OK    10.7s  'Le contrat prévoit un volume minimal annuel de 40 000 batteries.'
+Q19 fait simple     OK    13.4s  'Selon la procédure PR-SEC-04, les batteries doivent être stockées entre 10 °C et 25 °C.'
+Q20 fait simple     OK    17.1s  'Le responsable de la procédure de charge et de stockage des batteries est Karim Benali, re'
+Q21 tableau         OK     9.1s  'Le local B2 est inspecté le premier lundi de chaque mois.'
+Q22 fait simple     OK    11.7s  'Le prix public du Vilaine Compact est de 2 490 € TTC.'
+Q23 fait simple     OK     8.8s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an."
+Q24 tableau         OK    19.8s  "Le stock de batteries BAT-48V-14Ah restant s'élève à **1240 unités**, ce qui est inférieur"
+Q25 fait simple     OK    12.1s  'Selon le document FAQ du service après-vente, la durée de garantie du cadre est de 7 ans.'
+Q26 fait simple     OK    12.0s  'Le numéro de téléphone du service après-vente est le 02 40 00 12 34.'
+Q27 fait simple     OK     4.6s  "Le montant de la prime d'intéressement 2025 est de **1 150 euros par salarié**."
+Q28 anglais         OK    12.8s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit.'
+Q29 anglais         OK    14.2s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %."
+Q30 multi-documents NON   20.3s  "Selon l'article 5 du contrat d'approvisionnement (Contexte 0), le délai de livraison contr"
+Q31 multi-documents OK    13.1s  "Batterix a obtenu un score de 87 sur 100 à l'audit, et le contrat fixe un prix unitaire de"
+Q32 multi-documents OK     9.4s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 et prévoit 70 embauches à Saint-Nazair"
+Q33 audio           OK    25.7s  "La ligne d'assemblage numéro 3 de Nantes sera arrêtée pour maintenance du 2 au 6 mars 2026"
+Q34 audio           NON   45.0s  ''
+Q35 piège           OK    32.2s  "D'après les documents fournis, il n'est pas possible de connaître le chiffre d'affaires de"
+Q36 piège           OK    26.2s  "D'après les documents fournis, le nom du directeur financier de Vélanor n'est pas mentionn"
+Q37 piège           OK    34.7s  "D'après les documents fournis, il n'est pas possible de répondre à cette question car le r"
+Q38 piège           OK    19.1s  'Les documents fournis (rapport annuel 2025 de Vélanor SAS) ne contiennent aucune informati'
+-> outils/resultats/anythingllm/banc-2026-11-12-serre-top2.json

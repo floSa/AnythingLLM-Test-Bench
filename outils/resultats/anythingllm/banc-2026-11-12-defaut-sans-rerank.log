@@ -1,0 +1,63 @@
+               total        used        free      shared  buff/cache   available
+Mem:           32098        9190        3592         914       20601       22908
+  bge-m3 (embedding)
+  bge-reranker-v2-m3 (rerank)
+  faster-whisper-small (audio_transcription)
+== chat (réflexion coupée pour l'essai)
+  Bonjour
+== embed
+  dimensions : 1024
+== rerank
+  doc 0 score 9.05
+  doc 1 score -8.63
+== transcribe (corpus/documents/message-vocal-production.mp3)
+  Message vocale de Julien Moreau, directeur de production chez Vélanor, enregistrait le 3 novembre VVTSEC. La ligne d'assoblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars VVTSI pour maintenance. Pe
+  contrat-batterix-scan.pdf: {'fichier': 'contrat-batterix-scan.pdf', 'succes': True, 'duree_s': 1.2, 'mots': 137, 'erreur': None}
+  cse-2025-10-14.md: {'fichier': 'cse-2025-10-14.md', 'succes': True, 'duree_s': 0.1, 'mots': 78, 'erreur': None}
+  faq-sav.html: {'fichier': 'faq-sav.html', 'succes': True, 'duree_s': 0.1, 'mots': 104, 'erreur': None}
+  message-vocal-production.mp3: {'fichier': 'message-vocal-production.mp3', 'succes': True, 'duree_s': 5.9, 'mots': 60, 'erreur': None}
+  procedure-batteries.docx: {'fichier': 'procedure-batteries.docx', 'succes': True, 'duree_s': 0.4, 'mots': 112, 'erreur': None}
+  rapport-annuel-2025.pdf: {'fichier': 'rapport-annuel-2025.pdf', 'succes': True, 'duree_s': 0.2, 'mots': 457, 'erreur': None}
+  stocks-octobre-2025.xlsx: {'fichier': 'stocks-octobre-2025.xlsx', 'succes': True, 'duree_s': 0.2, 'mots': 35, 'erreur': None}
+  strategie-2026.pptx: {'fichier': 'strategie-2026.pptx', 'succes': True, 'duree_s': 0.2, 'mots': 67, 'erreur': None}
+  supplier-audit-batterix-en.pdf: {'fichier': 'supplier-audit-batterix-en.pdf', 'succes': True, 'duree_s': 0.1, 'mots': 68, 'erreur': None}
+indexation : 8.5 s
+Q01 tableau         OK     3.6s  "Le chiffre d'affaires de Vélanor en 2025 s'élève à **48,6 millions d'euros** (+12,4 % par "
+Q02 fait simple     OK    11.0s  'Vélanor a été fondée en 2014.'
+Q03 fait simple     OK     6.2s  'La présidente de Vélanor SAS est Hélène Marchais.'
+Q04 fait simple     OK    13.1s  "Selon le rapport annuel 2025, l'adresse du siège de Vélanor est située au 12 quai de la Fo"
+Q05 tableau         OK    14.9s  'Vélanor compte 412 salariés au 31 décembre 2025.'
+Q06 tableau         OK     4.5s  "Le chiffre d'affaires du troisième trimestre 2025 a été de **14,2 M€**."
+Q07 tableau         OK    17.5s  '15 400 unités.'
+Q08 tableau         OK    15.5s  'Le prix public TTC du modèle Erdre Cargo est de 4 290 €.'
+Q09 tableau         OK    23.5s  'Selon le rapport annuel 2025, il y a **97 salariés** sur le site de Cholet (au 31 décembre'
+Q10 fait simple     OK    14.2s  "La part d'aluminium recyclé dans les cadres est de 82 %."
+Q11 fait simple     OK    15.2s  'Selon le rapport annuel 2025 mentionné dans le contexte, le taux de recyclage des batterie'
+Q12 tableau         OK    14.2s  'Le fournisseur qui livre les moteurs est **Motodrive Co.**, et il est installé en **Taïwan'
+Q13 tableau         OK    15.5s  "Selon les chiffres clés de l'année 2025 figurant dans le rapport annuel, Vélanor a dégagé "
+Q14 fait simple     OK    15.9s  'Selon le rapport annuel 2025 disponible dans le contexte, le taux de retour sous garantie '
+Q15 scan            OK    16.0s  'Le prix unitaire prévu par le contrat avec Batterix est de 212 euros HT, comme indiqué à l'
+Q16 scan            OK    17.2s  "Selon l'article 5 du contrat d'approvisionnement (Contrat d'Approvisionnement N° BX-2025-1"
+Q17 scan            OK     3.3s  "Selon l'article 6 du contrat d'approvisionnement avec Batterix, le plafond des pénalités d"
+Q18 scan            OK    12.1s  'Le contrat prévoit un volume minimal annuel de 40 000 batteries.'
+Q19 fait simple     OK     8.4s  'Selon la procédure PR-SEC-04, les batteries doivent être stockées entre 10 °C et 25 °C.'
+Q20 fait simple     OK    13.4s  'Selon la procédure PR-SEC-04 — Charge et stockage des batteries, le responsable de la proc'
+Q21 tableau         OK    10.3s  'Le local B2 est inspecté le premier lundi de chaque mois.'
+Q22 fait simple     OK    11.2s  'Le prix public du modèle Vilaine Compact est de 2 490 € TTC.'
+Q23 fait simple     OK    11.6s  "La capacité prévue de l'usine de Saint-Nazaire est de 25 000 vélos par an."
+Q24 tableau         OK    20.0s  "Il reste **1240** batteries BAT-48V-14Ah. Oui, ce stock est bien **sous le seuil d'alerte*"
+Q25 fait simple     OK    12.2s  'Selon le document FAQ du service après-vente, le cadre est garanti 7 ans.'
+Q26 fait simple     OK    14.2s  'Le numéro de téléphone du service après-vente est le 02 40 00 12 34.'
+Q27 fait simple     OK    10.4s  "Le montant de la prime d'intéressement 2025 est de 1 150 euros par salarié."
+Q28 anglais         OK     9.6s  'Batterix obtained an overall score of 87 out of 100 at the supplier audit.'
+Q29 anglais         OK    16.9s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %."
+Q30 multi-documents OK    14.5s  "D'après le contrat d'approvisionnement (Article 5), le délai de livraison contractuel est "
+Q31 multi-documents OK    17.2s  "Batterix a obtenu un score de 87 sur 100 à l'audit, et le contrat fixe un prix unitaire de"
+Q32 multi-documents OK    14.5s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 et prévoit 70 embauches à Saint-Nazair"
+Q33 audio           OK    26.0s  "La ligne d'assemblage numéro 3 de Nantes sera arrêtée pour maintenance du 2 au 6 mars."
+Q34 audio           NON   57.8s  'Le document rapporté annuel 2025 ne mentionne pas le nom du directeur de production. Seule'
+Q35 piège           OK     9.8s  "Je ne trouve pas dans les documents fournis aucune mention du chiffre d'affaires de Vélano"
+Q36 piège           OK    27.8s  'Les documents fournis dans le contexte (le rapport annuel 2025 de Vélanor SAS) ne mentionn'
+Q37 piège           OK    39.8s  "Selon les documents fournis, il n'existe aucune information sur le nombre de trottinettes "
+Q38 piège           NON   23.5s  ''
+-> outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json

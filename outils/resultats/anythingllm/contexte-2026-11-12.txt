@@ -1,0 +1,7 @@
+longueur du message : 81667 caractères
+durée : 4.5 s ; exception : POST /api/v1/workspace/premier-essai/chat -> 500 {"id":"a11a7e7c-287d-40a0-afd5-b0907317a29e","type":"abort","textResponse":null,"sources":[],"close":true,"error":"GenericOpenAI Failed to embed: 500 litellm.InternalServerError: InternalServerError: Hosted_vllmException - {\"error\":{\"code\":500,\"message\":\"input (20418 tokens) is too large to p
+[backend] info: [DocumentManager] Found 1 pinned sources - prepending to content with ~241 tokens of content.
+[backend] info: [TokenManager] Returning existing instance for model: chat
+[backend] error: GenericOpenAI Failed to embed: 500 litellm.InternalServerError: InternalServerError: Hosted_vllmException - {"error":{"code":500,"message":"input (20418 tokens) is too large to process. increase the physical batch size (current batch
+LiteLLM: model group 'embed' failed with the error above. No fallback was attempted. Error: GenericOpenAI Failed to embed: 500 litellm.InternalServerError: InternalServerError: Hosted_vllmException - {"error":{"code":500,"message":"input (20418 token
+LiteLLM: model group 'embed' failed with the error above. No fallback was attempted.
