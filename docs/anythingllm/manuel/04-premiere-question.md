@@ -185,7 +185,7 @@ Taper `Quel est le chiffre d'affaires 2025 de Vélanor ?` (pastille 1), puis cli
 | 2 | réponse | « Le chiffre d'affaires de Vélanor en 2025 est de 48,6 M€. » |
 | 3 | « Sources » | ouvre la liste des documents utilisés |
 
-*Résultat* : la réponse arrive en une quinzaine de secondes, réflexion comprise. Sous la réponse, une ligne discrète indique le modèle, la durée et la vitesse.
+*Résultat* : la réponse arrive en une quinzaine de secondes, réflexion comprise. Au survol de la réponse, une ligne discrète indique le modèle, la durée et la vitesse (chapitre 06, étape 4).
 
 **Étape 13. Ouvrir les sources**
 *Où* : sous la réponse.

@@ -137,7 +137,7 @@ Cliquer sur « Ignorer l'enquête » (pastille 1), sans rien remplir.
 |---|---|---|
 | 1 | liste des espaces de travail | chaque espace a ses documents, ses conversations (fils) et ses réglages ; « New Thread » ouvre une nouvelle conversation |
 | 2 | « + » | crée un espace de travail (chapitre 04) |
-| 3 | flèche vers le haut | ouvre le gestionnaire de documents de l'espace (chapitre 05) |
+| 3 | flèche vers le haut | ouvre le fenêtre des documents de l'espace (chapitre 05) |
 | 4 | « Envoyer un message » | zone où taper une question |
 | 5 | « Outils » | commandes abrégées (`/reset`…) et compétences de l'agent (chapitres 06 et 10) |
 | 6 | clé | ouvre les paramètres de l'instance |

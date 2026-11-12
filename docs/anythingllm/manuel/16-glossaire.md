@@ -49,6 +49,9 @@ Les termes communs à toute la série de manuels (RAG, embedding, jeton, reranke
 | Consigne, invite | « Invite », « System Prompt » | texte d'instructions donné au modèle avant chaque question |
 | Température | « Température LLM » | réglage qui rend les réponses plus variées (valeur haute) ou plus constantes (valeur basse) |
 | Intégration (deux sens) | « Préférences d'intégration », « Sauvegarder et intégrer » | désigne à la fois le modèle d'embedding (réglage de l'instance) et l'action de préparer un document pour la recherche |
+| Service de modèles, service LLM central, LLM-Service | — | trois noms pour le même service installé sur le poste, qui fournit les modèles `chat`, `embed` et `transcribe` (chapitre 02) |
+| Embedder | « Préférences d'intégration » | le modèle d'embedding choisi pour l'instance (`embed`, ou l'embedder intégré « AnythingLLM Embedder ») |
+| Fenêtre des documents | flèche vers le haut d'un espace | fenêtre « Documents » / « Connecteurs de données » où l'on envoie, range et intègre les documents |
 | Multi-utilisateur | « Mon équipe », « Mode multi-utilisateurs » | plusieurs comptes, chacun avec un rôle : administrateur, gestionnaire (« Manager ») ou utilisateur (« Default ») |
 
 ## Résultat

@@ -52,8 +52,11 @@ Lire les chapitres 01 à 04 dans l'ordre : en une heure environ, l'application e
 
 ## Ce qui reste ouvert
 
-Cette liste est complétée au fil des essais ; elle est reprise dans le [rapport d'essais](annexes/A6-rapport-d-essais.md).
+- Le mode « Agent », mode par défaut d'un nouvel espace, n'est pas fiable dans l'interface : préférer « Requête » (chapitres 04 et 15).
+- La lecture des scans en français demande un réglage hors de l'interface (chapitre 15).
+- Non décrits : règles du routeur de modèles, blocs des agent flows, compétences personnalisées, extension de navigateur, application mobile, Telegram, Centre communautaire.
+- Détail de ce qui a été vérifié ou non : [rapport d'essais](annexes/A6-rapport-d-essais.md).
 
 ## Décisions en attente
 
-Les décisions qui sortent du cadre de la mission sont listées dans le [journal](../../JOURNAL.md#décisions-en-attente).
+Réservé aux responsables de l'installation : les choix qui dépassent ce manuel (réglages du service de modèles) sont listés dans le [journal du projet](../../JOURNAL.md#décisions-en-attente).

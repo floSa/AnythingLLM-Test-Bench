@@ -4,7 +4,7 @@
 > **Point de départ** : Paramètres de l'instance › « Sécurité », connecté avec le mot de passe de l'instance (chapitre 03).
 > **Durée** : environ 20 minutes. **Avant** : chapitres 03 à 07 ; faire le chapitre 11 avant, car les tâches planifiées disparaissent en multi-utilisateur.
 
-**Attention** : le passage en multi-utilisateur ne peut pas être annulé depuis l'interface. Le mot de passe de l'instance est remplacé par des comptes ; les pages « Tâches planifiées », « Canaux » (Telegram) et « Sécurité » disparaissent du menu.
+**Attention** : le passage en multi-utilisateur ne peut pas être annulé depuis l'interface. Avant l'étape 1, faire une sauvegarde (terminal Ubuntu, dossier du dépôt : `outils/anythingllm/sauvegarder.sh`) : la restaurer est le seul moyen de revenir en arrière. Le mot de passe de l'instance est remplacé par des comptes ; les pages « Tâches planifiées », « Canaux » (Telegram) et « Sécurité » disparaissent du menu.
 
 ## Ce qu'il faut savoir
 

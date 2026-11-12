@@ -82,7 +82,7 @@ Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pas
 | 3 | calendrier | fréquence d'exécution |
 | 4 | « Créer un emploi » | enregistre la tâche |
 
-*Résultat* : le message « Emploi créé » s'affiche. La tâche ne se rattache à aucun espace : la consigne est envoyée au modèle avec les compétences cochées dans « Outils (facultatifs) » ; sans outil (par exemple « RAG et mémoire à long terme »), le modèle répond sans lire les documents. L'exécution n'a pas été observée pendant les essais.
+*Résultat* : le message « Emploi créé » s'affiche. La tâche ne se rattache à aucun espace : la consigne est envoyée au modèle avec les compétences cochées dans « Outils (facultatifs) », sous la consigne. Pour qu'elle lise des documents, y cocher une compétence de recherche dans les documents si elle est proposée ; sans outil, le modèle répond sans lire les documents. Dans les essais, aucun outil n'a été coché et l'exécution n'a pas été observée : la tâche d'exemple montre le formulaire, pas un résultat.
 
 **Étape 6. Suivre la tâche**
 *Où* : « Tâches planifiées ».

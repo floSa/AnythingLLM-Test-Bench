@@ -4,7 +4,7 @@
 > **Point de départ** : écran principal, clé en bas de la barre latérale › « Paramètres de l'instance ».
 > **Durée** : environ 10 minutes. **Avant** : chapitre 03.
 
-**Attention** : changer le modèle d'embedding ou le découpage des textes impose d'intégrer de nouveau tous les documents : le changement retire les documents de tous les espaces (ils restent dans « Mes documents ») ; les replacer et les intégrer comme au chapitre 05, étapes 5 et 6.
+**Attention** : changer le modèle d'embedding impose d'intégrer de nouveau tous les documents (changer le découpage, lui, ne vaut que pour les documents intégrés ensuite, étape 3) : le changement retire les documents de tous les espaces (ils restent dans « Mes documents ») ; les replacer et les intégrer comme au chapitre 05, étapes 5 et 6.
 
 ## Ce qu'il faut savoir
 
@@ -127,7 +127,7 @@ Pour voir les choix sans rien changer : le fournisseur à gauche (ici « Generic
 |---|---|---|
 | 1 | « Rechercher des modèles » | filtre les fournisseurs |
 
-*Résultat* : l'espace utilise le modèle choisi ; les autres espaces gardent le leur. Sur le poste d'essai, `gemma-4-e4b` est proposé par le service : il se charge à la demande, ce qui prend quelques secondes à la première question. Le même choix se fait dans les réglages de l'espace, onglet « Paramètres du chat » (chapitre 07).
+*Résultat* : l'espace utilise le modèle choisi ; les autres espaces gardent le leur. Sur le poste d'essai, `gemma-4-e4b` est proposé par le service : il se charge à la demande, ce qui prend quelques secondes à la première question. Contrairement à `chat`, ce nom n'est pas garanti stable : le vérifier dans la liste avant de s'en servir. Le même choix se fait dans les réglages de l'espace, onglet « Paramètres du chat » (chapitre 07).
 
 ## Bon à savoir
 

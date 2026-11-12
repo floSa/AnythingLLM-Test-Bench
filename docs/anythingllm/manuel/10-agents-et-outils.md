@@ -34,7 +34,7 @@ L'exemple branche un serveur MCP écrit pour ce manuel, `velanor-outils` : il do
 | 4 | « Agent Flows » | enchaînements sans code (étape 3) |
 | 5 | « Serveurs MCP » | serveurs d'outils externes (étape 5) |
 
-*Résultat* : chaque ligne indique « On » ou « Off ». La capture a été prise à la fin du chapitre : elle montre déjà « Générer des graphiques » activé (étape 2), le flow `ConsignesBatteries` (étapes 3 et 4) et le serveur « Velanor Outils » (étape 5). Par défaut, quatre compétences sont actives : RAG et mémoire, voir et résumer des documents, récupérer des sites web, recherche web.
+*Résultat* : chaque ligne indique « On » ou « Off ». Les captures de ce chapitre ont été prises après le passage en multi-utilisateur (pastille « AD » en haut à droite, menu sans « Canaux » ni « Sécurité ») ; en mode « Juste moi », le menu montre ces entrées en plus, la page est la même. La capture a été prise à la fin du chapitre : elle montre déjà « Générer des graphiques » activé (étape 2), le flow `ConsignesBatteries` (étapes 3 et 4) et le serveur « Velanor Outils » (étape 5). Par défaut, quatre compétences sont actives : RAG et mémoire, voir et résumer des documents, récupérer des sites web, recherche web.
 
 **Étape 2. Activer une compétence**
 *Où* : cliquer sur « Générer des graphiques ».

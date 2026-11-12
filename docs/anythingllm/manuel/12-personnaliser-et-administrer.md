@@ -139,7 +139,7 @@ Cliquer sur « Créer la clé API » (pastille 1).
 *Où* : même fenêtre.
 
 ![Clé créée](../img/12-administrer/16-cle-creee.png)
-*Écran : fenêtre « Créer une nouvelle clé API », clé générée (masquée).*
+*Écran : fenêtre « Créer une nouvelle clé API », clé générée (masquée). Les bandes noires encadrées de rouge sans pastille sont des clés masquées pour la capture.*
 
 | N° | Élément | Rôle |
 |---|---|---|

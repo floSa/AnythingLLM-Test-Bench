@@ -117,7 +117,7 @@ Coller l'adresse dans « ou soumettre un lien » (pastille 1), ici `http://rag-a
 
 **Étape 6. Placer les dossiers dans l'espace**
 *Où* : onglet « Documents », « Mes documents ».
-Cocher les dossiers du site, du dépôt et de la vidéo (pastilles 1 à 3), cliquer sur « Déplacer vers l'espace de travail » (pastille 4), puis sur « Sauvegarder et intégrer ».
+Fermer puis rouvrir la fenêtre (chapitre 04, étape 5). Cocher les dossiers du site, du dépôt et de la vidéo (pastilles 1 à 3) ; la page `livraisons.html` importée seule à l'étape 5 est dans `custom-documents` et peut être cochée aussi. Cliquer sur « Déplacer vers l'espace de travail » (pastille 4), puis sur « Sauvegarder et intégrer ».
 
 ![Sources importées](../img/09-sources-externes/06-documents-importes.png)
 *Écran : fenêtre des documents, dossiers des sources importées cochés.*
@@ -132,7 +132,7 @@ Cocher les dossiers du site, du dépôt et de la vidéo (pastilles 1 à 3), cliq
 *Résultat* : la colonne de l'espace liste les documents avec l'état « Complete ».
 
 **Étape 7. Poser une question sur le site**
-*Où* : espace « Sources externes », en mode « Requête » (chapitre 04, étape 10).
+*Où* : espace « Sources externes ». Cet espace vient d'être créé : il est en mode « Agent ». Le passer d'abord en mode « Requête » (roue dentée › « Paramètres du chat » › « Requête », chapitre 04, étapes 9 et 10), puis revenir à la discussion.
 Demander `Combien de techniciens compte l'atelier de Nantes ?` puis ouvrir « Sources ».
 
 ![Réponse tirée du site](../img/09-sources-externes/07-reponse-site.png)

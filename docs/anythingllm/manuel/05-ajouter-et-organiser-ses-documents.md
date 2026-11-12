@@ -54,7 +54,7 @@ Cliquer sur « Nouveau dossier », taper `velanor-2025` (pastille 1), puis cliqu
 
 **Étape 3. Envoyer les fichiers**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au chapitre 04, étape 5) et sélectionner les 9 fichiers d'un coup (Ctrl+A dans la fenêtre de choix de Windows), ou les glisser ensemble dans la zone. Ajouter à la sélection la note de test fictive `note-de-test.txt` (dossier `outils\anythingllm\essais` du dépôt) : elle sert aux étapes 11 et 12.
+Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au chapitre 04, étape 5) et sélectionner les 9 fichiers d'un coup (Ctrl+A dans la fenêtre de choix de Windows), ou les glisser ensemble dans la zone. Puis faire un second envoi, de la même façon, avec la note de test fictive `note-de-test.txt` (dossier `outils\anythingllm\essais` du dépôt) : elle sert aux étapes 11 et 12.
 
 ![Fichiers envoyés](../img/05-documents/03-fichiers-televerses.png)
 *Écran : fenêtre des documents, fichiers envoyés dans « custom-documents ».*
@@ -70,7 +70,7 @@ Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au
 
 **Étape 4. Déplacer les fichiers dans le dossier**
 *Où* : fenêtre des documents rouverte, dossier `custom-documents` ouvert.
-Cocher les 8 fichiers du corpus envoyés à l'étape 3 (tous sauf `note-de-test.txt`). Si `rapport-annuel-2025.pdf` apparaît deux fois (l'un vient du chapitre 04), n'en cocher qu'un. Puis cliquer sur l'icône de dossier à droite de « Déplacer vers l'espace de travail » (pastille 2) et choisir `velanor-2025` dans la liste (pastille 3).
+Cocher les 8 fichiers du corpus envoyés à l'étape 3 (tous sauf `note-de-test.txt`). Si `rapport-annuel-2025.pdf` apparaît deux fois (l'un vient du chapitre 04), n'en cocher qu'un. Puis cliquer sur l'icône juste à droite de « Déplacer vers l'espace de travail » (un bac avec une flèche, pastille 2) et choisir `velanor-2025` dans la liste (pastille 3).
 
 ![Rangement dans un dossier](../img/05-documents/04-ranger-dans-un-dossier.png)
 *Écran : fenêtre des documents, fichiers cochés et liste des dossiers (la liste montre aussi des dossiers laissés par des essais précédents).*
@@ -78,7 +78,7 @@ Cocher les 8 fichiers du corpus envoyés à l'étape 3 (tous sauf `note-de-test.
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Déplacer vers l'espace de travail » | (étape 5) place la sélection dans l'espace |
-| 2 | icône de dossier | ouvre la liste des dossiers de destination |
+| 2 | icône « déplacer vers un dossier » (bac avec une flèche) | ouvre la liste des dossiers de destination |
 | 3 | `velanor-2025` | dossier choisi |
 
 *Résultat* : le message « 8 documents déplacés avec succès. » s'affiche ; le dossier `velanor-2025` contient les fichiers. La corbeille, à droite, supprime la sélection (étape 12).

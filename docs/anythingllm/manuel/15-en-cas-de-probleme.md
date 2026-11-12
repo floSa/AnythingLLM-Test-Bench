@@ -108,7 +108,7 @@ La première dit si AnythingLLM tourne, la deuxième montre ses derniers message
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | titre du document | texte lu par OCR : « (I'Acheteur) » pour « (l'Acheteur) », « Bréme » pour « Brême », « aprés » pour « après », « ler mars » pour « 1er mars » |
+| 1 | titre du document ; les erreurs sont dans le texte en dessous | texte lu par OCR : « (I'Acheteur) » pour « (l'Acheteur) », « Bréme » pour « Brême », « aprés » pour « après », « ler mars » pour « 1er mars » |
 
 *Cause* : la lecture optique (OCR) est réglée en anglais par défaut ; les accents et certaines lettres françaises sont mal reconnus. Les chiffres du contrat ont été bien lus dans les essais.
 *Que faire* : ce réglage n'existe pas dans l'interface. Depuis le dossier du dépôt, écrire la ligne `TARGET_OCR_LANG=fra,eng` dans le fichier `donnees/anythingllm/options.env`, puis relancer `outils/anythingllm/demarrer.sh` (le conteneur est recréé avec ce réglage). Supprimer ensuite le document scanné et l'envoyer de nouveau : la lecture donne alors « Brême » et « l'Acheteur ». Écrire la même ligne dans `donnees/anythingllm/storage/.env` ne suffit pas : l'outil de lecture ne la voit pas.
