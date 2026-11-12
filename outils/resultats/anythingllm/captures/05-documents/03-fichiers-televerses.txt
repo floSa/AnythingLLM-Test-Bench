@@ -1,0 +1,121 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+*New Thread
+
+New Thread
+
+Documents
+Connecteurs de données
+Mes documents
+Nouveau dossier
+
+Name
+
+11 documents
+
+custom-documents
+
+(9)
+
+contrat-batterix-scan.pdf
+
+cse-2025-10-14.md
+
+faq-sav.html
+
+note-de-test.txt
+
+procedure-batteries.docx
+
+rapport-annuel-2025.pdf
+
+rapport-annuel-2025.pdf
+
+Cached
+
+strategie-2026.pptx
+
+supplier-audit-batterix-en.pdf
+
+stocks-octobre-2025.xlsx-04e3
+
+(2)
+
+stocks-octobre-2025.xlsx - Sheet:Fournisseurs
+
+stocks-octobre-2025.xlsx - Sheet:Stocks
+
+stocks-octobre-2025.xlsx-5734
+
+stocks-octobre-2025.xlsx-71e3
+
+stocks-octobre-2025.xlsx-8278
+
+stocks-octobre-2025.xlsx-d60b
+
+velanor-2025
+
+Déplacer vers l'espace de travail
+
+contrat-batterix-scan.pdf
+
+747.3 KiB | 1.90s
+
+cse-2025-10-14.md
+
+548 B | 0.60s
+
+faq-sav.html
+
+810 B | 0.70s
+
+message-vocal-production.mp3
+
+144.4 KiB | 4.20s
+
+procedure-batteries.docx
+
+36.4 KiB | 0.80s
+
+rapport-annuel-2025.pdf
+
+52.5 KiB | 1.10s
+
+stocks-octobre-2025.xlsx
+
+5.7 KiB | 1.30s
+
+strategie-2026.pptx
+
+31.3 KiB | 1.30s
+
+supplier-audit-batterix-en.pdf
+
+42.9 KiB | 1.60s
+
+note-de-test.txt
+
+222 B | 1.60s
+
+ou soumettre un lien
+Récupérer le site web
+Ces fichiers seront téléchargés sur cette instance AnythingLLM uniquement.
+Démo Vélanor
+
+Name
+
+Aucun document
+
+chat
+Gardons le rythme.
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs

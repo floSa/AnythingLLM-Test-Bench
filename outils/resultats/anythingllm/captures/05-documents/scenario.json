@@ -1,0 +1,210 @@
+[
+ {
+  "capture": "05-documents/01-gestionnaire.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Rechercher un document"
+   ],
+   [
+    2,
+    "Nouveau dossier"
+   ],
+   [
+    3,
+    "zone d'envoi"
+   ],
+   [
+    4,
+    "Connecteurs de données"
+   ]
+  ],
+  "note": "",
+  "heure": "12:39:51"
+ },
+ {
+  "capture": "05-documents/02-nouveau-dossier.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "nom du dossier"
+   ],
+   [
+    2,
+    "Create Folder"
+   ]
+  ],
+  "note": "",
+  "heure": "12:39:52"
+ },
+ {
+  "capture": "05-documents/03-fichiers-televerses.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "fichier téléversé"
+   ],
+   [
+    2,
+    "dossier par défaut custom-documents"
+   ]
+  ],
+  "note": "",
+  "heure": "12:42:56"
+ },
+ {
+  "capture": "05-documents/04-ranger-dans-un-dossier.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Déplacer vers l'espace de travail"
+   ],
+   [
+    2,
+    "déplacer vers un dossier"
+   ],
+   [
+    3,
+    "velanor-2025"
+   ]
+  ],
+  "note": "",
+  "heure": "12:43:04"
+ },
+ {
+  "capture": "05-documents/05-dossier-selectionne.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "velanor-2025 (coché)"
+   ],
+   [
+    2,
+    "dossier du classeur (coché)"
+   ],
+   [
+    3,
+    "Déplacer vers l'espace de travail"
+   ]
+  ],
+  "note": "",
+  "heure": "12:44:11"
+ },
+ {
+  "capture": "05-documents/06-en-attente.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "documents en attente"
+   ],
+   [
+    2,
+    "Sauvegarder et intégrer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:44:12"
+ },
+ {
+  "capture": "05-documents/07-integration-en-cours.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "progression"
+   ]
+  ],
+  "note": "",
+  "heure": "12:44:15"
+ },
+ {
+  "capture": "05-documents/08-epingle.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "procedure-batteries.docx"
+   ],
+   [
+    2,
+    "épingle (Pin to workspace)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:10"
+ },
+ {
+  "capture": "05-documents/09-explication-epinglage.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "J'ai compris"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:11"
+ },
+ {
+  "capture": "05-documents/10-document-epingle.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "document épinglé"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:13"
+ },
+ {
+  "capture": "05-documents/11-retirer-de-l-espace.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "note-de-test.txt"
+   ],
+   [
+    2,
+    "retirer de l'espace (Remove document from workspace)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:22"
+ },
+ {
+  "capture": "05-documents/12-supprimer-le-fichier.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "note-de-test.txt (coché)"
+   ],
+   [
+    2,
+    "corbeille (supprimer)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:31"
+ },
+ {
+  "capture": "05-documents/13-rechercher.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Rechercher un document"
+   ]
+  ],
+  "note": "",
+  "heure": "12:45:36"
+ }
+]
