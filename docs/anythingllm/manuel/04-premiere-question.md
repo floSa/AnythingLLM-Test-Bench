@@ -72,7 +72,7 @@ La colonne de droite, au nom de l'espace (« Premier essai »), liste les docume
 
 **Étape 5. Envoyer le fichier**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$` dans la barre d'adresse de cette fenêtre, ouvrir la distribution (son nom, par exemple `Ubuntu` ou `Ubuntu-24.04`, est donné par `wsl -l` dans PowerShell), puis le dossier du dépôt et `corpus\documents`. Le chemin du dépôt s'affiche avec `pwd` dans le terminal Ubuntu, par exemple `/home/camille/AnythingLLM-Test-Bench` : il devient `\\wsl$\Ubuntu\home\camille\AnythingLLM-Test-Bench` en remplaçant les `/` par des `\`. et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
+Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : il faut y aller par le chemin réseau `\\wsl$`. Construire ce chemin ainsi : `\\wsl$\`, puis le nom de la distribution (donné par `wsl -l` dans PowerShell, par exemple `Ubuntu` ou `Ubuntu-24.04`), puis le chemin du dépôt affiché par `pwd` dans le terminal Ubuntu, en remplaçant les `/` par des `\`. Exemple : distribution `Ubuntu-24.04` et `pwd` = `/home/camille/AnythingLLM-Test-Bench` donnent `\\wsl$\Ubuntu-24.04\home\camille\AnythingLLM-Test-Bench`. Taper ce chemin dans la barre d'adresse de la fenêtre, Entrée, ouvrir `corpus` puis `documents`, et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
 
 ![Fichier envoyé](../img/04-premiere-question/05-document-televerse.png)
 *Écran : fenêtre des documents, fichier envoyé dans « custom-documents » (capture prise plus tard, sur une instance qui contient déjà les dossiers des chapitres suivants et un exemplaire du rapport marqué « Cached » ; la colonne de l'espace est vide, comme sur une installation neuve).*
@@ -143,7 +143,7 @@ Survoler la ligne, puis cliquer sur la roue dentée (pastille 1).
 
 **Étape 10. Choisir « Requête »**
 *Où* : réglages de l'espace › onglet « Paramètres du chat » (pastille 1).
-Cliquer sur « Requête » (pastille 4).
+Cliquer d'abord sur l'onglet « Paramètres du chat » (pastille 1), puis sur « Requête » (pastille 4).
 
 ![Mode de chat](../img/04-premiere-question/10-mode-requete.png)
 *Écran : réglages de l'espace, « Paramètres du chat », « Mode de chat ».*

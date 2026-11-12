@@ -188,7 +188,7 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 
 **Étape 12. Créer le widget**
 *Où* : connecté avec `admin-velanor`, Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
-En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requests from domains » (pastille 2) pour l'essai de l'étape 15, qui ouvre une page depuis un fichier et non depuis un site ; pour un vrai site, y mettre son nom de domaine (par exemple `intranet.velanor.fr`), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
+En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requests from domains » (pastille 2) pour l'essai de l'étape 15, qui ouvre une page depuis un fichier et non depuis un site ; pour un vrai site, y mettre son nom de domaine (par exemple `intranet.velanor.fr`). Dans tous les cas, renseigner « Max chats per day » (pastille 3, ici `200`) pour limiter le nombre de messages par jour. Cliquer enfin sur « Create embed » (pastille 4).
 
 ![Nouveau widget](../img/13-comptes-et-widget/12-nouveau-widget.png)
 *Écran : fenêtre de création d'un widget.*
