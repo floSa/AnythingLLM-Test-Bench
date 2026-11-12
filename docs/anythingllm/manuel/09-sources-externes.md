@@ -129,7 +129,7 @@ Fermer puis rouvrir la fenêtre (chapitre 04, étape 5). Cocher les dossiers du 
 | 3 | `jawed-youtube-transcripts` | la transcription |
 | 4 | « Déplacer vers l'espace de travail » | place la sélection dans l'espace |
 
-*Résultat* : la colonne de l'espace liste les documents avec l'état « Complete ».
+*Résultat* : la colonne de l'espace liste les documents importés et le bouton « Sauvegarder et intégrer » disparaît : l'intégration est terminée (comme au chapitre 05, étape 7). Pendant l'intégration, chaque ligne peut afficher un état ; « Complete » signifie que le document est prêt.
 
 **Étape 7. Poser une question sur le site**
 *Où* : espace « Sources externes ». Cet espace vient d'être créé : il est en mode « Agent ». Le passer d'abord en mode « Requête » (roue dentée › « Paramètres du chat » › « Requête », chapitre 04, étapes 9 et 10), puis revenir à la discussion.
