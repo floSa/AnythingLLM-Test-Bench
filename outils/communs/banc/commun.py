@@ -13,7 +13,19 @@ from pathlib import Path
 RACINE = Path(__file__).resolve().parents[3]
 QUESTIONS = RACINE / "corpus/questions.json"
 DOCUMENTS = RACINE / "corpus/documents"
-OLLAMA = "http://127.0.0.1:11434"
+
+def _env():
+    """Lit le .env du dépôt (clé du service LLM central, jamais affichée)."""
+    env = {}
+    f = RACINE / ".env"
+    if f.exists():
+        for l in f.read_text().splitlines():
+            if "=" in l and not l.lstrip().startswith("#"):
+                k, v = l.split("=", 1); env[k.strip()] = v.strip().strip('"')
+    return env
+
+
+CENTRAL = _env().get("LLM_CENTRAL_URL_HOTE", "http://127.0.0.1:8080/v1")
 
 REFUS = re.compile(r"(ne (contien|mentionn|précis|fourni|donn|perm|figur|trouv)|n'(est|apparaît|indique|y a)|aucune? (information|mention|donnée)|"
                    r"pas (d'information|mentionn|précis|indiqu|disponible|trouv|dans)|introuvable|impossible de (répondre|trouver|déterminer)|"
@@ -48,23 +60,27 @@ def citation_correcte(citations, sources):
     return {"document": bon_doc, "page": bonne_page}
 
 
-def juge_llm(question, attendu, reponse, modele="qwen3:4b-instruct"):
-    # num_ctx identique à celui de la solution testée : un num_ctx différent force Ollama à recharger le modèle
-    """Jugement complémentaire par LLM local (signalé comme tel dans les résultats)."""
+def juge_llm(question, attendu, reponse, modele=None):
+    """Jugement complémentaire par LLM (signalé comme tel dans les résultats) : service LLM central, modèle `chat`,
+    réflexion coupée, même contexte de 16 384 jetons que les solutions testées."""
+    env = _env()
+    modele = modele or env.get("LLM_CENTRAL_CHAT", "chat")
     consigne = (f"Question : {question}\nÉléments attendus : {', '.join(attendu) or 'aucune réponse dans les documents'}\n"
                 f"Réponse à juger : {reponse}\n\nLa réponse est-elle correcte (contient les éléments attendus, ou signale "
                 f"l'absence d'information si aucun élément n'est attendu) ? Réponds par un seul mot : OUI ou NON.")
-    req = urllib.request.Request(OLLAMA + "/api/generate", json.dumps({
-        "model": modele, "prompt": consigne, "stream": False, "options": {"temperature": 0, "num_predict": 3, "num_ctx": 16384}}).encode())
+    req = urllib.request.Request(CENTRAL + "/chat/completions", json.dumps({
+        "model": modele, "messages": [{"role": "user", "content": consigne}], "temperature": 0, "max_tokens": 5,
+        "chat_template_kwargs": {"enable_thinking": False}}).encode(),
+        headers={"Content-Type": "application/json", "Authorization": "Bearer " + env.get("LLM_CENTRAL_KEY", "")})
     try:
         with urllib.request.urlopen(req, timeout=300) as r:
-            return json.loads(r.read())["response"].strip().upper().startswith("OUI")
+            return json.loads(r.read())["choices"][0]["message"]["content"].strip().upper().startswith("OUI")
     except Exception as e:
-        return f"erreur : {e}"
+        return f"erreur : {type(e).__name__}"
 
 
 class Echantillonneur(threading.Thread):
-    """Relève la mémoire des conteneurs (docker stats) pendant le banc. Pas de GPU NVIDIA : pas de VRAM."""
+    """Relève la mémoire des conteneurs (docker stats) pendant le banc ; la VRAM est relevée à part (vram_nvidia)."""
 
     def __init__(self, conteneurs, pas=5):
         super().__init__(daemon=True)
@@ -138,7 +154,7 @@ def renoter(res):
     qs = {q["id"]: q for q in json.loads(QUESTIONS.read_text())["questions"]}
     for l in res["questions"]:
         l["exacte"] = bool(REFUS.search(l["reponse"])) if l["type"] == "piège" else exacte(l["reponse"], qs[l["id"]]["attendu"])
-    app = [k for k in pics if k.startswith("rag-open-notebook")]
+    app = [k for k in pics if k.startswith("rag-" + res["solution"].lower().replace(" ", "-"))] or [k for k in pics if k.startswith("rag-")]
     res["synthese"] = synthese(res["questions"], pics, app); res["synthese"]["indexation_s"] = idx
     return res
 

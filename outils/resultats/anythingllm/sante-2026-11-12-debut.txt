@@ -1,0 +1,20 @@
+== http://127.0.0.1:8080/v1/models
+  chat (chat)
+  embed (embedding)
+  rerank (rerank)
+  transcribe (audio_transcription)
+  gemma-4-e4b (chat)
+  qwen3.5-4b (chat)
+  bge-m3 (embedding)
+  bge-reranker-v2-m3 (rerank)
+  faster-whisper-small (audio_transcription)
+== chat (réflexion coupée pour l'essai)
+  Bon
+== embed
+  dimensions : 1024
+== rerank
+  doc 0 score 9.05
+  doc 1 score -8.63
+== transcribe (corpus/documents/message-vocal-production.mp3)
+  Message vocale de Julien Moreau, directeur de production chez Vélanor, enregistrait le 3 novembre VVTSEC. La ligne d'assoblage numéro 3 de Nantes sera arrêtée du 2 au 6 mars VVTSI pour maintenance. Pe
+code 0
