@@ -1,0 +1,48 @@
+OK  *                                                    -> Page introuvable : Non couvert : page d'erreur sans action
+OK  /                                                    -> Écran principal : [03](../manuel/03-premiers-pas.md)
+OK  /accept-invite/:code                                 -> Acceptation d'une invitation : Non couvert : l'acceptation par la personne invitée n'a pas été essayée ; création du lien
+OK  /login                                               -> Connexion : [03](../manuel/03-premiers-pas.md), [13](../manuel/13-comptes-equipe-et-widget.md)
+OK  /onboarding                                          -> Assistant de premier lancement : [03](../manuel/03-premiers-pas.md)
+OK  /onboarding/:step                                    -> Assistant de premier lancement : [03](../manuel/03-premiers-pas.md)
+OK  /settings/agents                                     -> Compétences de l'agent : [10](../manuel/10-agents-et-outils.md)
+OK  /settings/agents/builder                             -> Éditeur d'agent flow : [10](../manuel/10-agents-et-outils.md)
+OK  /settings/agents/builder/:flowId                     -> Éditeur d'agent flow : [10](../manuel/10-agents-et-outils.md)
+OK  /settings/api-keys                                   -> Clés API : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/audio-preference                           -> Voix et Parole : [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md)
+OK  /settings/beta-features                              -> Fonctionnalités expérimentales : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/beta-features/live-document-sync/manage    -> Gestion des documents surveillés : Non couvert : aucun document mis sous surveillance ; fonction présentée au [chapitre 12](.
+OK  /settings/branding                                   -> Personnalisation : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/browser-extension                          -> Extension de navigateur : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/chat                                       -> Chat (apparence) : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/community-hub/authentication               -> Centre communautaire : Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périm
+OK  /settings/community-hub/import-item                  -> Centre communautaire : Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périm
+OK  /settings/community-hub/trending                     -> Centre communautaire : Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périm
+OK  /settings/default-system-prompt                      -> Default System Prompt : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/embed-chat-widgets                         -> Widgets de chat intégrés : [13](../manuel/13-comptes-equipe-et-widget.md)
+OK  /settings/embedding-preference                       -> Préférences d'intégration : [03](../manuel/03-premiers-pas.md), [08](../manuel/08-choisir-les-modeles-et-la-lecture-de
+OK  /settings/event-logs                                 -> Journaux d'événements : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/external-connections/telegram              -> Canaux, Telegram : Non couvert : demande un compte Telegram en ligne (hors périmètre) ; page montrée au [chap
+OK  /settings/image-generation-preference                -> Génération d'images : [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md)
+OK  /settings/interface                                  -> Interface : [03](../manuel/03-premiers-pas.md), [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/invites                                    -> Invitation : [13](../manuel/13-comptes-equipe-et-widget.md)
+OK  /settings/llm-preference                             -> Préférence LLM : [03](../manuel/03-premiers-pas.md), [08](../manuel/08-choisir-les-modeles-et-la-lecture-de
+OK  /settings/mobile-connections                         -> AnythingLLM Mobile : Non couvert : demande l'application mobile (hors périmètre de la fiche) ; page montrée au 
+OK  /settings/model-routers                              -> Routeur modèle : [11](../manuel/11-memoires-taches-et-routage.md)
+OK  /settings/model-routers/:id                          -> Règles d'un routeur : Non couvert : règles non décrites ; création du routeur au [chapitre 11](../manuel/11-memo
+OK  /settings/privacy                                    -> Confidentialité et données : [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md)
+OK  /settings/scheduled-jobs                             -> Tâches planifiées : [11](../manuel/11-memoires-taches-et-routage.md)
+OK  /settings/scheduled-jobs/:id/runs                    -> Exécutions d'une tâche planifiée : Non couvert : aucune exécution observée pendant les essais ; création de la tâche au [chap
+OK  /settings/scheduled-jobs/:id/runs/:runId             -> Exécutions d'une tâche planifiée : Non couvert : aucune exécution observée pendant les essais ; création de la tâche au [chap
+OK  /settings/security                                   -> Sécurité : [13](../manuel/13-comptes-equipe-et-widget.md)
+OK  /settings/system-prompt-variables                    -> Variables de prompt système : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/text-splitter-preference                   -> Diviseur de texte et découpage : [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md)
+OK  /settings/transcription-preference                   -> Modèle de transcription : [03](../manuel/03-premiers-pas.md)
+OK  /settings/users                                      -> Utilisateurs : [13](../manuel/13-comptes-equipe-et-widget.md)
+OK  /settings/vector-database                            -> Base de données vectorielle : [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md)
+OK  /settings/workspace-chats                            -> Chat de l'espace de travail : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /settings/workspaces                                 -> Espaces de travail : [12](../manuel/12-personnaliser-et-administrer.md)
+OK  /sso/simple                                          -> Connexion unique (SSO) : Non couvert : demande un fournisseur d'identité externe, non configuré
+OK  /workspace/:slug                                     -> Discussion d'un espace : [04](../manuel/04-premiere-question.md), [06](../manuel/06-poser-des-questions-et-lire-les
+OK  /workspace/:slug/settings/:tab                       -> Paramètres généraux : [07](../manuel/07-regler-un-espace-de-travail.md)
+OK  t/:threadSlug                                        -> Discussion d'un espace : [04](../manuel/04-premiere-question.md), [06](../manuel/06-poser-des-questions-et-lire-les
+47 routes, 0 sans ligne de carte ou sans manuel ; 52 lignes dans la carte

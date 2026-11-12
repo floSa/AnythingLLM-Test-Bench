@@ -66,6 +66,17 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Confidentialité et données | lien en bas du menu des paramètres | fournisseurs et ce qu'ils voient, télémétrie | [08](../manuel/08-choisir-les-modeles-et-la-lecture-des-documents.md) |
 | Fonctionnalités expérimentales | Ctrl maintenu 3 s dans les paramètres | « Live Document Sync » | [12](../manuel/12-personnaliser-et-administrer.md) |
 
+## Écrans secondaires
+
+| Page ou menu | Chemin d'accès | Éléments (boutons, onglets, réglages) | Manuel qui le couvre |
+|---|---|---|---|
+| Acceptation d'une invitation | lien d'invitation (`/accept-invite/<code>`) | choix du nom d'utilisateur et du mot de passe | Non couvert : l'acceptation par la personne invitée n'a pas été essayée ; création du lien au [chapitre 13](../manuel/13-comptes-equipe-et-widget.md) |
+| Connexion unique (SSO) | `/sso/simple` | connexion par jeton externe | Non couvert : demande un fournisseur d'identité externe, non configuré |
+| Page introuvable | toute adresse inconnue | message d'erreur 404 | Non couvert : page d'erreur sans action |
+| Règles d'un routeur | Routeur modèle › ligne d'un routeur (`/settings/model-routers/<id>`) | règles de routage | Non couvert : règles non décrites ; création du routeur au [chapitre 11](../manuel/11-memoires-taches-et-routage.md) |
+| Exécutions d'une tâche planifiée | Tâches planifiées › ligne d'une tâche (`/settings/scheduled-jobs/<id>/runs`) | liste et détail des exécutions | Non couvert : aucune exécution observée pendant les essais ; création de la tâche au [chapitre 11](../manuel/11-memoires-taches-et-routage.md) |
+| Gestion des documents surveillés | Fonctionnalités expérimentales › « Manage Watched Documents » | documents suivis par Live Document Sync | Non couvert : aucun document mis sous surveillance ; fonction présentée au [chapitre 12](../manuel/12-personnaliser-et-administrer.md) |
+
 ## Captures de repérage
 
 Une capture par page, prise le 12 novembre 2026 avec le compte administrateur, en multi-utilisateur (scénario `outils/anythingllm/captures/carte.py`, texte de chaque page dans `outils/resultats/anythingllm/captures/carte/`). Les pages réservées au mode « Juste moi » (tâches planifiées, Telegram) sont montrées aux chapitres 11 et 12.
