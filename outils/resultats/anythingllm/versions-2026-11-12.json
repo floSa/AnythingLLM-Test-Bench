@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-12T12:51:38",
+  "composants": [
+    {
+      "depot": "Mintplex-Labs/anything-llm",
+      "derniere_stable": "v1.19.0",
+      "publiee_le": "2026-10-26",
+      "utilisee": "v1.19.0",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "microsoft/playwright-python",
+      "derniere_stable": "v1.65.1",
+      "publiee_le": "2026-11-11",
+      "utilisee": "v1.65.1",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "BerriAI/litellm",
+      "derniere_stable": "v1.109.1",
+      "publiee_le": "2026-11-12",
+      "utilisee": "v1.109.0",
+      "a_jour": false,
+      "raison": "Service LLM central (LLM-Service, géré à part) : version relevée pour traçabilité, mise à jour hors mission"
+    },
+    {
+      "depot": "mostlygeek/llama-swap",
+      "derniere_stable": "v272",
+      "publiee_le": "2026-11-10",
+      "utilisee": "v272",
+      "a_jour": true,
+      "raison": "Service LLM central (LLM-Service, géré à part) : version relevée pour traçabilité, mise à jour hors mission"
+    },
+    {
+      "depot": "speaches-ai/speaches",
+      "derniere_stable": "v0.8.3",
+      "publiee_le": "2025-09-19",
+      "utilisee": "v0.8.3",
+      "a_jour": true,
+      "raison": "Service LLM central (LLM-Service, géré à part) : version relevée pour traçabilité, mise à jour hors mission"
+    }
+  ],
+  "images": {
+    "mintplexlabs/anythingllm": "1.19.0@sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e",
+    "mcr.microsoft.com/playwright/python": "v1.65.1-noble@sha256:0ab41a37431309d72b7a26f40ef1fdb464a62740196b2143965a2f59dc090409"
+  },
+  "sources": {
+    "Mintplex-Labs/anything-llm": "v1.19.0, commit 9b1fcab141000eaba9f78ed131151de04904454b"
+  }
+}
