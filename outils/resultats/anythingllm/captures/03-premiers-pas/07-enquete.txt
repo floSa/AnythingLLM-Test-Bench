@@ -1,0 +1,11 @@
+Bienvenue
+
+Aidez-nous à améliorer AnythingLLM en répondant à quelques questions.
+
+Adresse e-mail 
+Pour quel usage utiliserez-vous AnythingLLM ?
+Pour le travail
+Pour un usage personnel
+Autre
+Comment avez-vous découvert AnythingLLM ? (Optionnel)
+Ignorer l'enquête

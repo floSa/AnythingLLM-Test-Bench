@@ -1,0 +1,88 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Interface
+
+Personnalisation
+
+Chat
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Interface
+
+Personnalisez l'apparence de l'interface utilisateur.
+
+Thème
+
+Sélectionnez votre thème d'interface préféré.
+
+System
+Light
+Dark
+
+Palette de couleurs
+
+Choisissez une palette de couleurs. Elle s'applique au mode clair comme au mode sombre.
+
+Default
+Par défaut
+True Dark
+Ocean
+Forest
+Plum
+Ember
+
+Langue d'affichage
+
+Sélectionnez la langue de l'interface utilisateur.
+
+English
+Chinese
+Chinese (Taiwan)
+Spanish
+German
+French
+Korean
+Lao
+Estonian
+Russian
+Italian
+Portuguese
+Hebrew
+Dutch
+Vietnamese
+Persian
+Turkish
+Arabic
+Danish
+Japanese
+Latvian
+Polish
+Romanian
+Czech
+Lithuanian
+Catalan
+Indonesian
+Croatian
+Swedish
+Hindi
+Bulgarian
+Hungarian

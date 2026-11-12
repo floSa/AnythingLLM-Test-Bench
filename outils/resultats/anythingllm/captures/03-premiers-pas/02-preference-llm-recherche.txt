@@ -1,0 +1,8 @@
+Préférence LLM
+
+AnythingLLM peut fonctionner avec de nombreux fournisseurs LLM. Ce sera le service qui traitera vos discussions.
+
+Generic OpenAI
+Connect to any OpenAi-compatible service via a custom configuration
+API Key
+Chat Model Selection

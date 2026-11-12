@@ -1,0 +1,15 @@
+Gestion des données
+
+Configurez comment AnythingLLM stocke et traite vos données.
+
+LLM Provider
+Generic OpenAI compatible service
+Data is shared according to the terms of service applicable with your generic endpoint provider.
+Embedding Preference
+AnythingLLM Embedder
+Your document text is embedded privately on this instance of AnythingLLM.
+Vector Database
+LanceDB
+Your vectors and document text are stored privately on this instance of AnythingLLM.
+
+Ces paramètres peuvent être modifiés ultérieurement dans les paramètres.

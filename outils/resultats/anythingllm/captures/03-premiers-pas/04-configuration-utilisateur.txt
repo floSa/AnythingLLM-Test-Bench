@@ -1,0 +1,7 @@
+Configuration utilisateur
+
+Configurez votre accès utilisateur.
+
+Combien de personnes utiliseront cette instance ?
+Juste moi
+Mon équipe

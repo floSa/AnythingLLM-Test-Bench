@@ -1,0 +1,274 @@
+[
+ {
+  "capture": "03-premiers-pas/01-bienvenue.png",
+  "url": "/onboarding",
+  "pastilles": [
+   [
+    1,
+    "Commencer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:03:52"
+ },
+ {
+  "capture": "03-premiers-pas/02-preference-llm-recherche.png",
+  "url": "/onboarding/llm-preference",
+  "pastilles": [
+   [
+    1,
+    "Search LLM providers"
+   ],
+   [
+    2,
+    "Generic OpenAI"
+   ]
+  ],
+  "note": "",
+  "heure": "12:03:53"
+ },
+ {
+  "capture": "03-premiers-pas/03-preference-llm-champs.png",
+  "url": "/onboarding/llm-preference",
+  "pastilles": [
+   [
+    1,
+    "Base URL"
+   ],
+   [
+    2,
+    "API Key"
+   ],
+   [
+    3,
+    "Selected Model"
+   ],
+   [
+    4,
+    "Model context window"
+   ],
+   [
+    5,
+    "Max Tokens"
+   ],
+   [
+    6,
+    "flèche Continuer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:03:56"
+ },
+ {
+  "capture": "03-premiers-pas/04-configuration-utilisateur.png",
+  "url": "/onboarding/user-setup",
+  "pastilles": [
+   [
+    1,
+    "Juste moi"
+   ],
+   [
+    2,
+    "Mon équipe"
+   ]
+  ],
+  "note": "",
+  "heure": "12:03:57"
+ },
+ {
+  "capture": "03-premiers-pas/05-mot-de-passe-instance.png",
+  "url": "/onboarding/user-setup",
+  "pastilles": [
+   [
+    1,
+    "Oui"
+   ],
+   [
+    2,
+    "Mot de passe de l'instance"
+   ],
+   [
+    3,
+    "flèche Continuer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:03:58"
+ },
+ {
+  "capture": "03-premiers-pas/06-gestion-des-donnees.png",
+  "url": "/onboarding/data-handling",
+  "pastilles": [
+   [
+    1,
+    "flèche Continuer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:00"
+ },
+ {
+  "capture": "03-premiers-pas/07-enquete.png",
+  "url": "/onboarding/survey",
+  "pastilles": [
+   [
+    1,
+    "Ignorer l'enquête"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:01"
+ },
+ {
+  "capture": "03-premiers-pas/08-ecran-principal.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "liste des espaces de travail"
+   ],
+   [
+    2,
+    "+ (Nouvel Espace de Travail)"
+   ],
+   [
+    3,
+    "envoi de documents (flèche)"
+   ],
+   [
+    4,
+    "Envoyer un message"
+   ],
+   [
+    5,
+    "Outils"
+   ],
+   [
+    6,
+    "Paramètres (clé)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:08"
+ },
+ {
+  "capture": "03-premiers-pas/09-connexion.png",
+  "url": "/login?nt=1",
+  "pastilles": [
+   [
+    1,
+    "Mot de passe"
+   ],
+   [
+    2,
+    "Connexion"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:10"
+ },
+ {
+  "capture": "03-premiers-pas/10-langue.png",
+  "url": "/settings/interface",
+  "pastilles": [
+   [
+    1,
+    "Paramètres de l'instance (menu)"
+   ],
+   [
+    2,
+    "Langue d'affichage"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:12"
+ },
+ {
+  "capture": "03-premiers-pas/11-transcription-defaut.png",
+  "url": "/settings/transcription-preference",
+  "pastilles": [
+   [
+    1,
+    "fournisseur actuel"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:16"
+ },
+ {
+  "capture": "03-premiers-pas/12-transcription-compatible.png",
+  "url": "/settings/transcription-preference",
+  "pastilles": [
+   [
+    1,
+    "WhisperGenericOpenAiBaseUrl"
+   ],
+   [
+    2,
+    "WhisperGenericOpenAiApiKey"
+   ],
+   [
+    3,
+    "WhisperGenericOpenAiModel"
+   ],
+   [
+    4,
+    "Enregistrer les modifications"
+   ]
+  ],
+  "note": "",
+  "heure": "12:04:17"
+ },
+ {
+  "capture": "03-premiers-pas/13-embedder-defaut.png",
+  "url": "/settings/embedding-preference",
+  "pastilles": [
+   [
+    1,
+    "fournisseur actuel"
+   ]
+  ],
+  "note": "",
+  "heure": "12:20:48"
+ },
+ {
+  "capture": "03-premiers-pas/14-embedder-generic.png",
+  "url": "/settings/embedding-preference",
+  "pastilles": [
+   [
+    1,
+    "Base URL"
+   ],
+   [
+    2,
+    "Embedding Model"
+   ],
+   [
+    3,
+    "Max embedding chunk length"
+   ],
+   [
+    4,
+    "API Key"
+   ],
+   [
+    5,
+    "Enregistrer les modifications"
+   ]
+  ],
+  "note": "",
+  "heure": "12:20:51"
+ },
+ {
+  "capture": "03-premiers-pas/15-embedder-confirmation.png",
+  "url": "/settings/embedding-preference",
+  "pastilles": [
+   [
+    1,
+    "Confirm"
+   ]
+  ],
+  "note": "",
+  "heure": "12:20:54"
+ }
+]

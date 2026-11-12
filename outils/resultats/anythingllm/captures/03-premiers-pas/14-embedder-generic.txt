@@ -1,0 +1,55 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Préférence LLM
+
+Base de données vectorielle
+
+Préférences d'intégration
+
+Diviseur de texte et découpage
+
+Génération d'images
+
+Voix et Parole
+
+Modèle de transcription
+
+Routeur modèle
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Préférence d'intégration
+
+Lorsque vous utilisez un LLM qui ne supporte pas nativement un moteur d'intégration - vous devrez peut-être spécifier en plus des identifiants pour intégrer le texte.
+L'intégration est le processus de transformation du texte en vecteurs. Ces identifiants sont nécessaires pour transformer vos fichiers et invites en un format que AnythingLLM peut utiliser pour traiter.
+
+Enregistrer les modifications
+Fournisseur d'intégration
+Generic OpenAI
+Run embedding models from any OpenAI compatible API service.
+Base URL
+Embedding Model
+Max embedding chunk length
+API Key
+
+optional
+
+Show advanced settings

@@ -1,0 +1,20 @@
+Préférence LLM
+
+AnythingLLM peut fonctionner avec de nombreux fournisseurs LLM. Ce sera le service qui traitera vos discussions.
+
+Generic OpenAI
+Connect to any OpenAi-compatible service via a custom configuration
+Base URL
+API Key
+Selected Model
+chat
+embed
+rerank
+transcribe
+gemma-4-e4b
+qwen3.5-4b
+bge-m3
+bge-reranker-v2-m3
+faster-whisper-small
+Model context window
+Max Tokens

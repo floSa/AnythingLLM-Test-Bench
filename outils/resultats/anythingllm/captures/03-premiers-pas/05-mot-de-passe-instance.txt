@@ -1,0 +1,13 @@
+Configuration utilisateur
+
+Configurez votre accès utilisateur.
+
+Combien de personnes utiliseront cette instance ?
+Juste moi
+Mon équipe
+Définir un mot de passe
+Oui
+Non
+Mot de passe de l'instance
+Le mot de passe doit contenir au moins 8 caractères.
+Conservez ce mot de passe, il n'y a pas de récupération possible.
