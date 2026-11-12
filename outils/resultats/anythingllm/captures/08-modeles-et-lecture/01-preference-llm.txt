@@ -1,0 +1,59 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Préférence LLM
+
+Base de données vectorielle
+
+Préférences d'intégration
+
+Diviseur de texte et découpage
+
+Génération d'images
+
+Voix et Parole
+
+Modèle de transcription
+
+Routeur modèle
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Préférence LLM
+
+Voici les identifiants et les paramètres de votre fournisseur LLM de chat et d'intégration préféré. Il est important que ces clés soient actuelles et correctes, sinon AnythingLLM ne fonctionnera pas correctement.
+
+Fournisseur LLM
+Generic OpenAI
+Connect to any OpenAi-compatible service via a custom configuration
+Base URL
+API Key
+Selected Model
+chat
+embed
+rerank
+transcribe
+gemma-4-e4b
+qwen3.5-4b
+bge-m3
+bge-reranker-v2-m3
+faster-whisper-small
+Model context window
+Max Tokens

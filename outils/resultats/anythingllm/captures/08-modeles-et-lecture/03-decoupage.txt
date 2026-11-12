@@ -1,0 +1,52 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Préférence LLM
+
+Base de données vectorielle
+
+Préférences d'intégration
+
+Diviseur de texte et découpage
+
+Génération d'images
+
+Voix et Parole
+
+Modèle de transcription
+
+Routeur modèle
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Préférences de division et de découpage du texte
+
+Parfois, vous voudrez peut-être changer la façon dont les nouveaux documents sont divisés et découpés avant d'être insérés dans votre base de données vectorielle.
+Vous ne devez modifier ce paramètre que si vous comprenez comment fonctionne la division du texte et ses effets secondaires.
+
+Taille des segments de texte
+
+C'est la longueur maximale de caractères pouvant être présents dans un seul vecteur.
+
+Longueur maximale du modèle d'intégration est 1,000.
+
+Chevauchement des segments de texte
+
+C'est le chevauchement maximal de caractères qui se produit pendant le découpage entre deux segments de texte adjacents.

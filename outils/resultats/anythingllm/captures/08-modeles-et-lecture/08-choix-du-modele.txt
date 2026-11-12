@@ -1,0 +1,72 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+*New Thread
+
+New Thread
+
+Banc-bge-m3
+
+chat
+Model Router
+OpenAI
+Anthropic
+Gemini
+NVIDIA NIM
+Ollama
+LM Studio
+llmman
+Lemonade
+SambaNova
+Local AI
+Together AI
+Fireworks AI
+Mistral
+Perplexity AI
+OpenRouter
+Groq
+KoboldCPP
+Cohere
+LiteLLM
+DeepSeek
+PPIO
+AWS Bedrock
+Google Vertex AI
+APIpie
+Moonshot AI
+Privatemode
+Novita AI
+CometAPI
+Microsoft Foundry Local
+xAI
+Z.AI
+GiteeAI
+Minimax
+Cerebras
+oMLX
+Generic OpenAI
+
+Modèles disponibles pour Generic OpenAI
+
+Sélectionnez un modèle à utiliser pour cet espace de travail.
+
+chat
+embed
+rerank
+transcribe
+gemma-4-e4b
+qwen3.5-4b
+bge-m3
+bge-reranker-v2-m3
+faster-whisper-small
+Par où commençons-nous ?
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs

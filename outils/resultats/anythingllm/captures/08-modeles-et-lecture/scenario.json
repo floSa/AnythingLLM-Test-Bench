@@ -1,0 +1,118 @@
+[
+ {
+  "capture": "08-modeles-et-lecture/01-preference-llm.png",
+  "url": "/settings/llm-preference",
+  "pastilles": [
+   [
+    1,
+    "fournisseur actuel (Generic OpenAI)"
+   ],
+   [
+    2,
+    "Selected Model"
+   ],
+   [
+    3,
+    "Model context window"
+   ],
+   [
+    4,
+    "Max Tokens"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:15"
+ },
+ {
+  "capture": "08-modeles-et-lecture/02-base-vectorielle.png",
+  "url": "/settings/vector-database",
+  "pastilles": [
+   [
+    1,
+    "LanceDB (base intégrée)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:19"
+ },
+ {
+  "capture": "08-modeles-et-lecture/03-decoupage.png",
+  "url": "/settings/text-splitter-preference",
+  "pastilles": [
+   [
+    1,
+    "Taille des segments de texte"
+   ],
+   [
+    2,
+    "Chevauchement des segments de texte"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:23"
+ },
+ {
+  "capture": "08-modeles-et-lecture/04-generation-d-images.png",
+  "url": "/settings/image-generation-preference",
+  "pastilles": [
+   [
+    1,
+    "fournisseur de génération d'images"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:27"
+ },
+ {
+  "capture": "08-modeles-et-lecture/05-voix-et-parole.png",
+  "url": "/settings/audio-preference",
+  "pastilles": [
+   [
+    1,
+    "Speech-to-text (dictée)"
+   ],
+   [
+    2,
+    "Text-to-speech (lecture)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:31"
+ },
+ {
+  "capture": "08-modeles-et-lecture/06-confidentialite.png",
+  "url": "/settings/privacy",
+  "pastilles": [
+   [
+    1,
+    "Confidentialité et données"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:34"
+ },
+ {
+  "capture": "08-modeles-et-lecture/07-modele-de-l-espace.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "modèle utilisé (Sélectionner le modèle)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:39"
+ },
+ {
+  "capture": "08-modeles-et-lecture/08-choix-du-modele.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Rechercher des modèles"
+   ]
+  ],
+  "note": "",
+  "heure": "12:48:41"
+ }
+]
