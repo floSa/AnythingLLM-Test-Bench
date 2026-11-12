@@ -25,7 +25,7 @@
 - Un espace « Banc-… » par embedder ; documents envoyés avec `addToWorkspaces` ; mode `query` ; une session neuve par question (pas d'historique). Le raisonnement `<think>…</think>` est retiré avant notation. [Vérifié]
 - Exactitude : présence des éléments attendus dans la réponse ; refus : formule de refus reconnue sur les pièges ; jugement complémentaire par le modèle `chat` (réflexion coupée), signalé « juge LLM ». [Vérifié]
 - Citation : bon document parmi les sources renvoyées ; AnythingLLM ne donne pas la page (les pages d'un PDF sont mises bout à bout avant découpage). [Source] (`cadrage-serveur.md`)
-- `free -m` et `outils/communs/llm_central_sante.sh --essai` relevés avant chaque banc (en tête de chaque `banc-*.log`). [Vérifié]
+- `free -m` relevé avant chaque banc, et `outils/communs/llm_central_sante.sh --essai` avant chaque banc sauf le premier (`embedder-natif`, précédé du seul `free -m` ; santé vérifiée en début de session, `sante-2026-11-12-debut.txt`) : en tête de chaque `banc-*.log`. [Vérifié]
 - Série : `outils/anythingllm/serie_banc.sh` ; même espace « Banc-bge-m3 », mêmes questions, seul le réglage change. [Vérifié]
 
 ## 2. Résultats
@@ -42,10 +42,10 @@
 Lecture [Vérifié] :
 
 - **Embedder** : passer de l'embedder intégré (all-MiniLM-L6-v2, surtout anglais) à `embed` (bge-m3, multilingue) fait passer de 25 à 33 réponses justes sur 34, surtout sur les tableaux (5/10 → 10/10) et les questions à plusieurs documents (1/3 → 3/3).
-- **Tri de précision natif** (« Accuracy Optimized ») : 34/34 et 4/4 au lieu de 33/34 et 3/4, médiane identique (13,5 s contre 14,3 s), queue plus longue (p95 50 s contre 28 s).
+- **Tri de précision natif** (« Accuracy Optimized ») : 34/34 et 4/4 au lieu de 33/34 et 3/4, médiane proche (13,5 s contre 14,3 s), queue plus longue (p95 50 s contre 28 s).
 - **8 passages** au lieu de 4 : 34/34 et 4/4 sans tri ; avec tri, la médiane la plus basse (10,7 s).
 - **Réglage serré** (2 passages) : 31/34 ; les questions qui croisent deux informations perdent une moitié de réponse.
-- **Juge LLM** : 35 à 37 « oui » sur 38 selon le réglage, cohérent avec la notation par mots-clés.
+- **Juge LLM** : 27 « oui » sur 38 avec l'embedder intégré, 35 à 37 avec bge-m3 selon le réglage, cohérent avec la notation par mots-clés.
 - Indexation des 9 documents avec `embed` : 8,5 s (OCR et transcription compris) ; les autres bancs réutilisent l'espace déjà indexé (« - » ou 0).
 
 ## 3. Ce qui change le résultat
@@ -56,14 +56,14 @@ Lecture [Vérifié] :
 | « Accuracy Optimized » | réglages de l'espace › Base de données vectorielle | +1 juste, +1 refus correct ; p95 plus longue [Vérifié] |
 | « Nombre maximum de contextes » 8 | même onglet | +1 juste, +1 refus correct [Vérifié] |
 | « Nombre maximum de contextes » 2 | même onglet | −2 justes par rapport à 4 [Vérifié] |
-| « Max Tokens » 8192 au lieu de 1024 | Préférence LLM | évite les réponses coupées par la réflexion ; avec 64, message de limite atteinte [Vérifié] (chapitre 15) |
+| « Max Tokens » 8192 au lieu de 1024 | Préférence LLM | avec 64, message de limite atteinte [Vérifié] (`captures/15-problemes/05-reponse-coupee.txt`) ; 1024 risquerait de couper la réflexion [Estimation] (non essayé) ; deux réponses vides sont survenues à 8192 (Q38 défaut, Q34 serré) [Vérifié] |
 | OCR en français (`TARGET_OCR_LANG=fra,eng`) | `donnees/anythingllm/options.env` | « Brême » et « l'Acheteur » lus correctement ; non rejoué sur le banc, les 4 questions du scan étant déjà justes en anglais [Vérifié] (`ocr-fra-2026-11-12.log`) |
 
 ## 4. Reranker : ce que la solution accepte
 
 AnythingLLM 1.19.0 **n'accepte pas de reranker externe** : aucune variable ni route `/rerank` dans le code ; le modèle `rerank` du service central (bge-reranker-v2-m3) ne peut donc pas être branché. [Source] (`cadrage-serveur.md`, section 4)
 
-Seul existe le reranker intégré `Xenova/ms-marco-MiniLM-L-6-v2` (23 Mo, téléchargé au premier usage depuis Hugging Face), activé par espace avec « Accuracy Optimized » (`vectorSearchMode: "rerank"`) : 10 à 50 candidats sont retrouvés puis reclassés, les `topN` meilleurs gardés. [Source] Il a été comparé à l'absence de tri (section 2). Journal : « Reranking 10 documents to top 4 took 225ms » à « 255ms ». [Vérifié] (`journal-extraits-2026-11-12.txt`)
+Seul existe le reranker intégré `Xenova/ms-marco-MiniLM-L-6-v2` (23 Mo, téléchargé au premier usage depuis Hugging Face), activé par espace avec « Accuracy Optimized » (`vectorSearchMode: "rerank"`) : 10 à 50 candidats sont retrouvés puis reclassés, les `topN` meilleurs gardés. [Source] Il a été comparé à l'absence de tri (section 2). Journal : « Reranking 10 documents to top 4 took … » de 215 à 553 ms, médiane d'environ 260 ms. [Vérifié] (`journal-extraits-2026-11-12.txt`) Fonctionnement : [Source] (`server/utils/vectorDbProviders/lance/index.js`, lignes 99-170).
 
 ## 5. Questions manquées
 
@@ -72,25 +72,26 @@ Seul existe le reranker intégré `Xenova/ms-marco-MiniLM-L-6-v2` (23 Mo, télé
 | défaut | Q34 « Qui est le directeur de production de Vélanor ? » (attendu : Moreau, dans le message vocal) | le passage de la transcription n'est pas retrouvé parmi les 4 ; trouvé avec le tri ou 8 passages [Vérifié] |
 | défaut | Q38 (piège, salaire d'un salarié) | réponse vide : ni refus ni invention [Vérifié] |
 | serré (2) | Q12, Q30 | moitié de la réponse seulement (pays du fournisseur, délai moyen constaté) [Vérifié] |
-| embedder intégré | 9 questions (tableaux, plusieurs documents) | passages pertinents non retrouvés par un modèle surtout anglais [Vérifié] |
+| serré (2) | Q34 (directeur de production) | réponse vide [Vérifié] |
+| embedder intégré | 9 questions : 5 tableaux, 2 à plusieurs documents, Q14 (fait simple), Q16 (scan) | passages pertinents non retrouvés [Vérifié] ; cause probable : modèle surtout anglais [Estimation] |
 
 ## 6. Temps et mémoire
 
 - Médiane de 10,7 à 14,3 s par question, réflexion du modèle comprise ; p95 de 28 à 50 s (questions où le modèle réfléchit longtemps). [Vérifié]
-- Mémoire de l'application en pointe : 617 Mio (embedder intégré), 887 Mio (bge-m3), environ 1,56 Gio dès que le reranker intégré a été chargé (il reste en mémoire). [Vérifié] (`pic_ram_mo`)
-- Service central pendant les bancs : `llm-swap` 5,7 Gio, `llm-speaches` 1,3 Gio, `llm-central` 0,7 Gio ; carte graphique 8,1 Go sur 16. [Vérifié]
+- Mémoire de l'application en pointe : 617 Mio (embedder intégré), 887 Mio (bge-m3), 1 559 à 1 573 Mio (environ 1,5 Gio) dès que le reranker intégré a été chargé (il reste en mémoire). [Vérifié] (`pic_ram_mo`, en Mio)
+- Service central pendant les bancs : `llm-swap` 5,5 à 5,6 Gio, `llm-speaches` 1,3 Gio, `llm-central` 0,7 Gio ; carte graphique 8,1 à 8,5 Go sur 16 selon le banc. [Vérifié] (`pic_ram_mo`, `vram`)
 
 ## 7. Préconisations
 
-Pour des questions sur des documents en français : embedder `embed`, mode « Requête », « Accuracy Optimized », 6 à 8 passages, « Max Tokens » 8192, OCR en français si des scans sont prévus. Ce réglage donne 34/34 et 4/4 sur le banc. [Vérifié]
+Pour des questions sur des documents en français : embedder `embed`, mode « Requête », « Accuracy Optimized », 8 passages, « Max Tokens » 8192 : ce réglage donne 34/34 et 4/4 sur le banc, médiane 10,7 s [Vérifié] (`banc-2026-11-12-top8-rerank-natif.json`). OCR en français si des scans sont prévus [Estimation] (lecture améliorée vérifiée, non passée au banc).
 
 ## Dépannage
 
 | Symptôme | Cause probable | Action |
 |---|---|---|
 | Réponses fausses sur des tableaux | embedder intégré | brancher `embed` (chapitre 03) |
-| Réponse vide | réflexion qui consomme le plafond, ou mode Agent | « Max Tokens » 8192 ; mode « Requête » |
-| p95 élevée | longue réflexion du modèle | non réglable dans AnythingLLM (pas de paramètre de réflexion pour Generic OpenAI) [Source] |
+| Réponse vide | cause non établie : réflexion qui consomme le plafond ou mode Agent [Estimation] (la réponse brute n'est pas gardée dans les JSON) | « Max Tokens » 8192 ; mode « Requête » |
+| p95 élevée | longue réflexion du modèle | non réglable dans AnythingLLM (pas de paramètre de réflexion pour Generic OpenAI) [Source] (`server/utils/helpers/reasoningEffort.js`, lignes 134-199) |
 
 ## Sources
 

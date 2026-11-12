@@ -54,7 +54,7 @@ Cliquer sur « Nouveau dossier », taper `velanor-2025` (pastille 1), puis cliqu
 
 **Étape 3. Envoyer les fichiers**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au chapitre 04, étape 5) et sélectionner les 9 fichiers d'un coup (Ctrl+A dans la fenêtre de choix de Windows), ou les glisser ensemble dans la zone. Les essais ont aussi envoyé une note de test fictive, `note-de-test.txt` (dossier `outils/anythingllm/essais/` du dépôt), qui sert aux étapes 11 et 12.
+Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au chapitre 04, étape 5) et sélectionner les 9 fichiers d'un coup (Ctrl+A dans la fenêtre de choix de Windows), ou les glisser ensemble dans la zone. Ajouter à la sélection la note de test fictive `note-de-test.txt` (dossier `outils\anythingllm\essais` du dépôt) : elle sert aux étapes 11 et 12.
 
 ![Fichiers envoyés](../img/05-documents/03-fichiers-televerses.png)
 *Écran : fenêtre des documents, fichiers envoyés dans « custom-documents ».*
@@ -70,7 +70,7 @@ Cliquer dans la zone d'envoi, aller dans `corpus\documents` du dépôt (comme au
 
 **Étape 4. Déplacer les fichiers dans le dossier**
 *Où* : fenêtre des documents rouverte, dossier `custom-documents` ouvert.
-Cocher les 8 fichiers du corpus (tous sauf `note-de-test.txt`, et sauf un éventuel second `rapport-annuel-2025.pdf` déjà placé dans « Premier essai » au chapitre 04, marqué « Cached »), puis cliquer sur l'icône de dossier à droite de « Déplacer vers l'espace de travail » (pastille 2) et choisir `velanor-2025` dans la liste (pastille 3).
+Cocher les 8 fichiers du corpus envoyés à l'étape 3 (tous sauf `note-de-test.txt`). Si `rapport-annuel-2025.pdf` apparaît deux fois (l'un vient du chapitre 04), n'en cocher qu'un. Puis cliquer sur l'icône de dossier à droite de « Déplacer vers l'espace de travail » (pastille 2) et choisir `velanor-2025` dans la liste (pastille 3).
 
 ![Rangement dans un dossier](../img/05-documents/04-ranger-dans-un-dossier.png)
 *Écran : fenêtre des documents, fichiers cochés et liste des dossiers (la liste montre aussi des dossiers laissés par des essais précédents).*
@@ -170,7 +170,7 @@ Lire, puis cliquer sur « J'ai compris » (pastille 1).
 ## Retirer un document d'un espace
 
 **Étape 11. Retirer le document**
-*Où* : fenêtre des documents, colonne de l'espace, ligne du document. Pour l'exemple, `note-de-test.txt` (envoyée à l'étape 3) a d'abord été placée dans l'espace comme aux étapes 5 et 6.
+*Où* : fenêtre des documents, colonne de l'espace, ligne du document. Avant cette étape, placer `note-de-test.txt` (envoyée à l'étape 3) dans l'espace : la cocher dans `custom-documents`, « Déplacer vers l'espace de travail », puis « Sauvegarder et intégrer » (comme aux étapes 5 et 6).
 Cliquer sur la flèche de retrait (pastille 2).
 
 ![Retrait d'un document](../img/05-documents/11-retirer-de-l-espace.png)

@@ -44,9 +44,9 @@ AnythingLLM ne contient aucun modèle de réponse ici : il envoie ses demandes a
 ## 2. Un conteneur, deux processus
 
 - Le point d'entrée applique les migrations de la base SQLite (Prisma), puis lance le serveur (`server/index.js`, port 3001) et le collecteur (`collector/index.js`, port 8888 interne) ; si l'un s'arrête, le conteneur s'arrête. [Source] (`docker/docker-entrypoint.sh`)
-- Le contrôle de santé appelle `/api/ping` toutes les minutes ; réponse `{"online":true}`. [Vérifié] (`outils/anythingllm/etat.sh`)
-- Utilisateur `anythingllm` (UID 1000), Chromium intégré pour lire les pages web : le compose officiel donne la capacité `SYS_ADMIN` au conteneur pour le bac à sable de Chromium. [Source] (`docker/Dockerfile`, `docker/.env.example` lignes 536-539)
-- Mémoire au repos : 390 à 600 Mio selon l'activité. [Vérifié] (`outils/resultats/anythingllm/installation-2026-11-12.log`, `etat.sh`)
+- Le contrôle de santé appelle `/api/ping` toutes les minutes [Source] (`docker/Dockerfile`, ligne 181 ; `docker/docker-healthcheck.sh`) ; réponse `{"online":true}` [Vérifié] (`exploitation-2026-11-12.log`).
+- Utilisateur `anythingllm` (UID 1000), Chromium intégré pour lire les pages web [Source] (`docker/Dockerfile`) ; le compose officiel donne la capacité `SYS_ADMIN` au conteneur pour le bac à sable de Chromium [Source] (`docker/docker-compose.yml`, lignes 16-17 ; `docker/.env.example`, lignes 536-539).
+- Mémoire au repos : 330 à 480 Mio selon l'activité. [Vérifié] (`installation-2026-11-12.log`, `exploitation-2026-11-12.log`, `fin-de-mission-2026-11-12.log`)
 
 ## 3. Dossier de données
 
@@ -86,20 +86,20 @@ Changer d'embedder efface les vecteurs de tous les espaces : les documents doive
 1. La question est transformée en vecteur par le même embedder.
 2. LanceDB renvoie les `topN` passages les plus proches (4 par défaut) dont la similarité dépasse le seuil (0,25 par défaut). [Source] (`server/utils/vectorDbProviders/lance/index.js`)
 3. Avec « Accuracy Optimized », 10 à 50 candidats sont d'abord retrouvés, puis reclassés par le reranker natif (`Xenova/ms-marco-MiniLM-L-6-v2`), et les `topN` meilleurs gardés. [Source] (même fichier, lignes 99-170)
-4. Les documents épinglés sont ajoutés en entier ; si moins de `topN` passages sont trouvés, des passages cités aux tours précédents complètent. [Source] (`server/utils/chats/apiChatHandler.js`)
+4. Les documents épinglés sont ajoutés en entier ; si moins de `topN` passages sont trouvés, des passages cités aux tours précédents complètent. [Source] (`server/utils/chats/apiChatHandler.js`, lignes 321-338 et 382-404)
 5. Le message système contient la consigne de l'espace, puis les passages sous la forme `[CONTEXT 0] … [END CONTEXT 0]`. [Source] (`server/utils/AiProviders/genericOpenAi/index.js`, lignes 95-105)
 6. En mode **Requête**, si aucun passage n'est trouvé, la réponse de refus de l'espace est renvoyée sans appeler le modèle. [Source]
 7. En mode **Agent** (le mode par défaut d'un nouvel espace, appelé `automatic` dans l'API), la question part à l'agent, qui décide lui-même d'appeler la recherche dans les documents. [Source] (`server/models/workspace.js`, lignes 220-226 ; `server/utils/chats/agents.js`)
 
 ## 7. Budget de contexte
 
-La fenêtre déclarée (« Model context window », ici 16 384 jetons) est partagée ainsi : consigne et passages 15 %, historique 15 %, question 70 %, avec une marge fixe de 600 jetons ; rien n'est raccourci tant que l'ensemble tient. [Source] (`server/utils/helpers/chat/index.js`)
+La fenêtre déclarée (« Model context window », ici 16 384 jetons) est partagée ainsi : consigne et passages 15 %, historique 15 %, question 70 %, avec une marge fixe de 600 jetons ; rien n'est raccourci tant que l'ensemble tient. [Source] (répartition : `server/utils/AiProviders/genericOpenAi/index.js`, lignes 46-50 ; marge et compression : `server/utils/helpers/chat/index.js`, lignes 53-190)
 
 | Part | Jetons sur 16 384 | Ce qui se passe au-delà |
 |---|---|---|
 | Consigne et passages | 2 457 | la consigne est ramenée à 25 % de la part, les passages à 75 %, en supprimant le milieu |
 | Historique | 2 457 | seules les paires les plus récentes sont gardées |
-| Question | 11 468 | la question est envoyée seule, coupée au milieu |
+| Question | 11 468 | la question est envoyée seule, coupée au milieu pour tenir dans 80 % de la fenêtre (13 107 jetons) |
 
 Avec 4 passages de 1 000 caractères (environ 300 jetons chacun), la part « consigne et passages » est loin d'être pleine. [Estimation] Le comptage utilise le découpage en jetons d'OpenAI (`cl100k_base`), pas celui de Qwen : c'est une approximation. [Source] (`server/utils/helpers/tiktoken.js`)
 
@@ -110,17 +110,17 @@ Le plafond de la réponse (« Max Tokens », 1 024 par défaut, 8 192 ici) n'est
 - Le modèle `chat` (Qwen3.5-4B) réfléchit avant de répondre ; AnythingLLM lit cette réflexion (`reasoning_content`) et la place en tête de la réponse entre balises `<think>` et `</think>`. L'interface la replie ; l'API la renvoie dans `textResponse`. [Source] (`server/utils/AiProviders/genericOpenAi/index.js`, lignes 213-219 et 346-387)
 - La réflexion est renvoyée telle quelle au modèle dans l'historique des tours suivants : elle consomme la part « historique ». [Source] (`server/utils/helpers/chat/responses.js`, lignes 284-315)
 - Le fournisseur « Generic OpenAI » n'envoie aucun paramètre pour couper la réflexion (`chat_template_kwargs`) : elle ne se coupe que du côté du service de modèles. [Source] (`server/utils/helpers/reasoningEffort.js`)
-- Avec le plafond par défaut de 1 024 jetons, la réflexion peut consommer tout le plafond et laisser une réponse vide ou coupée ; c'est pourquoi « Max Tokens » est réglé à 8 192. [Source]
+- Plafond par défaut de 1 024 jetons [Source] (`server/utils/AiProviders/genericOpenAi/index.js`, lignes 41-43) ; la réflexion pourrait alors consommer tout le plafond [Estimation] ; avec 64 jetons, AnythingLLM affiche un message de limite atteinte [Vérifié] (`captures/15-problemes/05-reponse-coupee.txt`). D'où « Max Tokens » à 8 192.
 
 ## 9. Modèles téléchargés par l'application
 
 | Modèle | Usage | Quand | Taille |
 |---|---|---|---|
-| `Xenova/all-MiniLM-L6-v2` | embedder natif | premier document intégré avec l'embedder natif | 23 Mo [Vérifié] |
-| `Xenova/ms-marco-MiniLM-L-6-v2` | reranker natif | premier usage de « Accuracy Optimized » | [Source] |
-| `eng.traineddata` (Tesseract) | OCR | premier PDF scanné | 5 Mo [Vérifié] |
-| `fra.traineddata` (Tesseract) | OCR en français | premier PDF scanné après `TARGET_OCR_LANG=fra,eng` | [Vérifié] (`storage/models/tesseract/`) |
-| `Xenova/whisper-small` | transcription intégrée | jamais ici (transcription confiée à `transcribe`) | environ 250 Mo [Source] |
+| `Xenova/all-MiniLM-L6-v2` | embedder natif | premier document intégré avec l'embedder natif | 23 Mo [Vérifié] (`fin-de-mission-2026-11-12.log`) |
+| `Xenova/ms-marco-MiniLM-L-6-v2` | reranker natif | premier usage de « Accuracy Optimized » | 23 Mo [Vérifié] (`fin-de-mission-2026-11-12.log`) ; nom du modèle [Source] (`server/utils/EmbeddingRerankers/native/index.js`, lignes 20-23) |
+| `eng.traineddata` (Tesseract) | OCR | premier PDF scanné | 5,2 Mo [Vérifié] (`fin-de-mission-2026-11-12.log`) |
+| `fra.traineddata` (Tesseract) | OCR en français | premier PDF scanné après `TARGET_OCR_LANG=fra,eng` | 1,2 Mo [Vérifié] (`fin-de-mission-2026-11-12.log`) |
+| `Xenova/whisper-small` | transcription intégrée | jamais ici (transcription confiée à `transcribe`) | environ 250 Mo [Source] (`collector/utils/WhisperProviders/localWhisper.js`) |
 
 Origine : Hugging Face, avec repli sur `cdn.anythingllm.com` ; cache dans `storage/models/`. [Source] (`server/utils/EmbeddingEngines/native/index.js`)
 

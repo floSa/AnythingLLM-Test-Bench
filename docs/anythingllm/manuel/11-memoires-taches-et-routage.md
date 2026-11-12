@@ -82,7 +82,7 @@ Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pas
 | 3 | calendrier | fréquence d'exécution |
 | 4 | « Créer un emploi » | enregistre la tâche |
 
-*Résultat* : le message « Emploi créé » s'affiche.
+*Résultat* : le message « Emploi créé » s'affiche. La tâche ne se rattache à aucun espace : la consigne est envoyée au modèle avec les compétences cochées dans « Outils (facultatifs) » ; sans outil (par exemple « RAG et mémoire à long terme »), le modèle répond sans lire les documents. L'exécution n'a pas été observée pendant les essais.
 
 **Étape 6. Suivre la tâche**
 *Où* : « Tâches planifiées ».
@@ -137,7 +137,7 @@ Remplir « Nom » (pastille 1) avec `Routeur Vélanor` et, facultatif, « Descri
 |---|---|---|
 | 1 | « Routeur Vélanor » | routeur, avec son plan de secours `generic-openai/chat`, 0 règle et 0 espace |
 
-*Résultat* : le routeur est prêt à recevoir des règles. Il se choisit ensuite comme fournisseur d'un espace : réglages de l'espace › « Paramètres du chat » › « Fournisseur LLM de l'espace de travail » (chapitre 07, étape 2), où « Model Router » figure dans la liste. Sur ce poste, le service propose aussi `gemma-4-e4b` : une règle peut, par exemple, envoyer les questions courtes à ce modèle.
+*Résultat* : le routeur est créé, sans règle : la création des règles (par sujet ou par longueur de question) n'est pas décrite dans ce manuel, et sans règle toutes les questions vont au modèle de secours. Il se choisit ensuite comme fournisseur d'un espace : réglages de l'espace › « Paramètres du chat » › « Fournisseur LLM de l'espace de travail » (chapitre 07, étape 2), où « Model Router » figure dans la liste. Sur ce poste, le service propose aussi `gemma-4-e4b` : une règle peut, par exemple, envoyer les questions courtes à ce modèle.
 
 ## Bon à savoir
 

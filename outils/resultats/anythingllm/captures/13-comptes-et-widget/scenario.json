@@ -224,18 +224,6 @@
   "heure": "14:05:34"
  },
  {
-  "capture": "13-comptes-et-widget/16-widget-reponse.png",
-  "url": "http://rag-anythingllm-site/widget-actif.html",
-  "pastilles": [
-   [
-    1,
-    "réponse dans le site"
-   ]
-  ],
-  "note": "",
-  "heure": "14:05:44"
- },
- {
   "capture": "13-comptes-et-widget/14-code-du-widget.png",
   "url": "/settings/embed-chat-widgets",
   "pastilles": [
@@ -382,5 +370,56 @@
   ],
   "note": "",
   "heure": "14:25:37"
+ },
+ {
+  "capture": "04-premiere-question/05-document-televerse.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ],
+   [
+    2,
+    "croix (fermer)"
+   ]
+  ],
+  "note": "",
+  "heure": "14:34:07"
+ },
+ {
+  "capture": "04-premiere-question/14-extrait-cite.png",
+  "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
+  "pastilles": [
+   [
+    1,
+    "Referenced 4 times."
+   ],
+   [
+    2,
+    "fermer"
+   ]
+  ],
+  "note": "",
+  "heure": "14:34:15"
+ },
+ {
+  "capture": "15-problemes/06-texte-ocr.png",
+  "url": "/workspace/demo-velanor/t/ad4c4b40-b2e1-41f3-abce-de18fe641916",
+  "pastilles": [],
+  "note": "",
+  "heure": "14:34:54"
+ },
+ {
+  "capture": "13-comptes-et-widget/16-widget-reponse.png",
+  "url": "file:///depot/donnees/widget-fichier.html",
+  "pastilles": [
+   [
+    1,
+    "réponse dans la page"
+   ]
+  ],
+  "note": "",
+  "heure": "14:35:14"
  }
 ]

@@ -28,7 +28,7 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Paramètres du chat | › « Paramètres du chat » | fournisseur et modèle de l'espace, mode (« Agent », « Chat », « Requête »), « Historique des chats », invite système, « Réponse de refus en mode requête », « Température LLM » | [07](../manuel/07-regler-un-espace-de-travail.md) |
 | Base de données vectorielle | › « Base de données vectorielle » | identifiant, « Nombre de vecteurs », préférence de recherche (« Default », « Accuracy Optimized »), « Nombre maximum de contextes », « Seuil de similarité des documents », « Réinitialiser la base de données vectorielle » | [07](../manuel/07-regler-un-espace-de-travail.md) |
 | Membres | › « Membres » (multi-utilisateur) | liste des membres, « Manage Users » | [13](../manuel/13-comptes-equipe-et-widget.md) |
-| Configuration de l'agent | › « Configuration de l'agent » | fournisseur et modèle de l'agent de l'espace, « Configure Agent Skills » | [10](../manuel/10-agents-et-outils.md) |
+| Configuration de l'agent | › « Configuration de l'agent » | fournisseur et modèle de l'agent de l'espace, « Configure Agent Skills » | [07](../manuel/07-regler-un-espace-de-travail.md), [10](../manuel/10-agents-et-outils.md) |
 
 ## Paramètres de l'instance
 
@@ -47,7 +47,8 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Chat de l'espace de travail | › « Chat de l'espace de travail » | historique de toutes les conversations, « Exporter », « Clear Chats » | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Invitation | › « Invitation » (multi-utilisateur) | « Create Invite Link », « Copy Invite Link » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Default System Prompt | › « Default System Prompt » | « System Prompt », « Save Changes » | [12](../manuel/12-personnaliser-et-administrer.md) |
-| Compétences de l'agent | Paramètres › « Compétences de l'agent » | compétences intégrées, « Agent Flows », « MCP Servers », « Custom Skills » | [10](../manuel/10-agents-et-outils.md) |
+| Compétences de l'agent | Paramètres › « Compétences de l'agent » | compétences intégrées, « Agent Flows », « Serveurs MCP » | [10](../manuel/10-agents-et-outils.md) |
+| Compétences personnalisées | même page, « Custom Skills » | import de compétences écrites en code | Non couvert : aucune compétence personnalisée importée (demande du code tiers à relire) |
 | Éditeur d'agent flow | › « Agent Flows » › « Create Flow » | blocs, enregistrement | [10](../manuel/10-agents-et-outils.md) |
 | Centre communautaire | Paramètres › « Centre communautaire » | tendances, compte, import | Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périmètre (aucun compte en ligne) |
 | Interface | Paramètres › Apparence › « Interface » | « Thème », « Palette de couleurs », « Langue d'affichage » | [03](../manuel/03-premiers-pas.md), [12](../manuel/12-personnaliser-et-administrer.md) |

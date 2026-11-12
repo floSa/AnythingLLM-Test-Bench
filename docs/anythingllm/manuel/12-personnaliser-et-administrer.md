@@ -57,7 +57,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 ## Administration
 
 **Étape 4. Liste des espaces**
-*Où* : Paramètres de l'instance › Admin › « Espaces de travail ». Cette entrée, comme « Utilisateurs » et « Invitation », n'existe qu'en multi-utilisateur (chapitre 13) ; en mode « Juste moi », le groupe Admin ne contient que « Chat de l'espace de travail » et « Default System Prompt ».
+*Où* : à faire après le chapitre 13. Paramètres de l'instance › Admin › « Espaces de travail ». Cette entrée, comme « Utilisateurs » et « Invitation », n'existe qu'en multi-utilisateur (chapitre 13) ; en mode « Juste moi », le groupe Admin ne contient que « Chat de l'espace de travail » et « Default System Prompt ».
 
 ![Espaces de l'instance](../img/12-administrer/04-espaces-de-travail.png)
 *Écran : « Instance Workspaces » (page en anglais).*
@@ -80,7 +80,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 | 1 | « Exporter » | télécharge tout l'historique |
 | 2 | « Clear Chats » | efface tout l'historique enregistré |
 
-*Résultat* : chaque ligne montre l'expéditeur (« API » pour les programmes), l'espace, la question et la réponse. La réponse enregistrée commence par la réflexion du modèle (`<think>…`).
+*Résultat* : chaque ligne montre l'expéditeur (« API » pour les programmes ; « unknown user » dans les journaux désigne une action sans compte, en mode « Juste moi » ou par une clé d'API), l'espace, la question et la réponse. La réponse enregistrée commence par la réflexion du modèle (`<think>…`).
 
 **Étape 6. Consigne par défaut des nouveaux espaces**
 *Où* : Paramètres de l'instance › Admin › « Default System Prompt ».
@@ -143,7 +143,7 @@ Cliquer sur « Créer la clé API » (pastille 1).
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | clé générée | à copier tout de suite (masquée sur la capture) |
+| 1 | clé générée | à copier tout de suite : sélectionner le texte du champ puis Ctrl+C (masquée sur la capture) |
 | 2 | « Fermer » | ferme la fenêtre |
 
 *Résultat* : la clé sert aux programmes (annexe A3) dans l'en-tête `Authorization: Bearer <clé>`.

@@ -4,12 +4,12 @@ Cette page de test charge la fenêtre de discussion d'AnythingLLM liée à l'esp
 
 Quelle est la durée de garantie du cadre ?
 
-2:05 PM
+2:34 PM
 Anything LLM Chat Assistant
 
-Le cadre est garanti 7 ans selon la FAQ du service après-vente de Vélanor.
+Le cadre est garanti 7 ans.
 
-2:05 PM
+2:34 PM
 Send message
 Powered by AnythingLLM
 Reset Chat

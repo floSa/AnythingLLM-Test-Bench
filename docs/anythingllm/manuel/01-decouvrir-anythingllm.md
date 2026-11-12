@@ -112,7 +112,7 @@ Le matériel se partage entre le service de modèles (le plus gros) et AnythingL
 | Élément | Minimum |
 |---|---|
 | Processeur | 8 cœurs récents |
-| Mémoire vive | 16 Go : environ 4,3 Go pour le service de modèles, 1 à 1,6 Go pour AnythingLLM, le reste pour Windows et WSL |
+| Mémoire vive | 16 Go : environ 4,3 Go pour le service de modèles, 0,4 à 1,6 Go pour AnythingLLM, le reste pour Windows et WSL |
 | Disque libre | 15 Go : 3,4 Go pour l'image d'AnythingLLM, environ 5 Go pour les modèles du service, le reste pour les documents |
 | Temps d'attente | le modèle produit environ 14 jetons par seconde, cinq fois moins qu'avec une carte graphique : compter 1 à 2 minutes par réponse, réflexion comprise (estimation, annexe A2) |
 
@@ -121,7 +121,7 @@ Le matériel se partage entre le service de modèles (le plus gros) et AnythingL
 | Élément | Minimum |
 |---|---|
 | Carte graphique | 8 Go de mémoire (7 Go pris par les trois modèles permanents) ; 16 Go sur le poste d'essai |
-| Mémoire vive | 16 Go : environ 5,4 Go pour le service de modèles, 1 à 1,6 Go pour AnythingLLM |
+| Mémoire vive | 16 Go : environ 5,4 Go pour le service de modèles, 0,4 à 1,6 Go pour AnythingLLM |
 | Disque libre | 15 Go |
 | Temps d'attente | environ 68 jetons par seconde : la plupart des réponses arrivent en 11 à 14 secondes, réflexion comprise, les plus longues en 50 secondes |
 

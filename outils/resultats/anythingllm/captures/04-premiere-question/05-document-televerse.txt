@@ -1,10 +1,26 @@
+AD
+
 Mon Espace de Travail
 
 Premier essai
 
+Quel est le chiffre d'…
+
+Thread
+
+Thread
+
+Thread
+
+Thread
+
 *New Thread
 
 New Thread
+
+Démo Vélanor
+
+Sources externes
 
 Documents
 Connecteurs de données
@@ -13,7 +29,7 @@ Nouveau dossier
 
 Name
 
-1
+17 documents
 
 custom-documents
 
@@ -21,14 +37,29 @@ custom-documents
 
 rapport-annuel-2025.pdf
 
-stocks-octobre-2025.xlsx-d60b
+jawed-youtube-transcripts
+
+(1)
+
+octocat-hello-world-master-ea2a
+
+(1)
+
+rag-anythingllm-site-82c5
+
+(3)
+
+stocks-octobre-2025.xlsx-7dae
+
+(2)
+
+velanor-2025
+
+(8)
 
 Déplacer vers l'espace de travail
-
-rapport-annuel-2025.pdf
-
-52.5 KiB | 0.10s
-
+Cliquez pour télécharger ou glissez-déposez
+prend en charge les fichiers texte, CSV, feuilles de calcul, fichiers audio, et plus encore !
 ou soumettre un lien
 Récupérer le site web
 Ces fichiers seront téléchargés sur cette instance AnythingLLM uniquement.
@@ -36,10 +67,12 @@ Premier essai
 
 Name
 
-Aucun document
+1
+
+rapport-annuel-2025.pdf
 
 chat
-Prenons le temps d'y réfléchir.
+Prêt quand vous l'êtes.
 Outils
 Envoyer le message au chatbot
 Créer un agent
@@ -47,5 +80,3 @@ Modifier l'espace de travail
 Télécharger un document
 
 Souvenirs
-
-Premier essai

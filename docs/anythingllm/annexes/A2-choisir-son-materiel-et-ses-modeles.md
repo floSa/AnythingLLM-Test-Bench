@@ -20,9 +20,9 @@
 
 | Élément | Mémoire | Statut |
 |---|---|---|
-| AnythingLLM au repos | 390 à 600 Mio | [Vérifié] (`installation-2026-11-12.log`, `etat.sh`) |
+| AnythingLLM au repos | 330 à 480 Mio | [Vérifié] (`installation-2026-11-12.log`, `exploitation-2026-11-12.log`, `fin-de-mission-2026-11-12.log`) |
 | AnythingLLM pendant le banc, embedding par le service | 887 Mio | [Vérifié] (`banc-2026-11-12-defaut-sans-rerank.json`) |
-| AnythingLLM avec le tri de précision chargé | environ 1,56 Gio (le petit modèle reste en mémoire) | [Vérifié] (`banc-2026-11-12-rerank-natif.json`) |
+| AnythingLLM avec le tri de précision chargé | 1 559 à 1 573 Mio, environ 1,5 Gio (le petit modèle reste en mémoire) | [Vérifié] (`banc-2026-11-12-rerank-natif.json`) |
 | Service central, profil `cpu` : LiteLLM, llama-swap, speaches | 0,59 + 3,6 + 0,13 Gio ≈ 4,3 Go | [Source] (`LLM-Service/mesures/cpu/memoire-vive-conteneurs.txt`) |
 | Service central, profil `gpu` : mémoire vive | LiteLLM 0,8, llama-swap 4,4, speaches 0,2 à 1,5 Go | [Source] (`LLM-Service/README.md`, « Mesures ») |
 | Service central, profil `gpu` : carte graphique | 7,0 Go pour `chat`, `embed` et `rerank` ; 8,1 Go relevés en fin de banc avec le bureau Windows | [Source] [Vérifié] |
@@ -36,11 +36,11 @@ Machine type : PC portable Intel Core Ultra 7 255H, 15,3 Go dans WSL ; service e
 | Élément | Valeur | Statut |
 |---|---|---|
 | Processeur | 8 cœurs récents (AVX2) | [Estimation] (profil A du banc) |
-| Mémoire vive | 16 Go : 4,3 Go service, 0,9 à 1,6 Go AnythingLLM, le reste pour Windows, WSL et Docker | [Estimation] (somme des lignes de la section 1) |
+| Mémoire vive | 16 Go : 4,3 Go service, 0,9 à 1,5 Gio AnythingLLM, le reste pour Windows, WSL et Docker | [Estimation] (somme des lignes de la section 1) |
 | Disque | 15 Go : image AnythingLLM 3,4 Go, modèles du service environ 5 Go, données | [Estimation] |
-| Débit de `chat` | 14 jetons/s pour une requête, 31 jetons/s cumulés pour quatre | [Source] (`LLM-Service/README.md`) |
-| Réflexion sur une question de calcul | environ 2 minutes | [Source] (idem) |
-| Temps de réponse attendu | environ 5 fois le profil B : 1 à 2 minutes par question, réflexion comprise | [Estimation] (68 / 14 ≈ 4,9 appliqué à la médiane de 11 à 14 s du profil B) |
+| Débit de `chat` | 14 jetons/s pour une requête, 31 jetons/s cumulés pour quatre, mesurés en profil `cpu` sur le Ryzen 5 9600X | [Source] (`LLM-Service/README.md`) ; sur le Core Ultra 7 255H du profil A : [Estimation] du même ordre |
+| Réflexion sur une question de calcul | environ 2 minutes (même machine Ryzen, profil `cpu`) | [Source] (idem) |
+| Temps de réponse attendu | environ 1 minute en médiane, 2 à 4 minutes pour les plus longues | [Estimation] (68 / 14 ≈ 4,9 appliqué à la médiane de 10,7 à 14,3 s et au p95 de 28 à 50 s du profil B) |
 | Indexation des 9 documents | 10 à 20 s (embedding 0,08 s pour 10 passages contre 0,05 s ; OCR et transcription sur le processeur) | [Estimation] |
 
 | Profil A | Valeur |
@@ -48,10 +48,10 @@ Machine type : PC portable Intel Core Ultra 7 255H, 15,3 Go dans WSL ; service e
 | Profil du service | `cpu` (`llm-swap-cpu`) |
 | Modèles | `chat` = Qwen3.5-4B Q4_K_M, `embed` = bge-m3 Q8_0, `rerank` = bge-reranker-v2-m3 (non utilisé par AnythingLLM), `transcribe` = faster-whisper-small |
 | Contexte | 16 384 jetons |
-| Mémoire service et application | 4,3 Go + 0,9 à 1,6 Go [Estimation] |
+| Mémoire service et application | 4,3 Go + 0,9 à 1,5 Gio [Estimation] |
 | Réglages conseillés | 4 passages, « Max Tokens » 8192, historique 20 ; tri de précision possible (calculé sur le processeur, 0,25 s pour 10 passages) |
 | Résultats du banc | non mesurés sur ce profil ; la qualité ne dépend pas du matériel (mêmes modèles) [Estimation] |
-| Temps d'attente | 1 à 2 minutes par réponse [Estimation] |
+| Temps d'attente | environ 1 minute en médiane, jusqu'à 4 minutes [Estimation] |
 
 ## 3. Profil B : avec carte graphique NVIDIA
 
@@ -60,10 +60,10 @@ Machine d'essai : Ryzen 5 9600X, 32 Go dans WSL, RTX 4060 Ti 16 Go, pilote 616.9
 | Profil B | Valeur | Statut |
 |---|---|---|
 | Profil du service | `gpu` (`llm-swap`) | [Vérifié] |
-| Modèles | mêmes que le profil A | [Vérifié] (`/v1/models`) |
+| Modèles | mêmes noms que le profil A [Vérifié] (`/v1/models`) ; quantifications Q4_K_M et Q8_0 [Source] (README de LLM-Service) |
 | Contexte | 16 384 jetons | [Vérifié] |
-| Carte graphique | 8 Go minimum (7,0 Go pour les trois modèles permanents) | [Source] |
-| Mémoire vive | 16 Go : 5,4 Go service, 0,9 à 1,6 Go AnythingLLM | [Source] [Vérifié] |
+| Carte graphique | 12 Go conseillés : 7,0 Go pour les trois modèles permanents [Source] (README de LLM-Service, « Mesures ») plus 1,8 Go pour Windows ; 8,1 à 8,5 Go mesurés en service sur la carte de 16 Go [Vérifié] ; une carte de 8 Go est trop juste [Estimation] |
+| Mémoire vive | 16 Go : 5,4 Go pour le service au repos [Source] (README de LLM-Service) ; 7,6 Gio mesurés pendant le banc, transcription chargée [Vérifié] (`pic_ram_mo`) ; 0,9 à 1,5 Gio AnythingLLM [Vérifié] |
 | Débit de `chat` | 68 jetons/s pour une requête, 174 jetons/s cumulés pour quatre | [Source] |
 | Réglages | embedder `embed`, mode « Requête », 4 ou 8 passages, avec ou sans tri de précision | [Vérifié] |
 | Résultats du banc | 33/34 à 34/34 justes, 3/4 à 4/4 refus | [Vérifié] (A1) |
@@ -71,7 +71,7 @@ Machine d'essai : Ryzen 5 9600X, 32 Go dans WSL, RTX 4060 Ti 16 Go, pilote 616.9
 
 ## 4. Budget de contexte et volume de documents
 
-AnythingLLM partage la fenêtre de 16 384 jetons en consigne et passages (15 %, 2 457 jetons), historique (15 %) et question (70 %), avec 600 jetons de marge ; le plafond de réponse (« Max Tokens ») n'est pas retranché. [Source] (annexe A5, section 7)
+AnythingLLM partage la fenêtre de 16 384 jetons en consigne et passages (15 %, 2 457 jetons), historique (15 %) et question (70 %), avec 600 jetons de marge ; le plafond de réponse (« Max Tokens ») n'est pas retranché. [Source] (`server/utils/AiProviders/genericOpenAi/index.js`, lignes 46-50 ; `server/utils/helpers/chat/index.js`, ligne 53)
 
 | Réglage | Passages | Jetons de passages | Place restante dans la part « consigne et passages » |
 |---|---|---|---|
@@ -79,11 +79,11 @@ AnythingLLM partage la fenêtre de 16 384 jetons en consigne et passages (15 %, 
 | 8 passages | 8 | environ 2 400 | presque pleine : au-delà, AnythingLLM coupe le milieu [Estimation] |
 | document épinglé | entier | taille du document | un document de plus de 2 000 jetons fait réduire les autres [Estimation] |
 
-Le nombre de documents d'un espace n'est pas limité par le contexte : seuls les passages retrouvés partent au modèle. La limite vient de la question elle-même : le modèle `embed` refuse une question de plus de 8 192 jetons (« input (20418 tokens) is too large to process », message de 81 667 caractères). [Vérifié] (`outils/resultats/anythingllm/contexte-2026-11-12.txt`)
+Le nombre de documents d'un espace n'est pas limité par le contexte : seuls les passages retrouvés partent au modèle. La limite vient de la question elle-même : une question de 20 418 jetons (81 667 caractères) est refusée par `embed` (« input (20418 tokens) is too large to process ») [Vérifié] (`outils/resultats/anythingllm/contexte-2026-11-12.txt`) ; la limite est de 8 192 jetons par requête d'embedding [Source] (LLM-Service, `.env.example`, `LLAMA_EMBED_CTX_PER_REQUEST=8192`).
 
 ## 5. Modèles
 
-- Les modèles sont ceux du service central, noms fixes `chat`, `embed`, `transcribe` ; `rerank` est disponible mais AnythingLLM ne sait pas l'utiliser (annexe A1, section 4). [Vérifié]
+- Les modèles sont ceux du service central, noms fixes `chat`, `embed`, `transcribe` [Vérifié] ; `rerank` est disponible mais AnythingLLM ne sait pas l'utiliser [Source] (`cadrage-serveur.md`, section 4).
 - Un modèle plus léger, pour situer un plancher de qualité, relève de LLM-Service : proposition inscrite dans les décisions en attente du [journal](../../../JOURNAL.md#décisions-en-attente).
 - La réflexion de `chat` ne peut pas être coupée depuis AnythingLLM (fournisseur Generic OpenAI sans paramètre de réflexion) ; le levier serait côté service. [Source]
 - Un second modèle de réponse est exposé sans modification du service : `gemma-4-e4b` (chargé à la demande, environ 5,3 Go de carte graphique en plus). Il se choisit par espace (chapitre 08) ; non passé au banc. [À tester]
@@ -94,7 +94,7 @@ Le nombre de documents d'un espace n'est pas limité par le contexte : seuls les
 |---|---|---|
 | WSL ralentit fortement | moins de 2 Go de mémoire libre | arrêter les autres applications du banc ; vérifier `free -m` |
 | Réponses de plusieurs minutes | profil `cpu` et longue réflexion | normal sur processeur ; préférer des questions précises |
-| Question refusée avec « too large to process » | question de plus de 8 192 jetons | envoyer le texte comme document |
+| Question refusée avec « too large to process » | question trop longue pour l'embedding (8 192 jetons au plus [Source]) | envoyer le texte comme document |
 
 ## Sources
 

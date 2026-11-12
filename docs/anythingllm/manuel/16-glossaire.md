@@ -45,6 +45,10 @@ Les termes communs à toute la série de manuels (RAG, embedding, jeton, reranke
 | OCR | — | lecture optique des caractères : transforme l'image d'un document scanné en texte |
 | Cached | « Cached » | badge d'un fichier dont les représentations sont déjà calculées |
 | UTC | — | temps universel, heure de référence internationale (une heure de moins que Paris en hiver) |
+| Instance | « Paramètres de l'instance » | une installation d'AnythingLLM, avec ses comptes, espaces et réglages |
+| Consigne, invite | « Invite », « System Prompt » | texte d'instructions donné au modèle avant chaque question |
+| Température | « Température LLM » | réglage qui rend les réponses plus variées (valeur haute) ou plus constantes (valeur basse) |
+| Intégration (deux sens) | « Préférences d'intégration », « Sauvegarder et intégrer » | désigne à la fois le modèle d'embedding (réglage de l'instance) et l'action de préparer un document pour la recherche |
 | Multi-utilisateur | « Mon équipe », « Mode multi-utilisateurs » | plusieurs comptes, chacun avec un rôle : administrateur, gestionnaire (« Manager ») ou utilisateur (« Default ») |
 
 ## Résultat

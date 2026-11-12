@@ -4,7 +4,7 @@
 > **Point de départ** : réglages de l'espace « Démo Vélanor » (barre latérale › survol de la ligne › roue dentée, comme au chapitre 04, étape 9).
 > **Durée** : environ 10 minutes. **Avant** : chapitres 04 et 05.
 
-**Attention** : « Supprimer l'espace de travail » et « Réinitialiser la base de données vectorielle » sont définitifs. Les fichiers restent dans « Mes documents », mais les conversations de l'espace sont perdues.
+**Attention** : deux actions sont définitives. « Supprimer l'espace de travail » efface l'espace et ses conversations. « Réinitialiser la base de données vectorielle » efface les passages de l'espace, qu'il faut intégrer de nouveau. Dans les deux cas, les fichiers restent dans « Mes documents ».
 
 ## Ce qu'il faut savoir
 
@@ -74,12 +74,12 @@ Dans « Réponse de refus en mode requête » (pastille 3), remplacer le texte a
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Nombre de vecteurs » | nombre de passages enregistrés pour cet espace |
-| 2 | préférence de recherche | « Default » ou « Accuracy Optimized » (tri de précision par un petit modèle intégré) |
+| 2 | « Search Preference » | « Default » ou « Accuracy Optimized » (tri de précision par un petit modèle intégré) |
 | 3 | « Nombre maximum de contextes » | nombre de passages donnés au modèle à chaque question (4 par défaut) |
 | 4 | « Seuil de similarité des documents » | « Aucune restriction », « Bas (score de similarité ≥ .25) » (défaut), « Moyen (≥ .50) », « Élevé (≥ .75) » |
 | 5 | « Réinitialiser la base de données vectorielle » | efface les passages de l'espace ; les documents devront être intégrés de nouveau |
 
-Pour l'espace « Démo Vélanor », choisir « Accuracy Optimized » dans la préférence de recherche (pastille 2) et taper `8` dans « Nombre maximum de contextes » (pastille 3), puis cliquer ailleurs.
+Pour l'espace « Démo Vélanor », choisir « Accuracy Optimized » dans « Search Preference » (pastille 2) et taper `8` dans « Nombre maximum de contextes » (pastille 3), puis cliquer ailleurs.
 
 *Résultat* : les changements s'appliquent dès la question suivante, sans nouvelle intégration.
 
@@ -104,7 +104,7 @@ Effet mesuré sur les 34 questions avec réponse du banc d'essai (détail en ann
 
 - passer de l'embedder intégré à `embed` est le réglage qui compte le plus : 33 bonnes réponses sur 34 au lieu de 25 ;
 - le tri de précision (« Accuracy Optimized ») ou 8 passages au lieu de 4 donnent 34 sur 34 et refusent correctement les 4 questions sans réponse ; 2 passages seulement font perdre deux réponses ;
-- les bons passages observés dans les essais avaient une similarité de 60 à 65 % (64 % au chapitre 04, étape 14) : un seuil « Élevé » (75 %) les aurait écartés ; garder « Bas ».
+- les bons passages observés dans les essais avaient une similarité de 60 à 65 % (chapitre 04, étape 14) : un seuil « Élevé » (75 %) les aurait écartés ; garder « Bas ».
 
 Pour un espace destiné à des questions précises sur des documents, les réglages conseillés sont : mode « Requête », réponse de refus en français, seuil « Bas », 4 à 8 passages.
 

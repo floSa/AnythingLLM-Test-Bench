@@ -4,7 +4,7 @@
 > **Point de départ** : écran principal, clé en bas de la barre latérale › « Paramètres de l'instance ».
 > **Durée** : environ 10 minutes. **Avant** : chapitre 03.
 
-**Attention** : changer le modèle d'embedding ou le découpage des textes impose d'intégrer de nouveau tous les documents (chapitre 05, étapes 5 et 6).
+**Attention** : changer le modèle d'embedding ou le découpage des textes impose d'intégrer de nouveau tous les documents : le changement retire les documents de tous les espaces (ils restent dans « Mes documents ») ; les replacer et les intégrer comme au chapitre 05, étapes 5 et 6.
 
 ## Ce qu'il faut savoir
 
@@ -118,7 +118,7 @@ Cliquer sur le nom du modèle (pastille 1).
 
 **Étape 8. Choisir le modèle**
 *Où* : sélecteur de modèle.
-Pour voir les choix sans rien changer : le fournisseur à gauche (ici « Generic OpenAI »), le modèle dans la liste de droite (`chat`). Pour garder les résultats des chapitres suivants, laisser `chat` et fermer le sélecteur avec Échap ; changer de modèle se fait en choisissant un autre nom dans la liste puis en confirmant dans le sélecteur.
+Pour voir les choix sans rien changer : le fournisseur à gauche (ici « Generic OpenAI »), le modèle dans la liste de droite (`chat`). Pour garder les résultats des chapitres suivants, laisser `chat` et fermer le sélecteur avec Échap ; changer de modèle se fait en choisissant un autre nom dans la liste de droite.
 
 ![Sélecteur de modèle](../img/08-modeles-et-lecture/08-choix-du-modele.png)
 *Écran : sélecteur de modèle de l'espace.*

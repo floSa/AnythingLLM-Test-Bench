@@ -39,11 +39,11 @@
 | `JWT_SECRET` prérempli fait sauter l'assistant | `installation-2026-11-12-essai1-jwt.log` [Vérifié] |
 | Embedder intégré 25/34, bge-m3 33/34, tri de précision 34/34 | `banc-2026-11-12-*.json` [Vérifié] |
 | Reranker externe non pris en charge | `cadrage-serveur.md` section 4 [Source] |
-| Tri de précision : 10 passages en 225 à 255 ms | `journal-extraits-2026-11-12.txt` [Vérifié] |
+| Tri de précision : 10 passages en 215 à 553 ms | `journal-extraits-2026-11-12.txt` [Vérifié] |
 | Arrêt, redémarrage (8 s), sauvegarde (36 Mo), restauration | `exploitation-2026-11-12.log` [Vérifié] |
 | OCR en français par `options.env`, sans effet par `storage/.env` | `ocr-fra-2026-11-12.log` [Vérifié] |
 | Dépassement : question de 20 418 jetons refusée par `embed` | `contexte-2026-11-12.txt` [Vérifié] |
-| Serveur MCP d'exemple : initialisation, liste, appel | sortie de `outils/anythingllm/mcp/installer-mcp.sh` ; capture du chapitre 10 [Vérifié] |
+| Serveur MCP d'exemple : liste des outils et appel (« Stock de BAT-500 : 184 unités ») | `journal-extraits-2026-11-12.txt` ; capture du chapitre 10 [Vérifié] |
 | Connecteurs site (3 pages), GitHub (1 fichier), YouTube (transcription) | `captures/09-sources-externes/notes.log` [Vérifié] |
 | Widget : réponse dans une page de test | `captures/13-comptes-et-widget/notes.log`, capture 16 [Vérifié] |
 | Exemples d'API, code de sortie 0 | `exemples/anythingllm/sorties_verifiees.txt` [Vérifié] |
@@ -52,12 +52,12 @@
 
 | Constat | Détail | Statut |
 |---|---|---|
-| Fichier envoyé non déplaçable | dans la fenêtre des documents encore ouverte, « Déplacer vers l'espace de travail » reste sans effet ; fermer et rouvrir la fenêtre | [Vérifié] (essai A/B, `captures/04-premiere-question/notes.log`) |
-| Mode « Agent » peu fiable dans l'interface | réponse vide au premier essai ; réponse tirée d'Internet sur une autre entreprise au second ; par l'API, réponse juste | [Vérifié] (chapitre 15, capture 03) |
-| Extension inconnue acceptée | un fichier `.xyz` est lu comme du texte | [Vérifié] |
-| Clé fausse : message peu clair | « 400 No connected db. » (message du service central) | [Vérifié] |
+| Fichier envoyé non déplaçable | dans la fenêtre des documents encore ouverte, « Déplacer vers l'espace de travail » reste sans effet ; fermer et rouvrir la fenêtre | [Vérifié] (essai A/B relevé dans le journal de session ; contournement appliqué dans `captures/c04_premiere_question.py` et `c05_documents.py`) ; aucun fichier brut de l'essai A/B [À tester] pour une preuve rejouable |
+| Mode « Agent » peu fiable dans l'interface | réponse tirée d'Internet sur une autre entreprise [Vérifié] (`captures/15-problemes/03-reponse-vide-mode-agent.txt`) ; réponse vide au premier essai et réponse juste par l'API : relevées dans le journal de session, sans fichier brut [À tester] |
+| Extension inconnue acceptée | un fichier `.xyz` est lu comme du texte | [Vérifié] (`captures/15-problemes/02-extension-inconnue.txt`) |
+| Clé fausse : message peu clair | « 400 No connected db. » (message du service central) | [Vérifié] (`captures/15-problemes/04-cle-refusee.txt`) |
 | Arrêt forcé | le conteneur s'arrête en code 137 au bout de 10 s | [Vérifié] (`exploitation-2026-11-12.log`) |
-| Traductions approximatives | « Nouvelle offre d'emploi » pour « New Job », environ un quart des libellés restent en anglais | [Vérifié] |
+| Traductions approximatives | « Nouvelle offre d'emploi » pour « New Job » [Vérifié] (`captures/11-memoires-taches-routage/04-taches-planifiees.txt`) ; environ un quart des libellés restent en anglais [Estimation] (`cadrage-interface.md`, comptage par expression régulière) |
 | Clé d'API locale visible sur une capture | repérée, capture refaite, masquage automatique ajouté aux scénarios (`ui.py`), textes enregistrés nettoyés ; jamais commitée | [Vérifié] |
 | Réponse vide sur une question piège (Q38, banc par défaut) | ni refus ni invention | [Vérifié] |
 

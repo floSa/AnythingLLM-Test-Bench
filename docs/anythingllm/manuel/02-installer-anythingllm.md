@@ -8,7 +8,7 @@
 
 ## Ce qu'il faut savoir
 
-AnythingLLM tient dans **un seul conteneur Docker** (un « conteneur » est une petite machine isolée qui contient l'application et tout ce dont elle a besoin). Ce conteneur ne contient aucun modèle d'IA : les réponses, la représentation des textes et la transcription de l'audio sont demandées à un **service de modèles** installé à part sur le même poste : le service LLM central, projet LLM-Service (https://github.com/floSa/llm-service). Il s'installe en suivant son propre README, avant ce chapitre, et se démarre par son script `scripts/demarrer.sh` (dans le dossier où il a été installé ; ajouter `cpu` sans carte graphique NVIDIA). Il est protégé par une clé, que sa personne responsable fournit.
+AnythingLLM tient dans **un seul conteneur Docker** (un « conteneur » est une petite machine isolée qui contient l'application et tout ce dont elle a besoin). Ce conteneur ne contient aucun modèle d'IA : les réponses, la représentation des textes et la transcription de l'audio sont demandées à un **service de modèles** installé à part sur le même poste : le service LLM central, projet LLM-Service (https://github.com/floSa/llm-service). Il s'installe en suivant son propre README, avant ce chapitre, et se démarre par son script `scripts/demarrer.sh` (dans le dossier où il a été installé ; ajouter `cpu` sans carte graphique NVIDIA). Il est protégé par une clé : la valeur de `LITELLM_MASTER_KEY` dans le fichier `.env` de LLM-Service (ou celle que fournit la personne qui gère ce service).
 
 Ce service a deux adresses : depuis le terminal du poste, `http://127.0.0.1:8080/v1` ; depuis AnythingLLM, qui tourne dans un conteneur Docker relié au service par un réseau Docker nommé `llm-net`, `http://llm-central:8080/v1`. Le chapitre 03 fait saisir cette seconde adresse dans AnythingLLM.
 
@@ -46,7 +46,7 @@ cp .env.example .env
 nano .env
 ```
 
-Dans le fichier ouvert, remplacer la valeur de `LLM_CENTRAL_KEY` par la clé du service LLM central (la personne qui gère ce service la fournit), enregistrer avec Ctrl+O puis quitter avec Ctrl+X. Ce fichier `.env` n'est jamais envoyé sur GitHub.
+Dans le fichier ouvert, remplacer la valeur de `LLM_CENTRAL_KEY` par la clé du service LLM central (valeur de `LITELLM_MASTER_KEY` dans le `.env` de LLM-Service), enregistrer avec Ctrl+O puis quitter avec Ctrl+X. Ce fichier `.env` n'est jamais envoyé sur GitHub.
 
 *Résultat* : le fichier `.env` contient la clé ; il n'est lisible que sur le poste.
 

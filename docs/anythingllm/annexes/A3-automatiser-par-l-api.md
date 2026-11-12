@@ -19,7 +19,7 @@
 
 - Adresse : `http://127.0.0.1:3001/api/v1/…` ; en-tête `Authorization: Bearer <clé>`. [Vérifié]
 - Documentation interactive : `http://127.0.0.1:3001/api/docs` (chapitre 12, étape 15). [Vérifié]
-- La clé reste valable après le passage en multi-utilisateur : les exemples ont été exécutés en multi-utilisateur avec une clé créée en mode « Juste moi ». [Vérifié]
+- La clé reste valable après le passage en multi-utilisateur : le passage est tracé à 13:57 (`captures/13-comptes-et-widget/notes.log`), les exemples ont tourné ensuite avec la clé « Scripts du banc » créée à 12:04 en mode « Juste moi » (date visible sur `captures/12-administrer/08-cles-api.txt`). [Vérifié]
 
 ## 2. Exemples exécutés
 
@@ -33,7 +33,7 @@ Dossier `exemples/anythingllm/`, lancés par `exemples/anythingllm/lancer.sh` [T
 | `04_poser_une_question.py` | `POST /workspace/exemple-api/chat`, mode `query` | « le cadre de vélo Vélanor est garanti pendant 7 ans », source `faq-sav.html` score 0,746, 18,2 s ; la réflexion `<think>` est en tête de `textResponse` [Vérifié] |
 | `05_recherche_seule.py` | `POST /workspace/exemple-api/vector-search` | passage de `faq-sav.html`, score 0,591, sans appel au modèle de réponse [Vérifié] |
 | `06_compatible_openai.py` | `GET /openai/models`, `POST /openai/chat/completions` avec le nom court de l'espace comme modèle | liste des espaces comme « modèles » ; « La garantie de la batterie est de 2 ans. » [Vérifié] |
-| `07_nettoyer.py` | `DELETE /workspace/exemple-api` | code 200 ; espace supprimé, fichier gardé dans « Mes documents » [Vérifié] |
+| `07_nettoyer.py` | `DELETE /workspace/exemple-api` | code 200, espace supprimé [Vérifié] ; fichier gardé dans « Mes documents » [Source] |
 
 Exemple minimal avec `curl` [Testée] (`01_sante.sh`) :
 
@@ -50,32 +50,32 @@ Le client plus complet utilisé par le banc et les scripts est `outils/anythingl
 |---|---|---|
 | Vérifier la clé | `GET /api/v1/auth` | [Vérifié] |
 | Lister, lire un espace | `GET /api/v1/workspaces`, `GET /api/v1/workspace/{slug}` | [Vérifié] |
-| Créer, régler, supprimer | `POST /workspace/new`, `POST /workspace/{slug}/update` (`chatMode`, `topN`, `similarityThreshold`, `vectorSearchMode`, `openAiHistory`, `openAiPrompt`, `queryRefusalResponse`), `DELETE /workspace/{slug}` | [Vérifié] (banc et exemples) |
+| Créer, régler, supprimer | `POST /workspace/new`, `POST /workspace/{slug}/update` (`chatMode`, `topN`, `similarityThreshold`, `vectorSearchMode`, `openAiHistory`), `DELETE /workspace/{slug}` | [Vérifié] (banc et exemples) ; `openAiPrompt`, `queryRefusalResponse` [Source] |
 | Envoyer un document | `POST /document/upload` (multipart `file`, option `addToWorkspaces`) | [Vérifié] |
-| Intégrer ou retirer | `POST /workspace/{slug}/update-embeddings` (`adds`, `deletes`) | [Source] |
-| Épingler | `POST /workspace/{slug}/update-pin` | [Source] |
-| Poser une question | `POST /workspace/{slug}/chat` (`message`, `mode` : `query`, `chat` ou `automatic`, `sessionId`) ; `stream-chat` en flux | [Vérifié] |
+| Intégrer ou retirer | `POST /workspace/{slug}/update-embeddings` (`adds`, `deletes`) | [Source] (`server/endpoints/api/workspace/index.js`, ligne 458) |
+| Épingler | `POST /workspace/{slug}/update-pin` | [Source] (idem, ligne 535) |
+| Poser une question | `POST /workspace/{slug}/chat` (`message`, `mode` : `query`, `chat` ou `automatic`, `sessionId`) | [Vérifié] ; `stream-chat` en flux [Source] (idem, ligne 738) |
 | Chercher sans le modèle | `POST /workspace/{slug}/vector-search` | [Vérifié] |
 | Compatible OpenAI | `/api/v1/openai/models`, `/chat/completions`, `/embeddings` | [Vérifié] (deux premières) |
-| Documents | `GET /documents`, `DELETE /system/remove-documents`, `DELETE /document/remove-folder` | [Vérifié] (`nettoyer_documents.py`) |
-| Widgets | `GET /embed` | [Vérifié] |
+| Documents | `GET /documents`, `DELETE /system/remove-documents`, `DELETE /document/remove-folder` | [Vérifié] (sorties de `nettoyer_documents.py` dans le journal de session : « 12 fichier(s) supprimé(s) » ; pas de fichier brut) [Source] (`server/endpoints/api/system/index.js`, ligne 220 ; `document/index.js`, ligne 1037) |
+| Widgets | `GET /embed` | [Source] (`server/endpoints/api/embed/index.js`, ligne 10) |
 | Réglages de l'instance | `GET /system`, `POST /system/update-env` | [Vérifié] (lecture) [Source] (écriture) |
-| Administration (multi-utilisateur) | `/admin/users`, `/admin/invites`, `/admin/workspace-chats` | [Source] |
+| Administration (multi-utilisateur) | `/admin/users`, `/admin/invites`, `/admin/workspace-chats` | [Source] (`server/endpoints/api/admin/index.js`, lignes 41, 270, 679) |
 
 ## 4. Points d'attention
 
 - **Réflexion dans la réponse** : `textResponse` commence par `<think>…</think>` ; la retirer avant affichage (`client.sans_pensee`). [Vérifié]
 - **Mode** : un espace créé sans `chatMode` est en `automatic` (Agent) ; préciser `mode` à chaque question ou `chatMode` à la création. [Vérifié]
 - **Sources** : chaque source donne `title`, `text` (avec un en-tête `<document_metadata>`), `score` et, avec le tri de précision, `rerank_score` ; pas de numéro de page. [Vérifié]
-- **Historique** : un même `sessionId` garde l'historique entre deux appels ; une session neuve par question pour des réponses indépendantes. [Source]
-- **Questions longues** : au-delà de 8 192 jetons, l'embedding de la question échoue (erreur 500). [Vérifié] (`contexte-2026-11-12.txt`)
+- **Historique** : un même `sessionId` garde l'historique entre deux appels ; une session neuve par question pour des réponses indépendantes. [Source] (`server/utils/chats/apiChatHandler.js`)
+- **Questions longues** : une question de 20 418 jetons échoue à l'embedding (erreur 500) [Vérifié] (`contexte-2026-11-12.txt`) ; limite de 8 192 jetons [Source] (LLM-Service, `.env.example`).
 
 ## Dépannage
 
 | Symptôme | Cause probable | Action |
 |---|---|---|
 | `403` sur toutes les routes | clé fausse ou supprimée | créer une nouvelle clé (chapitre 12) |
-| `textResponse` vide | mode `automatic` ou réflexion qui atteint le plafond | `mode: "query"` ; « Max Tokens » 8192 |
+| `textResponse` vide | mode `automatic` ou réflexion qui atteint le plafond [Estimation] | `mode: "query"` ; « Max Tokens » 8192 |
 | `500` « too large to process » | question trop longue pour l'embedding | envoyer le texte comme document |
 
 ## Sources

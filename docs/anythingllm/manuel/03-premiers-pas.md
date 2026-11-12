@@ -258,6 +258,8 @@ La fenêtre « WARNING - This action is irreversible » prévient que changer de
 
 ## Bon à savoir
 
+- Pour revenir des paramètres à l'écran principal : flèche de retour, dernière icône en bas du menu « Paramètres de l'instance ».
+
 - Les champs « Base URL », « API Key », « Selected Model »… restent en anglais même avec l'interface en français.
 - La clé saisie est enregistrée par AnythingLLM dans son fichier de réglages (`donnees/anythingllm/storage/.env`), en clair. Ce dossier ne doit pas être partagé.
 - « Max Tokens » à 1024 (valeur proposée) suffit rarement : le modèle `chat` réfléchit avant de répondre, et sa réflexion compte dans ce plafond.

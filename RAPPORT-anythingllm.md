@@ -11,7 +11,7 @@ Mission `kit/PROMPT.md`, fiche `kit/fiches/04-anythingllm.md`, exécutée le 12 
 | Captures | `mcr.microsoft.com/playwright/python:v1.65.1-noble@sha256:0ab41a37431309d72b7a26f40ef1fdb464a62740196b2143965a2f59dc090409` |
 | Service de modèles | LLM-Service (géré à part, non modifié) : LiteLLM v1.109.0, llama-swap v272 (llama.cpp build 12282), speaches 0.8.3 ; profil `gpu` |
 | Modèles utilisés | `chat` = Qwen3.5-4B Q4_K_M (réflexion activée, 16 384 jetons), `embed` = bge-m3 Q8_0 (1 024 dimensions), `transcribe` = faster-whisper-small ; `rerank` = bge-reranker-v2-m3 disponible mais **non utilisable** par AnythingLLM |
-| Modèles propres à AnythingLLM téléchargés | embedder intégré all-MiniLM-L6-v2 (23 Mo, pour la comparaison), tri de précision ms-marco-MiniLM-L-6-v2 (23 Mo), OCR Tesseract `eng` et `fra` (environ 5 Mo chacun) |
+| Modèles propres à AnythingLLM téléchargés | embedder intégré all-MiniLM-L6-v2 (23 Mo, pour la comparaison), tri de précision ms-marco-MiniLM-L-6-v2 (23 Mo), OCR Tesseract `eng` (5,2 Mo) et `fra` (1,2 Mo) |
 
 Versions relevées : `outils/resultats/anythingllm/versions-2026-11-12.json`.
 
@@ -33,7 +33,7 @@ Versions relevées : `outils/resultats/anythingllm/versions-2026-11-12.json`.
 2. Avec le tri de précision intégré (« Accuracy Optimized », seul reranker accepté) : 34/34, 4/4, médiane 13,5 s.
 3. 8 passages : 34/34, 4/4 ; 8 passages et tri : 34/34, 4/4, médiane 10,7 s (meilleur réglage).
 4. Embedder intégré (all-MiniLM-L6-v2) : 25/34 seulement ; 2 passages (réglage serré) : 31/34.
-5. Mémoire de l'application : 0,4 Gio au repos, 0,9 Gio en charge, 1,6 Gio avec le tri de précision chargé.
+5. Mémoire de l'application : 0,3 à 0,5 Gio au repos, 0,9 Gio en charge, 1,5 Gio avec le tri de précision chargé.
 
 ## Ce qui a été vérifié, ce qui ne l'a pas été
 
@@ -60,13 +60,15 @@ Voir [JOURNAL.md](JOURNAL.md#décisions-en-attente) :
 
 ## Disque, RAM et VRAM occupés (fin de mission)
 
+Relevé brut : `outils/resultats/anythingllm/fin-de-mission-2026-11-12.log`.
+
 | Élément | Valeur |
 |---|---|
 | Image AnythingLLM | 3,39 Go ; image Playwright 2,46 Go |
 | Données `donnees/anythingllm/` | 57 Mo ; sauvegarde `donnees/sauvegardes/` 36 Mo |
-| RAM `rag-anythingllm` | 472 Mio au repos |
+| RAM `rag-anythingllm` | 479 Mio au repos |
 | RAM service central | `llm-swap` 5,4 Gio, `llm-speaches` 1,3 Gio, `llm-central` 0,7 Gio |
-| VRAM | 8,3 Go sur 16,4 (service central et bureau Windows) |
+| VRAM | 8 344 Mio sur 16 380 (service central et bureau Windows) |
 
 ## Comment tout arrêter ou tout supprimer
 

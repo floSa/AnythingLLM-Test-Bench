@@ -49,7 +49,7 @@ Taper le nom d'utilisateur (pastille 1) et le mot de passe (pastille 2), puis «
 | 2 | « Mot de passe » | mot de passe du compte (masqué) |
 | 3 | « Connexion » | ouvre la session |
 
-*Résultat* : l'écran principal s'affiche ; une pastille aux initiales du compte (« AD ») apparaît en haut à droite. Le lien « Mot de passe oublié? Réinitialiser » permet de changer de mot de passe avec les codes de récupération (étape 8).
+*Résultat* : l'écran principal s'affiche ; une pastille aux initiales du compte (« AD ») apparaît en haut à droite. À la première connexion d'un compte, la fenêtre « Recovery Codes » peut s'afficher d'abord : la traiter comme à l'étape 8. Le lien « Mot de passe oublié? Réinitialiser » permet de changer de mot de passe avec les codes de récupération (étape 8).
 
 ## Créer des comptes
 
@@ -188,7 +188,7 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 
 **Étape 12. Créer le widget**
 *Où* : connecté avec `admin-velanor`, Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
-En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), renseigner le domaine du site dans « Restrict requests from domains » (pastille 2), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
+En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), renseigner le domaine du site dans « Restrict requests from domains » (pastille 2 ; par exemple `intranet.velanor.fr` ; laissé vide dans l'essai, pour la page de test de l'étape 15), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
 
 ![Nouveau widget](../img/13-comptes-et-widget/12-nouveau-widget.png)
 *Écran : fenêtre de création d'un widget.*
@@ -228,7 +228,7 @@ En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher
 *Résultat* : le code est prêt à coller dans une page du site.
 
 **Étape 15. Utiliser le widget dans le site**
-*Où* : page web contenant le code copié à l'étape 14. Dans l'essai, le code a été collé dans une page de test (`outils/anythingllm/essais/site/widget.html`, où `EMBED_ID` est remplacé par l'identifiant du widget), servie par le site de test du chapitre 09 et ouverte dans le navigateur des captures. Sur un vrai site, le code se colle avant `</body>` d'une page de ce site.
+*Où* : page web contenant le code copié à l'étape 14. Pour essayer sans site web : ouvrir le Bloc-notes de Windows, écrire `<html><body><h1>Test du widget</h1>`, coller le code copié à l'étape 14, écrire `</body></html>`, enregistrer sous `widget-test.html` sur le Bureau, puis ouvrir ce fichier par un double-clic : il s'ouvre dans le navigateur. Une page de ce type, ouverte directement depuis un fichier, a été essayée avec succès. Sur un vrai site, le code se colle avant `</body>` d'une page de ce site.
 Cliquer sur la bulle en bas à droite (pastille 1), poser une question.
 
 ![Site avec le widget](../img/13-comptes-et-widget/15-site-avec-widget.png)

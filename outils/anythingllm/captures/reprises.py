@@ -88,9 +88,81 @@ def ocr(s):
                                   (p.get_by_text("Nantes (I'Acheteur)", exact=False).first, "« I'Acheteur » au lieu de « l'Acheteur »")])
 
 
+def envoi(s):
+    """Chapitre 04, capture 05 : fichier envoyé et croix de la fenêtre (doublon d'essai supprimé ensuite)."""
+    p = s.page; s.chapitre = "04-premiere-question"
+    s.gestionnaire("premier-essai")
+    p.locator("input[type=file]").first.set_input_files("/depot/corpus/documents/rapport-annuel-2025.pdf")
+    p.wait_for_timeout(5000); s.sans_toasts()
+    if not p.get_by_text("Cliquez pour télécharger", exact=False).count():
+        pass
+    croix = p.evaluate_handle("() => { const b = document.elementFromPoint(1366, 126); return b && b.closest('button'); }").as_element()
+    item = p.locator('[data-tooltip-id="directory-item"]').filter(has_text="rapport-annuel-2025").first
+    if not item.is_visible():
+        p.get_by_text("custom-documents").first.click(); p.wait_for_timeout(1000)
+    from playwright.sync_api import Locator
+    s.cap_souple("05-document-televerse", [(item, "rapport-annuel-2025.pdf"), (p.locator("button:near(:text('Connecteurs de données'))").last if croix is None else p.locator("xpath=//button[.//*[name()='svg']]").filter(has_not_text=" ").nth(0), "croix (fermer)")])
+
+
+def croix_seule(s):
+    p = s.page; s.chapitre = "04-premiere-question"
+    s.gestionnaire("premier-essai")
+    p.locator("input[type=file]").first.set_input_files("/depot/corpus/documents/rapport-annuel-2025.pdf")
+    p.wait_for_timeout(5000); s.sans_toasts()
+    item = p.locator('[data-tooltip-id="directory-item"]').filter(has_text="rapport-annuel-2025").first
+    if not item.is_visible():
+        p.get_by_text("custom-documents").first.click(); p.wait_for_timeout(1000)
+    p.evaluate("() => { const b = document.elementFromPoint(1366, 126).closest('button'); b.setAttribute('data-manuel', 'croix'); }")
+    s.cap_souple("05-document-televerse", [(item, "rapport-annuel-2025.pdf"), (p.locator("[data-manuel=croix]"), "croix (fermer)")])
+
+
+def citation2(s):
+    p = s.page; s.chapitre = "04-premiere-question"
+    s.aller("/workspace/premier-essai")
+    p.locator("[aria-label=Threads]").get_by_text("Quel est le chiffre", exact=False).first.click()
+    p.wait_for_load_state("networkidle"); p.wait_for_timeout(2500)
+    p.get_by_role("button", name=re.compile("^Sources")).last.click(); p.wait_for_timeout(1200)
+    p.get_by_text("rapport-annuel-2025", exact=False).last.click(); p.wait_for_timeout(1500)
+    s.cap_souple("14-extrait-cite", [(p.get_by_text(re.compile(r"Referenced \d+ times")).first, "Referenced 4 times."),
+                                     (p.locator("button[aria-label=Close]").last, "fermer")])
+
+
+def ocr2(s):
+    p = s.page; s.chapitre = "15-problemes"
+    s.aller("/workspace/demo-velanor")
+    p.locator("[aria-label=Threads]").get_by_text("New Thread", exact=True).last.click(); p.wait_for_timeout(2500)
+    n = p.get_by_role("button", name=re.compile("^Sources")).count()
+    p.locator("#primary-prompt-input").fill("Quelle est la pénalité de retard prévue par le contrat Batterix ?")
+    p.locator('button[data-tooltip-id="send-prompt"]').click()
+    p.wait_for_function(f"() => [...document.querySelectorAll('button')].filter(b => b.innerText.trim().startsWith('Sources')).length > {n}", timeout=300000)
+    p.wait_for_timeout(3000)
+    p.get_by_role("button", name=re.compile("^Sources")).last.click(); p.wait_for_timeout(1200)
+    p.get_by_text("contrat-batterix-scan.pdf").last.click(); p.wait_for_timeout(1500)
+    s.cap_souple("06-texte-ocr", [(p.get_by_text("contrat-batterix-scan.pdf", exact=True).last, "contrat scanné : texte lu par OCR")])
+
+
+def widget_fichier(s):
+    """Chapitre 13 : page HTML ouverte directement depuis un fichier (sans serveur web), widget et réponse."""
+    p = s.page; s.chapitre = "13-comptes-et-widget"
+    html = open("/depot/outils/anythingllm/essais/site/widget-actif.html").read()
+    open("/depot/donnees/widget-fichier.html", "w").write(html)
+    p.goto("file:///depot/donnees/widget-fichier.html"); p.wait_for_timeout(3000)
+    p.locator("#anything-llm-embed-chat-button").click(); p.wait_for_timeout(1500)
+    p.locator("#message-input").fill("Quelle est la durée de garantie du cadre ?"); p.locator("#message-input").press("Enter")
+    try:
+        p.wait_for_function("() => document.body.innerText.includes('7 ans')", timeout=240000); ok = True
+    except Exception:
+        ok = False
+    p.wait_for_timeout(2500)
+    s.note("widget depuis un fichier local : " + ("réponse reçue" if ok else "pas de réponse") + " | " + p.inner_text("body")[-400:].replace("\n", " | "))
+    if ok:
+        bulle = p.get_by_text("7 ans", exact=False).last.locator("xpath=ancestor::div[2]")
+        s.cap_souple("16-widget-reponse", [(bulle, "réponse dans la page")])
+
+
 if __name__ == "__main__":
     s = Scenario("reprises")
     try:
-        etapes([agents, admin, experimental, widget, citation, ocr], s)
+        etapes([agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
     finally:
         s.fermer()

@@ -1,7 +1,7 @@
 # 04. Première question en dix minutes
 
 > Ce chapitre apprend le parcours le plus court : créer un espace de travail, y déposer un document, choisir le mode « Requête », poser une question et vérifier d'où vient la réponse.
-> **Point de départ** : écran principal, connecté, modèles déclarés (fin du chapitre 03).
+> **Point de départ** : écran principal, connecté, modèles déclarés (fin du chapitre 03). Depuis les paramètres, revenir à l'écran principal par la flèche de retour en bas du menu des paramètres.
 > **Durée** : environ 10 minutes. **Avant** : chapitre 03.
 
 ## Ce qu'il faut savoir
@@ -72,7 +72,7 @@ La colonne de droite, au nom de l'espace (« Premier essai »), liste les docume
 
 **Étape 5. Envoyer le fichier**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$\Ubuntu` dans la barre d'adresse de cette fenêtre, aller dans le dossier du dépôt, puis `corpus\documents`, et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
+Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$` dans la barre d'adresse de cette fenêtre, ouvrir la distribution (son nom, par exemple `Ubuntu` ou `Ubuntu-24.04`, est donné par `wsl -l` dans PowerShell), puis `home\<utilisateur>\AnythingLLM-Test-Bench\corpus\documents` (le chemin du dépôt s'affiche avec `pwd` dans le terminal Ubuntu), et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
 
 ![Fichier envoyé](../img/04-premiere-question/05-document-televerse.png)
 *Écran : fenêtre des documents, fichier envoyé dans « custom-documents ».*
@@ -181,7 +181,7 @@ Taper `Quel est le chiffre d'affaires 2025 de Vélanor ?` (pastille 1), puis cli
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Réflexions » | raisonnement du modèle, replié ; un clic le déplie |
+| 1 | « Réflexions » | raisonnement du modèle, replié ; juste après la question, ce libellé s'affiche « Thought for … » ; il devient « Réflexions » quand la page est rechargée ; un clic le déplie |
 | 2 | réponse | « Le chiffre d'affaires de Vélanor en 2025 est de 48,6 M€. » |
 | 3 | « Sources » | ouvre la liste des documents utilisés |
 
@@ -209,10 +209,9 @@ Cliquer sur « Sources ».
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Referenced 4 times. » | nombre de passages de ce document donnés au modèle |
-| 2 | pourcentage suivi de « match » | proximité de sens entre ce passage et la question |
-| 3 | croix | ferme la fenêtre |
+| 2 | croix | ferme la fenêtre |
 
-*Résultat* : le chiffre de la réponse se retrouve dans le premier passage (ligne « Chiffre d'affaires 48,6 M€ » du tableau de la page 3). Chaque passage porte son pourcentage de proximité (ici 64 %). Le numéro de page n'est connu que parce qu'il est écrit dans le texte du document : AnythingLLM ne l'indique pas lui-même.
+*Résultat* : le chiffre de la réponse se retrouve dans le premier passage (ligne « Chiffre d'affaires 48,6 M€ » du tableau de la page 3). En faisant défiler la fenêtre, chaque passage se termine par un pourcentage suivi de « match » : sa proximité de sens avec la question (de 60 à 65 % pour les passages de cette réponse). Le numéro de page n'est connu que parce qu'il est écrit dans le texte du document : AnythingLLM ne l'indique pas lui-même.
 
 ## Bon à savoir
 

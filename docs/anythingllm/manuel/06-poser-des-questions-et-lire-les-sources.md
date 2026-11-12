@@ -81,7 +81,7 @@ Cliquer sur « Sources ».
 *Résultat* : l'icône de haut-parleur, à gauche, lit la réponse à voix haute (voix du navigateur, chapitre 08).
 
 **Étape 5. Dupliquer ou supprimer**
-*Où* : « Plus d'actions ».
+*Où* : sous la réponse, cliquer sur « Plus d'actions » (pastille 4 de l'étape 4).
 
 ![Plus d'actions](../img/06-questions-et-sources/06-plus-d-actions.png)
 *Écran : menu « Plus d'actions ».*
@@ -109,7 +109,8 @@ Taper `Quel est le cours de l'action Vélanor en bourse ?` puis Entrée.
 *Résultat* : la réponse indique qu'aucune information sur le cours de l'action n'est disponible dans les documents. Quand des passages vaguement proches existent, le modèle répond lui-même qu'il ne sait pas ; quand aucun passage ne dépasse le seuil, c'est la réponse de refus réglée au chapitre 07 qui s'affiche.
 
 **Étape 7. Comparer avec le mode « Chat »**
-*Où* : réglages de l'espace › « Paramètres du chat » › « Chat », puis même question.
+*Où* : réglages de l'espace › « Paramètres du chat ».
+Cliquer sur « Chat », revenir à la discussion (clic sur « Démo Vélanor » dans la barre latérale), puis poser la même question.
 
 ![Même question en mode Chat](../img/06-questions-et-sources/08-meme-question-en-mode-chat.png)
 *Écran : espace « Démo Vélanor », même question en mode « Chat ».*
@@ -169,7 +170,7 @@ Pour renommer : cliquer sur « Rename », taper le nouveau nom dans la fenêtre 
 *Résultat* : la liste des commandes s'affiche.
 
 **Étape 11. Enregistrer une commande**
-*Où* : fenêtre « Ajouter une nouvelle commande preset ».
+*Où* : menu « Outils » › « Ajouter » (pastille 3 de l'étape 10) : la fenêtre « Ajouter une nouvelle commande preset » s'ouvre.
 Remplir la commande `resume`, la consigne `Résume en trois points les documents de cet espace.` et une description, puis « Sauvegarder ».
 
 ![Nouvelle commande abrégée](../img/06-questions-et-sources/12-ajouter-une-commande.png)

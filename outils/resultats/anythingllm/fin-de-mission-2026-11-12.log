@@ -1,0 +1,41 @@
+== 2026-11-12T15:37:31+01:00
+== conteneur
+rag-anythingllm Up 28 minutes (healthy) 127.0.0.1:3001->3001/tcp
+rag-anythingllm-site Up About an hour 80/tcp
+== /api/ping
+{"online":true}
+== mémoire
+rag-anythingllm 478.9MiB / 31.35GiB 0.01%
+== disque
+57M	donnees/anythingllm
+== service LLM central
+== http://127.0.0.1:8080/v1/models
+  chat (chat)
+  embed (embedding)
+  rerank (rerank)
+  transcribe (audio_transcription)
+  gemma-4-e4b (chat)
+== modèles téléchargés par AnythingLLM
+23M	donnees/anythingllm/storage/models/Xenova/all-MiniLM-L6-v2
+23M	donnees/anythingllm/storage/models/Xenova/ms-marco-MiniLM-L-6-v2
+total 6300
+-rw-r--r-- 1 florian florian 5199098 Nov 12 13:04 eng.traineddata
+-rw-r--r-- 1 florian florian 1248107 Nov 12 15:09 fra.traineddata
+== images
+mcr.microsoft.com/playwright/python:v1.65.1-noble 2.46GB
+mintplexlabs/anythingllm:1.19.0 3.39GB
+== service central
+llm-central 727.4MiB / 31.35GiB
+llm-swap 5.386GiB / 31.35GiB
+llm-speaches 1.304GiB / 31.35GiB
+8344 MiB, 16380 MiB
+== ports
+rag-anythingllm 127.0.0.1:3001->3001/tcp
+rag-anythingllm-site 80/tcp
+llm-central 4000/tcp, 127.0.0.1:8080->8080/tcp
+llm-swap 127.0.0.1:8081->8080/tcp
+llm-speaches 8000/tcp
+== mises à jour automatiques (Watchtower)
+0
+== curl
+200

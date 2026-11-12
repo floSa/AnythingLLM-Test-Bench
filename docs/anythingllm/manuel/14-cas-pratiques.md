@@ -1,7 +1,7 @@
 # 14. Cas pratiques
 
 > Ce chapitre met bout à bout les chapitres précédents dans trois usages réels, avec l'espace « Démo Vélanor » : une foire aux questions du service après-vente, le suivi d'un fournisseur à partir de plusieurs documents, et un point de production à partir d'un message vocal.
-> **Point de départ** : espace « Démo Vélanor » constitué au chapitre 05, en mode « Requête » (chapitre 04, étape 10), connecté avec un compte administrateur ou gestionnaire. Les captures de ce chapitre ont été prises avant le passage en multi-utilisateur : avec un compte, la pastille aux initiales s'affiche en plus en haut à droite, le reste est identique.
+> **Point de départ** : espace « Démo Vélanor » constitué au chapitre 05, en mode « Requête » (chapitre 04, étape 10), connecté (mot de passe de l'instance en mode « Juste moi », ou compte administrateur ou gestionnaire après le chapitre 13). Les captures de ce chapitre ont été prises avant le passage en multi-utilisateur : avec un compte, la pastille aux initiales s'affiche en plus en haut à droite, le reste est identique.
 > **Durée** : environ 20 minutes. **Avant** : chapitres 04 à 07.
 
 ## Ce qu'il faut savoir
@@ -24,7 +24,7 @@ Cliquer sur « Ajouter un nouveau message » (pastille 2) : une carte d'exemple 
 | 1 | « Messages de chat suggérés » | questions proposées en boutons sur l'écran vide de l'espace (4 au plus) |
 | 2 | « Ajouter un nouveau message » | ajoute une question |
 
-*Résultat* : les questions apparaissent en boutons quand un fil vide est ouvert ; un clic les envoie.
+*Résultat* : le champ « Message » et le bouton « Enregistrer les messages » apparaissent sous la liste après le clic sur la carte (non montrés sur la capture) ; une fois enregistrées, les questions apparaissent en boutons quand un fil vide est ouvert, et un clic les envoie (vérifié pendant les essais).
 
 **Étape 2. Interroger la FAQ**
 *Où* : espace « Démo Vélanor », nouveau fil « FAQ — garantie ».

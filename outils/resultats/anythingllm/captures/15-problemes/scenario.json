@@ -200,6 +200,22 @@
   "heure": "14:24:26"
  },
  {
+  "capture": "04-premiere-question/05-document-televerse.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ],
+   [
+    2,
+    "croix (fermer)"
+   ]
+  ],
+  "note": "",
+  "heure": "14:34:07"
+ },
+ {
   "capture": "04-premiere-question/14-extrait-cite.png",
   "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
   "pastilles": [
@@ -209,30 +225,22 @@
    ],
    [
     2,
-    "pourcentage de similarité"
-   ],
-   [
-    3,
     "fermer"
    ]
   ],
   "note": "",
-  "heure": "14:24:33"
+  "heure": "14:34:15"
  },
  {
   "capture": "15-problemes/06-texte-ocr.png",
-  "url": "/workspace/demo-velanor/t/9ba5ee92-6f59-42bf-ae39-a20203befc8d",
+  "url": "/workspace/demo-velanor/t/57a24dec-d407-4d9e-8aec-e83bbf784bfc",
   "pastilles": [
    [
     1,
-    "« Bréme » au lieu de « Brême »"
-   ],
-   [
-    2,
-    "« I'Acheteur » au lieu de « l'Acheteur »"
+    "contrat scanné : texte lu par OCR"
    ]
   ],
   "note": "",
-  "heure": "14:25:02"
+  "heure": "14:36:38"
  }
 ]

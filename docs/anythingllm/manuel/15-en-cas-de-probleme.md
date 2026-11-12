@@ -108,8 +108,7 @@ La première dit si AnythingLLM tourne, la deuxième montre ses derniers message
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Bréme » | « Brême » mal lu |
-| 2 | « (I'Acheteur) » | « (l'Acheteur) » mal lu |
+| 1 | titre du document | texte lu par OCR : « (I'Acheteur) » pour « (l'Acheteur) », « Bréme » pour « Brême », « aprés » pour « après », « ler mars » pour « 1er mars » |
 
 *Cause* : la lecture optique (OCR) est réglée en anglais par défaut ; les accents et certaines lettres françaises sont mal reconnus. Les chiffres du contrat ont été bien lus dans les essais.
 *Que faire* : ce réglage n'existe pas dans l'interface. Depuis le dossier du dépôt, écrire la ligne `TARGET_OCR_LANG=fra,eng` dans le fichier `donnees/anythingllm/options.env`, puis relancer `outils/anythingllm/demarrer.sh` (le conteneur est recréé avec ce réglage). Supprimer ensuite le document scanné et l'envoyer de nouveau : la lecture donne alors « Brême » et « l'Acheteur ». Écrire la même ligne dans `donnees/anythingllm/storage/.env` ne suffit pas : l'outil de lecture ne la voit pas.
@@ -126,7 +125,7 @@ La première dit si AnythingLLM tourne, la deuxième montre ses derniers message
 | Symptôme | Cause | Que faire |
 |---|---|---|
 | L'assistant de premier lancement ne s'affiche pas sur une installation neuve | une clé de session (`JWT_SECRET`) existait dans les réglages au premier démarrage | ne pas la renseigner d'avance (le script d'installation ne le fait pas) ; sinon tout supprimer et réinstaller (chapitre 02, étape 10) |
-| Tous les espaces répondent par un refus après un changement d'embedder | les représentations des documents ont été effacées | intégrer de nouveau les documents de chaque espace (chapitre 05, étapes 5 et 6) |
+| Tous les espaces répondent par un refus après un changement d'embedder | le changement a retiré les documents de tous les espaces (ils restent dans « Mes documents ») | replacer et intégrer les documents de chaque espace (chapitre 05, étapes 5 et 6) |
 | « Selected Model » reste vide et grisé | adresse ou clé du service incorrecte | vérifier `http://llm-central:8080/v1` et la clé |
 | La page « Tâches planifiées » renvoie à l'accueil | instance en multi-utilisateur | fonction propre au mode « Juste moi » |
 | L'arrêt prend une dizaine de secondes | le conteneur ne s'arrête pas de lui-même, Docker le force au bout de 10 s | sans conséquence constatée : les données sont intactes au redémarrage |
