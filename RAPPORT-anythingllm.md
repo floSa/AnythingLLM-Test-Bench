@@ -63,6 +63,9 @@ Voir [JOURNAL.md](JOURNAL.md#décisions-en-attente) :
 2. Proposer un modèle de réponse plus léger dans LLM-Service pour situer un plancher de qualité (hors mission).
 3. Tâche planifiée « Point stocks du lundi » laissée programmée (09:00 UTC chaque jour) : sa page n'est plus accessible en multi-utilisateur ; à supprimer par l'utilisateur s'il ne veut pas d'appel quotidien au modèle (restaurer la sauvegarde d'avant le passage en multi-utilisateur, ou base SQLite).
 
+4. Ports affichés par `docker ps` : les conteneurs de LLM-Service `llm-central` et `llm-speaches` affichent des ports déclarés par leur image (`4000/tcp`, `8000/tcp`), non publiés (aucune liaison dans `HostConfig.PortBindings`, aucune écoute sur l'hôte). Tous les ports publiés de la machine sont sur `127.0.0.1` (3001, 8080, 8081 ; preuve : `outils/resultats/anythingllm/preuves-reranker-et-ports-2026-11-12.txt`). Faire disparaître ces mentions demanderait de modifier LLM-Service, ce que la mission n'a pas le droit de faire : décision laissée à l'utilisateur.
+5. Reranker : condition « banc sans puis avec le reranker rerank si la solution en accepte un » remplie au sens de sa clause : AnythingLLM 1.19.0 n'accepte aucun reranker externe (essai réel, `essai-reranker-externe-2026-11-12.txt`) ; banc passé sans puis avec le seul tri accepté (tri de précision intégré).
+
 ## Disque, RAM et VRAM occupés (fin de mission)
 
 Relevé brut : `outils/resultats/anythingllm/fin-de-mission-2026-11-12.log`.
