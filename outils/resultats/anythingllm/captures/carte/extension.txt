@@ -1,0 +1,40 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Browser Extension API Keys
+
+Manage API keys for browser extensions connecting to your AnythingLLM instance.
+
+Generate New API Key
+EXTENSION CONNECTION STRING	CREATED AT	ACTIONS
+No API keys found

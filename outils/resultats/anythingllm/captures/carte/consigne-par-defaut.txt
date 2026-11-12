@@ -1,0 +1,43 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Default System Prompt
+
+This is the default system prompt that will be used for new workspaces.
+
+System Prompt
+
+A system prompt provides instructions that shape the AI’s responses and behavior. This prompt will be automatically applied to all newly created workspaces. To change the system prompt of a specific workspace, edit the prompt in the workspace settings. To restore the system prompt to our sane default, leave this field empty and save changes.
+
+You can insert system prompt variables like: {time}, {time_24}, {date}, +7 more...
+
+Given the following conversation, relevant context, and a follow up question, reply with an answer to the current question the user is asking. The current date and time is {datetime}. Return only your response to the question given the above information following the users instructions as needed.
+Save Changes

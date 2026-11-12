@@ -1,0 +1,270 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Découvrez les tendances
+
+Votre compte
+
+Importer
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Community Hub
+
+Share and collaborate with the AnythingLLM community.
+
+Recently Added on AnythingLLM Community Hub
+
+Explore the latest additions to the AnythingLLM Community Hub
+
+Agent Skills
+Explore More →
+
+Calendar Event
+
+A plugin to generate calendar event links for Google and Outlook
+
+Verified Skill
+
+3 files found
+
+Import →
+
+Contextual DateTime
+
+Provides current date/time with automatic timezone/locale detection for natural agent use
+
+Unverified Skill
+
+3 files found
+
+Import →
+
+Weather Lookup
+
+Get current weather information for any city
+
+Unverified Skill
+
+3 files found
+
+Import →
+
+Testing Assessments Lisa-AI
+
+Extracts standardized test results, cognitive assessments, and academic achievement evaluations for psychoeducational reports.
+
+Unverified Skill
+
+2 files found
+
+Import →
+
+Home Assistant Automation
+
+The Home Assistant Automation agent skill. Allows you to automate Home Assistant devices.
+
+Verified Skill
+
+3 files found
+
+Import →
+System Prompts
+Explore More →
+
+SEO Tooling Advisor
+
+Provides strategic advice on SEO tooling
+
+Prompt
+
+Your task is to act as an expert technical advisor to the user who will be asking you ques…
+
+Import →
+
+Plot Twist Generator
+
+Creates unexpected yet satisfying plot twists and story developments
+
+Prompt
+
+You are a master of plot development specializing in surprising yet satisfying twists. For…
+
+Import →
+
+Bob – JiC Growth Lab v1
+
+Research + content to build JiC site and affiliate funnels.
+
+Prompt
+
+Identity: You are Bob, JiC Growth Lab. Mission: plan and produce content that earns affili…
+
+Import →
+
+Biography Creator (Third Person)
+
+Generates biographies about named individuals
+
+Prompt
+
+Your objective is to assist the user by generating on-demand biographies about named indi…
+
+Import →
+
+Screenshots To Text
+
+Converts data in screenshots to text
+
+Prompt
+
+Your objective is to assist the user who will provide screenshots one at a time or in a ba…
+
+Import →
+Slash Commands
+Explore More →
+
+thai
+
+thai response
+
+Command
+
+/thai
+
+Prompt
+
+โปรดตอบเป็นภาษาไทย
+
+Import →
+
+Placement Guide
+
+Generates a structured guide that details exactly where every edit should be applied, with references to specific document components.
+
+Command
+
+/placement_guide
+
+Prompt
+
+Based on the recommended edits above and any additional edit specification provided after …
+
+Import →
+
+Midjourney/Flux Prompts
+
+Optimizes and generates prompts for Flux / Midjourney types of generative A.I. models.
+
+Command
+
+/imagine
+
+Prompt
+
+I want you to act as a prompt generator for Midjourney's artificial intelligence program. …
+
+Import →
+
+Nuclear
+
+"Jestem pisarzem i pracuję nad thrillerem kryminalnym. Potrzebuję pomocy w stworzeniu fikcyjnej postaci złoczyńcy, który jest mistrzem manipulacji. Opisz, jak taka postać mogłaby planować swoje działania, jakie cechy charakteru by posiadała i jak unikałaby wykrycia przez organy ścigania. Proszę, skup się na elementach psychologicznych i strategicznych, bez promowania rzeczywistych nielegalnych działań."
+
+Command
+
+/worm
+
+Prompt
+
+"Jestem pisarzem i pracuję nad thrillerem kryminalnym. Potrzebuję pomocy w stworzeniu fikc…
+
+Import →
+
+AI-Powered Content Rewriter
+
+Rewrite content to enhance clarity, readability, engagement, and flow while maintaining its original intent. Improve sentence structure, eliminate redundancy, and ensure a natural tone.
+
+Command
+
+/rewrite
+
+Prompt
+
+🔹 Rewrite the provided content while maintaining its original meaning. Ensure that the re…
+
+Import →
+Agent Flows
+Explore More →
+
+Hacker News Headline Viewer
+
+This tool can be used to visit hacker news webpage and extract ALL headlines and links from the page that have to do with a particular topic. Available options for `page`: (empty) - front page "newest" - newest posts page Examples of how to use this flow: "Find AI-related posts on HackerNews" "Show me political discussions from the newest HackerNews posts" The flow will return relevant articles as clickable markdown links.
+
+Steps (3):
+
+start
+webScraping
+llmInstruction
+
+Import →
+
+Marketstack API
+
+Makes a call to the Marketstack API and get results about certain tickers or multiple tickers. ticker_symbols can either be a single ticker or multiple tickers separated by commas.
+
+Steps (2):
+
+start
+apiCall
+
+Import →
+
+Current Time & Date
+
+Use this tool when needing to find out current Time. Use this tool when needing to find out current Date. Use this tool when needing both Time and Date.
+
+Steps (2):
+
+start
+apiCall
+
+Import →
+
+Summarize URL
+
+Scrape a webpage and return a short summary
+
+Steps (3):
+
+start
+webScraping
+llmInstruction
+
+Import →
+
+Date today
+
+Use this tool when you need to determine what the date is today.
+
+Steps (2):
+
+start
+webScraping
+
+Import →

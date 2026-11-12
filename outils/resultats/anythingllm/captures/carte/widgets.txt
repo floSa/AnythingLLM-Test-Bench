@@ -1,0 +1,54 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Chat Embed
+
+Widgets
+History
+
+Widgets de chat intégrables
+
+Les widgets de chat intégrables sont des interfaces de chat publiques associées à un espace de travail unique. Ils vous permettent de créer des espaces de travail que vous pouvez ensuite publier dans le monde entier.
+
+Créer un widget intégré
+ESPACE DE TRAVAIL	CHATS ENVOYÉS	DOMAINES ACTIFS	CRÉÉ LE	
+
+Démo Vélanor
+1	
+
+all
+
+	11 minutes ago	
+Code
+Disable
+Delete

@@ -1,0 +1,63 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Agent Skills
+
+RAG et mémoire à long terme
+On
+Voir et résumer des documents
+On
+Récupérer des sites web
+On
+Recherche web en direct et navigation
+On
+Accès au système de fichiers
+Off
+Création de documents
+Off
+Générer des graphiques
+On
+Générer des images
+Off
+Connecteur SQL
+Off
+
+Custom Skills
+
+No imported skills found
+
+Learn about agent skills in the AnythingLLM Agent Docs.
+
+Agent Flows
+
+Open Builder
+
+ConsignesBatteries
+On
+
+Serveurs MCP
+
+Rafraîchir
+
+Velanor Outils
+Sur
+
+Select an Agent Skill, Agent Flow, or MCP Server

@@ -1,0 +1,58 @@
+AD
+
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+Thread
+
+Combien de vélos Vélan…
+
+Thread
+
+Thread
+
+Questions production
+
+Quel est le cours de l…
+
+Quel est le cours de l…
+
+FAQ — garantie
+
+Quelle est la pénalité…
+
+Quelle est la durée de…
+
+Fournisseur Batterix
+
+Point production
+
+*New Thread
+
+New Thread
+
+Banc-bge-m3
+
+Sources externes
+
+Paramètres généraux
+Paramètres du chat
+Base de données vectorielle
+Membres
+Configuration de l'agent
+Fournisseur LLM de l'agent de l'espace de travail
+
+Le fournisseur et le modèle LLM spécifiques qui seront utilisés pour l'agent @agent de cet espace de travail.
+
+System Default
+Agents will use the workspace or system LLM unless otherwise specified.
+Configure Agent Skills
+
+Customize and enhance the default agent's capabilities by enabling or disabling specific skills. These settings will be applied across all workspaces.

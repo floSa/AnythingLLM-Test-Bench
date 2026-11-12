@@ -1,0 +1,60 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Experimental Features
+
+Live Document Sync
+Off
+Automatic Document Content Sync
+
+Enable the ability to specify a document to be "watched". Watched document's content will be regularly fetched and updated in AnythingLLM.
+
+Watched documents will automatically update in all workspaces they are referenced in at the same time of update.
+
+This feature only applies to web-based content, such as websites, Confluence, YouTube, and GitHub files.
+
+Feature Documentation and Warnings
+Manage Watched Documents →
+Terms of use for experimental features
+
+Experimental features of AnythingLLM are features that we are piloting and are opt-in. We proactively will condition or warn you on any potential concerns should any exist prior to approval of any feature.
+
+Use of any feature on this page can result in, but not limited to, the following possibilities.
+
+Loss of data.
+Change in quality of results.
+Increased storage.
+Increased resource consumption.
+Increased cost or use of any connected LLM or embedding provider.
+Potential bugs or issues using AnythingLLM.
+
+Use of an experimental feature also comes with the following list of non-exhaustive conditions.
+
+Feature may not exist in future updates.
+The feature being used is not currently stable.
+The feature may not be available in future versions, configurations, or subscriptions of AnythingLLM.
+Your privacy settings will be honored with use of any beta feature.
+These conditions may change in future updates.
+
+Access to any features requires approval of this modal. If you would like to read more you can refer to docs.anythingllm.com or email team@mintplexlabs.com
+
+Reject & close
+I understand

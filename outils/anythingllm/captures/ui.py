@@ -8,6 +8,7 @@
 - les secrets (clé du service central, mots de passe) sont masqués avant capture.
 """
 import json, os, re, sys, time
+CLE_RE = re.compile(r"\b[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}\b|sk-[A-Za-z0-9_-]{8,}|brx-[A-Za-z0-9_-]{8,}")
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright, expect  # noqa: F401
@@ -80,10 +81,21 @@ class Scenario:
         txt = TXT / self.chapitre / f"{nom}.txt"
         masques = list(masques) + (self._secrets_visibles() if auto else [])
         libs = annoter.capture(self.page, img, elements, masques=masques, plein=plein, clip=clip, texte=txt)
+        txt.write_text(CLE_RE.sub("[clé masquée]", txt.read_text()))
         self.journal.append({"capture": f"{self.chapitre}/{nom}.png", "url": self.page.url.replace(BASE, ""),
                              "pastilles": libs, "note": note, "heure": time.strftime("%H:%M:%S")})
         self._ecrire_journal()
         return libs
+
+    def cap_souple(self, nom, elements=(), **kw):
+        """Comme cap, mais ignore (et note) les éléments introuvables ou invisibles."""
+        garde = []
+        for loc, lib in elements:
+            try:
+                loc.wait_for(state="visible", timeout=5000); garde.append((loc, lib))
+            except Exception:
+                self.note(f"{nom} : élément absent « {lib} »")
+        return self.cap(nom, garde, **kw)
 
     def _secrets_visibles(self):
         """Champs de clé ou de mot de passe remplis : masqués d'office."""
@@ -95,6 +107,12 @@ class Scenario:
                         res.append(loc)
                 except Exception:
                     pass
+        for loc in self.page.get_by_text(CLE_RE).all():
+            try:
+                if loc.is_visible():
+                    res.append(loc)
+            except Exception:
+                pass
         return res
 
     def _ecrire_journal(self):
@@ -106,6 +124,7 @@ class Scenario:
         f.write_text(json.dumps(anciens + self.journal, ensure_ascii=False, indent=1))
 
     def note(self, texte):
+        texte = CLE_RE.sub("[clé masquée]", texte)
         print("NOTE", texte, flush=True)
         f = TXT / self.chapitre / "notes.log"
         f.parent.mkdir(parents=True, exist_ok=True)

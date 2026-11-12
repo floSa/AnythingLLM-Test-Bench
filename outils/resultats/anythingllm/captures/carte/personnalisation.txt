@@ -1,0 +1,46 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Interface
+
+Personnalisation
+
+Chat
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Personnalisation de la marque
+
+Personnalisez les éléments de marque de votre instance.
+
+Identité
+Couleurs
+Barre latérale
+Navigateur
+
+Nom de l'application
+
+Définissez le nom affiché dans l'interface.
+
+Logo
+
+Téléchargez votre logo personnalisé.
+
+Ajouter un logo personnalisé
+Taille recommandée : 800 x 200

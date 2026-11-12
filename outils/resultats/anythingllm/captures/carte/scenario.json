@@ -1,0 +1,247 @@
+[
+ {
+  "capture": "carte/accueil.png",
+  "url": "/",
+  "pastilles": [],
+  "note": "repérage /",
+  "heure": "14:13:46"
+ },
+ {
+  "capture": "carte/discussion.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor",
+  "heure": "14:13:49"
+ },
+ {
+  "capture": "carte/espace-general.png",
+  "url": "/workspace/demo-velanor/settings/general-appearance",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor/settings/general-appearance",
+  "heure": "14:13:53"
+ },
+ {
+  "capture": "carte/espace-chat.png",
+  "url": "/workspace/demo-velanor/settings/chat-settings",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor/settings/chat-settings",
+  "heure": "14:13:56"
+ },
+ {
+  "capture": "carte/espace-vecteurs.png",
+  "url": "/workspace/demo-velanor/settings/vector-database",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor/settings/vector-database",
+  "heure": "14:14:00"
+ },
+ {
+  "capture": "carte/espace-membres.png",
+  "url": "/workspace/demo-velanor/settings/members",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor/settings/members",
+  "heure": "14:14:03"
+ },
+ {
+  "capture": "carte/espace-agent.png",
+  "url": "/workspace/demo-velanor/settings/agent-config",
+  "pastilles": [],
+  "note": "repérage /workspace/demo-velanor/settings/agent-config",
+  "heure": "14:14:07"
+ },
+ {
+  "capture": "carte/preference-llm.png",
+  "url": "/settings/llm-preference",
+  "pastilles": [],
+  "note": "repérage /settings/llm-preference",
+  "heure": "14:14:10"
+ },
+ {
+  "capture": "carte/base-vectorielle.png",
+  "url": "/settings/vector-database",
+  "pastilles": [],
+  "note": "repérage /settings/vector-database",
+  "heure": "14:14:14"
+ },
+ {
+  "capture": "carte/embedding.png",
+  "url": "/settings/embedding-preference",
+  "pastilles": [],
+  "note": "repérage /settings/embedding-preference",
+  "heure": "14:14:17"
+ },
+ {
+  "capture": "carte/decoupage.png",
+  "url": "/settings/text-splitter-preference",
+  "pastilles": [],
+  "note": "repérage /settings/text-splitter-preference",
+  "heure": "14:14:21"
+ },
+ {
+  "capture": "carte/images.png",
+  "url": "/settings/image-generation-preference",
+  "pastilles": [],
+  "note": "repérage /settings/image-generation-preference",
+  "heure": "14:14:24"
+ },
+ {
+  "capture": "carte/voix.png",
+  "url": "/settings/audio-preference",
+  "pastilles": [],
+  "note": "repérage /settings/audio-preference",
+  "heure": "14:14:28"
+ },
+ {
+  "capture": "carte/transcription.png",
+  "url": "/settings/transcription-preference",
+  "pastilles": [],
+  "note": "repérage /settings/transcription-preference",
+  "heure": "14:14:31"
+ },
+ {
+  "capture": "carte/routeurs.png",
+  "url": "/settings/model-routers",
+  "pastilles": [],
+  "note": "repérage /settings/model-routers",
+  "heure": "14:14:35"
+ },
+ {
+  "capture": "carte/utilisateurs.png",
+  "url": "/settings/users",
+  "pastilles": [],
+  "note": "repérage /settings/users",
+  "heure": "14:14:38"
+ },
+ {
+  "capture": "carte/espaces.png",
+  "url": "/settings/workspaces",
+  "pastilles": [],
+  "note": "repérage /settings/workspaces",
+  "heure": "14:14:42"
+ },
+ {
+  "capture": "carte/conversations.png",
+  "url": "/settings/workspace-chats",
+  "pastilles": [],
+  "note": "repérage /settings/workspace-chats",
+  "heure": "14:14:45"
+ },
+ {
+  "capture": "carte/invitations.png",
+  "url": "/settings/invites",
+  "pastilles": [],
+  "note": "repérage /settings/invites",
+  "heure": "14:14:49"
+ },
+ {
+  "capture": "carte/consigne-par-defaut.png",
+  "url": "/settings/default-system-prompt",
+  "pastilles": [],
+  "note": "repérage /settings/default-system-prompt",
+  "heure": "14:14:52"
+ },
+ {
+  "capture": "carte/competences.png",
+  "url": "/settings/agents",
+  "pastilles": [],
+  "note": "repérage /settings/agents",
+  "heure": "14:14:56"
+ },
+ {
+  "capture": "carte/centre-communautaire.png",
+  "url": "/settings/community-hub/trending",
+  "pastilles": [],
+  "note": "repérage /settings/community-hub/trending",
+  "heure": "14:15:00"
+ },
+ {
+  "capture": "carte/interface.png",
+  "url": "/settings/interface",
+  "pastilles": [],
+  "note": "repérage /settings/interface",
+  "heure": "14:15:03"
+ },
+ {
+  "capture": "carte/personnalisation.png",
+  "url": "/settings/branding",
+  "pastilles": [],
+  "note": "repérage /settings/branding",
+  "heure": "14:15:06"
+ },
+ {
+  "capture": "carte/apparence-chat.png",
+  "url": "/settings/chat",
+  "pastilles": [],
+  "note": "repérage /settings/chat",
+  "heure": "14:15:10"
+ },
+ {
+  "capture": "carte/widgets.png",
+  "url": "/settings/embed-chat-widgets",
+  "pastilles": [],
+  "note": "repérage /settings/embed-chat-widgets",
+  "heure": "14:15:13"
+ },
+ {
+  "capture": "carte/journaux.png",
+  "url": "/settings/event-logs",
+  "pastilles": [],
+  "note": "repérage /settings/event-logs",
+  "heure": "14:15:17"
+ },
+ {
+  "capture": "carte/cles-api.png",
+  "url": "/settings/api-keys",
+  "pastilles": [],
+  "note": "repérage /settings/api-keys",
+  "heure": "14:15:20"
+ },
+ {
+  "capture": "carte/variables.png",
+  "url": "/settings/system-prompt-variables",
+  "pastilles": [],
+  "note": "repérage /settings/system-prompt-variables",
+  "heure": "14:15:24"
+ },
+ {
+  "capture": "carte/extension.png",
+  "url": "/settings/browser-extension",
+  "pastilles": [],
+  "note": "repérage /settings/browser-extension",
+  "heure": "14:15:27"
+ },
+ {
+  "capture": "carte/mobile.png",
+  "url": "/settings/mobile-connections",
+  "pastilles": [],
+  "note": "repérage /settings/mobile-connections",
+  "heure": "14:15:31"
+ },
+ {
+  "capture": "carte/securite.png",
+  "url": "/settings/security",
+  "pastilles": [],
+  "note": "repérage /settings/security",
+  "heure": "14:15:35"
+ },
+ {
+  "capture": "carte/confidentialite.png",
+  "url": "/settings/privacy",
+  "pastilles": [],
+  "note": "repérage /settings/privacy",
+  "heure": "14:15:38"
+ },
+ {
+  "capture": "carte/experimental.png",
+  "url": "/settings/beta-features",
+  "pastilles": [],
+  "note": "repérage /settings/beta-features",
+  "heure": "14:15:41"
+ },
+ {
+  "capture": "carte/documentation-api.png",
+  "url": "/api/docs/",
+  "pastilles": [],
+  "note": "repérage /api/docs",
+  "heure": "14:15:45"
+ }
+]

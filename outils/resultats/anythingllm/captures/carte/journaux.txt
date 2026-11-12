@@ -1,0 +1,109 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Journaux d'événements
+
+Consultez toutes les actions et événements se produisant sur cette instance pour la surveillance.
+
+Effacer les journaux d'événements
+TYPE D'ÉVÉNEMENT	UTILISATEUR	SURVENU À	
+
+login_event
+admin-velanor	Nov 12, 2026 2:13 PM	
+
+show
+
+
+
+api_workspace_deleted
+unknown user	Nov 12, 2026 2:10 PM	
+
+show
+
+
+
+api_sent_chat
+unknown user	Nov 12, 2026 2:10 PM	
+
+show
+
+
+
+api_sent_chat
+unknown user	Nov 12, 2026 2:10 PM	
+
+show
+
+
+
+workspace_documents_added
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+
+
+api_document_uploaded
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+
+
+api_workspace_created
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+
+
+workspace_documents_removed
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+
+
+workspace_documents_removed
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+
+
+workspace_documents_removed
+unknown user	Nov 12, 2026 2:09 PM	
+
+show
+
+Page suivante

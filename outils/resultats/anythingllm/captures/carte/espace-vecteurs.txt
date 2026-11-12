@@ -1,0 +1,77 @@
+AD
+
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+Thread
+
+Combien de vélos Vélan…
+
+Thread
+
+Thread
+
+Questions production
+
+Quel est le cours de l…
+
+Quel est le cours de l…
+
+FAQ — garantie
+
+Quelle est la pénalité…
+
+Quelle est la durée de…
+
+Fournisseur Batterix
+
+Point production
+
+*New Thread
+
+New Thread
+
+Banc-bge-m3
+
+Sources externes
+
+Paramètres généraux
+Paramètres du chat
+Base de données vectorielle
+Membres
+Configuration de l'agent
+Identifiant de la base de données vectorielle
+
+demo-velanor
+
+Nombre de vecteurs
+
+13
+
+Search Preference
+
+This is the fastest performance, but may not return the most relevant results leading to model hallucinations.
+
+Default
+Accuracy Optimized
+Nombre maximum de contextes
+
+Ce paramètre contrôle le nombre maximum de contextes qui seront envoyés au LLM par chat ou requête.
+Recommandé: 4
+
+Seuil de similarité des documents
+
+Le score de similarité minimum requis pour qu'une source soit considérée comme liée au chat. Plus le nombre est élevé, plus la source doit être similaire au chat.
+
+Aucune restriction
+Bas (score de similarité ≥ .25)
+Moyen (score de similarité ≥ .50)
+Élevé (score de similarité ≥ .75)
+Réinitialiser la base de données vectorielle

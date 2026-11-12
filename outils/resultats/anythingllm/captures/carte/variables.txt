@@ -1,0 +1,58 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+System Prompt Variables
+
+System prompt variables are used to store configuration values that can be referenced in your system prompt to enable dynamic content in your prompts.
+
+Add Variable
+KEY	VALUE	DESCRIPTION	TYPE
+time		Current time	System	
+
+time_24		Current time (24-hour format)	System	
+
+date		Current date	System	
+
+datetime		Current date and time	System	
+
+datetime_24		Current date and time (24-hour format)	System	
+
+user.id		Current user's ID	User	
+
+user.name		Current user's username	User	
+
+user.bio		Current user's bio field from their profile	User	
+
+workspace.id		Current workspace's ID	Workspace	
+
+workspace.name		Current workspace's name	Workspace	

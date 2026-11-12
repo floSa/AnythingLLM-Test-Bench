@@ -1,0 +1,39 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Confidentialité et gestion des données
+
+Voici votre configuration pour la gestion des données et des fournisseurs tiers connectés avec AnythingLLM.
+
+LLM Provider
+Generic OpenAI compatible service
+Data is shared according to the terms of service applicable with your generic endpoint provider.
+Embedding Preference
+Generic OpenAI compatible service
+Data is shared according to the terms of service applicable with your generic endpoint provider.
+Vector Database
+LanceDB
+Your vectors and document text are stored privately on this instance of AnythingLLM.
+Télémétrie anonyme activée
+
+All events do not record IP-address and contain no identifying content, settings, chats, or other non-usage based information. To see the list of event tags collected you can look on GitHub here.
+
+As an open-source project we respect your right to privacy. We are dedicated to building the best solution for integrating AI and documents privately and securely. If you do decide to turn off telemetry all we ask is to consider sending us feedback and thoughts so that we can continue to improve AnythingLLM for you. team@mintplexlabs.com.

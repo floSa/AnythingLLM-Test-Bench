@@ -1,0 +1,79 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Fonctionnalités Expérimentales
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Chats de l'espace de travail
+
+Exporter
+Clear Chats
+
+Voici tous les chats et messages enregistrés qui ont été envoyés par les utilisateurs, classés par date de création.
+
+ID	ENVOYÉ PAR	ESPACE DE TRAVAIL	INVITE	RÉPONSE	ENVOYÉ À	
+249	admin-velanor	Démo Vélanor	Quand la ligne d'assemblage numéro 3 de …	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:56 PM	
+
+248	admin-velanor	Démo Vélanor	Quel délai de livraison prévoit le contr…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:55 PM	
+
+247	admin-velanor	Démo Vélanor	Quelle est la durée de garantie du cadre…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:54 PM	
+
+246	admin-velanor	Premier essai	Quel est le résultat net 2025 de Vélanor…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:53 PM	
+
+245	admin-velanor	Démo Vélanor	Quelle est la pénalité de retard prévue …	<think>The user is asking about the pena…	Nov 12, 2026 1:53 PM	
+
+244	admin-velanor	Démo Vélanor	Quelle est la pénalité de retard prévue …	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:51 PM	
+
+243	admin-velanor	Premier essai	Quel est le résultat net 2025 de Vélanor…		Nov 12, 2026 1:49 PM	
+
+242	admin-velanor	Banc-bge-m3	Quel est le salaire de Karim Benali ?	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:48 PM	
+
+241	admin-velanor	Banc-bge-m3	Combien de trottinettes électriques Véla…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:47 PM	
+
+240	admin-velanor	Banc-bge-m3	Qui est le directeur financier de Vélano…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:47 PM	
+
+239	admin-velanor	Banc-bge-m3	Quel était le chiffre d'affaires de Véla…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:46 PM	
+
+238	admin-velanor	Banc-bge-m3	Qui est le directeur de production de Vé…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:46 PM	
+
+237	admin-velanor	Banc-bge-m3	Quelle ligne d'assemblage sera arrêtée p…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:45 PM	
+
+236	admin-velanor	Banc-bge-m3	Quel chiffre d'affaires Vélanor vise-t-e…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:45 PM	
+
+235	admin-velanor	Banc-bge-m3	Quel score Batterix a-t-il obtenu à l'au…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:45 PM	
+
+234	admin-velanor	Banc-bge-m3	Quel est le délai de livraison contractu…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:44 PM	
+
+233	admin-velanor	Banc-bge-m3	Quel est le taux de cellules défectueuse…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:44 PM	
+
+232	admin-velanor	Banc-bge-m3	What overall score did Batterix obtain a…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:44 PM	
+
+231	admin-velanor	Banc-bge-m3	Quel est le montant de la prime d'intére…	<think>The user is asking about the amou…	Nov 12, 2026 1:44 PM	
+
+230	admin-velanor	Banc-bge-m3	Quel est le numéro de téléphone du servi…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:43 PM	
+Next Page
