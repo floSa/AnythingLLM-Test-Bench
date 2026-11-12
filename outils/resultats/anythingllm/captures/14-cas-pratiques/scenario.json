@@ -1,0 +1,70 @@
+[
+ {
+  "capture": "14-cas-pratiques/01-messages-suggeres.png",
+  "url": "/workspace/demo-velanor/settings/general-appearance",
+  "pastilles": [
+   [
+    1,
+    "Messages de chat suggérés"
+   ],
+   [
+    2,
+    "Ajouter un nouveau message"
+   ]
+  ],
+  "note": "",
+  "heure": "13:54:02"
+ },
+ {
+  "capture": "14-cas-pratiques/02-faq-garantie.png",
+  "url": "/workspace/demo-velanor/t/bbac0239-8ae4-45d2-8e35-b901352006f8",
+  "pastilles": [
+   [
+    1,
+    "réponse"
+   ],
+   [
+    2,
+    "source : faq-sav.html"
+   ]
+  ],
+  "note": "",
+  "heure": "13:54:35"
+ },
+ {
+  "capture": "14-cas-pratiques/03-fournisseur-batterix.png",
+  "url": "/workspace/demo-velanor/t/b3948969-f94a-48ca-9a87-82ca1e8b6ca2",
+  "pastilles": [
+   [
+    1,
+    "réponse croisant deux documents"
+   ],
+   [
+    2,
+    "contrat scanné"
+   ],
+   [
+    3,
+    "audit en anglais"
+   ]
+  ],
+  "note": "",
+  "heure": "13:55:15"
+ },
+ {
+  "capture": "14-cas-pratiques/04-message-vocal.png",
+  "url": "/workspace/demo-velanor/t/5fa97866-599e-454f-8057-41103b2b55a6",
+  "pastilles": [
+   [
+    1,
+    "réponse"
+   ],
+   [
+    2,
+    "source : message vocal transcrit"
+   ]
+  ],
+  "note": "",
+  "heure": "13:56:15"
+ }
+]

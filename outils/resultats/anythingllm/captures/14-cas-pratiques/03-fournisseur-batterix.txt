@@ -1,0 +1,87 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+Thread
+
+Combien de vélos Vélan…
+
+Thread
+
+Thread
+
+Questions production
+
+Quel est le cours de l…
+
+Quel est le cours de l…
+
+FAQ — garantie
+
+Quelle est la pénalité…
+
+Quelle est la durée de…
+
+Fournisseur Batterix
+
+New Thread
+
+Banc-bge-m3
+
+Sources externes
+
+chat
+Le contrat d’approvisionnement avec Batterix prévoit un délai de livraison de 21 jours après la commande, et l’audit fournisseur a attribué un score de 87 sur 100 à l’établissement.
+
+Quel délai de livraison prévoit le contrat Batterix, et quel score l’audit fournisseur a-t-il donné à Batterix ?
+
+Thought for 25.4s
+
+Le contrat d’approvisionnement avec Batterix prévoit un délai de livraison de 21 jours après la commande, et l’audit fournisseur a attribué un score de 87 sur 100 à l’établissement.
+
+chat · 26.1s (1.80 tok/s) · Nov 12, 1:55 PM
+
+Sources
++ 2
+Outils
+Envoyer le message au chatbot
+
+Sources
+
+procedure-batteries.docx
+
+Document
+
+1 référence
+
+contrat-batterix-scan.pdf
+
+Document
+
+1 référence
+
+supplier-audit-batterix-en.pdf
+
+Document
+
+1 référence
+
+stocks-octobre-2025.xlsx - Sheet:Fournisseurs
+
+Document
+
+1 référence
+
+stocks-octobre-2025.xlsx - Sheet:Stocks
+
+Document
+
+1 référence
+
+Souvenirs
