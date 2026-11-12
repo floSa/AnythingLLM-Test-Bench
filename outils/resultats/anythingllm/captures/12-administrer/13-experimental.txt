@@ -1,3 +1,4 @@
+AD
 PARAMÈTRES DE L'INSTANCE
 
 Fournisseurs d'IA
@@ -10,13 +11,7 @@ Centre communautaire
 
 Apparence
 
-Canaux
-
 Outils
-
-Sécurité
-
-Fonctionnalités Expérimentales
 
 Contacter le Support
 Confidentialité et données

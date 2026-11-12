@@ -51,7 +51,7 @@ Taper `Les réponses doivent toujours citer le nom du document source.` (pastill
 |---|---|---|
 | 1 | souvenir enregistré | rappelé au modèle dans les conversations de l'espace |
 
-*Résultat* : le souvenir est listé. Son menu permet de le modifier, de le rendre global (« Passer à l'échelle mondiale ») ou de le supprimer. Dans les essais, la personnalisation a ensuite été recoupée pour que les mesures de qualité ne soient pas faussées par des souvenirs.
+*Résultat* : le souvenir est listé. Son menu permet de le modifier, de le rendre global (« Passer à l'échelle mondiale ») ou de le supprimer. Dans les essais, « Activer la personnalisation » a ensuite été recoupé (même interrupteur) pour que les mesures de qualité ne soient pas faussées ; les chapitres suivants fonctionnent dans les deux cas.
 
 ## Programmer une tâche
 
@@ -70,7 +70,7 @@ Cliquer sur « Nouvelle offre d'emploi » (pastille 1) : c'est la traduction app
 
 **Étape 5. Décrire la tâche**
 *Où* : formulaire de nouvelle tâche.
-Remplir le nom `Point stocks du lundi` (pastille 1), l'instruction (pastille 2), choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel ») puis cliquer sur « Créer un emploi » (pastille 4).
+Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pastille 2) avec `Résume l'état des stocks de pièces à partir des documents de l'espace Démo Vélanor.`, choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel » ; ici « hebdomadaire » conviendrait au nom, l'essai a gardé « quotidien »), puis cliquer sur « Créer un emploi » (pastille 4).
 
 ![Nouvelle tâche](../img/11-memoires-taches-routage/05-nouvelle-tache.png)
 *Écran : formulaire de nouvelle tâche planifiée.*
@@ -78,7 +78,7 @@ Remplir le nom `Point stocks du lundi` (pastille 1), l'instruction (pastille 2),
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | nom | nom affiché dans la liste |
-| 2 | instruction | consigne envoyée au modèle à chaque exécution |
+| 2 | « Demande » | consigne envoyée au modèle à chaque exécution |
 | 3 | calendrier | fréquence d'exécution |
 | 4 | « Créer un emploi » | enregistre la tâche |
 
@@ -94,7 +94,7 @@ Remplir le nom `Point stocks du lundi` (pastille 1), l'instruction (pastille 2),
 |---|---|---|
 | 1 | tâche créée | ligne avec son calendrier (« À 09:00 UTC »), son état et sa prochaine exécution |
 
-*Résultat* : la colonne « Prochaine course » indique la prochaine exécution ; les résultats des exécutions se consultent depuis la ligne de la tâche. Les heures sont en temps universel (UTC) : 09:00 UTC correspond à 10:00 à Paris en hiver.
+*Résultat* : la colonne « Prochaine course » indique la prochaine exécution ; les résultats des exécutions se consultent depuis la ligne de la tâche. Les heures sont en temps universel (UTC, l'heure de référence internationale) : 09:00 UTC correspond à 10:00 à Paris en hiver.
 
 ## Créer un routeur de modèles
 
@@ -113,7 +113,7 @@ Cliquer sur « Nouveau routeur » (pastille 1).
 
 **Étape 8. Définir le modèle de secours**
 *Où* : fenêtre « Créer un nouveau routeur ».
-Remplir « Nom » (pastille 1), choisir « Generic OpenAI » comme prestataire principal (pastille 2), taper `chat` comme modèle (pastille 3), puis cliquer sur « Créer » (pastille 4).
+Remplir « Nom » (pastille 1) avec `Routeur Vélanor` et, facultatif, « Description » ; choisir « Generic OpenAI » comme prestataire principal (pastille 2), taper `chat` comme modèle (pastille 3), puis cliquer sur « Créer un routeur » (pastille 4).
 
 ![Nouveau routeur](../img/11-memoires-taches-routage/07-nouveau-routeur.png)
 *Écran : fenêtre « Créer un nouveau routeur ».*
@@ -123,7 +123,7 @@ Remplir « Nom » (pastille 1), choisir « Generic OpenAI » comme prestataire p
 | 1 | « Nom » | nom du routeur |
 | 2 | « Prestataire principal et modèle » | fournisseur utilisé quand aucune règle ne s'applique ; il sert aussi à évaluer les règles rédigées en langage courant |
 | 3 | modèle | nom du modèle de secours (`chat`) |
-| 4 | « Créer » | enregistre le routeur |
+| 4 | « Créer un routeur » | enregistre le routeur |
 
 *Résultat* : le routeur apparaît dans la liste.
 
@@ -137,7 +137,7 @@ Remplir « Nom » (pastille 1), choisir « Generic OpenAI » comme prestataire p
 |---|---|---|
 | 1 | « Routeur Vélanor » | routeur, avec son plan de secours `generic-openai/chat`, 0 règle et 0 espace |
 
-*Résultat* : le routeur est prêt à recevoir des règles et à être choisi comme fournisseur dans les réglages d'un espace (« Model Router », chapitre 07). Sur ce poste, le service propose aussi `gemma-4-e4b` : une règle peut, par exemple, envoyer les questions courtes à ce modèle.
+*Résultat* : le routeur est prêt à recevoir des règles. Il se choisit ensuite comme fournisseur d'un espace : réglages de l'espace › « Paramètres du chat » › « Fournisseur LLM de l'espace de travail » (chapitre 07, étape 2), où « Model Router » figure dans la liste. Sur ce poste, le service propose aussi `gemma-4-e4b` : une règle peut, par exemple, envoyer les questions courtes à ce modèle.
 
 ## Bon à savoir
 

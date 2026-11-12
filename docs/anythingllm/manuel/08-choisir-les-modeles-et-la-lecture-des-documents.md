@@ -4,7 +4,7 @@
 > **Point de départ** : écran principal, clé en bas de la barre latérale › « Paramètres de l'instance ».
 > **Durée** : environ 10 minutes. **Avant** : chapitre 03.
 
-**Attention** : changer le modèle d'embedding ou le découpage des textes impose d'intégrer de nouveau tous les documents (chapitre 03, étape 15).
+**Attention** : changer le modèle d'embedding ou le découpage des textes impose d'intégrer de nouveau tous les documents (chapitre 05, étapes 5 et 6).
 
 ## Ce qu'il faut savoir
 
@@ -53,7 +53,7 @@ Sur ces pages, le bouton d'enregistrement (« Enregistrer les modifications » o
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Taille des segments de texte » | longueur maximale d'un passage, en caractères ; ne peut pas dépasser la limite déclarée pour l'embedding (« Longueur maximale du modèle d'intégration est 1,000. ») |
+| 1 | « Taille des segments de texte » | longueur maximale d'un passage, en caractères ; ne peut pas dépasser la limite déclarée pour l'embedding (1 000 ici, rappelée sous le champ) |
 | 2 | « Chevauchement des segments de texte » | nombre de caractères repris d'un passage au suivant (20 par défaut) |
 
 *Résultat* : un changement ne vaut que pour les documents intégrés ensuite. Pour des passages plus longs, relever d'abord « Max embedding chunk length » dans « Préférences d'intégration » (chapitre 03, étape 14).
@@ -118,7 +118,7 @@ Cliquer sur le nom du modèle (pastille 1).
 
 **Étape 8. Choisir le modèle**
 *Où* : sélecteur de modèle.
-Choisir le fournisseur à gauche (ici « Generic OpenAI »), puis le modèle dans la liste de droite, et enregistrer.
+Pour voir les choix sans rien changer : le fournisseur à gauche (ici « Generic OpenAI »), le modèle dans la liste de droite (`chat`). Pour garder les résultats des chapitres suivants, laisser `chat` et fermer le sélecteur avec Échap ; changer de modèle se fait en choisissant un autre nom dans la liste puis en confirmant dans le sélecteur.
 
 ![Sélecteur de modèle](../img/08-modeles-et-lecture/08-choix-du-modele.png)
 *Écran : sélecteur de modèle de l'espace.*

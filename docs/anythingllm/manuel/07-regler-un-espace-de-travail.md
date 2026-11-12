@@ -12,7 +12,7 @@ Chaque espace a ses propres réglages ; ils ne touchent pas les autres espaces. 
 
 **Il n'y a pas de bouton « Enregistrer »** : un champ texte est enregistré quand on clique ailleurs, une liste ou un bouton dès qu'on le change. Une coche « Enregistré » s'affiche deux secondes à côté du titre du réglage.
 
-Les réglages qui changent le plus la qualité des réponses sont dans l'onglet « Base de données vectorielle » : le nombre de passages donnés au modèle et le tri de précision. Leur effet mesuré est résumé dans « Bon à savoir ».
+Les réglages qui changent le plus la qualité des réponses sont dans l'onglet « Base de données vectorielle » : le nombre de passages donnés au modèle et le tri de précision. Les réglages conseillés sont donnés dans « Bon à savoir ».
 
 ## Paramètres généraux
 
@@ -79,6 +79,8 @@ Dans « Réponse de refus en mode requête » (pastille 3), remplacer le texte a
 | 4 | « Seuil de similarité des documents » | « Aucune restriction », « Bas (score de similarité ≥ .25) » (défaut), « Moyen (≥ .50) », « Élevé (≥ .75) » |
 | 5 | « Réinitialiser la base de données vectorielle » | efface les passages de l'espace ; les documents devront être intégrés de nouveau |
 
+Pour l'espace « Démo Vélanor », choisir « Accuracy Optimized » dans la préférence de recherche (pastille 2) et taper `8` dans « Nombre maximum de contextes » (pastille 3), puis cliquer ailleurs.
+
 *Résultat* : les changements s'appliquent dès la question suivante, sans nouvelle intégration.
 
 ## Configuration de l'agent
@@ -100,9 +102,9 @@ Dans « Réponse de refus en mode requête » (pastille 3), remplacer le texte a
 
 Effet mesuré sur les 34 questions avec réponse du banc d'essai (détail en annexe A1) :
 
-- passer de l'embedder intégré à `embed` est le réglage qui compte le plus ;
-- le tri de précision (« Accuracy Optimized ») et un nombre de passages plus élevé sont comparés dans l'annexe A1 ;
-- les bons passages observés dans les essais avaient une similarité de 60 à 65 % (« 64% match » au chapitre 04) : un seuil « Élevé » (75 %) les aurait écartés ; garder « Bas ».
+- passer de l'embedder intégré à `embed` est le réglage qui compte le plus : 33 bonnes réponses sur 34 au lieu de 25 ;
+- le tri de précision (« Accuracy Optimized ») ou 8 passages au lieu de 4 donnent 34 sur 34 et refusent correctement les 4 questions sans réponse ; 2 passages seulement font perdre deux réponses ;
+- les bons passages observés dans les essais avaient une similarité de 60 à 65 % (64 % au chapitre 04, étape 14) : un seuil « Élevé » (75 %) les aurait écartés ; garder « Bas ».
 
 Pour un espace destiné à des questions précises sur des documents, les réglages conseillés sont : mode « Requête », réponse de refus en français, seuil « Bas », 4 à 8 passages.
 

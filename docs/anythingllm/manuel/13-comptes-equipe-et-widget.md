@@ -22,7 +22,7 @@ Un **widget** est une petite fenêtre de discussion liée à un espace, qu'un si
 
 **Étape 1. Activer le mode multi-utilisateur**
 *Où* : Paramètres de l'instance › « Sécurité », section « Mode multi-utilisateurs ».
-Basculer « Activer le mode multi-utilisateurs » (pastille 1), remplir le nom (pastille 2) et le mot de passe (pastille 3) du compte administrateur, puis cliquer sur « Enregistrer les modifications » (pastille 4).
+Basculer « Activer le mode multi-utilisateurs » (pastille 1), remplir le nom (pastille 2, ici `admin-velanor`) et le mot de passe (pastille 3) du compte administrateur, puis cliquer sur « Enregistrer les modifications » (pastille 4).
 
 ![Activation du multi-utilisateur](../img/13-comptes-et-widget/01-mode-multi-utilisateurs.png)
 *Écran : « Sécurité », mode multi-utilisateurs.*
@@ -102,7 +102,7 @@ Cocher `camille.martin` (pastille 1), puis « Save » (pastille 2).
 ## Inviter une personne
 
 **Étape 6. Créer un lien d'invitation**
-*Où* : Paramètres de l'instance › Admin › « Invitation » › « Create Invite Link ».
+*Où* : Paramètres de l'instance › Admin › « Invitation » (la page s'intitule « Invitations ») › « Create Invite Link ».
 Cocher éventuellement les espaces à ouvrir d'office (pastille 1), puis « Create Invite » (pastille 2).
 
 ![Nouvelle invitation](../img/13-comptes-et-widget/06-invitation.png)
@@ -130,7 +130,7 @@ Cocher éventuellement les espaces à ouvrir d'office (pastille 1), puis « Crea
 ## Première connexion d'un utilisateur
 
 **Étape 8. Garder les codes de récupération**
-*Où* : première connexion de `camille.martin`.
+*Où* : se déconnecter de `admin-velanor` (pastille aux initiales en haut à droite › « Déconnexion », voir l'étape 10), puis se connecter avec `camille.martin` et son mot de passe (comme à l'étape 2) : c'est sa première connexion.
 Cliquer sur « Download » (pastille 1), puis sur « Close ».
 
 ![Codes de récupération](../img/13-comptes-et-widget/08-codes-de-recuperation.png)
@@ -153,12 +153,12 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 | 1 | liste des espaces | seulement « Démo Vélanor » |
 | 2 | « Envoyer un message » | l'utilisateur peut poser des questions |
 
-*Résultat* : pas de clé des paramètres, pas de bouton « + » : un compte « Default » ne peut que discuter.
+*Résultat* : pas de clé des paramètres, pas de bouton « + » : un compte « Default » ne peut que discuter. Se déconnecter, puis se reconnecter avec `admin-velanor` pour la suite du chapitre.
 
 ## Régler son compte
 
 **Étape 10. Ouvrir le menu du compte**
-*Où* : pastille aux initiales, en haut à droite.
+*Où* : connecté avec `admin-velanor`, pastille aux initiales (« AD »), en haut à droite.
 
 ![Menu du compte](../img/13-comptes-et-widget/10-menu-du-compte.png)
 *Écran : menu du compte.*
@@ -187,19 +187,20 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 ## Intégrer une fenêtre de discussion dans un site
 
 **Étape 12. Créer le widget**
-*Où* : Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
-Choisir l'espace « Démo Vélanor » (pastille 1), le mode « Requête », remplir les limites (pastille 2), puis « Create embed » (pastille 3).
+*Où* : connecté avec `admin-velanor`, Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
+En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), renseigner le domaine du site dans « Restrict requests from domains » (pastille 2), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
 
 ![Nouveau widget](../img/13-comptes-et-widget/12-nouveau-widget.png)
 *Écran : fenêtre de création d'un widget.*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | espace de travail | espace interrogé par le widget |
-| 2 | limite par jour | nombre maximal de messages par jour, tous visiteurs confondus |
-| 3 | « Create embed » | crée le widget |
+| 1 | mode « Query » | le widget ne répond qu'à partir des documents de l'espace |
+| 2 | « Restrict requests from domains » | domaines autorisés à afficher le widget ; vide = tous |
+| 3 | « Max chats per day » | nombre maximal de messages par jour, tous visiteurs confondus |
+| 4 | « Create embed » | crée le widget |
 
-*Résultat* : le widget apparaît dans la liste. La même fenêtre propose des domaines autorisés (vide = tous) et des autorisations de modifier le modèle, la température ou la consigne : les laisser fermées.
+*Résultat* : le widget apparaît dans la liste. La même fenêtre propose aussi d'autoriser le visiteur à changer le modèle, la température ou la consigne (« Enable dynamic … ») : laisser ces interrupteurs fermés.
 
 **Étape 13. Récupérer le code**
 *Où* : « Widgets de chat intégrés », ligne du widget.
@@ -227,7 +228,7 @@ Choisir l'espace « Démo Vélanor » (pastille 1), le mode « Requête », remp
 *Résultat* : le code est prêt à coller dans une page du site.
 
 **Étape 15. Utiliser le widget dans le site**
-*Où* : page web contenant le code (ici une page de test du dépôt, `outils/anythingllm/essais/site/widget.html`).
+*Où* : page web contenant le code copié à l'étape 14. Dans l'essai, le code a été collé dans une page de test (`outils/anythingllm/essais/site/widget.html`, où `EMBED_ID` est remplacé par l'identifiant du widget), servie par le site de test du chapitre 09 et ouverte dans le navigateur des captures. Sur un vrai site, le code se colle avant `</body>` d'une page de ce site.
 Cliquer sur la bulle en bas à droite (pastille 1), poser une question.
 
 ![Site avec le widget](../img/13-comptes-et-widget/15-site-avec-widget.png)

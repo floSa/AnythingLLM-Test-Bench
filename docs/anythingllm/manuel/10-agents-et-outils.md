@@ -34,7 +34,7 @@ L'exemple branche un serveur MCP écrit pour ce manuel, `velanor-outils` : il do
 | 4 | « Agent Flows » | enchaînements sans code (étape 3) |
 | 5 | « Serveurs MCP » | serveurs d'outils externes (étape 5) |
 
-*Résultat* : chaque ligne indique « On » ou « Off ». Par défaut, quatre compétences sont actives : RAG et mémoire, voir et résumer des documents, récupérer des sites web, recherche web.
+*Résultat* : chaque ligne indique « On » ou « Off ». La capture a été prise à la fin du chapitre : elle montre déjà « Générer des graphiques » activé (étape 2), le flow `ConsignesBatteries` (étapes 3 et 4) et le serveur « Velanor Outils » (étape 5). Par défaut, quatre compétences sont actives : RAG et mémoire, voir et résumer des documents, récupérer des sites web, recherche web.
 
 **Étape 2. Activer une compétence**
 *Où* : cliquer sur « Générer des graphiques ».
@@ -68,7 +68,7 @@ Cliquer sur « Create Flow » (pastille 1).
 
 **Étape 4. Décrire et enregistrer le flow**
 *Où* : éditeur d'agent flow.
-Remplir « Flow Name » avec `ConsignesBatteries` (pastille 1) et « Description » (pastille 2) avec une phrase qui dit au modèle quand l'utiliser, ajouter des étapes avec « Add Block » (pastille 3), puis cliquer sur « Save » (pastille 4).
+Remplir « Flow Name » avec `ConsignesBatteries` (pastille 1) et « Description » (pastille 2) avec une phrase qui dit au modèle quand l'utiliser, puis cliquer sur « Save » (pastille 4). Dans les essais, le flow a été enregistré sans bloc, pour montrer l'éditeur ; « Add Block » (pastille 3) propose les étapes possibles, à choisir selon la tâche.
 
 ![Éditeur d'agent flow](../img/10-agents/04-editeur-de-flow.png)
 *Écran : éditeur d'agent flow (en anglais).*
@@ -80,11 +80,14 @@ Remplir « Flow Name » avec `ConsignesBatteries` (pastille 1) et « Description
 | 3 | « Add Block » | ajoute une étape (appel d'API, lecture de site web, instruction au modèle…) |
 | 4 | « Save » | enregistre le flow ; « Publish » le partage sur le Centre communautaire en ligne |
 
-*Résultat* : le flow est enregistré et apparaît dans la section « Agent Flows » ; l'agent peut l'appeler comme une compétence. Les « Flow Variables » permettent de demander au modèle des valeurs (par exemple une référence de pièce) à injecter dans les étapes.
+*Résultat* : le flow est enregistré ; de retour sur « Compétences de l'agent », il apparaît dans la section « Agent Flows » (`ConsignesBatteries`, « On », visible sur la capture de l'étape 1) ; l'agent peut l'appeler comme une compétence. Les « Flow Variables » permettent de demander au modèle des valeurs (par exemple une référence de pièce) à injecter dans les étapes.
 
 ## Brancher un serveur MCP
 
-Les serveurs MCP se déclarent dans le fichier `anythingllm_mcp_servers.json` du dossier de données (`donnees/anythingllm/storage/plugins/`) ; l'interface les affiche et permet de les activer. Le script `outils/anythingllm/mcp/installer-mcp.sh` copie le serveur d'exemple et le déclare :
+Les serveurs MCP se déclarent dans le fichier `anythingllm_mcp_servers.json` du dossier de données (`donnees/anythingllm/storage/plugins/`) ; l'interface les affiche et permet de les activer.
+
+**Étape 5a. Déclarer le serveur d'exemple**
+*Où* : terminal Ubuntu, dossier du dépôt. Le script copie le serveur d'exemple et le déclare :
 
 ```bash
 outils/anythingllm/mcp/installer-mcp.sh
@@ -105,6 +108,7 @@ Cliquer sur « Rafraîchir » (pastille 1), puis sur « Velanor Outils » (pasti
 | 2 | « Velanor Outils » | serveur déclaré, « Sur » quand il tourne |
 | 3 | « 1/1 outils activés » | outils du serveur proposés à l'agent |
 | 4 | `stock_piece` | outil du serveur, avec sa description |
+| 5 | `ConsignesBatteries` | flow créé aux étapes 3 et 4, listé dans « Agent Flows » |
 
 *Résultat* : le détail montre la commande de démarrage (`node` et le chemin du script) et la liste des outils. Un serveur MCP tourne dans le conteneur d'AnythingLLM : il n'a accès qu'à ce que le conteneur voit.
 

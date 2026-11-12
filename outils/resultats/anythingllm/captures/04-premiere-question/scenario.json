@@ -204,6 +204,142 @@
   "heure": "12:38:35"
  },
  {
+  "capture": "10-agents/01-competences.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "RAG et mémoire à long terme"
+   ],
+   [
+    2,
+    "Recherche web en direct et navigation"
+   ],
+   [
+    3,
+    "Générer des graphiques"
+   ],
+   [
+    4,
+    "Agent Flows"
+   ],
+   [
+    5,
+    "Serveurs MCP"
+   ]
+  ],
+  "note": "",
+  "heure": "14:23:57"
+ },
+ {
+  "capture": "10-agents/05-serveur-mcp.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "Rafraîchir"
+   ],
+   [
+    2,
+    "Velanor Outils"
+   ],
+   [
+    3,
+    "1/1 outils activés"
+   ],
+   [
+    4,
+    "outil stock_piece"
+   ],
+   [
+    5,
+    "flow ConsignesBatteries"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:00"
+ },
+ {
+  "capture": "12-administrer/04-espaces-de-travail.png",
+  "url": "/settings/workspaces",
+  "pastilles": [
+   [
+    1,
+    "New Workspace"
+   ],
+   [
+    2,
+    "Démo Vélanor"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:04"
+ },
+ {
+  "capture": "12-administrer/13-experimental.png",
+  "url": "/settings/beta-features",
+  "pastilles": [
+   [
+    1,
+    "I understand"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:13"
+ },
+ {
+  "capture": "12-administrer/13b-live-document-sync.png",
+  "url": "/settings/beta-features",
+  "pastilles": [
+   [
+    1,
+    "Live Document Sync"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:15"
+ },
+ {
+  "capture": "12-administrer/14-documentation-api.png",
+  "url": "/api/docs/",
+  "pastilles": [
+   [
+    1,
+    "Authorize"
+   ],
+   [
+    2,
+    "Workspaces"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:21"
+ },
+ {
+  "capture": "13-comptes-et-widget/12-nouveau-widget.png",
+  "url": "/settings/embed-chat-widgets",
+  "pastilles": [
+   [
+    1,
+    "espace de travail"
+   ],
+   [
+    2,
+    "mode Requête"
+   ],
+   [
+    3,
+    "limite par jour"
+   ],
+   [
+    4,
+    "Create embed"
+   ]
+  ],
+  "note": "",
+  "heure": "14:24:26"
+ },
+ {
   "capture": "04-premiere-question/14-extrait-cite.png",
   "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
   "pastilles": [
@@ -213,7 +349,7 @@
    ],
    [
     2,
-    "passage cité"
+    "pourcentage de similarité"
    ],
    [
     3,
@@ -221,6 +357,6 @@
    ]
   ],
   "note": "",
-  "heure": "12:38:37"
+  "heure": "14:24:33"
  }
 ]

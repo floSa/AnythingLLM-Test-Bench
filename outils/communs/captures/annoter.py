@@ -37,9 +37,13 @@ CLASSE = "rag-annotation-manuel"
 
 def _boite(page, loc, n=None, masque=False):
     loc.wait_for(state="visible", timeout=15000)
-    loc.scroll_into_view_if_needed(timeout=5000)
-    b = loc.bounding_box()
     vw, vh = page.evaluate("[window.innerWidth, window.innerHeight]")
+    b = loc.bounding_box()
+    # ne faire défiler que si l'élément est hors de la fenêtre : un défilement dans une zone interne déplacerait
+    # les éléments déjà repérés (pastilles décalées)
+    if not b or b["y"] < 0 or b["y"] + min(b["height"], 40) > vh or b["x"] < 0 or b["x"] > vw:
+        loc.scroll_into_view_if_needed(timeout=5000)
+        b = loc.bounding_box()
     # un élément sans taille ou hors de la fenêtre donnerait une pastille flottante sans rectangle : erreur explicite
     if not b or b["width"] < 2 or b["height"] < 2 or b["x"] + b["width"] < 0 or b["y"] + b["height"] < 0 \
             or b["x"] > vw or b["y"] > vh:
@@ -51,6 +55,12 @@ def _boite(page, loc, n=None, masque=False):
 def annoter(page, elements):
     """elements : liste de (locator, libellé). Renvoie les libellés numérotés."""
     boites = [_boite(page, loc, n=i) for i, (loc, _) in enumerate(elements, 1)]
+    # second passage sans défilement : positions finales, après les éventuels défilements des éléments suivants
+    sx, sy = page.evaluate("[window.scrollX, window.scrollY]")
+    for bt, (loc, _) in zip(boites, elements):
+        b = loc.bounding_box()
+        if b:
+            bt.update(x=b["x"] + sx, y=b["y"] + sy, w=b["width"], h=b["height"])
     page.evaluate(_JS, [boites, CLASSE])
     return [(i, lib) for i, (_, lib) in enumerate(elements, 1)]
 

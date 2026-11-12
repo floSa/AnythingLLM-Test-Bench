@@ -81,7 +81,7 @@ La première dit si AnythingLLM tourne, la deuxième montre ses derniers message
 | 2 | « 400 No connected db. » | message renvoyé par le service de modèles quand la clé est fausse |
 
 *Cause* : la clé saisie dans « Préférence LLM » ne correspond pas à celle du service (message peu explicite du service, essayé avec une clé volontairement fausse).
-*Que faire* : Paramètres de l'instance › « Préférence LLM » › « API Key » : recoller la clé du fichier `.env`, « Save changes ». Faire de même dans « Préférences d'intégration » et « Modèle de transcription » si la clé a changé.
+*Que faire* : afficher la clé dans le terminal, dossier du dépôt, avec `grep LLM_CENTRAL_KEY .env`, puis Paramètres de l'instance › « Préférence LLM » › « API Key » : la coller, « Save changes ». Faire de même dans « Préférences d'intégration » et « Modèle de transcription » si la clé a changé.
 
 ## La réponse est coupée
 
@@ -109,7 +109,7 @@ La première dit si AnythingLLM tourne, la deuxième montre ses derniers message
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Bréme » | « Brême » mal lu |
-| 2 | « I'Acheteur » | « l'Acheteur » mal lu |
+| 2 | « (I'Acheteur) » | « (l'Acheteur) » mal lu |
 
 *Cause* : la lecture optique (OCR) est réglée en anglais par défaut ; les accents et certaines lettres françaises sont mal reconnus. Les chiffres du contrat ont été bien lus dans les essais.
 *Que faire* : ce réglage n'existe pas dans l'interface. Depuis le dossier du dépôt, écrire la ligne `TARGET_OCR_LANG=fra,eng` dans le fichier `donnees/anythingllm/options.env`, puis relancer `outils/anythingllm/demarrer.sh` (le conteneur est recréé avec ce réglage). Supprimer ensuite le document scanné et l'envoyer de nouveau : la lecture donne alors « Brême » et « l'Acheteur ». Écrire la même ligne dans `donnees/anythingllm/storage/.env` ne suffit pas : l'outil de lecture ne la voit pas.

@@ -17,7 +17,18 @@ L'onglet « Connecteurs de données » de la fenêtre des documents propose des 
 | « Récupération de site web en masse » | une page et les pages liées, jusqu'à une profondeur donnée | non |
 | Confluence, Drupal Wiki, Obsidian, Paperless-ngx | un espace documentaire, un coffre de notes, une gestion électronique de documents | oui, celui du service |
 
-Pour l'exemple, un petit site fictif de trois pages tourne sur le poste, à l'adresse `http://rag-anythingllm-site/` du réseau Docker (lancé par `outils/anythingllm/essais/site.sh start`).
+Pour l'exemple, un petit site fictif de trois pages tourne sur le poste, à l'adresse `http://rag-anythingllm-site/` du réseau Docker (étape 0).
+
+## Démarrer le site de test
+
+**Étape 0. Lancer le site fictif**
+*Où* : terminal Ubuntu, dossier du dépôt.
+
+```bash
+outils/anythingllm/essais/site.sh start
+```
+
+*Résultat* : `site de test : http://rag-anythingllm-site/ (réseau rag-local)`. Ce site n'est visible que d'AnythingLLM (même réseau Docker), pas du navigateur Windows ; `outils/anythingllm/essais/site.sh stop` l'arrête. Pour un vrai site, utiliser directement son adresse.
 
 ## Voir les connecteurs
 
@@ -90,7 +101,7 @@ Coller l'adresse d'une vidéo sous-titrée dans « URL de la vidéo YouTube » (
 
 **Étape 5. Soumettre un lien**
 *Où* : onglet « Documents », sous la zone d'envoi.
-Coller l'adresse dans « ou soumettre un lien » (pastille 1), puis cliquer sur « Récupérer le site web » (pastille 2).
+Coller l'adresse dans « ou soumettre un lien » (pastille 1), ici `http://rag-anythingllm-site/livraisons.html`, puis cliquer sur « Récupérer le site web » (pastille 2).
 
 ![Import d'une page par son lien](../img/09-sources-externes/05-lien-simple.png)
 *Écran : fenêtre des documents, champ de lien.*
@@ -137,7 +148,7 @@ Demander `Combien de techniciens compte l'atelier de Nantes ?` puis ouvrir « So
 ## Bon à savoir
 
 - Un document importé du web peut être tenu à jour automatiquement avec la fonction expérimentale « Live Document Sync » (chapitre 12, étape 14).
-- Le connecteur de site web utilise le navigateur intégré au conteneur : c'est la raison de l'option `SYS_ADMIN` du conteneur (annexe A5).
+- Le connecteur de site web utilise un navigateur intégré au conteneur, qui demande une permission particulière du conteneur (`SYS_ADMIN`, réglée par l'installation ; annexe A5).
 
 ## En cas de problème
 

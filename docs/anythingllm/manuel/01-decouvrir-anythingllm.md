@@ -16,7 +16,7 @@ Le travail s'organise en **espaces de travail**. Un espace réunit :
 
 Les espaces sont cloisonnés : une question posée dans un espace ne voit que les documents de cet espace.
 
-AnythingLLM ne contient pas de modèle d'IA dans cette installation : il s'appuie sur un **service de modèles** installé sur le même poste (le service LLM central), qui fournit le modèle de réponse, le modèle d'embedding (qui représente le sens des textes) et la transcription de l'audio. Rien ne part vers un service en ligne pour répondre aux questions.
+AnythingLLM ne contient pas de modèle d'IA dans cette installation : il s'appuie sur un **service de modèles** installé sur le même poste (le service LLM central), qui fournit le modèle de réponse, le modèle d'embedding (qui représente le sens des textes) et la transcription de l'audio. Rien ne part vers un service en ligne pour répondre aux questions, sauf si l'agent utilise sa compétence de recherche sur le web, active par défaut (chapitre 10).
 
 ## Pour qui
 
@@ -133,7 +133,7 @@ Test sur 38 questions dont la réponse est connue, posées à 9 documents d'une 
 
 | Mesure | Résultat |
 |---|---|
-| Réponses justes | 33 sur 34 avec les réglages par défaut ; 34 sur 34 avec le tri de précision « Accuracy Optimized » ou 8 passages |
+| Réponses justes (34 questions ont une réponse dans les documents, 4 n'en ont pas) | 33 sur 34 avec les réglages par défaut ; 34 sur 34 avec le tri de précision « Accuracy Optimized » ou 8 passages |
 | Questions sans réponse dans les documents | 4 refus sur 4 avec le tri de précision, aucune réponse inventée |
 | Embedder intégré à la place du service | 25 sur 34 seulement : brancher le modèle d'embedding du service est indispensable en français |
 | Temps de réponse | 11 à 14 secondes en général, réflexion du modèle comprise ; jusqu'à 50 secondes pour les plus longues |

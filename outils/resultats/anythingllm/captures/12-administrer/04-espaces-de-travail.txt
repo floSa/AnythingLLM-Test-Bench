@@ -1,10 +1,17 @@
+AD
 PARAMÈTRES DE L'INSTANCE
 
 Fournisseurs d'IA
 
 Admin
 
+Utilisateurs
+
+Espaces de travail
+
 Chat de l'espace de travail
+
+Invitation
 
 Default System Prompt
 
@@ -14,11 +21,7 @@ Centre communautaire
 
 Apparence
 
-Canaux
-
 Outils
-
-Sécurité
 
 Contacter le Support
 Confidentialité et données
@@ -30,3 +33,26 @@ These are all the workspaces that exist on this instance. Removing a workspace w
 
 New Workspace
 NAME	LINK	USERS	CREATED ON	
+Mon Espace de Travail	
+mon-espace-de-travail
+	
+0
+	Nov 12, 2026 12:04 PM	
+
+Premier essai	
+premier-essai
+	
+0
+	Nov 12, 2026 12:36 PM	
+
+Démo Vélanor	
+demo-velanor
+	
+1
+	Nov 12, 2026 12:38 PM	
+
+Sources externes	
+sources-externes
+	
+0
+	Nov 12, 2026 1:11 PM	

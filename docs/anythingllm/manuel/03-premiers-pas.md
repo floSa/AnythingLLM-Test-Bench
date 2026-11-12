@@ -4,7 +4,7 @@
 > **Point de départ** : page « Bienvenue » ouverte à l'adresse `http://127.0.0.1:3001`, à la fin du chapitre 02.
 > **Durée** : environ 15 minutes. **Avant** : chapitre 02.
 
-**Attention** : le mot de passe choisi à l'étape 6 ne peut pas être récupéré. Le noter dans un endroit sûr.
+**Attention** : le mot de passe choisi à l'étape 5 ne peut pas être récupéré. Le noter dans un endroit sûr.
 
 ## Ce qu'il faut savoir
 
@@ -16,7 +16,7 @@ AnythingLLM ne répond pas lui-même : il envoie chaque demande à des **modèle
 | Modèle d'embedding | `embed` | transforme chaque passage de document et chaque question en une suite de nombres qui représente son sens ; c'est ce qui permet de retrouver les passages utiles |
 | Modèle de transcription | `transcribe` | transforme un fichier audio ou vidéo en texte |
 
-Le service se joint, depuis AnythingLLM, à l'adresse `http://llm-central:8080/v1` avec une clé (celle du fichier `.env`, chapitre 02, étape 3). Dans AnythingLLM, ce type de service s'appelle « Generic OpenAI » (pour les réponses et l'embedding) ou « OpenAI Compatible » (pour la transcription) : il parle la même langue que l'API d'OpenAI, sans être OpenAI.
+Le service se joint, depuis AnythingLLM, à l'adresse `http://llm-central:8080/v1` (et non `127.0.0.1`, qui désignerait le conteneur d'AnythingLLM lui-même ; voir le chapitre 02) avec une clé (celle du fichier `.env`, chapitre 02, étape 3). Dans AnythingLLM, ce type de service s'appelle « Generic OpenAI » (pour les réponses et l'embedding) ou « OpenAI Compatible » (pour la transcription) : il parle la même langue que l'API d'OpenAI, sans être OpenAI.
 
 L'assistant de premier lancement ne demande que le modèle de réponse ; les deux autres se déclarent ensuite dans les paramètres.
 
@@ -78,7 +78,7 @@ Cliquer sur « Juste moi » (pastille 1).
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Juste moi » | une seule personne, protégée par un mot de passe ; toutes les fonctions restent disponibles |
-| 2 | « Mon équipe » | plusieurs comptes avec rôles ; certaines pages (tâches planifiées, Telegram) disparaissent alors |
+| 2 | « Mon équipe » | plusieurs comptes avec rôles ; certaines pages (tâches planifiées, robot de messagerie Telegram) disparaissent alors |
 
 *Résultat* : la question « Définir un mot de passe » apparaît. Le passage en équipe reste possible plus tard (chapitre 13) ; l'inverse ne l'est pas.
 
@@ -108,7 +108,7 @@ Lire les trois cartes, puis cliquer sur la flèche de droite (pastille 1).
 |---|---|---|
 | 1 | flèche de droite | passe à l'enquête |
 
-Les cartes résument : les questions partent au service « Generic OpenAI » (ici, le service du poste) ; l'embedding est calculé dans AnythingLLM (« AnythingLLM Embedder », remplacé à l'étape 10) ; les vecteurs restent dans la base LanceDB de l'instance.
+Les cartes résument : les questions partent au service « Generic OpenAI » (ici, le service du poste) ; l'embedding est calculé dans AnythingLLM (« AnythingLLM Embedder », remplacé à l'étape 14) ; les vecteurs restent dans la base LanceDB de l'instance.
 
 *Résultat* : la page d'enquête s'ouvre.
 
@@ -142,9 +142,11 @@ Cliquer sur « Ignorer l'enquête » (pastille 1), sans rien remplir.
 | 5 | « Outils » | commandes abrégées (`/reset`…) et compétences de l'agent (chapitres 06 et 10) |
 | 6 | clé | ouvre les paramètres de l'instance |
 
-En haut de la zone de discussion, le nom du modèle utilisé (`chat`) ; à droite, l'icône de réglages de la discussion (taille du texte, souvenirs, export) et la roue dentée de l'espace apparaît au survol de son nom.
+En haut de la zone de discussion, le nom du modèle utilisé (`chat`) ; en haut à droite, l'icône de réglages de la discussion (taille du texte, souvenirs, export, chapitre 06) et, à côté, l'icône de l'agent. Dans la barre latérale, la flèche (pastille 3) et la roue dentée des réglages de l'espace sont visibles sur l'espace ouvert, et apparaissent au survol sur les autres.
 
 ## Se connecter
+
+Après l'assistant, la session est déjà ouverte : cette étape sert aux connexions suivantes (nouveau navigateur, redémarrage). Elle peut être lue maintenant et faite plus tard.
 
 **Étape 9. Ouvrir une session**
 *Où* : page « Bienvenue — Connectez-vous à votre compte AnythingLLM », affichée à chaque nouvelle ouverture du navigateur ou après un redémarrage.
@@ -226,7 +228,7 @@ Cliquer sur la carte du fournisseur actuel (pastille 1), « AnythingLLM Embedder
 
 **Étape 14. Brancher `embed`**
 *Où* : même page.
-Taper `Generic` dans « Search all embedding providers », choisir « Generic OpenAI », puis remplir « Base URL » (pastille 1) avec `http://llm-central:8080/v1`, « Embedding Model » (pastille 2) avec `embed`, « Max embedding chunk length » (pastille 3) avec `1000`, « API Key » (pastille 4) avec la clé, et cliquer sur « Save changes » (pastille 5).
+Taper `Generic` dans « Search all embedding providers », choisir « Generic OpenAI », puis remplir « Base URL » (pastille 1) avec `http://llm-central:8080/v1`, « Embedding Model » (pastille 2) avec `embed`, « Max embedding chunk length » (pastille 3) avec `1000`, « API Key » (pastille 4) avec la clé, et cliquer sur « Enregistrer les modifications » (pastille 5).
 
 ![Embedding par le service central](../img/03-premiers-pas/14-embedder-generic.png)
 *Écran : « Préférences d'intégration », fournisseur Generic OpenAI.*
@@ -237,11 +239,11 @@ Taper `Generic` dans « Search all embedding providers », choisir « Generic Op
 | 2 | « Embedding Model » | nom du modèle d'embedding |
 | 3 | « Max embedding chunk length » | taille maximale d'un passage, en caractères |
 | 4 | « API Key » | clé du service (masquée) |
-| 5 | « Save changes » | enregistre |
+| 5 | « Enregistrer les modifications » | enregistre |
 
-*Résultat* : une fenêtre de confirmation s'ouvre (étape suivante).
+*Résultat* : sur une installation neuve, sans document intégré, l'enregistrement est immédiat et le fournisseur « Generic OpenAI » s'affiche : les modèles sont déclarés, passer au chapitre 04. Si des documents avaient déjà été intégrés, une fenêtre de confirmation s'ouvre (étape 15).
 
-**Étape 15. Confirmer le changement**
+**Étape 15. Confirmer le changement (seulement si des documents existaient déjà)**
 *Où* : fenêtre de confirmation, au-dessus de la page.
 La fenêtre « WARNING - This action is irreversible » prévient que changer de modèle d'embedding efface la représentation de tous les documents déjà intégrés, dans tous les espaces ; les fichiers téléversés sont gardés et pourront être intégrés de nouveau. Cliquer sur « Confirm » (pastille 1). Cette fenêtre n'apparaît que si des documents ont déjà été intégrés.
 

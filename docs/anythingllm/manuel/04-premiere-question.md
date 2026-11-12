@@ -60,7 +60,7 @@ Survoler la ligne, puis cliquer sur la flèche vers le haut (pastille 1).
 *Où* : fenêtre des documents, onglet « Documents ».
 
 ![Fenêtre des documents](../img/04-premiere-question/04-gestionnaire-vide.png)
-*Écran : fenêtre des documents, avant tout envoi.*
+*Écran : fenêtre des documents, avant l'envoi du rapport (sur la capture, des fichiers des essais précédents sont déjà listés ; sur une installation neuve, « Mes documents » est vide).*
 
 | N° | Élément | Rôle |
 |---|---|---|
@@ -72,7 +72,7 @@ La colonne de droite, au nom de l'espace (« Premier essai »), liste les docume
 
 **Étape 5. Envoyer le fichier**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi, choisir `rapport-annuel-2025.pdf` dans le dossier `corpus/documents` du dépôt (ou le glisser dans la zone).
+Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$\Ubuntu` dans la barre d'adresse de cette fenêtre, aller dans le dossier du dépôt, puis `corpus\documents`, et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
 
 ![Fichier envoyé](../img/04-premiere-question/05-document-televerse.png)
 *Écran : fenêtre des documents, fichier envoyé dans « custom-documents ».*
@@ -209,10 +209,10 @@ Cliquer sur « Sources ».
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Referenced 4 times. » | nombre de passages de ce document donnés au modèle |
-| 2 | passage cité | texte exact transmis au modèle ; ici la ligne « Chiffre d'affaires 48,6 M€ » du tableau de la page 3 |
+| 2 | pourcentage suivi de « match » | proximité de sens entre ce passage et la question |
 | 3 | croix | ferme la fenêtre |
 
-*Résultat* : le chiffre de la réponse se retrouve dans le passage. Sous chaque passage, un pourcentage suivi de « match » indique sa proximité de sens avec la question. Le numéro de page n'est connu que parce qu'il est écrit dans le texte du document : AnythingLLM ne l'indique pas lui-même.
+*Résultat* : le chiffre de la réponse se retrouve dans le premier passage (ligne « Chiffre d'affaires 48,6 M€ » du tableau de la page 3). Chaque passage porte son pourcentage de proximité (ici 64 %). Le numéro de page n'est connu que parce qu'il est écrit dans le texte du document : AnythingLLM ne l'indique pas lui-même.
 
 ## Bon à savoir
 
@@ -225,7 +225,7 @@ Cliquer sur « Sources ».
 | Symptôme | Cause | Que faire |
 |---|---|---|
 | « Déplacer vers l'espace de travail » ne fait rien | fichier envoyé dans la fenêtre encore ouverte (version 1.19.0) | fermer la fenêtre et la rouvrir, puis recommencer |
-| Réponse vide sous « Thought for … » | mode « Agent » | passer en mode « Requête » ou « Chat » (étape 10) |
+| Réponse vide sous « Thought for … » (libellé « Réflexions » après rechargement de la page) | mode « Agent » | passer en mode « Requête » ou « Chat » (étape 10) |
 | « There is no relevant information in this workspace to answer your query. » | aucun passage assez proche n'a été trouvé, ou le document n'est pas intégré | vérifier l'étape 8 ; reformuler la question ; voir le [chapitre 07](07-regler-un-espace-de-travail.md) |
 
 ---

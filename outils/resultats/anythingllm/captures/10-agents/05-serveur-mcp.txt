@@ -1,3 +1,4 @@
+AD
 PARAMÈTRES DE L'INSTANCE
 
 Fournisseurs d'IA
@@ -10,11 +11,7 @@ Centre communautaire
 
 Apparence
 
-Canaux
-
 Outils
-
-Sécurité
 
 Contacter le Support
 Confidentialité et données
@@ -40,17 +37,6 @@ Générer des images
 Off
 Connecteur SQL
 Off
-Créer des tâches planifiées
-Off
-
-App Integrations
-
-Connecteur GMail
-Off
-Connecteur Google Calendar
-Off
-Connecteur Outlook
-Off
 
 Custom Skills
 
@@ -60,11 +46,10 @@ Learn about agent skills in the AnythingLLM Agent Docs.
 
 Agent Flows
 
-Create Flow
+Open Builder
 
-No agent flows found
-
-Learn more about Agent Flows.
+ConsignesBatteries
+On
 
 Serveurs MCP
 

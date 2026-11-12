@@ -57,7 +57,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 ## Administration
 
 **Étape 4. Liste des espaces**
-*Où* : Paramètres de l'instance › Admin › « Espaces de travail ».
+*Où* : Paramètres de l'instance › Admin › « Espaces de travail ». Cette entrée, comme « Utilisateurs » et « Invitation », n'existe qu'en multi-utilisateur (chapitre 13) ; en mode « Juste moi », le groupe Admin ne contient que « Chat de l'espace de travail » et « Default System Prompt ».
 
 ![Espaces de l'instance](../img/12-administrer/04-espaces-de-travail.png)
 *Écran : « Instance Workspaces » (page en anglais).*
@@ -65,6 +65,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « New Workspace » | crée un espace depuis l'administration |
+| 2 | « Démo Vélanor » | un espace de l'instance |
 
 *Résultat* : le tableau liste les espaces (nom, adresse, nombre d'utilisateurs, date de création) ; la corbeille d'une ligne supprime l'espace et ses conversations.
 
@@ -110,6 +111,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 
 **Étape 8. Ouvrir les clés d'API**
 *Où* : Paramètres de l'instance › Outils › « Clés API ».
+Cliquer sur « Générer une nouvelle clé API » (pastille 1).
 
 ![Clés d'API](../img/12-administrer/08-cles-api.png)
 *Écran : « Clés API » (clés masquées sur la capture).*
@@ -118,7 +120,7 @@ Ces pages ne changent pas la qualité des réponses : elles servent à adapter l
 |---|---|---|
 | 1 | « Générer une nouvelle clé API » | ouvre la création d'une clé |
 
-*Résultat* : le tableau liste les clés existantes, avec « Copier la clé API » et une corbeille pour la supprimer. Le lien « Lisez la documentation de l'API » ouvre la documentation interactive (étape 14).
+*Résultat* : le tableau liste les clés existantes, avec « Copier la clé API » et une corbeille pour la supprimer. Le lien « Lisez la documentation de l'API » ouvre la documentation interactive (étape 15).
 
 **Étape 9. Créer une clé**
 *Où* : fenêtre « Créer une nouvelle clé API ».
@@ -203,9 +205,9 @@ Cliquer sur « Créer la clé API » (pastille 1).
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Live Document Sync » | relit régulièrement les documents venus du web (sites, GitHub, YouTube, Confluence) et met à jour les espaces |
+| 1 | « I understand » | accepte les conditions d'utilisation des fonctions expérimentales |
 
-*Résultat* : une fois activée, une icône d'œil apparaît sur ces documents dans la fenêtre des documents (« surveiller »).
+*Résultat* : la page s'ouvre d'abord sur la fenêtre « Terms of use for experimental features » (risques : perte de données, résultats changeants, consommation accrue). « Reject & close » refuse ; « I understand » accepte (message « Experimental Feature set enabled. Reloading the page. ») et affiche la seule fonction proposée, « Live Document Sync » : elle relit régulièrement les documents venus du web (sites, GitHub, YouTube, Confluence) et met à jour les espaces ; une icône d'œil apparaît alors sur ces documents dans la fenêtre des documents.
 
 **Étape 15. Documentation interactive de l'API**
 *Où* : adresse `http://127.0.0.1:3001/api/docs` dans le navigateur.

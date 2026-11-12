@@ -28,7 +28,7 @@ Les termes communs à toute la série de manuels (RAG, embedding, jeton, reranke
 | Agent | `@agent` | assistant qui enchaîne des actions avec des outils (compétences) |
 | Compétence | « Compétences de l'agent » | outil que l'agent peut utiliser : lire un site, chercher dans les documents, créer un fichier… |
 | Agent flow | « Agent Flows » | suite d'étapes construite sans code, utilisable par l'agent |
-| Serveur MCP | « MCP Servers » | petit programme qui ajoute des outils à l'agent selon un protocole standard |
+| Serveur MCP | « Serveurs MCP » | petit programme qui ajoute des outils à l'agent selon un protocole standard |
 | Souvenir | « Souvenirs » | information retenue par l'application et rappelée au modèle dans les conversations suivantes |
 | Tâche planifiée | « Tâches planifiées » | question ou action lancée automatiquement à heure fixe |
 | Routeur de modèles | « Routeur modèle » | règles qui envoient chaque question au modèle le plus adapté |
@@ -39,6 +39,12 @@ Les termes communs à toute la série de manuels (RAG, embedding, jeton, reranke
 | Jeton | « Max Tokens », « context window » | unité de texte pour un modèle, environ trois quarts de mot en français |
 | Clé d'API | « Clés API » | code secret qui permet à un programme d'utiliser AnythingLLM sans l'interface |
 | Widget | « Widgets de chat intégrés » | fenêtre de discussion à insérer dans une page web |
+| Vecteur, base de données vectorielle | « Base de données vectorielle » | suite de nombres qui représente le sens d'un passage ; la base vectorielle les range et retrouve les plus proches d'une question |
+| LanceDB | « LanceDB » | base vectorielle intégrée à AnythingLLM, rangée dans son dossier de données |
+| Conteneur | — | petite machine isolée lancée par Docker, qui contient une application (chapitre 02) |
+| OCR | — | lecture optique des caractères : transforme l'image d'un document scanné en texte |
+| Cached | « Cached » | badge d'un fichier dont les représentations sont déjà calculées |
+| UTC | — | temps universel, heure de référence internationale (une heure de moins que Paris en hiver) |
 | Multi-utilisateur | « Mon équipe », « Mode multi-utilisateurs » | plusieurs comptes, chacun avec un rôle : administrateur, gestionnaire (« Manager ») ou utilisateur (« Default ») |
 
 ## Résultat

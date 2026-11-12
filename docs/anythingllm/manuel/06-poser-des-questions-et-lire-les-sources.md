@@ -14,7 +14,9 @@ Le mode de l'espace décide de la façon de répondre :
 | « Chat » | réponse à partir des passages et des connaissances générales du modèle, avec l'historique de la conversation | discussion plus libre autour des documents |
 | « Agent » | le modèle choisit lui-même ses outils (recherche dans les documents, site web, serveurs MCP) | tâches en plusieurs étapes (chapitre 10) |
 
-Chaque conversation d'un espace est un **fil** (« Thread ») : il garde son propre historique. Le premier fil (« default ») s'ouvre avec l'espace ; « New Thread » en crée un autre, utile pour séparer des sujets.
+Chaque conversation d'un espace est un **fil** (« Thread ») : il garde son propre historique. À l'ouverture de l'espace, un fil vide « *New Thread » est prêt ; il prend le nom de sa première question. « New Thread » en crée un autre, utile pour séparer des sujets.
+
+Les captures de ce chapitre et des suivants montrent dans la barre latérale des espaces et des fils créés pendant les essais (« Banc-bge-m3 », « Thread »…) : les ignorer.
 
 Le modèle `chat` **réfléchit** avant de répondre : la réflexion s'affiche repliée au-dessus de la réponse.
 
@@ -71,7 +73,7 @@ Cliquer sur « Sources ».
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Copier » | copie la réponse dans le presse-papiers |
+| 1 | « Copier » | copie la réponse dans le presse-papiers ; le crayon à sa droite modifie la réponse |
 | 2 | « Régénérer » | redemande une réponse à la même question |
 | 3 | « Bonne réponse » | marque la réponse comme bonne (pouce) |
 | 4 | « Plus d'actions » | ouvre d'autres actions |
@@ -116,7 +118,7 @@ Taper `Quel est le cours de l'action Vélanor en bourse ?` puis Entrée.
 |---|---|---|
 | 1 | même question | posée en mode « Chat » |
 
-*Résultat* : ici aussi le modèle dit ne pas connaître le cours de l'action. En mode « Chat », il peut toutefois compléter avec ses connaissances générales, sans source : pour des questions sur les documents, revenir au mode « Requête ».
+*Résultat* : ici aussi le modèle dit ne pas connaître le cours de l'action. En mode « Chat », il peut toutefois compléter avec ses connaissances générales, sans source. **Remettre ensuite l'espace en mode « Requête »** (même onglet, bouton « Requête ») : les chapitres suivants le supposent.
 
 ## Organiser ses conversations en fils
 
@@ -144,6 +146,8 @@ Cliquer sur « New Thread » (pastille 2).
 |---|---|---|
 | 1 | « Rename » | renomme le fil (une fenêtre du navigateur demande le nouveau nom) |
 | 2 | « Delete Thread » | supprime le fil et ses messages |
+
+Pour renommer : cliquer sur « Rename », taper le nouveau nom dans la fenêtre du navigateur, puis OK.
 
 *Résultat* : le fil renommé (ici « Questions production ») apparaît sous son nouveau nom. Ctrl+clic sur plusieurs fils permet de les supprimer ensemble.
 
@@ -205,9 +209,9 @@ Remplir la commande `resume`, la consigne `Résume en trois points les documents
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | formats proposés | PDF, Markdown, Plain Text, JSON, HTML ; « Copy chat link » copie un lien vers le fil |
+| 1 | formats proposés | PDF, Markdown, Plain Text, JSON, HTML |
 
-*Résultat* : le fichier est téléchargé par le navigateur. La réflexion du modèle est retirée de l'export.
+*Résultat* : cliquer sur un format, par exemple PDF pour le lire ou Markdown pour le retravailler ; le fichier est téléchargé par le navigateur. Dans le premier menu, « Copy chat link » copie un lien vers le fil. La réflexion du modèle est retirée de l'export.
 
 ## Bon à savoir
 

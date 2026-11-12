@@ -40,6 +40,16 @@ Les widgets de chat intégrables sont des interfaces de chat publiques associée
 
 Créer un widget intégré
 ESPACE DE TRAVAIL	CHATS ENVOYÉS	DOMAINES ACTIFS	CRÉÉ LE	
+
+Démo Vélanor
+1	
+
+all
+
+	22 minutes ago	
+Code
+Disable
+Delete
 Create new embed for workspace
 Workspace
 
@@ -48,7 +58,6 @@ This is the workspace your chat window will be based on. All defaults will be in
 Mon Espace de Travail
 Premier essai
 Démo Vélanor
-Banc-bge-m3
 Sources externes
 Allowed chat method
 

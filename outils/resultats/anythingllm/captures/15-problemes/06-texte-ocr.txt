@@ -1,49 +1,35 @@
+AD
+
 Mon Espace de Travail
 
 Premier essai
 
 Démo Vélanor
 
-Combien de vélos Vélan…
+FAQ — garantie
 
-Quel est le stock de l…
+Fournisseur Batterix
 
-Thread
-
-Combien de vélos Vélan…
+Point production
 
 Thread
-
-Thread
-
-Questions production
-
-Quel est le cours de l…
-
-Quel est le cours de l…
-
-Quelle est la pénalité…
 
 Quelle est la pénalité…
 
 New Thread
 
-Banc-bge-m3
-
 Sources externes
 
 chat
-Selon l’article 6 du contrat d’approvisionnement n° BX-2025-117, la pénalité de retard prévue est : 0,5 % du montant de la commande par jour de retard, plafonnée à 8 % du montant de la commande.
+Selon l’article 6 du contrat d’approvisionnement N° BX-2025-117 entre Vélanor SAS et Batterix GmbH, la pénalité de retard est de 0,5 % du montant de la commande par jour de retard, plafonnée à 8 % du montant de la commande.
 
 Quelle est la pénalité de retard prévue par le contrat Batterix ?
 
-Thought for 2.9s
+Thought for 16.3s
 
-Selon l’article 6 du contrat d’approvisionnement n° BX-2025-117, la pénalité de retard prévue est :
+Selon l’article 6 du contrat d’approvisionnement N° BX-2025-117 entre Vélanor SAS et Batterix GmbH, la pénalité de retard est de 0,5 % du montant de la commande par jour de retard, plafonnée à 8 % du montant de la commande.
 
-0,5 % du montant de la commande par jour de retard, plafonnée à 8 % du montant de la commande.
-
-chat · 3.8s (16.24 tok/s) · Nov 12, 1:53 PM
+chat · 17.3s (3.92 tok/s) · Nov 12, 2:24 PM
 
 Sources
 + 1
