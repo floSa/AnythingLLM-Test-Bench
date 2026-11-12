@@ -1,0 +1,42 @@
+               total        used        free      shared  buff/cache   available
+Mem:           32098        8908        3968         912       20504       23190
+indexation : 0.0 s
+Q01 tableau         NON   83.7s  "D'après les documents fournis, le chiffre d'affaires exact de Vélanor pour l'année 2025 n'"
+Q02 fait simple     OK    11.1s  'Vélanor a été fondée en 2014.'
+Q03 fait simple     OK    10.6s  "D'après les documents fournis, la présidente de Vélanor est Hélène Marchais. Elle dirige l"
+Q04 fait simple     OK     8.9s  "L'adresse du siège de Vélanor est au 12 quai de la Fosse, à Nantes."
+Q05 tableau         OK     3.3s  'Vélanor compte **412 salariés** au 31 décembre 2025.'
+Q06 tableau         OK    14.8s  "Selon le rapport annuel 2025 mentionné dans les documents, le chiffre d'affaires du troisi"
+Q07 tableau         OK    19.1s  '15 400 unités ont été produites en 2025.'
+Q08 tableau         NON   25.2s  'D’après les documents fournis, le prix public du modèle Erdre Cargo n’est pas mentionné. S'
+Q09 tableau         NON   52.3s  'Les documents fournis ne précisent pas le nombre de salariés travaillant spécifiquement su'
+Q10 fait simple     OK    12.0s  "La part d'aluminium recyclé dans les cadres est de 82 %."
+Q11 fait simple     OK    12.4s  'Le taux de recyclage des batteries usagées collectées atteint 96 %, grâce au partenariat a'
+Q12 tableau         NON    6.1s  "Je n'ai pas d'informations dans les documents fournis concernant le fournisseur des moteur"
+Q13 tableau         NON    9.3s  "D'après les documents fournis, Vélanor n'a pas de résultat net précis mentionné pour l'ann"
+Q14 fait simple     NON    8.0s  "Les documents fournis ne contiennent pas d'information sur le taux de retour sous garantie"
+Q15 scan            OK    19.4s  "Selon l'Article 4 du contrat d'approvisionnement (Contexte 1), le prix unitaire des batter"
+Q16 scan            NON    8.4s  'Je ne trouve aucune information concernant un contrat Batterix ou son délai de livraison d'
+Q17 scan            OK    12.1s  'Le plafond des pénalités de retard est de 8 % du montant de la commande (Article 6 du cont'
+Q18 scan            OK    12.1s  "Selon le contrat d'approvisionnement (Article 3), le volume minimal annuel prévu est de **"
+Q19 fait simple     OK    11.9s  'Selon la procédure PR-SEC-04 (Contexte 0), les batteries doivent être stockées entre **10 '
+Q20 fait simple     OK    11.6s  'Karim Benali est responsable de la procédure de charge et de stockage des batteries, comme'
+Q21 tableau         OK     7.9s  'Le local B2 est inspecté le premier lundi de chaque mois.'
+Q22 fait simple     OK    12.0s  'Le prix public du Vilaine Compact est de 2 490 € TTC.'
+Q23 fait simple     OK     4.3s  "La capacité prévue de l'usine de Saint-Nazaire est de **25 000 vélos par an**, selon le do"
+Q24 tableau         OK    18.2s  "Il reste un stock de 1240 batteries BAT-48V-14Ah. Oui, ce stock est sous le seuil d'alerte"
+Q25 fait simple     OK    10.0s  'Selon le document de FAQ du service après-vente, le cadre est garanti **7 ans**.'
+Q26 fait simple     OK    10.6s  'Le numéro de téléphone du service après-vente est le 02 40 00 12 34.'
+Q27 fait simple     OK    11.4s  "Le montant de la prime d'intéressement 2025 est de 1 150 euros par salarié."
+Q28 anglais         OK    11.5s  'Batterix obtained an overall score of 87 out of 100.'
+Q29 anglais         OK    16.1s  "Le taux de cellules défectueuses mesuré chez Batterix lors de l'audit est de 0,3 %."
+Q30 multi-documents NON   35.2s  "D'après le contrat d'approvisionnement n° BX-2025-117 (Contexte 3), le délai de livraison "
+Q31 multi-documents NON   29.4s  "Les documents fournis ne contiennent aucune information concernant l'entreprise Batterix, "
+Q32 multi-documents OK    12.0s  "Vélanor vise un chiffre d'affaires de 55 M€ en 2026 et prévoit 70 embauches pour l'usine à"
+Q33 audio           OK    30.7s  "La ligne d'assemblage numéro 3 de Nantes sera arrêtée pour maintenance du 2 au 6 mars."
+Q34 audio           OK     9.4s  'Le directeur de production de Vélanor est Julien Moreau.'
+Q35 piège           OK     7.4s  "D'après les documents fournis, aucun chiffre d'affaires spécifique pour l'exercice 2022 n'"
+Q36 piège           OK    45.2s  "D'après les documents fournis, le nom du directeur financier de Vélanor n'est pas mentionn"
+Q37 piège           OK    40.4s  "D'après les documents fournis, il n'est pas indiqué combien de trottinettes électriques Vé"
+Q38 piège           OK    16.7s  'Les documents fournis ne contiennent aucune information sur le salaire de Karim Benali. Il'
+-> outils/resultats/anythingllm/banc-2026-11-12-embedder-natif.json

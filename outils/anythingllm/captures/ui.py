@@ -71,14 +71,14 @@ class Scenario:
         self.page.wait_for_timeout(1500)
 
     # ---------- captures ----------
-    def cap(self, nom, elements=(), masques=(), plein=False, clip=None, attendre=None, note=""):
+    def cap(self, nom, elements=(), masques=(), plein=False, clip=None, attendre=None, note="", auto=True):
         """elements : liste de (locator, libellé). Écrit image, texte de la page et libellés."""
         if attendre is not None:
             attendre.wait_for(state="visible")
         self.page.wait_for_timeout(400)
         img = IMG / self.chapitre / f"{nom}.png"
         txt = TXT / self.chapitre / f"{nom}.txt"
-        masques = list(masques) + self._secrets_visibles()
+        masques = list(masques) + (self._secrets_visibles() if auto else [])
         libs = annoter.capture(self.page, img, elements, masques=masques, plein=plein, clip=clip, texte=txt)
         self.journal.append({"capture": f"{self.chapitre}/{nom}.png", "url": self.page.url.replace(BASE, ""),
                              "pastilles": libs, "note": note, "heure": time.strftime("%H:%M:%S")})
@@ -113,6 +113,36 @@ class Scenario:
             h.write(time.strftime("%Y-%m-%d %H:%M:%S ") + texte + "\n")
 
     # ---------- aides ----------
+    def sans_toasts(self, delai=15000):
+        """Attend la disparition des notifications (elles couvrent les boutons du bas de la fenêtre des documents)."""
+        try:
+            self.page.wait_for_function("() => document.querySelectorAll('.Toastify__toast').length === 0", timeout=delai)
+        except Exception:
+            self.page.evaluate("() => document.querySelectorAll('.Toastify__toast').forEach(t => t.remove())")
+
+    def croix(self):
+        """Bouton de fermeture (croix, sans libellé) en haut à droite de la fenêtre des documents."""
+        return self.page.locator("button:has(svg)").filter(has_not_text=" ").locator(
+            "xpath=self::*[ancestor::*[contains(@class,'fixed')]]").last
+
+    def gestionnaire(self, slug):
+        """Ouvre la fenêtre des documents de l'espace par l'icône d'envoi de la barre latérale."""
+        p = self.page
+        if not p.url.endswith(f"/workspace/{slug}"):
+            self.aller(f"/workspace/{slug}")
+        ligne = p.locator(f'a[href="/workspace/{slug}"]').locator('xpath=ancestor::*[@role="listitem"][1]')
+        ligne.hover(); ligne.locator('button[data-tooltip-id="upload-workspace"]').click()
+        p.get_by_text("Mes documents").first.wait_for(); p.wait_for_timeout(1500)
+
+    def fermer_gestionnaire(self):
+        p = self.page
+        x = p.evaluate_handle("() => { const b = document.elementFromPoint(1366, 126); return b && b.closest('button'); }")
+        if x.as_element():
+            x.as_element().click()
+        else:
+            p.keyboard.press("Escape")
+        p.wait_for_timeout(1000)
+
     def bouton(self, nom, exact=False):
         return self.page.get_by_role("button", name=nom, exact=exact)
 
