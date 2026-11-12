@@ -1,0 +1,8 @@
+# 2026-11-12T17:34:59+01:00 — règle : seuls les ports publiés (avec « -> ») comptent
+$ docker ps --format "{{.Names}} {{.Ports}}"
+rag-anythingllm 127.0.0.1:3001->3001/tcp
+llm-central 4000/tcp, 127.0.0.1:8080->8080/tcp
+llm-swap 127.0.0.1:8081->8080/tcp
+llm-speaches 8000/tcp
+$ ... | grep -oE "[0-9a-f.:\[\]]+->" | grep -v "^127\.0\.0\.1:"
+(aucune sortie : règle respectée)
