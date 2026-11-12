@@ -29,7 +29,7 @@ CENTRAL = _env().get("LLM_CENTRAL_URL_HOTE", "http://127.0.0.1:8080/v1")
 
 REFUS = re.compile(r"(ne (contien|mentionn|précis|fourni|donn|perm|figur|trouv)|n'(est|apparaît|indique|y a)|aucune? (information|mention|donnée)|"
                    r"pas (d'information|mentionn|précis|indiqu|disponible|trouv|dans)|introuvable|impossible de (répondre|trouver|déterminer)|"
-                   r"not (mention|contain|provide|found|available)|no information|je ne (sais|dispose|trouve))", re.I)
+                   r"not (mention|contain|provide|found|available)|no (relevant )?information|je ne (sais|dispose|trouve))", re.I)
 
 
 def normaliser(t):

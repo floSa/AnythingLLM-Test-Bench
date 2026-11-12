@@ -11,6 +11,7 @@ if [ ! -d donnees/playwright/site/playwright ]; then
   docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD/donnees/playwright:/pw" "$IMAGE" \
     pip install -q --target /pw/site playwright==1.65.1
 fi
-docker run --rm --name rag-captures --network rag-local --user "$(id -u):$(id -g)" -e HOME=/tmp \
+ENVF=(); [ -f .env ] && ENVF=(--env-file .env)  # clé du service central : transmise au scénario, jamais affichée
+docker run --rm --name rag-captures --network rag-local "${ENVF[@]}" --user "$(id -u):$(id -g)" -e HOME=/tmp \
   -e PYTHONPATH=/pw/site:/depot/outils/communs/captures -v "$PWD/donnees/playwright:/pw" -v "$PWD:/depot" -w /depot \
   "$IMAGE" python "$@"
