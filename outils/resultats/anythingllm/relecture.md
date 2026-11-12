@@ -16,7 +16,7 @@ Sources relues au tag `v1.19.0` (commit `9b1fcab141000eaba9f78ed131151de04904454
 
 Journal : `outils/resultats/anythingllm/demarrage-2026-11-12.log`. Avec `DISABLE_TELEMETRY="true"`, le journal affiche `[TELEMETRY DISABLED] Telemetry is marked as disabled - no events will send.` mais aussi :
 
-- `[ContextWindowFinder] Pulling remote model map...` puis `Remote model map synced and cached` (table des tailles de contexte des modèles, téléchargée au démarrage) ;
-- `[ModelPricing] Remote pricing data synced and cached.` (table des prix des modèles).
+- `[ContextWindowFinder] Pulling remote model map...` puis `Remote model map synced and cached` (table des tailles de contexte des modèles : `https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json`, `server/utils/AiProviders/modelMap/index.js`, ligne 30) ;
+- `[ModelPricing] Remote pricing data synced and cached.` (table des prix des modèles : `https://models.dev/api.json`, `server/utils/helpers/modelPricing/index.js`, ligne 70).
 
 Ces deux téléchargements ne transmettent aucune donnée de l'utilisateur mais montrent que l'instance contacte Internet même télémétrie coupée.
