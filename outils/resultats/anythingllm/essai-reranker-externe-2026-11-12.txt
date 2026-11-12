@@ -1,0 +1,34 @@
+update-env RerankerEngine=generic-openai -> {"newValues": {}, "error": false}
+update-env RerankingProvider=generic-openai -> {"newValues": {}, "error": false}
+update-env RerankerBasePath=http://llm-central:8080/v1 -> {"newValues": {}, "error": false}
+update-env RerankerModelPref=rerank -> {"newValues": {}, "error": false}
+update-env RERANKER_PROVIDER=generic-openai -> {"newValues": {}, "error": false}
+clés de réglage contenant « rerank » avant : ['AgentSkillRerankerEnabled', 'AgentSkillRerankerTopN']
+clés de réglage contenant « rerank » après : ['AgentSkillRerankerEnabled', 'AgentSkillRerankerTopN']
+vectorSearchMode demandé='generic-openai' -> enregistré='default'
+vectorSearchMode demandé='cohere' -> enregistré='default'
+vectorSearchMode demandé='rerank@llm-central' -> enregistré='default'
+vectorSearchMode demandé='rerank' -> enregistré='rerank'
+
+== journal de llm-central (lecture seule), depuis le début de la session (12:40) : requêtes contenant « rerank »
+11:47:18 - 11:47:18 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:44936 INFO:     172.18.0.1:44936 - "POST /v1/rerank HTTP/1.1" 200 OK
+11:47:38 - 11:47:38 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:35548 INFO:     172.18.0.1:35548 - "POST /v1/rerank HTTP/1.1" 200 OK
+11:49:25 - 11:49:25 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:48386 INFO:     172.18.0.1:48386 - "POST /v1/rerank HTTP/1.1" 200 OK
+12:45:43 - 12:45:43 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:47956 INFO:     172.18.0.1:47956 - "POST /v1/rerank HTTP/1.1" 200 OK
+13:06:13 - 13:06:13 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:39766 INFO:     172.18.0.1:39766 - "POST /v1/rerank HTTP/1.1" 200 OK
+13:17:46 - 13:17:46 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:48798 INFO:     172.18.0.1:48798 - "POST /v1/rerank HTTP/1.1" 200 OK
+13:26:22 - 13:26:22 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:49074 INFO:     172.18.0.1:49074 - "POST /v1/rerank HTTP/1.1" 200 OK
+13:36:17 - 13:36:17 - LiteLLM Router:INFO: router_python_core.py:6406 - litellm.arerank(model=hosted_vllm/rerank) 200 OK
+INFO: 172.18.0.1:41280 INFO:     172.18.0.1:41280 - "POST /v1/rerank HTTP/1.1" 200 OK
+nombre total : 16
+== adresses d'origine des appels /rerank :
+      8 172.18.0.1
+      8 INFO:
+== adresse IP de rag-anythingllm sur llm-net : 172.18.0.2
