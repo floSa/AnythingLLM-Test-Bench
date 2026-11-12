@@ -186,9 +186,22 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 
 ## Intégrer une fenêtre de discussion dans un site
 
-**Étape 12. Créer le widget**
+**Étape 12. Choisir l'espace du widget**
 *Où* : connecté avec `admin-velanor`, Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
-En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requests from domains » (pastille 2) pour l'essai de l'étape 15, qui ouvre une page depuis un fichier et non depuis un site ; pour un vrai site, y mettre son nom de domaine (par exemple `intranet.velanor.fr`). Dans tous les cas, renseigner « Max chats per day » (pastille 3, ici `200`) pour limiter le nombre de messages par jour. Cliquer enfin sur « Create embed » (pastille 4).
+En haut de la fenêtre « Create new embed for workspace », choisir « Démo Vélanor » dans la liste « Workspace » (pastille 1).
+
+![Choix de l'espace du widget](../img/13-comptes-et-widget/11b-widget-espace.png)
+*Écran : fenêtre « Create new embed for workspace », haut de la fenêtre.*
+
+| N° | Élément | Rôle |
+|---|---|---|
+| 1 | « Workspace » | espace dont les documents servent aux réponses du widget |
+
+*Résultat* : l'espace est choisi ; la suite du réglage est plus bas dans la même fenêtre.
+
+**Étape 12 (suite). Régler et créer le widget**
+*Où* : même fenêtre, faire défiler vers le bas.
+Plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requests from domains » (pastille 2) pour l'essai de l'étape 15, qui ouvre une page depuis un fichier et non depuis un site ; pour un vrai site, y mettre son nom de domaine (par exemple `intranet.velanor.fr`). Dans tous les cas, renseigner « Max chats per day » (pastille 3, ici `200`) pour limiter le nombre de messages par jour. Cliquer enfin sur « Create embed » (pastille 4).
 
 ![Nouveau widget](../img/13-comptes-et-widget/12-nouveau-widget.png)
 *Écran : fenêtre de création d'un widget.*

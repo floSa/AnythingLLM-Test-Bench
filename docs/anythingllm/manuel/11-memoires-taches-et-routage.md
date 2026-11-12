@@ -70,7 +70,7 @@ Cliquer sur « Nouvelle offre d'emploi » (pastille 1) : c'est la traduction app
 
 **Étape 5. Décrire la tâche**
 *Où* : formulaire de nouvelle tâche.
-Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pastille 2) avec une consigne, par exemple `Rédige un rappel des points à vérifier pour l'inventaire des pièces détachées.`, choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel » ; ici « hebdomadaire » conviendrait au nom, l'essai a gardé « quotidien »), puis cliquer sur « Créer un emploi » (pastille 4).
+Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pastille 2) avec une consigne, par exemple `Rédige un rappel des points à vérifier pour l'inventaire des pièces détachées.`, choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel » ; ici « hebdomadaire » conviendrait au nom, l'essai a gardé « quotidien »), puis cliquer sur « Créer un emploi » (pastille 4). Le champ d'heure à droite de la fréquence (« À », 09:00 par défaut) fixe l'heure d'exécution : la liste l'affiche ensuite en temps universel (« À 09:00 UTC », soit 10:00 à Paris en hiver) ; le laisser tel quel pour l'essai.
 
 ![Nouvelle tâche](../img/11-memoires-taches-routage/05-nouvelle-tache.png)
 *Écran : formulaire de nouvelle tâche planifiée.*

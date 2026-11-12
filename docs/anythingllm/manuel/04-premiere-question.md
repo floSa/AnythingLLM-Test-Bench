@@ -79,10 +79,10 @@ Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvr
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | `rapport-annuel-2025.pdf` | le fichier envoyé, rangé dans le dossier `custom-documents` |
+| 1 | `rapport-annuel-2025.pdf` | le fichier envoyé, rangé dans le dossier `custom-documents` (sur la capture, la pastille est sur l'exemplaire des essais précédents ; sur une installation neuve, il n'y a qu'une ligne) |
 | 2 | croix | ferme la fenêtre |
 
-*Résultat* : le fichier apparaît dans « Mes documents », dans le dossier `custom-documents`. La colonne de droite indique toujours « Aucun document » : il n'est **pas encore** dans l'espace. Fermer la fenêtre avec la croix (pastille 2), puis la rouvrir comme à l'étape 3 : dans la version 1.19.0, un fichier qu'on vient d'envoyer ne peut pas être placé dans l'espace tant que la fenêtre n'a pas été rouverte.
+*Résultat* : le fichier apparaît dans « Mes documents », dans le dossier `custom-documents`. La colonne de droite indique toujours « Aucun document » : il n'est **pas encore** dans l'espace. Ne pas cliquer tout de suite sur « Déplacer vers l'espace de travail », même si la barre s'affiche : fermer la fenêtre avec la croix (pastille 2), puis la rouvrir comme à l'étape 3 : dans la version 1.19.0, un fichier qu'on vient d'envoyer ne peut pas être placé dans l'espace tant que la fenêtre n'a pas été rouverte.
 
 **Étape 6. Placer le fichier dans l'espace**
 *Où* : fenêtre des documents rouverte, « Mes documents » › dossier `custom-documents`.

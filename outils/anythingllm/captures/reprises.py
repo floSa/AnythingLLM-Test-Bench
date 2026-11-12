@@ -183,9 +183,18 @@ def github_form(s):
     s.cap_souple("03-github", [(repo, "URL du dépôt GitHub"), (sub, "Submit")])
 
 
+def widget_espace(s):
+    p = s.page; s.chapitre = "13-comptes-et-widget"
+    s.aller("/settings/embed-chat-widgets"); p.wait_for_timeout(1500)
+    p.get_by_role("button").filter(has_text="Créer un widget intégré").first.click(); p.wait_for_timeout(1200)
+    sel = p.locator("select[name=workspace_id]"); sel.select_option(label="Démo Vélanor")
+    s.cap_souple("11b-widget-espace", [(sel, "espace de travail (Démo Vélanor)")])
+    p.keyboard.press("Escape")
+
+
 if __name__ == "__main__":
     s = Scenario("reprises")
     try:
-        etapes([envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
+        etapes([widget_espace, envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
     finally:
         s.fermer()
