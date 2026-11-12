@@ -62,7 +62,7 @@ Voir [JOURNAL.md](JOURNAL.md#décisions-en-attente) :
 
 | Élément | Valeur |
 |---|---|
-| Image AnythingLLM | 3,39 Go ; image Playwright environ 2 Go |
+| Image AnythingLLM | 3,39 Go ; image Playwright 2,46 Go |
 | Données `donnees/anythingllm/` | 57 Mo ; sauvegarde `donnees/sauvegardes/` 36 Mo |
 | RAM `rag-anythingllm` | 472 Mio au repos |
 | RAM service central | `llm-swap` 5,4 Gio, `llm-speaches` 1,3 Gio, `llm-central` 0,7 Gio |
