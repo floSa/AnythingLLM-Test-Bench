@@ -20,6 +20,8 @@ Le service se joint, depuis AnythingLLM, à l'adresse `http://llm-central:8080/v
 
 L'assistant de premier lancement ne demande que le modèle de réponse ; les deux autres se déclarent ensuite dans les paramètres.
 
+L'interface suit la langue du navigateur. Avec un navigateur en anglais, l'assistant s'affiche en anglais : « Get Started » pour « Commencer », « LLM Preference » pour « Préférence LLM », « Just me » et « My team » pour « Juste moi » et « Mon équipe », « Would you like to set up a password? » et « Yes » pour « Définir un mot de passe » et « Oui », « Instance Password » pour « Mot de passe de l'instance », « Skip Survey » pour « Ignorer l'enquête ». L'étape 10 passe ensuite l'interface en français.
+
 ## Faire l'assistant de premier lancement
 
 **Étape 1. Lancer l'assistant**

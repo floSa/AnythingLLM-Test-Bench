@@ -28,7 +28,7 @@ Basculer « Activer la personnalisation » (pastille 1).
 *Résultat* : l'interrupteur « Souvenirs automatisés » apparaît, déjà activé (vert) : l'application crée alors des souvenirs en arrière-plan après les conversations. Le laisser pour l'essai ; le couper (un clic) sur un poste sans carte graphique, où ce travail ralentit les réponses suivantes. La liste des souvenirs de l'espace est vide (« 0/20 »).
 
 **Étape 2. Écrire un souvenir**
-*Où* : panneau « Souvenirs » › lien « créer un nouveau souvenir ».
+*Où* : panneau « Souvenirs », lien « créer un nouveau souvenir » sous la liste vide « 0/20 » (une fois des souvenirs créés, le bouton « + » à côté de l'onglet en ajoute d'autres).
 Taper `Les réponses doivent toujours citer le nom du document source.` (pastille 1), puis cliquer sur « Créer » (pastille 2).
 
 ![Création d'un souvenir](../img/11-memoires-taches-routage/02-creer-un-souvenir.png)

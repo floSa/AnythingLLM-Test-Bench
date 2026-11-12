@@ -80,7 +80,7 @@ Remplir « Flow Name » avec `ConsignesBatteries` (pastille 1) et « Description
 | 3 | « Add Block » | ajoute une étape (appel d'API, lecture de site web, instruction au modèle…) |
 | 4 | « Save » | enregistre le flow ; « Publish » le partage sur le Centre communautaire en ligne |
 
-*Résultat* : le flow est enregistré ; en revenant sur « Compétences de l'agent » (clé en bas de la barre latérale de l'écran principal, ou adresse `http://127.0.0.1:3001/settings/agents`), il apparaît dans la section « Agent Flows » (`ConsignesBatteries`, « On », visible sur la capture de l'étape 1) ; l'agent peut l'appeler comme une compétence. Les « Flow Variables » permettent de demander au modèle des valeurs (par exemple une référence de pièce) à injecter dans les étapes.
+*Résultat* : le flow est enregistré ; en revenant sur « Compétences de l'agent » (flèche « < » en haut à gauche de l'éditeur, ou adresse `http://127.0.0.1:3001/settings/agents`), il apparaît dans la section « Agent Flows » (`ConsignesBatteries`, « On », visible sur la capture de l'étape 1) ; l'agent peut l'appeler comme une compétence. Les « Flow Variables » permettent de demander au modèle des valeurs (par exemple une référence de pièce) à injecter dans les étapes.
 
 ## Brancher un serveur MCP
 
