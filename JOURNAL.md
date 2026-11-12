@@ -4,7 +4,9 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 
 ## Décisions en attente
 
-(aucune pour l'instant)
+1. LLM-Service : option pour couper ou borner la réflexion de `chat` pour les applications qui ne la règlent pas (AnythingLLM n'envoie aucun paramètre de réflexion au fournisseur Generic OpenAI). Hors mission (modification de LLM-Service).
+2. LLM-Service : modèle de réponse plus léger pour situer un plancher de qualité. Hors mission.
+3. Tâche planifiée « Point stocks du lundi » (09:00 UTC chaque jour) laissée en place : sa page disparaît en multi-utilisateur ; à supprimer si l'appel quotidien au modèle n'est pas souhaité.
 
 ### 2026-11-12 12:55 — Phase A : diagnostic de la machine et santé du service central
 
@@ -14,3 +16,23 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 - Juge du banc (`outils/communs/banc/commun.py`) adapté au service central : `/v1/chat/completions`, modèle `chat`, réflexion coupée, clé lue dans `.env` ; essai : OUI pour « Paris », NON pour « Lyon ».
 - Version retenue : AnythingLLM v1.19.0 (26 octobre 2026), image `mintplexlabs/anythingllm:1.19.0@sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e` (3,39 Go), sources au tag dans `sources/anythingllm` (commit 9b1fcab, ignoré par git).
 - Prochaine étape : cadrage (lecture du code par sous-agents), versions, relecture, installation.
+
+### 2026-11-12 13:00 — Cadrage, installation, configuration
+
+- Cadrage par deux sous-agents (`cadrage-serveur.md`, `cadrage-interface.md`) : pas de reranker externe en 1.19.0 (seul le tri intégré « Accuracy Optimized ») ; « Max Tokens » 1024 par défaut ; réflexion `<think>` dans les réponses ; mode par défaut `automatic` (Agent) ; pas de page dans les sources ; français partiel.
+- Installation `outils/anythingllm/installer.sh` (11 s, 390 à 425 Mio au repos, port `127.0.0.1:3001`) ; premier essai avec `JWT_SECRET` prérempli : assistant sauté (`installation-2026-11-12-essai1-jwt.log`), installation refaite sans.
+- Assistant et modèles déclarés à la souris (chapitre 03) : Generic OpenAI `chat` (16384, Max Tokens 8192), transcription OpenAI Compatible `transcribe`, puis embedder Generic OpenAI `embed` après le banc de l'embedder intégré.
+
+### 2026-11-12 14:00 — Bancs (6 réglages)
+
+- `free -m` et `llm_central_sante.sh --essai` avant chaque banc (en tête des `banc-*.log`).
+- Embedder intégré 25/34, 4/4 ; bge-m3 défaut 33/34, 3/4 ; tri intégré 34/34, 4/4 ; 8 passages 34/34, 4/4 ; 8 passages et tri 34/34, 4/4 (médiane 10,7 s) ; 2 passages 31/34, 4/4.
+- Écart : des captures sans appel au modèle (chapitres 07, 08, 12, 10 en partie) ont été prises pendant un banc (RAM disponible 22 Go) ; les captures qui interrogent le modèle ont été faites hors banc.
+
+### 2026-11-12 15:30 — Captures, chapitres, annexes, rapport
+
+- Captures des chapitres 03 à 15 (133) et 35 captures de repérage ; masquage automatique des clés ajouté après une clé locale visible (jamais commitée).
+- Essais : arrêt, redémarrage, sauvegarde, restauration (`exploitation-2026-11-12.log`) ; OCR français (`ocr-fra-2026-11-12.log`) ; dépassement de contexte (`contexte-2026-11-12.txt`) ; exemples d'API (7, code 0) ; passage en multi-utilisateur, comptes, invitation, widget.
+- Jeu de démonstration rangé (`demo_ranger.py`) : « Démo Vélanor » avec trois conversations citées ; espace du banc et documents d'essai supprimés.
+- Documentation committée chapitre par chapitre, `verifier_docs.py` à 0 point ; README, index de la série, `outils/README.md`, `RAPPORT-anythingllm.md`.
+- Prochaine étape : relecture par un lecteur novice, corrections, commit final.
