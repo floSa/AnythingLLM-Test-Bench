@@ -1,0 +1,44 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Interface
+
+Personnalisation
+
+Chat
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Chat
+
+Personnalisez le comportement du chat.
+
+Soumission automatique
+Soumet automatiquement le message lorsque vous utilisez la reconnaissance vocale.
+Lecture automatique
+Lit automatiquement les réponses de l'IA à haute voix.
+Correction orthographique
+Active la correction orthographique dans la zone de saisie du chat.
+Afficher la barre de défilement
+Affiche la barre de défilement dans l'interface de chat.
+Désactiver le défilement automatique
+Désactiver le défilement automatique vers la fin de la conversation lorsqu'un nouveau message est reçu.
+Rendu HTML
+Autorise le rendu du contenu HTML dans les réponses du chat.

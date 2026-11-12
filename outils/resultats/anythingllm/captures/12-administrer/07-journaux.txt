@@ -1,0 +1,112 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Tâches planifiées
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Journaux d'événements
+
+Consultez toutes les actions et événements se produisant sur cette instance pour la surveillance.
+
+Effacer les journaux d'événements
+TYPE D'ÉVÉNEMENT	UTILISATEUR	SURVENU À	
+
+api_sent_chat
+unknown user	Nov 12, 2026 1:06 PM	
+
+show
+
+
+
+api_sent_chat
+unknown user	Nov 12, 2026 1:06 PM	
+
+show
+
+
+
+api_sent_chat
+unknown user	Nov 12, 2026 1:06 PM	
+
+show
+
+
+
+login_event
+unknown user	Nov 12, 2026 1:06 PM	
+
+show
+
+
+
+api_sent_chat
+unknown user	Nov 12, 2026 1:06 PM	
+
+show
+
+
+
+sent_chat
+unknown user	Nov 12, 2026 1:05 PM	
+
+show
+
+
+
+workspace_thread_created
+unknown user	Nov 12, 2026 1:05 PM	
+
+show
+
+
+
+sent_chat
+unknown user	Nov 12, 2026 1:04 PM	
+
+show
+
+
+
+workspace_thread_created
+unknown user	Nov 12, 2026 1:04 PM	
+
+show
+
+
+
+login_event
+unknown user	Nov 12, 2026 1:04 PM	
+
+show
+
+Page suivante

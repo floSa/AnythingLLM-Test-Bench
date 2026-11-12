@@ -1,0 +1,74 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Chat de l'espace de travail
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Chats de l'espace de travail
+
+Exporter
+Clear Chats
+
+Voici tous les chats et messages enregistrés qui ont été envoyés par les utilisateurs, classés par date de création.
+
+ID	ENVOYÉ PAR	ESPACE DE TRAVAIL	INVITE	RÉPONSE	ENVOYÉ À	
+92	API	Banc-bge-m3	Qui est la présidente de Vélanor ?	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:06 PM	
+
+91	API	Banc-bge-m3	En quelle année Vélanor a-t-elle été fon…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:06 PM	
+
+90	API	Banc-bge-m3	Quel est le chiffre d'affaires 2025 de V…	<think>The user is asking about the reve…	Nov 12, 2026 1:06 PM	
+
+89	unknown user	Démo Vélanor	Quel est le cours de l'action Vélanor en…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:05 PM	
+
+88	unknown user	Démo Vélanor	Quel est le cours de l'action Vélanor en…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 1:04 PM	
+
+87	unknown user	Démo Vélanor	Combien de vélos Vélanor a-t-elle produi…	<think>The user is asking: How many bicy…	Nov 12, 2026 1:02 PM	
+
+86	unknown user	Démo Vélanor	Quel est le stock de la pièce BAT-500 ?	<think>L'utilisateur demande le stock de…	Nov 12, 2026 12:57 PM	
+
+85	unknown user	Démo Vélanor	Combien de vélos Vélanor a-t-elle produi…	<think>The user is asking about two piec…	Nov 12, 2026 12:56 PM	
+
+84	API	Banc-bge-m3	Quel est le salaire de Karim Benali ?	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:56 PM	
+
+83	API	Banc-bge-m3	Combien de trottinettes électriques Véla…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:55 PM	
+
+82	API	Banc-bge-m3	Qui est le directeur financier de Vélano…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:55 PM	
+
+81	API	Banc-bge-m3	Quel était le chiffre d'affaires de Véla…	<think>The user is asking about the reve…	Nov 12, 2026 12:54 PM	
+
+80	API	Banc-bge-m3	Qui est le directeur de production de Vé…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:54 PM	
+
+79	API	Banc-bge-m3	Quelle ligne d'assemblage sera arrêtée p…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:53 PM	
+
+78	API	Banc-bge-m3	Quel chiffre d'affaires Vélanor vise-t-e…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:53 PM	
+
+77	API	Banc-bge-m3	Quel score Batterix a-t-il obtenu à l'au…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:52 PM	
+
+76	API	Banc-bge-m3	Quel est le délai de livraison contractu…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:52 PM	
+
+75	API	Banc-bge-m3	Quel est le taux de cellules défectueuse…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:52 PM	
+
+74	API	Banc-bge-m3	What overall score did Batterix obtain a…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:51 PM	
+
+73	API	Banc-bge-m3	Quel est le montant de la prime d'intére…	<think>Thinking Process: 1. **Analyze …	Nov 12, 2026 12:51 PM	
+Next Page

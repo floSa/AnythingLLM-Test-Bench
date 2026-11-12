@@ -1,0 +1,234 @@
+[
+ {
+  "capture": "12-administrer/13-experimental.png",
+  "url": "/settings/beta-features",
+  "pastilles": [
+   [
+    1,
+    "Live Document Sync"
+   ]
+  ],
+  "note": "",
+  "heure": "12:53:04"
+ },
+ {
+  "capture": "12-administrer/14-documentation-api.png",
+  "url": "/api/docs/",
+  "pastilles": [
+   [
+    1,
+    "Authorize"
+   ],
+   [
+    2,
+    "Workspaces"
+   ]
+  ],
+  "note": "",
+  "heure": "12:53:09"
+ },
+ {
+  "capture": "12-administrer/01-interface.png",
+  "url": "/settings/interface",
+  "pastilles": [
+   [
+    1,
+    "Thème"
+   ],
+   [
+    2,
+    "Palette de couleurs"
+   ],
+   [
+    3,
+    "Langue d'affichage"
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:39"
+ },
+ {
+  "capture": "12-administrer/02-personnalisation.png",
+  "url": "/settings/branding",
+  "pastilles": [
+   [
+    1,
+    "Identité"
+   ],
+   [
+    2,
+    "Couleurs"
+   ],
+   [
+    3,
+    "Barre latérale"
+   ],
+   [
+    4,
+    "Navigateur"
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:43"
+ },
+ {
+  "capture": "12-administrer/03-apparence-du-chat.png",
+  "url": "/settings/chat",
+  "pastilles": [
+   [
+    1,
+    "Soumission automatique"
+   ],
+   [
+    2,
+    "Rendu HTML"
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:47"
+ },
+ {
+  "capture": "12-administrer/04-espaces-de-travail.png",
+  "url": "/settings/workspaces",
+  "pastilles": [
+   [
+    1,
+    "New Workspace"
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:56"
+ },
+ {
+  "capture": "12-administrer/05-historique-des-conversations.png",
+  "url": "/settings/workspace-chats",
+  "pastilles": [
+   [
+    1,
+    "Exporter"
+   ],
+   [
+    2,
+    "Clear Chats"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:01"
+ },
+ {
+  "capture": "12-administrer/06-consigne-par-defaut.png",
+  "url": "/settings/default-system-prompt",
+  "pastilles": [
+   [
+    1,
+    "System Prompt"
+   ],
+   [
+    2,
+    "Save Changes"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:05"
+ },
+ {
+  "capture": "12-administrer/07-journaux.png",
+  "url": "/settings/event-logs",
+  "pastilles": [
+   [
+    1,
+    "Effacer les journaux d'événements"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:09"
+ },
+ {
+  "capture": "12-administrer/08-cles-api.png",
+  "url": "/settings/api-keys",
+  "pastilles": [
+   [
+    1,
+    "Générer une nouvelle clé API"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:18"
+ },
+ {
+  "capture": "12-administrer/09-variables.png",
+  "url": "/settings/system-prompt-variables",
+  "pastilles": [
+   [
+    1,
+    "Add Variable"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:27"
+ },
+ {
+  "capture": "12-administrer/10-extension.png",
+  "url": "/settings/browser-extension",
+  "pastilles": [
+   [
+    1,
+    "Generate New API Key"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:31"
+ },
+ {
+  "capture": "12-administrer/11-mobile.png",
+  "url": "/settings/mobile-connections",
+  "pastilles": [
+   [
+    1,
+    "Connected Mobile Devices"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:35"
+ },
+ {
+  "capture": "12-administrer/12-telegram.png",
+  "url": "/settings/external-connections/telegram",
+  "pastilles": [
+   [
+    1,
+    "Telegram"
+   ]
+  ],
+  "note": "",
+  "heure": "13:07:39"
+ },
+ {
+  "capture": "12-administrer/15-creer-une-cle.png",
+  "url": "/settings/api-keys",
+  "pastilles": [
+   [
+    1,
+    "Créer la clé API"
+   ]
+  ],
+  "note": "",
+  "heure": "13:08:11"
+ },
+ {
+  "capture": "12-administrer/16-cle-creee.png",
+  "url": "/settings/api-keys",
+  "pastilles": [
+   [
+    1,
+    "nouvelle clé (masquée)"
+   ],
+   [
+    2,
+    "Fermer"
+   ]
+  ],
+  "note": "",
+  "heure": "13:08:14"
+ }
+]

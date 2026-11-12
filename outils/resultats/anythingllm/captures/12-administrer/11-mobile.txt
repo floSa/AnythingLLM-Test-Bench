@@ -1,0 +1,52 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Tâches planifiées
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Connected Mobile Devices
+
+These are the devices that are connected to your desktop application to sync chats, workspaces, and more.
+
+Register New Device
+DEVICE NAME	REGISTERED	
+No devices found
+
+Go mobile. Stay local. AnythingLLM Mobile.
+
+AnythingLLM for mobile allows you to connect to your workspace's chats, threads, tools, and documents for you to use on the go.
+
+Run with local models on your phone privately or relay chats directly to this instance seamlessly.
+
+Scan the QR code with the AnythingLLM Mobile app to enable live sync of your workspaces, chats, threads and documents.
+Learn more

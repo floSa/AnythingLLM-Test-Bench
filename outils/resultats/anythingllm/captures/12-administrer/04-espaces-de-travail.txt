@@ -1,0 +1,32 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Chat de l'espace de travail
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Instance Workspaces
+
+These are all the workspaces that exist on this instance. Removing a workspace will delete all of its associated chats and settings.
+
+New Workspace
+NAME	LINK	USERS	CREATED ON	

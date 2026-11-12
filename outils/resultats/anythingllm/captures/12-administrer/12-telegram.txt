@@ -1,0 +1,58 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Telegram
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Bot Telegram
+
+Connectez votre instance de AnythingLLM à Telegram afin de pouvoir communiquer avec vos espaces de travail depuis n'importe quel appareil.
+
+View Documentation
+
+Étape 1 : Créez votre bot Telegram
+
+Ouvrez @BotFather sur Telegram, envoyez `/newbot` à @BotFather, suivez les instructions, et copiez le jeton API.
+
+Ouvrir BotFather
+
+1. Ouvrez le lien ou numérisez le code QR.
+
+2. Envoyer /newbot à @BotFather
+
+3. Choisissez un nom et un nom d'utilisateur pour votre bot.
+
+4. Copiez le jeton API que vous recevez.
+
+Paramètres de sécurité recommandés
+
+Pour une sécurité supplémentaire, configurez ces paramètres via @BotFather.
+
+Disable Groups — Empêcher l'ajout de bots aux groupes
+Disable Inline — Empêcher l'utilisation de bots dans les recherches en ligne.
+Utilisez un nom d'utilisateur de bot non évident pour réduire sa visibilité.
+
+Étape 2 : Connectez votre bot
+
+Collez le jeton API que vous avez reçu de @BotFather et sélectionnez un espace de travail par défaut pour que votre bot puisse communiquer.
+
+Token Bot
+Bot de connexion

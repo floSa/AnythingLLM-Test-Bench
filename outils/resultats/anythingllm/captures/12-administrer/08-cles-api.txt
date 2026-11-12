@@ -1,0 +1,45 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Tâches planifiées
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Clés API
+
+Les clés API permettent au titulaire d'accéder et de gérer de manière programmatique cette instance AnythingLLM.
+
+Lisez la documentation de l'API →
+Générer une nouvelle clé API
+NOM	CLÉ API	CRÉÉ PAR	CRÉÉ	ACTIONS
+Scripts du banc	[clé masquée]	--	Nov 12, 2026 12:04 PM	
+Copier la clé API
