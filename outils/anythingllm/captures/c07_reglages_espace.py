@@ -33,7 +33,8 @@ def chat(s):
     refus = p.locator("[name=queryRefusalResponse]")
     refus.scroll_into_view_if_needed()
     refus.fill(REFUS); refus.blur(); p.wait_for_timeout(1500)
-    s.cap("04-parametres-du-chat-bas", [(p.locator("[name=openAiPrompt]"), "Invite système"),
+    s.cap("04-parametres-du-chat-bas", [(p.get_by_text("Given the following conversation", exact=False).first, "Invite (consigne système)"),
+                                        (p.get_by_text("View History").first, "View History"),
                                         (refus, "Réponse de refus en mode requête"),
                                         (p.locator("[name=openAiTemp]"), "Température LLM")])
 

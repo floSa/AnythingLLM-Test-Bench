@@ -1,0 +1,30 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+*New Thread
+
+New Thread
+
+Banc-bge-m3
+
+Paramètres généraux
+Paramètres du chat
+Base de données vectorielle
+Configuration de l'agent
+Nom des espaces de travail
+
+Cela ne changera que le nom d'affichage de votre espace de travail.
+
+Messages de chat suggérés
+
+Personnalisez les messages qui seront suggérés aux utilisateurs de votre espace de travail.
+
+Ajouter un nouveau message
+Supprimer l'Espace de Travail
+
+Supprimer cet espace de travail et toutes ses données. Cela supprimera l'espace de travail pour tous les utilisateurs.
+
+Supprimer l'espace de travail

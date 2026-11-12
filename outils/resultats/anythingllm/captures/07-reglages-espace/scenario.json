@@ -1,0 +1,126 @@
+[
+ {
+  "capture": "07-reglages-espace/01-roue-dentee.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "roue dentée de l'espace"
+   ]
+  ],
+  "note": "",
+  "heure": "12:47:44"
+ },
+ {
+  "capture": "07-reglages-espace/02-parametres-generaux.png",
+  "url": "/workspace/demo-velanor/settings/general-appearance",
+  "pastilles": [
+   [
+    1,
+    "Paramètres généraux"
+   ],
+   [
+    2,
+    "Nom des espaces de travail"
+   ],
+   [
+    3,
+    "Messages de chat suggérés"
+   ],
+   [
+    4,
+    "Supprimer l'espace de travail"
+   ]
+  ],
+  "note": "",
+  "heure": "12:47:47"
+ },
+ {
+  "capture": "07-reglages-espace/03-parametres-du-chat-haut.png",
+  "url": "/workspace/demo-velanor/settings/chat-settings",
+  "pastilles": [
+   [
+    1,
+    "fournisseur LLM de l'espace"
+   ],
+   [
+    2,
+    "Mode de chat"
+   ],
+   [
+    3,
+    "Historique des chats"
+   ]
+  ],
+  "note": "",
+  "heure": "12:49:00"
+ },
+ {
+  "capture": "07-reglages-espace/04-parametres-du-chat-bas.png",
+  "url": "/workspace/demo-velanor/settings/chat-settings",
+  "pastilles": [
+   [
+    1,
+    "Invite (consigne système)"
+   ],
+   [
+    2,
+    "View History"
+   ],
+   [
+    3,
+    "Réponse de refus en mode requête"
+   ],
+   [
+    4,
+    "Température LLM"
+   ]
+  ],
+  "note": "",
+  "heure": "12:49:03"
+ },
+ {
+  "capture": "07-reglages-espace/05-base-vectorielle.png",
+  "url": "/workspace/demo-velanor/settings/vector-database",
+  "pastilles": [
+   [
+    1,
+    "Nombre de vecteurs"
+   ],
+   [
+    2,
+    "préférence de recherche"
+   ],
+   [
+    3,
+    "Nombre maximum de contextes"
+   ],
+   [
+    4,
+    "Seuil de similarité des documents"
+   ],
+   [
+    5,
+    "Réinitialiser la base de données vectorielle"
+   ]
+  ],
+  "note": "",
+  "heure": "12:49:06"
+ },
+ {
+  "capture": "07-reglages-espace/06-configuration-agent.png",
+  "url": "/workspace/demo-velanor/settings/agent-config",
+  "pastilles": [
+   [
+    1,
+    "fournisseur de l'agent"
+   ],
+   [
+    2,
+    "Configure Agent Skills"
+   ]
+  ],
+  "note": "",
+  "heure": "12:49:10"
+ }
+]
