@@ -42,7 +42,7 @@ Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec
 Lecture :
 
 - « Bonne page » : seul RAGFlow expose la page du passage cité ; AnythingLLM et Open Notebook citent le document et le passage.
-- AnythingLLM atteint 34/34 et 4/4 avec son tri de précision intégré ou 8 passages, comme RAGFlow avec ses meilleurs réglages, pour environ 1,6 Gio de mémoire contre 5 Gio pour RAGFlow. Il n'accepte pas le reranker externe `rerank`, que RAGFlow utilise.
+- AnythingLLM atteint 34/34 et 4/4 avec son tri de précision intégré ou 8 passages, comme RAGFlow avec ses meilleurs réglages, pour environ 1,5 Gio de mémoire contre 5 Gio pour RAGFlow. Il n'accepte pas le reranker externe `rerank`, que RAGFlow utilise.
 - Avec l'embedder intégré d'AnythingLLM (surtout anglais), le résultat tombe à 25/34 : le modèle d'embedding du service central est indispensable sur ce corpus français.
 - Les temps de réponse sont du même ordre pour les trois solutions sur le service central (médiane 8 à 14 s), car le modèle `chat` réfléchit avant de répondre.
 
