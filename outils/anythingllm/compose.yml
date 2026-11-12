@@ -1,0 +1,35 @@
+# AnythingLLM v1.19.0 (édition Docker), d'après docker/docker-compose.yml et docker/HOW_TO_USE_DOCKER.md du dépôt officiel.
+# Écarts au compose officiel (relus dans outils/resultats/anythingllm/relecture.md) :
+#  - image officielle figée par étiquette et empreinte au lieu d'une construction locale (build) ;
+#  - projet, conteneur et réseaux préfixés rag- ; port publié sur 127.0.0.1 seulement ;
+#  - stockage dans donnees/anythingllm/storage (ignoré par git), .env de l'application dans ce même dossier
+#    (montage recommandé par HOW_TO_USE_DOCKER.md) ;
+#  - réseaux externes llm-net (service LLM central, http://llm-central:8080/v1) et rag-local (captures Playwright) ;
+#  - aucun serveur de modèles : chat, embed, rerank et transcribe viennent du service LLM central.
+name: rag-anythingllm
+
+services:
+  anythingllm:
+    image: mintplexlabs/anythingllm:1.19.0@sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e
+    container_name: rag-anythingllm
+    # SYS_ADMIN : demandé par le compose officiel pour le navigateur Chromium intégré (lecture de sites web).
+    cap_add:
+      - SYS_ADMIN
+    user: "1000:1000"
+    ports:
+      - "127.0.0.1:3001:3001"
+    environment:
+      STORAGE_DIR: /app/server/storage
+    volumes:
+      - ../../donnees/anythingllm/storage:/app/server/storage
+      - ../../donnees/anythingllm/storage/.env:/app/server/.env
+    networks:
+      - llm-net
+      - rag-local
+    restart: unless-stopped
+
+networks:
+  llm-net:
+    external: true
+  rag-local:
+    external: true

@@ -1,0 +1,15 @@
+== installer.sh 2026-11-12T12:52:36+01:00
+RAM disponible avant installation : 23953 Mo
+image : mintplexlabs/anythingllm:1.19.0 mintplexlabs/anythingllm@sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e 3390657284 octets
+réglages générés : /home/florian/mes_projets/Tutoriels/AnythingLLM-Test-Bench/donnees/anythingllm/storage/.env (secrets locaux, jamais affichés)
+ Container rag-anythingllm Creating 
+ Container rag-anythingllm Created 
+ Container rag-anythingllm Starting 
+ Container rag-anythingllm Started 
+AnythingLLM prêt : http://127.0.0.1:3001 (10 s)
+rag-anythingllm 127.0.0.1:3001->3001/tcp
+durée : 11 s
+RAM au repos : rag-anythingllm 425MiB / 31.35GiB
+disque des données : 1.6M	/home/florian/mes_projets/Tutoriels/AnythingLLM-Test-Bench/donnees/anythingllm
+
+== constat : [ONBOARDING PATCH] Legacy instance is already onboarded (JWT_SECRET prérempli) ; conteneur et donnees/anythingllm supprimés, JWT_SECRET retiré de installer.sh
