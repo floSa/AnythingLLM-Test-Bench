@@ -1,0 +1,15 @@
+Vélanor — aide en ligne (page de test, fictive)
+
+Cette page de test charge la fenêtre de discussion d'AnythingLLM liée à l'espace « Démo Vélanor ».
+
+Quelle est la durée de garantie du cadre ?
+
+2:05 PM
+Anything LLM Chat Assistant
+
+Le cadre est garanti 7 ans selon la FAQ du service après-vente de Vélanor.
+
+2:05 PM
+Send message
+Powered by AnythingLLM
+Reset Chat

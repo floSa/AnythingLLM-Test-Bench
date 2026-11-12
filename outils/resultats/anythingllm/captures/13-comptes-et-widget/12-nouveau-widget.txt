@@ -1,0 +1,87 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Chat Embed
+
+Widgets
+History
+
+Widgets de chat intégrables
+
+Les widgets de chat intégrables sont des interfaces de chat publiques associées à un espace de travail unique. Ils vous permettent de créer des espaces de travail que vous pouvez ensuite publier dans le monde entier.
+
+Créer un widget intégré
+ESPACE DE TRAVAIL	CHATS ENVOYÉS	DOMAINES ACTIFS	CRÉÉ LE	
+Create new embed for workspace
+Workspace
+
+This is the workspace your chat window will be based on. All defaults will be inherited from the workspace unless overridden by this config.
+
+Mon Espace de Travail
+Premier essai
+Démo Vélanor
+Banc-bge-m3
+Sources externes
+Allowed chat method
+
+Set how your chatbot should operate. Query means it will only respond if a document helps answer the query.
+Chat opens the chat to even general questions and can answer totally unrelated queries to your workspace.
+
+Chat: Respond to all questions regardless of context
+Query: Only respond to chats related to documents in workspace
+Restrict requests from domains
+
+This filter will block any requests that come from a domain other than the list below.
+Leaving this empty means anyone can use your embed on any site.
+
+Max chats per day
+
+Limit the amount of chats this embedded chat can process in a 24 hour period. Zero is unlimited.
+
+Max chats per session
+
+Limit the amount of chats a session user can send with this embed in a 24 hour period. Zero is unlimited.
+
+Message History Limit
+
+The number of previous messages to include in the chat context. Default is 20.
+
+Enable dynamic model use
+Allow setting of the preferred LLM model to override the workspace default.
+Enable dynamic LLM temperature
+Allow setting of the LLM temperature to override the workspace default.
+Enable Prompt Override
+Allow setting of the system prompt to override the workspace default.
+
+After creating an embed you will be provided a link that you can publish on your website with a simple<script> tag.
+
+Cancel
+Create embed

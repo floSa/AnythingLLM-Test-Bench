@@ -1,0 +1,42 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Invitations
+
+Create invitation links for people in your organization to accept and sign up with. Invitations can only be used by a single user.
+
+Create Invite Link
+STATUS	ACCEPTED BY	CREATED BY	CREATED	
+Pending	--	admin-velanor	Nov 12, 2026 1:59 PM	
+Copy Invite Link
+Create new invite
+
+After creation you will be able to copy the invite and send it to a new user where they can create an account as the default role and automatically be added to workspaces selected.
+
+Close

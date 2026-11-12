@@ -1,0 +1,46 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Sécurité
+
+Mode multi-utilisateurs
+
+Configurez votre instance pour prendre en charge votre équipe en activant le mode multi-utilisateurs.
+
+Enregistrer les modifications
+Activer le mode multi-utilisateurs
+Nom d'utilisateur du compte administrateur
+
+Le nom d'utilisateur doit comporter entre 2 et 64 caractères, commencer par une lettre minuscule et ne contenir que des lettres minuscules, des chiffres, des tirets bas, des tirets et des points.
+
+Mot de passe du compte administrateur
+
+Par défaut, vous serez le seul administrateur. En tant qu'administrateur, vous devrez créer des comptes pour tous les nouveaux utilisateurs ou administrateurs. Ne perdez pas votre mot de passe car seul un utilisateur administrateur peut réinitialiser les mots de passe.
+
+Protection par mot de passe
+
+Protégez votre instance AnythingLLM avec un mot de passe. Si vous oubliez ce mot de passe, il n'y a pas de méthode de récupération, donc assurez-vous de le sauvegarder.
+
+Protection par mot de passe
+Mot de passe de l'instance
+
+Protégez votre instance AnythingLLM avec un mot de passe. Si vous oubliez ce mot de passe, il n'y a pas de méthode de récupération, donc assurez-vous de le sauvegarder.

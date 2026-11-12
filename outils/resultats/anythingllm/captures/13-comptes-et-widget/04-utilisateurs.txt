@@ -1,0 +1,42 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Users
+
+These are all the accounts which have an account on this instance. Removing an account will instantly remove their access to this instance.
+
+Add user
+USERNAME	ROLE	DATE ADDED	
+admin-velanor	Admin	Nov 12, 2026 1:57 PM	
+Edit
+
+camille.martin	Default	Nov 12, 2026 1:59 PM	
+Edit
+Suspend
+Delete

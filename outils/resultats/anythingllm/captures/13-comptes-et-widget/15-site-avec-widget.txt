@@ -1,0 +1,3 @@
+Vélanor — aide en ligne (page de test, fictive)
+
+Cette page de test charge la fenêtre de discussion d'AnythingLLM liée à l'espace « Démo Vélanor ».

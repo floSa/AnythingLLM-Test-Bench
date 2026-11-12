@@ -1,0 +1,87 @@
+AD
+
+Mon Espace de Travail
+
+*New Thread
+
+New Thread
+
+Premier essai
+
+Démo Vélanor
+
+Banc-bge-m3
+
+Sources externes
+
+chat
+Sur quoi travaillons-nous ?
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs
+
+Modifier le compte
+Photo de profil
+800 x 800
+Nom d'utilisateur
+
+Le nom d'utilisateur doit comporter entre 2 et 64 caractères, commencer par une lettre minuscule et ne contenir que des lettres minuscules, des chiffres, des tirets bas, des tirets et des points.
+
+Nouveau mot de passe
+
+Le mot de passe doit contenir au moins 8 caractères.
+
+Bio
+Thème
+System
+Light
+Dark
+Palette de couleurs
+Default
+Par défaut
+True Dark
+Ocean
+Forest
+Plum
+Ember
+Langue
+English
+Chinese
+Chinese (Taiwan)
+Spanish
+German
+French
+Korean
+Lao
+Estonian
+Russian
+Italian
+Portuguese
+Hebrew
+Dutch
+Vietnamese
+Persian
+Turkish
+Arabic
+Danish
+Japanese
+Latvian
+Polish
+Romanian
+Czech
+Lithuanian
+Catalan
+Indonesian
+Croatian
+Swedish
+Hindi
+Bulgarian
+Hungarian
+Soumission automatique
+Lecture automatique
+Annuler
+Mettre à jour le compte

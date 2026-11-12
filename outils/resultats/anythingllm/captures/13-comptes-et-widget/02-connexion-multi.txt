@@ -1,0 +1,9 @@
+Bienvenue
+
+Connectez-vous à votre compte AnythingLLM.
+
+Nom d'utilisateur
+Mot de passe
+Connexion
+Mot de passe oublié?
+Réinitialiser

@@ -1,0 +1,270 @@
+[
+ {
+  "capture": "13-comptes-et-widget/01-mode-multi-utilisateurs.png",
+  "url": "/settings/security",
+  "pastilles": [
+   [
+    1,
+    "Activer le mode multi-utilisateurs"
+   ],
+   [
+    2,
+    "Nom d'utilisateur du compte administrateur"
+   ],
+   [
+    3,
+    "Mot de passe du compte administrateur"
+   ],
+   [
+    4,
+    "Enregistrer les modifications"
+   ]
+  ],
+  "note": "",
+  "heure": "13:57:52"
+ },
+ {
+  "capture": "13-comptes-et-widget/02-connexion-multi.png",
+  "url": "/login?nt=1",
+  "pastilles": [
+   [
+    1,
+    "Nom d'utilisateur"
+   ],
+   [
+    2,
+    "Mot de passe"
+   ],
+   [
+    3,
+    "Connexion"
+   ]
+  ],
+  "note": "",
+  "heure": "13:58:00"
+ },
+ {
+  "capture": "13-comptes-et-widget/03-nouvel-utilisateur.png",
+  "url": "/settings/users",
+  "pastilles": [
+   [
+    1,
+    "User's username"
+   ],
+   [
+    2,
+    "mot de passe"
+   ],
+   [
+    3,
+    "rôle"
+   ],
+   [
+    4,
+    "Add user"
+   ]
+  ],
+  "note": "",
+  "heure": "13:59:40"
+ },
+ {
+  "capture": "13-comptes-et-widget/04-utilisateurs.png",
+  "url": "/settings/users",
+  "pastilles": [
+   [
+    1,
+    "camille.martin"
+   ],
+   [
+    2,
+    "admin-velanor"
+   ],
+   [
+    3,
+    "Add user"
+   ]
+  ],
+  "note": "",
+  "heure": "13:59:43"
+ },
+ {
+  "capture": "13-comptes-et-widget/05-membres-de-l-espace.png",
+  "url": "/workspace/demo-velanor/settings/members",
+  "pastilles": [
+   [
+    1,
+    "camille.martin (coché)"
+   ],
+   [
+    2,
+    "Save"
+   ]
+  ],
+  "note": "",
+  "heure": "13:59:48"
+ },
+ {
+  "capture": "13-comptes-et-widget/06-invitation.png",
+  "url": "/settings/invites",
+  "pastilles": [
+   [
+    1,
+    "Auto-add invitee to workspaces"
+   ],
+   [
+    2,
+    "Create Invite"
+   ]
+  ],
+  "note": "",
+  "heure": "13:59:54"
+ },
+ {
+  "capture": "13-comptes-et-widget/07-invitation-creee.png",
+  "url": "/settings/invites",
+  "pastilles": [
+   [
+    1,
+    "Copy Invite Link"
+   ]
+  ],
+  "note": "",
+  "heure": "13:59:57"
+ },
+ {
+  "capture": "13-comptes-et-widget/08-codes-de-recuperation.png",
+  "url": "/login?nt=1",
+  "pastilles": [
+   [
+    1,
+    "Download"
+   ]
+  ],
+  "note": "",
+  "heure": "14:00:08"
+ },
+ {
+  "capture": "13-comptes-et-widget/09-vue-utilisateur.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "seuls les espaces dont l'utilisateur est membre"
+   ],
+   [
+    2,
+    "Envoyer un message"
+   ]
+  ],
+  "note": "",
+  "heure": "14:00:10"
+ },
+ {
+  "capture": "13-comptes-et-widget/10-menu-du-compte.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "Compte"
+   ],
+   [
+    2,
+    "Déconnexion"
+   ]
+  ],
+  "note": "",
+  "heure": "14:03:11"
+ },
+ {
+  "capture": "13-comptes-et-widget/11-fenetre-compte.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "Thème"
+   ],
+   [
+    2,
+    "Langue"
+   ],
+   [
+    3,
+    "Mettre à jour le compte"
+   ]
+  ],
+  "note": "",
+  "heure": "14:03:13"
+ },
+ {
+  "capture": "13-comptes-et-widget/12-nouveau-widget.png",
+  "url": "/settings/embed-chat-widgets",
+  "pastilles": [
+   [
+    1,
+    "espace de travail"
+   ],
+   [
+    2,
+    "limite par jour"
+   ],
+   [
+    3,
+    "Create embed"
+   ]
+  ],
+  "note": "",
+  "heure": "14:03:53"
+ },
+ {
+  "capture": "13-comptes-et-widget/13-widgets.png",
+  "url": "/settings/embed-chat-widgets",
+  "pastilles": [
+   [
+    1,
+    "widget de Démo Vélanor"
+   ],
+   [
+    2,
+    "code à intégrer"
+   ]
+  ],
+  "note": "",
+  "heure": "14:03:57"
+ },
+ {
+  "capture": "13-comptes-et-widget/15-site-avec-widget.png",
+  "url": "http://rag-anythingllm-site/widget-actif.html",
+  "pastilles": [
+   [
+    1,
+    "bulle de discussion"
+   ]
+  ],
+  "note": "",
+  "heure": "14:05:34"
+ },
+ {
+  "capture": "13-comptes-et-widget/16-widget-reponse.png",
+  "url": "http://rag-anythingllm-site/widget-actif.html",
+  "pastilles": [
+   [
+    1,
+    "réponse dans le site"
+   ]
+  ],
+  "note": "",
+  "heure": "14:05:44"
+ },
+ {
+  "capture": "13-comptes-et-widget/14-code-du-widget.png",
+  "url": "/settings/embed-chat-widgets",
+  "pastilles": [
+   [
+    1,
+    "code HTML à coller dans le site"
+   ]
+  ],
+  "note": "",
+  "heure": "14:06:03"
+ }
+]

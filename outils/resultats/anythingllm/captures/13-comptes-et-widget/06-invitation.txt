@@ -1,0 +1,51 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Invitations
+
+Create invitation links for people in your organization to accept and sign up with. Invitations can only be used by a single user.
+
+Create Invite Link
+STATUS	ACCEPTED BY	CREATED BY	CREATED	
+No invitations found
+Create new invite
+
+After creation you will be able to copy the invite and send it to a new user where they can create an account as the default role and automatically be added to workspaces selected.
+
+Auto-add invitee to workspaces
+
+You can optionally automatically assign the user to the workspaces below by selecting them. By default, the user will not have any workspaces visible. You can assign workspaces later post-invite acceptance.
+
+Mon Espace de Travail
+Premier essai
+Démo Vélanor
+Banc-bge-m3
+Sources externes
+Cancel
+Create Invite

@@ -1,0 +1,20 @@
+Bienvenue
+
+Connectez-vous à votre compte AnythingLLM.
+
+Nom d'utilisateur
+Mot de passe
+Connexion
+Mot de passe oublié?
+Réinitialiser
+Recovery Codes
+
+In order to reset your password in the future, you will need these recovery codes. Download or copy your recovery codes to save them.
+
+These recovery codes are only shown once!
+
+[code masqué]
+[code masqué]
+[code masqué]
+[code masqué]
+Download

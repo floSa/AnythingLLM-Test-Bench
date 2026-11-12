@@ -1,0 +1,63 @@
+AD
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Utilisateurs
+
+Espaces de travail
+
+Chat de l'espace de travail
+
+Invitation
+
+Default System Prompt
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Outils
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Users
+
+These are all the accounts which have an account on this instance. Removing an account will instantly remove their access to this instance.
+
+Add user
+USERNAME	ROLE	DATE ADDED	
+admin-velanor	Admin	Nov 12, 2026 1:57 PM	
+Edit
+Add user to instance
+Username
+
+Le nom d'utilisateur doit comporter entre 2 et 64 caractères, commencer par une lettre minuscule et ne contenir que des lettres minuscules, des chiffres, des tirets bas, des tirets et des points.
+
+Password
+
+Password must be at least 8 characters long
+
+Bio
+Role
+Default
+Manager
+Administrator
+
+Permissions
+
+Can only send chats with workspaces they are added to by admin or managers.
+Cannot modify any settings at all.
+Limit messages per day
+Restrict this user to a number of successful queries or chats within a 24 hour window.
+
+After creating a user they will need to login with their initial login to get access.
+
+Cancel
+Add user
