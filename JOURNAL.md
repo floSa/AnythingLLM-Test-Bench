@@ -36,3 +36,12 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 - Jeu de démonstration rangé (`demo_ranger.py`) : « Démo Vélanor » avec trois conversations citées ; espace du banc et documents d'essai supprimés.
 - Documentation committée chapitre par chapitre, `verifier_docs.py` à 0 point ; README, index de la série, `outils/README.md`, `RAPPORT-anythingllm.md`.
 - Prochaine étape : relecture par un lecteur novice, corrections, commit final.
+
+### 2026-11-12 18:30 — Phase H : relectures, clôture
+
+- Relecture par lecteur novice (partie 1), treize passages avec un sous-agent neuf à chaque fois : 59, 34, 14, 15, 4, 3, 4, 2, 3, 3, 2, 2 remarques, puis « Aucune remarque » au treizième. Corrections commitées après chaque passage (renvois, étapes manquantes, prérequis LLM-Service, captures refaites dont 04/05, 04/14, 09/03, 10/01, 12/04, 12/14, 13/07, 13/12, 15/06, nouvelles 13/11b et 14/01b).
+- Outil d'annotation corrigé (`outils/communs/captures/annoter.py`) : défilement seulement si l'élément est hors de la fenêtre, puis second calcul des positions (pastilles décalées dans les zones à défilement interne).
+- Relecture adversariale des annexes : 45 écarts (aucun lien cassé) corrigés en requalifiant ([Source], [Estimation], [À tester]) et en rectifiant les chiffres ; relevé brut de fin de mission `outils/resultats/anythingllm/fin-de-mission-2026-11-12.log`.
+- Masquage étendu aux codes d'invitation (`ui.py`), texte nettoyé.
+- Jeu de démonstration rangé (`demo_ranger.py`) : « Démo Vélanor » avec ses trois conversations citées.
+- État : AnythingLLM en marche sur `http://127.0.0.1:3001`, `verifier_docs.py` à 0 point, dépôt poussé.

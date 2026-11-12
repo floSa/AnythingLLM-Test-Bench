@@ -41,6 +41,11 @@ Versions relevées : `outils/resultats/anythingllm/versions-2026-11-12.json`.
 - Non vérifié (détail en A6, section 5) : profil sans carte graphique (estimé), `nettoyer.sh` (relu, non rejoué pour garder la démonstration), mise à jour de version, réglage du découpage, règles du routeur, exécution d'une tâche planifiée, `gemma-4-e4b` au banc, extension de navigateur, mobile, Telegram, Centre communautaire, dictée et lecture vocale, acceptation d'une invitation.
 - Reranker `rerank` du service central : non essayé, car AnythingLLM 1.19.0 n'accepte aucun reranker externe (code source) ; le reranker intégré a été comparé à l'absence de tri.
 
+## Relectures
+
+- Partie 1 relue par un lecteur novice (sous-agent neuf à chaque passage) : treize passages, remarques corrigées après chacun, « Aucune remarque » au dernier.
+- Partie 2 relue de façon adversariale : 45 écarts corrigés (requalifications, chiffres rectifiés, fichiers sources cités).
+
 ## Incidents rencontrés
 
 - `JWT_SECRET` prérempli à la première installation : l'assistant de premier lancement était sauté ; installation refaite sans cette variable.
