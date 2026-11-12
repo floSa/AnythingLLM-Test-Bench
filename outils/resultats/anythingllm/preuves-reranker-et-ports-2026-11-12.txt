@@ -1,0 +1,17 @@
+# Preuves : reranker externe non accepté par AnythingLLM 1.19.0 ; ports publiés liés à 127.0.0.1 — 2026-11-12T16:33:37+01:00
+tag : v1.19.0 9b1fcab
+== server/utils/EmbeddingRerankers/ :
+native
+== variables d'environnement RERANK (serveur, collecteur) :
+process.env.AGENT_SKILL_RERANKER_ENABLED
+process.env.AGENT_SKILL_RERANKER_TOP_N
+== reranker utilisé par la recherche vectorielle (lance/index.js) :
+8:const { NativeEmbeddingReranker } = require("../../EmbeddingRerankers/native");
+== valeurs admises de vectorSearchMode (models/workspace.js:129) :
+        !["default", "rerank"].includes(value)
+== ports publiés (docker port) :
+rag-anythingllm -> 3001/tcp -> 127.0.0.1:3001 
+rag-anythingllm-site -> 
+llm-central -> 8080/tcp -> 127.0.0.1:8080 
+llm-swap -> 8080/tcp -> 127.0.0.1:8081 
+llm-speaches -> 
