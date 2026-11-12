@@ -14,7 +14,7 @@ Les trois cas utilisent les documents fictifs de l'entreprise Vélanor : une FAQ
 
 **Étape 1. Proposer des questions toutes prêtes**
 *Où* : réglages de l'espace « Démo Vélanor » › « Paramètres généraux ».
-Cliquer sur « Ajouter un nouveau message » (pastille 2), taper une question fréquente (par exemple `Quelle est la durée de garantie du cadre et de la batterie ?`), puis « Enregistrer les messages ».
+Cliquer sur « Ajouter un nouveau message » (pastille 2) : une carte d'exemple « Expliquez-moi les avantages de AnythingLLM » apparaît. Cliquer sur cette carte, remplacer le texte du champ « Message » par une question fréquente (par exemple `Quelle est la durée de garantie du cadre et de la batterie ?`), puis cliquer sur « Enregistrer les messages ».
 
 ![Messages suggérés](../img/14-cas-pratiques/01-messages-suggeres.png)
 *Écran : « Paramètres généraux », messages de chat suggérés.*

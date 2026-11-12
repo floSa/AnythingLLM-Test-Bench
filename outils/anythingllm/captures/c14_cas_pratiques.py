@@ -55,9 +55,25 @@ def production(s):
     s.cap_souple("04-message-vocal", [(rep, "réponse"), (p.get_by_text("message-vocal-production.mp3").last, "source : message vocal transcrit")])
 
 
+def suggestions(s):
+    """Enregistre une question suggérée par l'interface et vérifie qu'elle s'affiche sur un fil vide (sans capture)."""
+    p = s.page
+    s.aller(f"/workspace/{SLUG}/settings/general-appearance"); p.wait_for_timeout(1500)
+    p.get_by_text("Ajouter un nouveau message", exact=False).first.click(); p.wait_for_timeout(600)
+    # le bouton ajoute une carte d'exemple ; un clic sur la carte ouvre le champ « Message »
+    p.get_by_text("Expliquez-moi", exact=False).last.click(); p.wait_for_timeout(600)
+    p.locator("input[name=message]").fill("Quelle est la durée de garantie du cadre et de la batterie ?")
+    if p.locator("textarea[name=message], input[name=heading]").count():
+        s.note("autre champ présent")
+    p.get_by_role("button", name="Enregistrer les messages").first.click(); p.wait_for_timeout(1500)
+    s.aller(f"/workspace/{SLUG}"); p.locator("[aria-label=Threads]").get_by_text("New Thread", exact=True).last.click()
+    p.wait_for_timeout(2000)
+    s.note("suggestion affichée : " + str(p.get_by_text("Quelle est la durée de garantie", exact=False).count() > 0))
+
+
 if __name__ == "__main__":
     s = Scenario(CH)
     try:
-        etapes([faq, fournisseur, production], s)
+        etapes([faq, fournisseur, production, suggestions], s)
     finally:
         s.fermer()
