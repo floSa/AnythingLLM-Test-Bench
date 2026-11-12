@@ -1,0 +1,226 @@
+[
+ {
+  "capture": "04-premiere-question/01-bouton-nouvel-espace.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "+ (Nouvel Espace de Travail)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:05"
+ },
+ {
+  "capture": "04-premiere-question/02-nom-de-l-espace.png",
+  "url": "/",
+  "pastilles": [
+   [
+    1,
+    "Nom des espaces de travail"
+   ],
+   [
+    2,
+    "Save"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:06"
+ },
+ {
+  "capture": "04-premiere-question/03-icone-envoi.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "envoi de documents (flèche vers le haut)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:11"
+ },
+ {
+  "capture": "04-premiere-question/04-gestionnaire-vide.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "Mes documents"
+   ],
+   [
+    2,
+    "zone d'envoi"
+   ],
+   [
+    3,
+    "ou soumettre un lien"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:12"
+ },
+ {
+  "capture": "04-premiere-question/05-document-televerse.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ],
+   [
+    2,
+    "croix (fermer)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:16"
+ },
+ {
+  "capture": "04-premiere-question/06-document-coche.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf (coché)"
+   ],
+   [
+    2,
+    "Déplacer vers l'espace de travail"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:21"
+ },
+ {
+  "capture": "04-premiere-question/07-sauvegarder-et-integrer.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "document en attente dans l'espace"
+   ],
+   [
+    2,
+    "Sauvegarder et intégrer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:24"
+ },
+ {
+  "capture": "04-premiere-question/08-document-integre.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "document intégré à l'espace"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:29"
+ },
+ {
+  "capture": "04-premiere-question/09-roue-dentee.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "roue dentée de l'espace"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:32"
+ },
+ {
+  "capture": "04-premiere-question/10-mode-requete.png",
+  "url": "/workspace/premier-essai/settings/chat-settings",
+  "pastilles": [
+   [
+    1,
+    "Paramètres du chat"
+   ],
+   [
+    2,
+    "Agent"
+   ],
+   [
+    3,
+    "Chat"
+   ],
+   [
+    4,
+    "Requête"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:37"
+ },
+ {
+  "capture": "04-premiere-question/11-question.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "Envoyer un message"
+   ],
+   [
+    2,
+    "Envoyer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:36:40"
+ },
+ {
+  "capture": "04-premiere-question/12-reponse.png",
+  "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
+  "pastilles": [
+   [
+    1,
+    "Réflexions (repliées)"
+   ],
+   [
+    2,
+    "réponse"
+   ],
+   [
+    3,
+    "Sources"
+   ]
+  ],
+  "note": "",
+  "heure": "12:38:33"
+ },
+ {
+  "capture": "04-premiere-question/13-panneau-sources.png",
+  "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ]
+  ],
+  "note": "",
+  "heure": "12:38:35"
+ },
+ {
+  "capture": "04-premiere-question/14-extrait-cite.png",
+  "url": "/workspace/premier-essai/t/3c9a0c7f-5cc5-49c6-a717-788ab80ed519",
+  "pastilles": [
+   [
+    1,
+    "Referenced 4 times."
+   ],
+   [
+    2,
+    "passage cité"
+   ],
+   [
+    3,
+    "fermer"
+   ]
+  ],
+  "note": "",
+  "heure": "12:38:37"
+ }
+]

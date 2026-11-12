@@ -1,0 +1,45 @@
+Mon Espace de Travail
+
+Premier essai
+
+*New Thread
+
+New Thread
+
+Paramètres généraux
+Paramètres du chat
+Base de données vectorielle
+Configuration de l'agent
+Fournisseur LLM de l'espace de travail
+
+Le fournisseur et le modèle LLM spécifiques qui seront utilisés pour cet espace de travail. Par défaut, il utilise le fournisseur et les paramètres LLM du système.
+
+System default
+Use the system LLM preference for this workspace.
+Mode de chat
+Agent
+Chat
+Requête
+
+Requête fournira des réponses uniquement si le contexte du document est trouvé.
+Vous devrez utiliser la commande "@agent" pour utiliser les outils.
+
+Historique des chats
+
+Le nombre de chats précédents qui seront inclus dans la mémoire à court terme de la réponse. Recommandé: 20.
+
+Invite
+
+L'invite qui sera utilisée sur cet espace de travail. Définissez le contexte et les instructions pour que l'IA génère une réponse. Vous devez fournir une invite soigneusement conçue pour que l'IA puisse générer une réponse pertinente et précise.
+
+You can insert prompt variables like: {time}, {time_24}, {date}, +4 more...
+
+View History
+Given the following conversation, relevant context, and a follow up question, reply with an answer to the current question the user is asking. The current date and time is {datetime}. Return only your response to the question given the above information following the users instructions as needed.
+Réponse de refus en mode requête
+
+En mode requête , vous pouvez souhaiter retourner une réponse de refus personnalisée lorsque aucun contexte n'est trouvé.
+
+Température LLM
+
+Plus le nombre est élevé, plus la réponse sera créative. Pour certains modèles, cela peut entraîner des réponses incohérentes si la valeur est trop élevée.
