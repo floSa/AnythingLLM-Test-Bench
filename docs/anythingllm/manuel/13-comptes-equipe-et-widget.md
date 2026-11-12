@@ -113,17 +113,20 @@ Cocher éventuellement les espaces à ouvrir d'office (pastille 1), puis « Crea
 | 1 | « Auto-add invitee to workspaces » | espaces auxquels la personne invitée sera ajoutée |
 | 2 | « Create Invite » | crée le lien |
 
-*Résultat* : l'invitation apparaît dans la liste.
+*Résultat* : une fenêtre « Create new invite » s'ouvre avec le lien d'invitation (étape suivante) ; l'invitation est aussi ajoutée à la liste, à l'état « Pending ».
 
 **Étape 7. Copier le lien**
-*Où* : « Invitations ».
+*Où* : fenêtre « Create new invite », ouverte par l'étape 6.
+Cliquer sur l'icône de copie (pastille 2) à droite du lien, puis sur « Close » (pastille 3). Plus tard, le lien se recopie depuis la liste « Invitations », lien « Copy Invite Link » de la ligne.
 
 ![Invitation créée](../img/13-comptes-et-widget/07-invitation-creee.png)
-*Écran : « Invitations », une invitation en attente.*
+*Écran : fenêtre « Create new invite », lien créé (masqué).*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Copy Invite Link » | copie le lien à envoyer |
+| 1 | lien d'invitation | adresse à envoyer à la personne invitée (masquée sur la capture : elle vaut un droit d'inscription) |
+| 2 | icône de copie | copie le lien dans le presse-papiers |
+| 3 | « Close » | ferme la fenêtre |
 
 *Résultat* : la personne qui ouvre le lien choisit son nom et son mot de passe ; chaque lien ne sert qu'une fois. Le lien commence par l'adresse de l'instance : depuis un autre poste, elle n'est joignable que si l'instance a été ouverte au réseau, ce que cette installation ne fait pas.
 

@@ -120,18 +120,6 @@
   "heure": "13:59:54"
  },
  {
-  "capture": "13-comptes-et-widget/07-invitation-creee.png",
-  "url": "/settings/invites",
-  "pastilles": [
-   [
-    1,
-    "Copy Invite Link"
-   ]
-  ],
-  "note": "",
-  "heure": "13:59:57"
- },
- {
   "capture": "13-comptes-et-widget/08-codes-de-recuperation.png",
   "url": "/login?nt=1",
   "pastilles": [
@@ -433,5 +421,25 @@
   ],
   "note": "",
   "heure": "14:57:51"
+ },
+ {
+  "capture": "13-comptes-et-widget/07-invitation-creee.png",
+  "url": "/settings/invites",
+  "pastilles": [
+   [
+    1,
+    "lien d invitation (masqué)"
+   ],
+   [
+    2,
+    "copier le lien"
+   ],
+   [
+    3,
+    "Close"
+   ]
+  ],
+  "note": "",
+  "heure": "15:27:44"
  }
 ]

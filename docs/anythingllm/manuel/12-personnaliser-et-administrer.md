@@ -218,9 +218,8 @@ Cliquer sur « Créer une clé API » (pastille 1). Sur cette capture et la suiv
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | « Authorize » | saisit la clé d'API pour essayer les routes depuis la page |
-| 2 | « Workspaces » | routes des espaces (créer, lister, poser une question…) |
 
-*Résultat* : chaque route peut être essayée depuis la page. L'annexe A3 donne des exemples exécutés.
+*Résultat* : sous « Authorize », les routes sont regroupées par thème (« Authentication », « Admin », puis plus bas « Workspaces »…) ; chaque route peut être essayée depuis la page. L'annexe A3 donne des exemples exécutés.
 
 ## Bon à savoir
 

@@ -203,9 +203,29 @@ def suggestion_editeur(s):
                                              (champ, "Message"), (p.get_by_role("button", name="Enregistrer les messages"), "Enregistrer les messages")])
 
 
+def invitation2(s):
+    p = s.page; s.chapitre = "13-comptes-et-widget"
+    s.aller("/settings/invites"); p.wait_for_timeout(1500)
+    s.bouton("Create Invite Link").first.click(); p.wait_for_timeout(1000)
+    p.get_by_role("button", name="Create Invite").last.click(); p.wait_for_timeout(2500)
+    s.note("fenêtre invitation : " + p.inner_text("body")[-700:].replace("\n", " | "))
+    fen = p.get_by_text("Create new invite").last.locator("xpath=ancestor::*[.//button][1]")
+    lien = p.locator("input:visible").last
+    copie = lien.locator("xpath=following::button[1]")
+    s.cap_souple("07-invitation-creee", [(lien, "lien d invitation (masqué)"), (copie, "copier le lien"), (p.get_by_role("button", name="Close").last, "Close")], masques=[lien])
+
+
+def swagger2(s):
+    p = s.page; s.chapitre = "12-administrer"
+    s.aller("/api/docs"); p.wait_for_timeout(3000)
+    p.evaluate("() => { window.scrollTo(0, 0); document.querySelectorAll('*').forEach(e => { if (e.scrollTop) e.scrollTop = 0; }); }")
+    p.wait_for_timeout(500)
+    s.cap_souple("14-documentation-api", [(p.get_by_role("button", name=re.compile("Authorize")).first, "Authorize")])
+
+
 if __name__ == "__main__":
     s = Scenario("reprises")
     try:
-        etapes([suggestion_editeur, widget_espace, envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
+        etapes([invitation2, swagger2, suggestion_editeur, widget_espace, envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
     finally:
         s.fermer()

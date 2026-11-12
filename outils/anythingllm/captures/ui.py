@@ -8,7 +8,7 @@
 - les secrets (clé du service central, mots de passe) sont masqués avant capture.
 """
 import json, os, re, sys, time
-CLE_RE = re.compile(r"\b[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}\b|sk-[A-Za-z0-9_-]{8,}|brx-[A-Za-z0-9_-]{8,}")
+CLE_RE = re.compile(r"\b[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}-[A-Z0-9]{7}\b|sk-[A-Za-z0-9_-]{8,}|brx-[A-Za-z0-9_-]{8,}|accept-invite/[A-Za-z0-9-]+")
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright, expect  # noqa: F401

@@ -276,22 +276,6 @@
   "heure": "14:24:13"
  },
  {
-  "capture": "12-administrer/14-documentation-api.png",
-  "url": "/api/docs/",
-  "pastilles": [
-   [
-    1,
-    "Authorize"
-   ],
-   [
-    2,
-    "Workspaces"
-   ]
-  ],
-  "note": "",
-  "heure": "14:24:21"
- },
- {
   "capture": "12-administrer/13b-live-document-sync.png",
   "url": "/settings/beta-features",
   "pastilles": [
@@ -302,5 +286,37 @@
   ],
   "note": "",
   "heure": "14:25:32"
+ },
+ {
+  "capture": "13-comptes-et-widget/07-invitation-creee.png",
+  "url": "/settings/invites",
+  "pastilles": [
+   [
+    1,
+    "lien d'invitation"
+   ],
+   [
+    2,
+    "copier le lien"
+   ],
+   [
+    3,
+    "Close"
+   ]
+  ],
+  "note": "",
+  "heure": "15:27:17"
+ },
+ {
+  "capture": "12-administrer/14-documentation-api.png",
+  "url": "/api/docs/",
+  "pastilles": [
+   [
+    1,
+    "Authorize"
+   ]
+  ],
+  "note": "",
+  "heure": "15:27:23"
  }
 ]
