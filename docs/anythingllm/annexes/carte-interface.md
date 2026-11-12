@@ -18,6 +18,7 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Gestionnaire de documents, onglet « Documents » | barre latérale › icône d'envoi de l'espace | « Mes documents », « Rechercher un document », « Nouveau dossier », zone d'envoi, « ou soumettre un lien », « Déplacer vers l'espace de travail », déplacer vers un dossier, corbeille, « Sauvegarder et intégrer », épingle, retrait | [05](../manuel/05-ajouter-et-organiser-ses-documents.md) |
 | Gestionnaire de documents, onglet « Connecteurs de données » | même fenêtre | GitHub, GitLab, Gitea, YouTube, site web, Confluence, Drupal Wiki, Obsidian, Paperless-ngx | [09](../manuel/09-sources-externes.md) |
 | Souvenirs | discussion › menu des réglages du chat › « Souvenirs » | onglets « Espace de travail » et « Global », « Activer la personnalisation », « Souvenirs automatisés », « Créer un souvenir » | [11](../manuel/11-memoires-taches-et-routage.md) |
+| Menu du compte | pastille aux initiales (multi-utilisateur) | « Compte », « Support », « Déconnexion » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 | Compte | menu du compte (multi-utilisateur) › « Compte » | photo, nom d'utilisateur, mot de passe, « Thème », « Langue », « Mettre à jour le compte » | [13](../manuel/13-comptes-equipe-et-widget.md) |
 
 ## Réglages d'un espace de travail
@@ -50,7 +51,7 @@ Une partie de l'interface reste en anglais même en français (libellés écrits
 | Compétences de l'agent | Paramètres › « Compétences de l'agent » | compétences intégrées, « Agent Flows », « Serveurs MCP » | [10](../manuel/10-agents-et-outils.md) |
 | Compétences personnalisées | même page, « Custom Skills » | import de compétences écrites en code | Non couvert : aucune compétence personnalisée importée (demande du code tiers à relire) |
 | Éditeur d'agent flow | › « Agent Flows » › « Create Flow » | blocs, enregistrement | [10](../manuel/10-agents-et-outils.md) |
-| Centre communautaire | Paramètres › « Centre communautaire » | tendances, compte, import | Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périmètre (aucun compte en ligne) |
+| Centre communautaire | Paramètres › « Centre communautaire » | « Découvrez les tendances », « Votre compte », « Importer » | Non couvert : contenu chargé depuis un service en ligne qui demande un compte ; hors périmètre (aucun compte en ligne) |
 | Interface | Paramètres › Apparence › « Interface » | « Thème », « Palette de couleurs », « Langue d'affichage » | [03](../manuel/03-premiers-pas.md), [12](../manuel/12-personnaliser-et-administrer.md) |
 | Personnalisation | › « Personnalisation » | onglets Identité, Couleurs, Barre latérale, Navigateur ; nom de l'application, logo, e-mail de support | [12](../manuel/12-personnaliser-et-administrer.md) |
 | Chat (apparence) | › « Chat » | envoi et lecture automatiques, correction orthographique, barre de défilement, rendu HTML | [12](../manuel/12-personnaliser-et-administrer.md) |

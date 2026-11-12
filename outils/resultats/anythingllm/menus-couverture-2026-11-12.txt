@@ -1,0 +1,50 @@
+OK  Admin
+OK  AnythingLLM Mobile
+OK  Apparence
+OK  Base de données vectorielle
+OK  Canaux
+OK  Centre communautaire
+OK  Chat
+OK  Chat de l'espace de travail
+OK  Clés API
+OK  Compétences de l'agent
+OK  Confidentialité et données
+OK  Default System Prompt
+OK  Diviseur de texte et découpage
+OK  Découvrez les tendances
+OK  Espaces de travail
+OK  Extension de navigateur
+OK  Fonctionnalités Expérimentales
+OK  Fournisseurs d'IA
+OK  Génération d'images
+OK  Importer
+OK  Interface
+OK  Invitation
+OK  Journaux d'événements
+OK  Modèle de transcription
+OK  Outils
+OK  Personnalisation
+OK  Préférence LLM
+OK  Préférences d'intégration
+OK  Routeur modèle
+OK  Sécurité
+OK  Telegram
+OK  Tâches planifiées
+OK  Utilisateurs
+OK  Variables de prompt système
+OK  Voix et Parole
+OK  Votre compte
+OK  Widgets de chat intégrés
+OK  Paramètres généraux
+OK  Paramètres du chat
+OK  Base de données vectorielle
+OK  Membres
+OK  Configuration de l'agent
+OK  Taille du texte
+OK  Souvenirs
+OK  Exporter la conversation au format...
+OK  Compte
+OK  Déconnexion
+OK  Documents
+OK  Connecteurs de données
+37 entrées du menu des paramètres et 12 autres entrées ; 0 absente(s) de la carte
