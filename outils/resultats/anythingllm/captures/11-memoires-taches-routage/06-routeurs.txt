@@ -1,0 +1,52 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Préférence LLM
+
+Base de données vectorielle
+
+Préférences d'intégration
+
+Diviseur de texte et découpage
+
+Génération d'images
+
+Voix et Parole
+
+Modèle de transcription
+
+Routeur modèle
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Routeurs modèles
+
+Les routeurs modèles vous permettent de définir des règles pour acheminer automatiquement les messages de chat vers différents fournisseurs et modèles de LLM, en fonction de conditions spécifiques.
+
+NOM
+PLAN DE SECOURS
+RÈGLES
+ESPACES DE TRAVAIL
+
+Aucun routeur modèle disponible pour le moment.
+
+Aucun routeur n'est configuré pour le moment. Créez-en un pour commencer.
+
+Nouveau routeur

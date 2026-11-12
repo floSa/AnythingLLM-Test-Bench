@@ -1,0 +1,74 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Widgets de chat intégrés
+
+Journaux d'événements
+
+Tâches planifiées
+
+Clés API
+
+Variables de prompt système
+
+Extension de navigateur
+
+AnythingLLM Mobile
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Tâches planifiées
+
+Créez des tâches d'IA récurrentes qui s'exécutent selon un calendrier. Chaque tâche exécute une requête avec des outils optionnels et enregistre le résultat pour examen ultérieur.
+
+NOM
+CALENDRIER
+ÉTAT
+DERNIÈRE COURSE
+PROCHAINE COURSE
+ACTIONS
+
+Aucune tâche planifiée pour le moment.
+
+Créez-en un pour commencer.
+
+Nouvelle offre d'emploi
+Nouvelle tâche planifiée
+Nom *
+Demande *
+Calendrier *
+Constructeur
+Personnalisé
+Courir
+chaque minute
+par heure
+quotidien
+hebdomadaire
+mensuel
+À
+
+Planning actuel : 0 9 * * *— À 09:00 UTC
+
+Outils (facultatifs)
+
+Sélectionnez les outils d'agent que cette tâche peut utiliser. Si aucun outil n'est sélectionné, la tâche s'exécutera sans aucun outil.
+
+Annuler
+Créer un emploi

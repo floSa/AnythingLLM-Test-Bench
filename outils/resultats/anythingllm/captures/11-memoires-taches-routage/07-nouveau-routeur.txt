@@ -1,0 +1,104 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Préférence LLM
+
+Base de données vectorielle
+
+Préférences d'intégration
+
+Diviseur de texte et découpage
+
+Génération d'images
+
+Voix et Parole
+
+Modèle de transcription
+
+Routeur modèle
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Routeurs modèles
+
+Les routeurs modèles vous permettent de définir des règles pour acheminer automatiquement les messages de chat vers différents fournisseurs et modèles de LLM, en fonction de conditions spécifiques.
+
+NOM
+PLAN DE SECOURS
+RÈGLES
+ESPACES DE TRAVAIL
+
+Aucun routeur modèle disponible pour le moment.
+
+Aucun routeur n'est configuré pour le moment. Créez-en un pour commencer.
+
+Nouveau routeur
+Créer un nouveau routeur
+Nom
+Description
+Prestataire principal et modèle
+
+Utilisé lorsque aucune règle de routage ne correspond. Il est également utilisé pour évaluer les règles classifiées par un modèle de langage.
+
+Sélectionner le prestataire
+OpenAI (nécessite une configuration préalable)
+Azure OpenAI (nécessite une configuration préalable)
+Anthropic (nécessite une configuration préalable)
+Gemini (nécessite une configuration préalable)
+NVIDIA NIM (nécessite une configuration préalable)
+Ollama (nécessite une configuration préalable)
+LM Studio (nécessite une configuration préalable)
+llmman (nécessite une configuration préalable)
+Lemonade (nécessite une configuration préalable)
+SambaNova (nécessite une configuration préalable)
+Local AI (nécessite une configuration préalable)
+Together AI (nécessite une configuration préalable)
+Fireworks AI (nécessite une configuration préalable)
+Mistral (nécessite une configuration préalable)
+Perplexity AI (nécessite une configuration préalable)
+OpenRouter (nécessite une configuration préalable)
+Groq (nécessite une configuration préalable)
+KoboldCPP (nécessite une configuration préalable)
+Oobabooga Web UI (nécessite une configuration préalable)
+Cohere (nécessite une configuration préalable)
+LiteLLM (nécessite une configuration préalable)
+DeepSeek (nécessite une configuration préalable)
+PPIO (nécessite une configuration préalable)
+AWS Bedrock (nécessite une configuration préalable)
+Google Vertex AI (nécessite une configuration préalable)
+APIpie (nécessite une configuration préalable)
+Moonshot AI (nécessite une configuration préalable)
+Privatemode (nécessite une configuration préalable)
+Novita AI (nécessite une configuration préalable)
+CometAPI (nécessite une configuration préalable)
+Microsoft Foundry Local (nécessite une configuration préalable)
+xAI (nécessite une configuration préalable)
+Z.AI (nécessite une configuration préalable)
+GiteeAI (nécessite une configuration préalable)
+Minimax (nécessite une configuration préalable)
+Cerebras (nécessite une configuration préalable)
+oMLX (nécessite une configuration préalable)
+Generic OpenAI
+Durée de recharge (secondes)
+
+Combien de temps la décision de routage est-elle mise en cache avant de réévaluer les règles ? Définissez cette valeur sur 0 pour désactiver la mise en cache.
+
+Annuler
+Créer un routeur

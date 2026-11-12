@@ -1,0 +1,138 @@
+[
+ {
+  "capture": "11-memoires-taches-routage/01-souvenirs.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Activer la personnalisation"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:29"
+ },
+ {
+  "capture": "11-memoires-taches-routage/02-creer-un-souvenir.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Mémoire"
+   ],
+   [
+    2,
+    "Créer"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:32"
+ },
+ {
+  "capture": "11-memoires-taches-routage/03-souvenir-cree.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "souvenir enregistré"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:34"
+ },
+ {
+  "capture": "11-memoires-taches-routage/04-taches-planifiees.png",
+  "url": "/settings/scheduled-jobs",
+  "pastilles": [
+   [
+    1,
+    "Nouvelle offre d'emploi"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:39"
+ },
+ {
+  "capture": "11-memoires-taches-routage/05-nouvelle-tache.png",
+  "url": "/settings/scheduled-jobs",
+  "pastilles": [
+   [
+    1,
+    "nom"
+   ],
+   [
+    2,
+    "instruction"
+   ],
+   [
+    3,
+    "calendrier"
+   ],
+   [
+    4,
+    "Créer un emploi"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:42"
+ },
+ {
+  "capture": "11-memoires-taches-routage/05b-tache-creee.png",
+  "url": "/settings/scheduled-jobs",
+  "pastilles": [
+   [
+    1,
+    "tâche créée"
+   ]
+  ],
+  "note": "",
+  "heure": "13:00:45"
+ },
+ {
+  "capture": "11-memoires-taches-routage/06-routeurs.png",
+  "url": "/settings/model-routers",
+  "pastilles": [
+   [
+    1,
+    "Nouveau routeur"
+   ]
+  ],
+  "note": "",
+  "heure": "13:10:08"
+ },
+ {
+  "capture": "11-memoires-taches-routage/07-nouveau-routeur.png",
+  "url": "/settings/model-routers",
+  "pastilles": [
+   [
+    1,
+    "Nom"
+   ],
+   [
+    2,
+    "Prestataire principal"
+   ],
+   [
+    3,
+    "modèle"
+   ],
+   [
+    4,
+    "Créer"
+   ]
+  ],
+  "note": "",
+  "heure": "13:10:12"
+ },
+ {
+  "capture": "11-memoires-taches-routage/08-routeur-regles.png",
+  "url": "/settings/model-routers",
+  "pastilles": [
+   [
+    1,
+    "Routeur Vélanor"
+   ]
+  ],
+  "note": "",
+  "heure": "13:10:16"
+ }
+]

@@ -1,0 +1,50 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+Thread
+
+*New Thread
+
+New Thread
+
+Banc-bge-m3
+
+chat
+Bon après-midi
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs
+
+Activer la personnalisation
+
+Permettez à votre assistant de se souvenir d'informations sur vous ou sur cet espace de travail et de les utiliser lors de conversations.
+
+Souvenirs automatisés
+
+Faites en sorte que votre assistant crée automatiquement des souvenirs en arrière-plan.
+
+DÉMO VÉLANOR
+(0/20)
+GLOBAL
+(0/5)
+
+Pour l'instant, aucune donnée mémorisée. Cependant, à mesure que vous interagissez davantage avec le chatbot, de nouveaux souvenirs seront enregistrés. créer un nouveau souvenir
+
+Créer un souvenir
+
+Les souvenirs doivent être exprimés sous une seule et concise phrase. Par exemple : « L'utilisateur préfère Python à JavaScript ».
+
+Mémoire
+Annuler
+Créer
