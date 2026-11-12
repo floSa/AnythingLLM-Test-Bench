@@ -1,0 +1,32 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+New Thread
+
+Banc-bge-m3
+
+chat
+Le stock de la pièce BAT-500 est de 184 unités (entreposé dans l’entrepôt de Nantes - données fictives).
+
+@agent Quel est le stock de la pièce BAT-500 ?
+
+Thought for 4.2s
+
+Le stock de la pièce BAT-500 est de 184 unités (entreposé dans l’entrepôt de Nantes - données fictives).
+
+chat · 5.5s (55.26 tok/s) · Nov 12, 12:57 PM
+
+Sources
+Outils
+Envoyer le message au chatbot
+
+Sources
+
+Souvenirs

@@ -1,0 +1,39 @@
+BUILDER
+ConsignesBatteries
+New Flow
+Publish
+Save
+view documentation →
+Flow Information
+Flow Name
+
+It is important to give your flow a name that an LLM can easily understand.
+
+"SendMessageToDiscord", "CheckStockPrice", "CheckWeather"
+
+Description
+
+It is equally important to give your flow a description that an LLM can easily understand. Be sure to include the purpose of the flow, the context it will be used in, and any other relevant information.
+
+Flow Variables
+Variables
+
+Define values here, then reference them in any block below by wrapping the name in ${variableName}. References are highlighted as you type.
+
+Required and Optional variables can be set by the LLM when it runs this flow. Static variables are fixed and never shown to the LLM.
+
+Required
+Optional
+Static
+Flow Complete
+
+Flow will end here
+
+This is the end of your agent flow. All steps above will be executed in sequence.
+Add Block
+API Call
+Make an HTTP request
+LLM Instruction
+Process data using LLM instructions
+Web Scraping
+Scrape content from a webpage

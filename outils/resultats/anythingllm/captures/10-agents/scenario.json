@@ -1,0 +1,138 @@
+[
+ {
+  "capture": "10-agents/01-competences.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "RAG et mémoire à long terme"
+   ],
+   [
+    2,
+    "Recherche web en direct et navigation"
+   ],
+   [
+    3,
+    "Générer des graphiques"
+   ],
+   [
+    4,
+    "Agent Flows"
+   ],
+   [
+    5,
+    "Serveurs MCP"
+   ]
+  ],
+  "note": "",
+  "heure": "12:54:51"
+ },
+ {
+  "capture": "10-agents/02-competence-detail.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "compétence choisie"
+   ],
+   [
+    2,
+    "interrupteur (activée)"
+   ],
+   [
+    3,
+    "Save"
+   ]
+  ],
+  "note": "",
+  "heure": "12:54:54"
+ },
+ {
+  "capture": "10-agents/05-serveur-mcp.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "Rafraîchir"
+   ],
+   [
+    2,
+    "Velanor Outils"
+   ],
+   [
+    3,
+    "1/1 outils activés"
+   ],
+   [
+    4,
+    "outil stock_piece"
+   ]
+  ],
+  "note": "",
+  "heure": "12:55:10"
+ },
+ {
+  "capture": "10-agents/03-agent-flows.png",
+  "url": "/settings/agents",
+  "pastilles": [
+   [
+    1,
+    "Create Flow"
+   ]
+  ],
+  "note": "",
+  "heure": "12:57:33"
+ },
+ {
+  "capture": "10-agents/04-editeur-de-flow.png",
+  "url": "/settings/agents/builder",
+  "pastilles": [
+   [
+    1,
+    "Flow Name"
+   ],
+   [
+    2,
+    "Description"
+   ],
+   [
+    3,
+    "Add Block"
+   ],
+   [
+    4,
+    "Save"
+   ]
+  ],
+  "note": "",
+  "heure": "12:57:37"
+ },
+ {
+  "capture": "10-agents/07-question-agent.png",
+  "url": "/workspace/demo-velanor/t/17349228-c4f8-44d8-aeae-746168d32d6b",
+  "pastilles": [
+   [
+    1,
+    "@agent + question"
+   ],
+   [
+    2,
+    "@ (démarrer l'agent)"
+   ]
+  ],
+  "note": "",
+  "heure": "12:57:45"
+ },
+ {
+  "capture": "10-agents/08-reponse-agent.png",
+  "url": "/workspace/demo-velanor/t/17349228-c4f8-44d8-aeae-746168d32d6b",
+  "pastilles": [
+   [
+    1,
+    "réponse"
+   ]
+  ],
+  "note": "",
+  "heure": "12:58:00"
+ }
+]

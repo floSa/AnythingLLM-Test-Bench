@@ -1,0 +1,82 @@
+PARAMÈTRES DE L'INSTANCE
+
+Fournisseurs d'IA
+
+Admin
+
+Compétences de l'agent
+
+Centre communautaire
+
+Apparence
+
+Canaux
+
+Outils
+
+Sécurité
+
+Contacter le Support
+Confidentialité et données
+v1.19.0
+
+Agent Skills
+
+RAG et mémoire à long terme
+On
+Voir et résumer des documents
+On
+Récupérer des sites web
+On
+Recherche web en direct et navigation
+On
+Accès au système de fichiers
+Off
+Création de documents
+Off
+Générer des graphiques
+On
+Générer des images
+Off
+Connecteur SQL
+Off
+Créer des tâches planifiées
+Off
+
+App Integrations
+
+Connecteur GMail
+Off
+Connecteur Google Calendar
+Off
+Connecteur Outlook
+Off
+
+Custom Skills
+
+No imported skills found
+
+Learn about agent skills in the AnythingLLM Agent Docs.
+
+Agent Flows
+
+Create Flow
+
+No agent flows found
+
+Learn more about Agent Flows.
+
+Serveurs MCP
+
+Rafraîchir
+
+Velanor Outils
+Sur
+Générer des graphiques
+
+Activez l'agent par défaut pour générer différents types de graphiques à partir des données fournies ou données dans le chat.
+
+Unsaved Changes
+
+Cancel
+Save
