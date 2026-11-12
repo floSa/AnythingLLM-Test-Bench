@@ -273,7 +273,7 @@ La fenêtre « WARNING - This action is irreversible » prévient que changer de
 |---|---|---|
 | « Selected Model » reste un champ vide grisé | adresse ou clé incorrecte : la liste des modèles n'a pas pu être lue | vérifier l'adresse `http://llm-central:8080/v1` et la clé ; voir le [chapitre 15](15-en-cas-de-probleme.md) |
 | La flèche de droite ne réagit pas | un champ obligatoire est vide ou le mot de passe fait moins de 8 caractères | compléter les champs |
-| Mot de passe oublié | aucune récupération en mode « Juste moi » | retirer `AUTH_TOKEN` et `JWT_SECRET` de `donnees/anythingllm/storage/.env`, redémarrer, puis définir un nouveau mot de passe dans Paramètres › « Sécurité » ; voir le [chapitre 15](15-en-cas-de-probleme.md) |
+| Mot de passe oublié | l'écran de l'étape 5 l'annonce : « il n'y a pas de récupération possible » en mode « Juste moi » | seule solution décrite ici : tout supprimer et réinstaller (chapitre 02, étape 10), ce qui efface aussi les documents et conversations ; d'où l'importance de noter le mot de passe |
 
 ---
 *Version décrite : AnythingLLM 1.19.0, essais du 12 novembre 2026. Détails et preuves : [rapport d'essais](../annexes/A6-rapport-d-essais.md).*

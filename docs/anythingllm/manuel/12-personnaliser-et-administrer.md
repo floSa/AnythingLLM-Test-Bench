@@ -124,14 +124,14 @@ Cliquer sur « Générer une nouvelle clé API » (pastille 1).
 
 **Étape 9. Créer une clé**
 *Où* : fenêtre « Créer une nouvelle clé API ».
-Cliquer sur « Créer la clé API » (pastille 1).
+Cliquer sur « Créer une clé API » (pastille 1). Sur cette capture et la suivante, les bandes noires encadrées de rouge sans pastille masquent des clés déjà créées.
 
 ![Création d'une clé](../img/12-administrer/15-creer-une-cle.png)
 *Écran : fenêtre « Créer une nouvelle clé API ».*
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Créer la clé API » | génère la clé |
+| 1 | « Créer une clé API » | génère la clé |
 
 *Résultat* : la clé s'affiche dans la fenêtre.
 
