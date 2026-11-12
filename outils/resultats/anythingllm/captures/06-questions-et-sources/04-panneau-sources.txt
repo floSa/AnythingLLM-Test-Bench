@@ -1,0 +1,50 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Combien de vélos Vélan…
+
+Quel est le stock de l…
+
+Thread
+
+Combien de vélos Vélan…
+
+New Thread
+
+Banc-bge-m3
+
+chat
+En 2025, Vélanor a produit 61 800 vélos. La production principale s’est faite au site de Nantes (siège et assemblage avec 268 salariés), tandis que la fabrication des cadres a été réalisée au site de Cholet. Ceci inclut tous les modèles produits : Loire Urban, Sèvre Trail, Brière Kidenfant et Erdre Cargo.
+
+Combien de vélos Vélanor a-t-elle produits en 2025, et dans quelle usine ?
+
+Thought for 7.6s
+
+En 2025, Vélanor a produit 61 800 vélos. La production principale s’est faite au site de Nantes (siège et assemblage avec 268 salariés), tandis que la fabrication des cadres a été réalisée au site de Cholet.
+
+Ceci inclut tous les modèles produits : Loire Urban, Sèvre Trail, Brière Kidenfant et Erdre Cargo.
+
+chat · 9.0s (10.13 tok/s) · Nov 12, 1:02 PM
+
+Sources
+Outils
+Envoyer le message au chatbot
+
+Sources
+
+procedure-batteries.docx
+
+Document
+
+1 référence
+
+rapport-annuel-2025.pdf
+
+Document
+
+Références à 4
+
+Souvenirs

@@ -1,0 +1,226 @@
+[
+ {
+  "capture": "06-questions-et-sources/02-reponse-et-sources.png",
+  "url": "/workspace/demo-velanor/t/f74a8c96-0541-44e3-b4dc-fcd307560caa",
+  "pastilles": [
+   [
+    1,
+    "réflexion repliée (Thought for …)"
+   ],
+   [
+    2,
+    "Sources"
+   ]
+  ],
+  "note": "",
+  "heure": "13:02:24"
+ },
+ {
+  "capture": "06-questions-et-sources/03-reflexion-depliee.png",
+  "url": "/workspace/demo-velanor/t/f74a8c96-0541-44e3-b4dc-fcd307560caa",
+  "pastilles": [
+   [
+    1,
+    "réflexion dépliée"
+   ]
+  ],
+  "note": "",
+  "heure": "13:02:26"
+ },
+ {
+  "capture": "06-questions-et-sources/04-panneau-sources.png",
+  "url": "/workspace/demo-velanor/t/f74a8c96-0541-44e3-b4dc-fcd307560caa",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ],
+   [
+    2,
+    "procedure-batteries.docx (épinglé)"
+   ]
+  ],
+  "note": "",
+  "heure": "13:02:28"
+ },
+ {
+  "capture": "06-questions-et-sources/05-actions-sur-la-reponse.png",
+  "url": "/workspace/demo-velanor/t/abb0c98c-af86-4b50-a207-4158f40444bc",
+  "pastilles": [
+   [
+    1,
+    "Copier"
+   ],
+   [
+    2,
+    "Régénérer"
+   ],
+   [
+    3,
+    "Bonne réponse"
+   ],
+   [
+    4,
+    "Plus d'actions"
+   ]
+  ],
+  "note": "",
+  "heure": "13:02:36"
+ },
+ {
+  "capture": "06-questions-et-sources/06-plus-d-actions.png",
+  "url": "/workspace/demo-velanor/t/abb0c98c-af86-4b50-a207-4158f40444bc",
+  "pastilles": [
+   [
+    1,
+    "Dupliquer"
+   ],
+   [
+    2,
+    "Supprimer"
+   ]
+  ],
+  "note": "",
+  "heure": "13:02:37"
+ },
+ {
+  "capture": "06-questions-et-sources/09-nouveau-fil.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "fils de l'espace"
+   ],
+   [
+    2,
+    "New Thread"
+   ]
+  ],
+  "note": "",
+  "heure": "13:03:15"
+ },
+ {
+  "capture": "06-questions-et-sources/10-options-du-fil.png",
+  "url": "/workspace/demo-velanor/t/1036d96d-1928-440b-ae19-77c3295c6676",
+  "pastilles": [
+   [
+    1,
+    "Rename"
+   ],
+   [
+    2,
+    "Delete Thread"
+   ]
+  ],
+  "note": "",
+  "heure": "13:03:19"
+ },
+ {
+  "capture": "06-questions-et-sources/07-question-sans-reponse.png",
+  "url": "/workspace/demo-velanor/t/87dcc019-20d6-4f36-9322-29889ac0b449",
+  "pastilles": [
+   [
+    1,
+    "question sans réponse dans les documents"
+   ]
+  ],
+  "note": "",
+  "heure": "13:05:01"
+ },
+ {
+  "capture": "06-questions-et-sources/08-meme-question-en-mode-chat.png",
+  "url": "/workspace/demo-velanor/t/de401fa4-7fb7-4fbe-af8f-6972b0c329b6",
+  "pastilles": [
+   [
+    1,
+    "même question, mode Chat"
+   ]
+  ],
+  "note": "",
+  "heure": "13:05:44"
+ },
+ {
+  "capture": "06-questions-et-sources/11-commandes-abregees.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "Commandes abrégées"
+   ],
+   [
+    2,
+    "/reset"
+   ],
+   [
+    3,
+    "Ajouter"
+   ],
+   [
+    4,
+    "Compétences des agents"
+   ]
+  ],
+  "note": "",
+  "heure": "13:05:52"
+ },
+ {
+  "capture": "06-questions-et-sources/12-ajouter-une-commande.png",
+  "url": "/workspace/demo-velanor",
+  "pastilles": [
+   [
+    1,
+    "commande"
+   ],
+   [
+    2,
+    "prompt"
+   ],
+   [
+    3,
+    "description"
+   ],
+   [
+    4,
+    "Sauvegarder"
+   ]
+  ],
+  "note": "",
+  "heure": "13:05:53"
+ },
+ {
+  "capture": "06-questions-et-sources/13-menu-de-la-discussion.png",
+  "url": "/workspace/demo-velanor/t/abb0c98c-af86-4b50-a207-4158f40444bc",
+  "pastilles": [
+   [
+    1,
+    "réglages de la discussion"
+   ],
+   [
+    2,
+    "Taille du texte"
+   ],
+   [
+    3,
+    "Souvenirs"
+   ],
+   [
+    4,
+    "Exporter la conversation au format..."
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:00"
+ },
+ {
+  "capture": "06-questions-et-sources/14-formats-d-export.png",
+  "url": "/workspace/demo-velanor/t/abb0c98c-af86-4b50-a207-4158f40444bc",
+  "pastilles": [
+   [
+    1,
+    "formats proposés"
+   ]
+  ],
+  "note": "",
+  "heure": "13:06:02"
+ }
+]
