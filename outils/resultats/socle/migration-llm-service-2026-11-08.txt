@@ -1,0 +1,49 @@
+# Migration du socle vers LLM-Service (~/Projets/Projet-IA/LLM-Service, branche service-ollama), 2026-11-08T21:20:52+01:00
+## Modèles avant (rag-socle-ollama)
+  qwen3:4b 9230ed1499c1
+  bge-m3:latest 790764642607
+  ministral-3:3b 696e35e0fa67
+  qwen3:4b-instruct a117f98fcf01
+rag-socle-ollama supprimé
+8.5G	/dst/models
+## LLM-Service démarré : conteneur ollama-central, réseau llm-net, 127.0.0.1:11434, sur CPU (override local sans réservation GPU)
+ollama version is 0.30.7
+## Modèles après (ollama-central)
+  bge-m3:latest 790764642607
+  qwen3:4b-instruct 0edcdef34593
+  qwen3:4b 9230ed1499c1
+  ministral-3:3b 696e35e0fa67
+## Journal du préchargement
+[llm-service] Démarrage d'Ollama central...
+[llm-service] Attente du démarrage...
+[llm-service] Ollama opérationnel.
+[llm-service] Vérification / téléchargement de : qwen3:4b-instruct
+[llm-service] OK : qwen3:4b-instruct
+[llm-service] Vérification / téléchargement de : bge-m3
+[llm-service] OK : bge-m3
+[llm-service] Prêt. Modèles servis : qwen3:4b-instruct bge-m3
+## Écart constaté : empreinte de qwen3:4b-instruct changée (a117f98fcf01 -> 0edcdef34593)
+  Cause : le préchargement de LLM-Service fait « ollama pull », qui a mis à jour le manifeste depuis le registre.
+  Poids : inchangés, même couche sha256:85e4a5b7b8ef… (2 497 280 480 octets), celle que chargeait llama-server pendant les bancs.
+  Couches changées : config (487 o) et paramètres (119 o) ; paramètres actuels :
+  {"repeat_penalty":1,"stop":["<|im_start|>","<|im_end|>"],"temperature":0.7,"top_k":20,"top_p":0.8}
+  Conséquence : les bancs du 2026-11-08 restent valables pour le modèle ; un contrôle est rejoué après branchement.
+## Incident de performance après migration (2026-11-08, 21:30 à 22:45)
+  Constat : questions du banc à 200-290 s au lieu de 9 s ; Ollama génère 0,4 jeton/s.
+  Mesures (outil : /api/generate, qwen3:4b-instruct, num_ctx 16384, 64 à 128 jetons générés) :
+    OLLAMA_FLASH_ATTENTION=1, KV q8_0 (réglage du service), 16 fils : génération 0,4 j/s, lecture du prompt 8,5 j/s
+    FLASH_ATTENTION=0, KV f16, 16 fils                             : génération 0,4 j/s, lecture du prompt 1,9 j/s
+    num_thread=16 (option de requête)                              : génération 0,4 j/s
+    num_thread=8                                                   : génération 13,6 j/s, lecture du prompt 39,1 j/s
+    num_thread=6                                                   : génération 13,4 j/s, lecture du prompt 30,8 j/s
+    cpuset "0-7" sur le conteneur                                  : sans effet (Ollama lance toujours 16 fils), plus de 400 s
+    LLAMA_ARG_THREADS=8 (variable du serveur llama.cpp lancé par Ollama) : n_threads = 8, génération 13,3 j/s
+  Cause : WSL présente 16 cœurs (processeur hybride : 6 performants, 8 efficaces, 2 basse consommation) ; Ollama lance un fil par cœur
+          et le calcul attend les cœurs les plus lents. Les réglages q8_0 et flash attention ne sont pas en cause.
+  Correctif : docker-compose.override.yml local de LLM-Service : LLAMA_ARG_THREADS=8, LLAMA_ARG_THREADS_BATCH=8.
+  .env de LLM-Service laissé à OLLAMA_FLASH_ATTENTION=0 et OLLAMA_KV_CACHE_TYPE=f16 (conditions des bancs du 2026-11-08).
+## Passage à la dernière version stable d'Ollama (relevé : outils/resultats/open-notebook/versions-2026-11-08.json)
+  Image : ollama/ollama:0.40.15@sha256:0e59999e0e8f9fd4e704bd788a89b7e4cad399367fb1365f8c102ac662288761 (override local de LLM-Service)
+  Modèles : inchangés (mêmes empreintes)
+  Mesure (même requête que ci-dessus, LLAMA_ARG_THREADS=8) : génération 16,4 j/s, lecture du prompt 64,4 j/s (0.30.7 : 13,3 et 38,7)
+  Banc complet rejoué : banc-2026-11-08-docling-qwen-fullcontent-ollama040.json (28/34, 4/4, médiane 7,4 s, indexation 84 s)

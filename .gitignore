@@ -1,0 +1,20 @@
+# Données locales, volumes et identifiants (jamais versionnés)
+donnees/
+# Environnements et dépendances
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+# Gros fichiers de modèles et archives
+*.gguf
+*.safetensors
+*.zip
+*:Zone.Identifier
+# Sources de RAGFlow clonées au tag figé (récupérées par outils/ragflow/installer.sh)
+sources/
+# Consignes de mission distribuées à part (kit-manuels-rag-local.zip)
+kit/
+CLAUDE.md
+.claude/
+# Clés locales (copie de .env.example)
+.env

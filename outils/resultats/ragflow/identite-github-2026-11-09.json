@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-09T18:44:08",
+  "depot": "https://github.com/infiniflow/ragflow",
+  "description": "RAGFlow is an agent-native database: a Retrieval-Augmented Generation (RAG) engine that grew into context infrastructure.",
+  "site": "https://ragflow.io",
+  "etoiles": 93880,
+  "forks": 11278,
+  "licence": "Apache-2.0",
+  "langage": "Go",
+  "cree_le": "2023-12-12T06:13:13Z",
+  "dernier_push": "2026-11-09T13:09:58Z",
+  "archive": false,
+  "issues_et_pr_ouvertes": 1348,
+  "commits_total_branche_defaut": 10909,
+  "commits_90_derniers_jours": 2763,
+  "contributeurs": 925,
+  "versions_recentes": [
+    {
+      "tag": "nightly",
+      "date": "2025-12-01",
+      "prerelease": true
+    },
+    {
+      "tag": "v1.0.0",
+      "date": "2026-11-06",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.0.0-rc3",
+      "date": "2026-10-30",
+      "prerelease": false
+    },
+    {
+      "tag": "v0.27.3",
+      "date": "2026-10-23",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.0.0-rc2",
+      "date": "2026-10-16",
+      "prerelease": false
+    },
+    {
+      "tag": "v1.0.0-rc1",
+      "date": "2026-09-29",
+      "prerelease": false
+    },
+    {
+      "tag": "v0.27.2",
+      "date": "2026-09-10",
+      "prerelease": false
+    },
+    {
+      "tag": "v0.27.1",
+      "date": "2026-08-28",
+      "prerelease": false
+    },
+    {
+      "tag": "v0.27.0",
+      "date": "2026-08-19",
+      "prerelease": false
+    },
+    {
+      "tag": "v0.26.4",
+      "date": "2026-07-07",
+      "prerelease": false
+    }
+  ]
+}

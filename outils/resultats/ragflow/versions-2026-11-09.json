@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-09T17:29:32",
+  "composants": [
+    {
+      "depot": "infiniflow/ragflow",
+      "derniere_stable": "v1.0.0",
+      "publiee_le": "2026-11-06",
+      "utilisee": "v1.0.0",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "elastic/elasticsearch",
+      "derniere_stable": "v9.5.6",
+      "publiee_le": "2026-11-02",
+      "utilisee": "v8.11.3",
+      "a_jour": false,
+      "raison": "version imposée par le docker/.env de RAGFlow v1.0.0 (STACK_VERSION=8.11.3), gardée pour la compatibilité ; aucune montée sans essai"
+    },
+    {
+      "depot": "apache/kvrocks",
+      "derniere_stable": "v2.17.0",
+      "publiee_le": "2026-09-19",
+      "utilisee": "v2.16.0",
+      "a_jour": false,
+      "raison": "version imposée par le docker-compose-base.yml de RAGFlow v1.0.0, gardée pour la compatibilité"
+    },
+    {
+      "depot": "nats-io/nats-server",
+      "derniere_stable": "v2.15.2",
+      "publiee_le": "2026-10-26",
+      "utilisee": "v2.14.2",
+      "a_jour": false,
+      "raison": "version imposée par le docker-compose-base.yml de RAGFlow v1.0.0, gardée pour la compatibilité"
+    },
+    {
+      "depot": "pgsty/silo",
+      "derniere_stable": "RELEASE.2026-10-26T00-00-00Z",
+      "publiee_le": "2026-10-26",
+      "utilisee": "RELEASE.2026-08-06T00-00-00Z",
+      "a_jour": false,
+      "raison": "version (fork de MinIO) imposée par le docker-compose-base.yml de RAGFlow v1.0.0, gardée pour la compatibilité"
+    },
+    {
+      "depot": "vllm-project/vllm",
+      "derniere_stable": "v0.32.0",
+      "publiee_le": "2026-10-18",
+      "utilisee": "v0.29.0",
+      "a_jour": false,
+      "raison": "LLM-Service partagé (branche service-vllm) ; garder 0.29.0 conserve la comparabilité avec le banc GPU Open Notebook du 9 novembre ; montée de version inscrite dans les décisions en attente"
+    },
+    {
+      "depot": "speaches-ai/speaches",
+      "derniere_stable": "v0.8.3",
+      "publiee_le": "2025-09-19",
+      "utilisee": "v0.8.3",
+      "a_jour": true,
+      "raison": null
+    },
+    {
+      "depot": "microsoft/playwright-python",
+      "derniere_stable": "v1.64.1",
+      "publiee_le": "2026-10-22",
+      "utilisee": null,
+      "a_jour": true,
+      "raison": null
+    }
+  ]
+}
