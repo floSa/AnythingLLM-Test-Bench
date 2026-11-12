@@ -1,0 +1,42 @@
+# Sorties vérifiées des exemples AnythingLLM 1.19.0 — 2026-11-12T15:09:53+01:00
+
+## 01_sante.sh
+ping : {"online":true}
+auth : {"authenticated":true}
+clé refusée (attendu 403) : 403
+(code de sortie : 0)
+
+## 02_lister_les_espaces.py
+mon-espace-de-travail mode=automatic topN=4 seuil=0.25 recherche=default historique=20
+premier-essai        mode=query     topN=4 seuil=0.25 recherche=default historique=20
+demo-velanor         mode=query     topN=4 seuil=0.25 recherche=default historique=20
+banc-bge-m3          mode=query     topN=2 seuil=0.25 recherche=default historique=20
+sources-externes     mode=query     topN=4 seuil=0.25 recherche=default historique=20
+(code de sortie : 0)
+
+## 03_creer_et_alimenter.py
+espace créé : exemple-api mode query
+téléversé : True faq-sav.html 104 mots -> custom-documents/faq-sav.html-718d997a-5044-467a-b551-f9cc6d7148e3.json
+documents dans l'espace : ['faq-sav.html-718d997a-5044-467a-b551-f9cc6d7148e3.json']
+(code de sortie : 0)
+
+## 04_poser_une_question.py
+réflexion présente dans textResponse : True
+réponse : Selon le document fourni, le cadre de vélo Vélanor est garanti pendant 7 ans.
+source : faq-sav.html  score=0.746  extrait='<document_metadata>\nsourceDocument: faq-sav.html\npublished: 11/12/2026, 2:09:53 '
+durée : 18.2 s
+(code de sortie : 0)
+
+## 05_recherche_seule.py
+0.591  faq-sav.html  '<document_metadata>\nsourceDocument: faq-sav.html\npublished: 11/12/2026, 2:09:53 PM\n</docum'
+(code de sortie : 0)
+
+## 06_compatible_openai.py
+modèles : ['mon-espace-de-travail', 'premier-essai', 'demo-velanor', 'banc-bge-m3', 'sources-externes', 'exemple-api']
+réponse : La garantie de la batterie est de 2 ans.
+(code de sortie : 0)
+
+## 07_nettoyer.py
+suppression : 200
+espaces restants : ['mon-espace-de-travail', 'premier-essai', 'demo-velanor', 'banc-bge-m3', 'sources-externes']
+(code de sortie : 0)
