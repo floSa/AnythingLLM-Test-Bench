@@ -69,7 +69,7 @@ Remplir « URL du site web » (pastille 1) avec `http://rag-anythingllm-site/ind
 
 **Étape 3. Collecter le dépôt**
 *Où* : « Dépôt GitHub ».
-Remplir « URL du dépôt GitHub » (pastille 1) avec `https://github.com/octocat/Hello-World`, laisser « Jeton d'accès GitHub » vide, puis cliquer sur « Submit » (pastille 2).
+Remplir « URL du dépôt GitHub » (pastille 1) avec `https://github.com/octocat/Hello-World` et laisser « Jeton d'accès GitHub » vide. La liste « Branch » se remplit avec les branches du dépôt ; choisir `master`, la branche principale de ce dépôt (la capture, prise avant le chargement de la liste, affiche encore `main`). Faire défiler le formulaire jusqu'en bas et cliquer sur « Submit » (pastille 2, caché sous le bord de la capture).
 
 ![Import d'un dépôt GitHub](../img/09-sources-externes/03-github.png)
 *Écran : formulaire « Dépôt GitHub ».*

@@ -198,7 +198,7 @@ Cliquer sur « Créer la clé API » (pastille 1).
 ## Fonctions expérimentales et documentation de l'API
 
 **Étape 14. Débloquer les fonctions expérimentales**
-*Où* : n'importe quelle page des paramètres, maintenir la touche Ctrl enfoncée 3 secondes ; l'entrée « Fonctionnalités Expérimentales » apparaît en bas du menu.
+*Où* : n'importe quelle page des paramètres, maintenir la touche Ctrl enfoncée 3 secondes ; l'entrée « Fonctionnalités Expérimentales » apparaît en bas du menu. Cliquer dessus, puis, dans la fenêtre des conditions, sur « I understand » (pastille 1).
 
 ![Fonctions expérimentales](../img/12-administrer/13-experimental.png)
 *Écran : « Fonctionnalités Expérimentales » (page en anglais).*

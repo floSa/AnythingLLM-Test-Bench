@@ -217,6 +217,7 @@ Plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requ
 
 **Étape 13. Récupérer le code**
 *Où* : « Widgets de chat intégrés », ligne du widget.
+Cliquer sur « Code » (pastille 2).
 
 ![Liste des widgets](../img/13-comptes-et-widget/13-widgets.png)
 *Écran : « Widgets de chat intégrables ».*
@@ -230,6 +231,7 @@ Plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requ
 
 **Étape 14. Copier le code**
 *Où* : fenêtre « Copy your embed code ».
+Sélectionner tout le bloc de code (de `<script` à `</script>`) et le copier avec Ctrl+C. Le code reprend l'adresse par laquelle l'interface a été ouverte : sur la capture, une adresse interne au réseau Docker des essais (`http://rag-anythingllm:3001`) ; depuis le navigateur Windows, `http://127.0.0.1:3001`. Ne pas la modifier.
 
 ![Code du widget](../img/13-comptes-et-widget/14-code-du-widget.png)
 *Écran : code d'intégration du widget.*
