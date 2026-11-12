@@ -1,0 +1,12 @@
+Bienvenue
+
+Connectez-vous à votre compte AnythingLLM.
+
+Nom d'utilisateur
+Mot de passe
+
+Error: [001] Invalid login credentials.
+
+Connexion
+Mot de passe oublié?
+Réinitialiser

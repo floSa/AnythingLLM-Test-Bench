@@ -1,0 +1,82 @@
+[
+ {
+  "capture": "15-problemes/02-extension-inconnue.png",
+  "url": "/workspace/premier-essai",
+  "pastilles": [
+   [
+    1,
+    "fichier accepté malgré une extension inconnue"
+   ]
+  ],
+  "note": "",
+  "heure": "13:18:06"
+ },
+ {
+  "capture": "15-problemes/03-reponse-vide-mode-agent.png",
+  "url": "/workspace/premier-essai/t/48aa5d82-daeb-49c0-bf25-826a2d071a3f",
+  "pastilles": [
+   [
+    1,
+    "réflexion seule, sans réponse"
+   ]
+  ],
+  "note": "",
+  "heure": "13:50:01"
+ },
+ {
+  "capture": "15-problemes/05-reponse-coupee.png",
+  "url": "/workspace/premier-essai/t/8326c846-eb05-4b66-8f88-77a043c0224e",
+  "pastilles": [
+   [
+    1,
+    "réflexion coupée, réponse vide ou tronquée"
+   ]
+  ],
+  "note": "",
+  "heure": "13:50:55"
+ },
+ {
+  "capture": "15-problemes/04-cle-refusee.png",
+  "url": "/workspace/premier-essai/t/df819e7d-ad1d-426f-af1b-b0f10de88560",
+  "pastilles": [
+   [
+    1,
+    "Could not respond to message."
+   ],
+   [
+    2,
+    "400 No connected db."
+   ]
+  ],
+  "note": "",
+  "heure": "13:53:16"
+ },
+ {
+  "capture": "15-problemes/06-texte-ocr.png",
+  "url": "/workspace/demo-velanor/t/88255a1b-867b-47df-bfdb-55cd1498002b",
+  "pastilles": [
+   [
+    1,
+    "« Bréme » au lieu de « Brême »"
+   ],
+   [
+    2,
+    "« I'Acheteur » au lieu de « l'Acheteur »"
+   ]
+  ],
+  "note": "",
+  "heure": "13:53:37"
+ },
+ {
+  "capture": "15-problemes/01-mauvais-mot-de-passe.png",
+  "url": "/login?nt=1",
+  "pastilles": [
+   [
+    1,
+    "message d'erreur"
+   ]
+  ],
+  "note": "",
+  "heure": "14:06:10"
+ }
+]
