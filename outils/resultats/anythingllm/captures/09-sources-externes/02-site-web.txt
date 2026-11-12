@@ -1,0 +1,74 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Banc-bge-m3
+
+Sources externes
+
+*New Thread
+
+New Thread
+
+Documents
+Connecteurs de données
+Dépôt GitHub
+
+Importez un dépôt GitHub entier en un seul clic.
+
+Dépôt GitLab
+
+Importez un dépôt GitLab entier en un seul clic.
+
+Dépôt Git
+
+Importer un référentiel public ou privé entier depuis n'importe quelle instance Gitea en un seul clic.
+
+Transcription YouTube
+
+Importez la transcription d'une vidéo YouTube à partir d'un lien.
+
+Récupération de site web en masse
+
+Récupérez un site web et ses sous-liens jusqu'à une certaine profondeur.
+
+Confluence
+
+Importez un espace Confluence entier en un seul clic.
+
+Drupal Wiki
+
+Import Drupal Wiki spaces in a single click.
+
+Obsidian
+
+Import Obsidian vault in a single click.
+
+Paperless-ngx
+
+Import documents from your Paperless-ngx instance.
+
+URL du site web
+
+URL du site web que vous souhaitez récupérer.
+
+Profondeur de récupération
+
+Nombre de niveaux de sous-liens à suivre à partir de l'URL de base.
+
+Nombre maximum de pages
+
+Nombre maximum de pages à récupérer.
+
+Submit
+chat
+Par où commençons-nous ?
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs

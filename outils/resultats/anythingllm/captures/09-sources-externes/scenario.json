@@ -1,0 +1,138 @@
+[
+ {
+  "capture": "09-sources-externes/01-connecteurs.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "Connecteurs de données"
+   ],
+   [
+    2,
+    "Dépôt GitHub"
+   ],
+   [
+    3,
+    "Transcription YouTube"
+   ],
+   [
+    4,
+    "Récupération de site web en masse"
+   ]
+  ],
+  "note": "",
+  "heure": "13:12:39"
+ },
+ {
+  "capture": "09-sources-externes/02-site-web.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "URL du site"
+   ],
+   [
+    2,
+    "profondeur"
+   ],
+   [
+    3,
+    "nombre maximal de pages"
+   ],
+   [
+    4,
+    "Submit"
+   ]
+  ],
+  "note": "",
+  "heure": "13:13:33"
+ },
+ {
+  "capture": "09-sources-externes/03-github.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "URL du dépôt GitHub"
+   ],
+   [
+    2,
+    "Submit"
+   ]
+  ],
+  "note": "",
+  "heure": "13:13:46"
+ },
+ {
+  "capture": "09-sources-externes/04-youtube.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "URL de la vidéo YouTube"
+   ],
+   [
+    2,
+    "Collect transcript"
+   ]
+  ],
+  "note": "",
+  "heure": "13:13:57"
+ },
+ {
+  "capture": "09-sources-externes/05-lien-simple.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "ou soumettre un lien"
+   ],
+   [
+    2,
+    "Récupérer le site web"
+   ]
+  ],
+  "note": "",
+  "heure": "13:14:07"
+ },
+ {
+  "capture": "09-sources-externes/06-documents-importes.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "pages du site de test"
+   ],
+   [
+    2,
+    "dépôt GitHub"
+   ],
+   [
+    3,
+    "transcription YouTube"
+   ],
+   [
+    4,
+    "Déplacer vers l'espace de travail"
+   ]
+  ],
+  "note": "",
+  "heure": "13:14:59"
+ },
+ {
+  "capture": "09-sources-externes/07-reponse-site.png",
+  "url": "/workspace/sources-externes/t/e977ff17-cb2b-49f5-9f8a-5a62b22fbc46",
+  "pastilles": [
+   [
+    1,
+    "réponse"
+   ],
+   [
+    2,
+    "source : page du site"
+   ]
+  ],
+  "note": "",
+  "heure": "13:15:24"
+ }
+]

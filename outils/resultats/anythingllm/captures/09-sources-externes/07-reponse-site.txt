@@ -1,0 +1,50 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Banc-bge-m3
+
+Sources externes
+
+Combien de techniciens…
+
+New Thread
+
+chat
+L’atelier de Nantes compte 14 techniciens.
+
+Combien de techniciens compte l’atelier de Nantes ?
+
+Thought for 9.6s
+
+L’atelier de Nantes compte 14 techniciens.
+
+chat · 9.9s (1.22 tok/s) · Nov 12, 1:15 PM
+
+Sources
+Outils
+Envoyer le message au chatbot
+
+Sources
+
+rag-anythingllm-site_atelier.html.html
+
+rag-anythingllm-site/atelier.html
+
+1 référence
+
+rag-anythingllm-site_index.html.html
+
+rag-anythingllm-site/index.html
+
+1 référence
+
+rag-anythingllm-site_livraisons.html.html
+
+rag-anythingllm-site/livraisons.html
+
+1 référence
+
+Souvenirs

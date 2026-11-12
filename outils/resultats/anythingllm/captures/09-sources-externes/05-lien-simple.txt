@@ -1,0 +1,71 @@
+Mon Espace de Travail
+
+Premier essai
+
+Démo Vélanor
+
+Banc-bge-m3
+
+Sources externes
+
+*New Thread
+
+New Thread
+
+Documents
+Connecteurs de données
+Mes documents
+Nouveau dossier
+
+Name
+
+26 documents
+
+custom-documents
+
+(9)
+
+jawed-youtube-transcripts
+
+(1)
+
+octocat-hello-world-master-ea2a
+
+(1)
+
+rag-anythingllm-site-82c5
+
+(3)
+
+stocks-octobre-2025.xlsx-7dae
+
+(2)
+
+stocks-octobre-2025.xlsx-fdbf
+
+(2)
+
+velanor-2025
+
+(8)
+
+Cliquez pour télécharger ou glissez-déposez
+prend en charge les fichiers texte, CSV, feuilles de calcul, fichiers audio, et plus encore !
+ou soumettre un lien
+Récupérer le site web
+Ces fichiers seront téléchargés sur cette instance AnythingLLM uniquement.
+Sources externes
+
+Name
+
+Aucun document
+
+chat
+Prenons le temps d'y réfléchir.
+Outils
+Envoyer le message au chatbot
+Créer un agent
+Modifier l'espace de travail
+Télécharger un document
+
+Souvenirs
