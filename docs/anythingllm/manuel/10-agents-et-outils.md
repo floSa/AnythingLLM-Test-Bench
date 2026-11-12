@@ -86,7 +86,7 @@ Remplir « Flow Name » avec `ConsignesBatteries` (pastille 1) et « Description
 
 Les serveurs MCP se déclarent dans le fichier `anythingllm_mcp_servers.json` du dossier de données (`donnees/anythingllm/storage/plugins/`) ; l'interface les affiche et permet de les activer.
 
-**Étape 5a. Déclarer le serveur d'exemple**
+**Avant l'étape 5. Déclarer le serveur d'exemple**
 *Où* : terminal Ubuntu, dossier du dépôt. Le script copie le serveur d'exemple et le déclare :
 
 ```bash

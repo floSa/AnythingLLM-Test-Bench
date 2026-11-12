@@ -53,7 +53,7 @@ Sur ces pages, le bouton d'enregistrement (« Enregistrer les modifications » o
 
 | N° | Élément | Rôle |
 |---|---|---|
-| 1 | « Taille des segments de texte » | longueur maximale d'un passage, en caractères ; ne peut pas dépasser la limite déclarée pour l'embedding (1 000 ici, rappelée sous le champ) |
+| 1 | « Taille des segments de texte » | longueur maximale d'un passage, en caractères ; ne peut pas dépasser la limite déclarée pour l'embedding (1 000 ici, réglée au chapitre 03, étape 14) |
 | 2 | « Chevauchement des segments de texte » | nombre de caractères repris d'un passage au suivant (20 par défaut) |
 
 *Résultat* : un changement ne vaut que pour les documents intégrés ensuite. Pour des passages plus longs, relever d'abord « Max embedding chunk length » dans « Préférences d'intégration » (chapitre 03, étape 14).

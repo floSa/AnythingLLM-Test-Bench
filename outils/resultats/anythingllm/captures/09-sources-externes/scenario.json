@@ -48,22 +48,6 @@
   "heure": "13:13:33"
  },
  {
-  "capture": "09-sources-externes/03-github.png",
-  "url": "/workspace/sources-externes",
-  "pastilles": [
-   [
-    1,
-    "URL du dépôt GitHub"
-   ],
-   [
-    2,
-    "Submit"
-   ]
-  ],
-  "note": "",
-  "heure": "13:13:46"
- },
- {
   "capture": "09-sources-externes/04-youtube.png",
   "url": "/workspace/sources-externes",
   "pastilles": [
@@ -134,5 +118,37 @@
   ],
   "note": "",
   "heure": "13:15:24"
+ },
+ {
+  "capture": "04-premiere-question/05-document-televerse.png",
+  "url": "/workspace/premier-essai-86397990",
+  "pastilles": [
+   [
+    1,
+    "rapport-annuel-2025.pdf"
+   ],
+   [
+    2,
+    "croix (fermer)"
+   ]
+  ],
+  "note": "",
+  "heure": "14:49:04"
+ },
+ {
+  "capture": "09-sources-externes/03-github.png",
+  "url": "/workspace/sources-externes",
+  "pastilles": [
+   [
+    1,
+    "URL du dépôt GitHub"
+   ],
+   [
+    2,
+    "Submit"
+   ]
+  ],
+  "note": "",
+  "heure": "14:49:10"
  }
 ]

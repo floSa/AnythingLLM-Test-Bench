@@ -34,7 +34,7 @@ Taper `Combien de vélos Vélanor a-t-elle produits en 2025, et dans quelle usin
 | 1 | « Thought for … » | réflexion du modèle, repliée, avec sa durée |
 | 2 | « Sources » | documents utilisés pour la réponse |
 
-*Résultat* : la réponse arrive en quelques secondes : « Vélanor a produit 61 800 vélos en 2025 », avec la répartition par site. Sous la réponse, une ligne indique le modèle, la durée et la vitesse (par exemple « chat · 6.4s »).
+*Résultat* : la réponse arrive en quelques secondes : « Vélanor a produit 61 800 vélos en 2025 », avec la répartition par site. Au survol de la réponse, une ligne indique le modèle, la durée et la vitesse (par exemple « chat · 6.4s »).
 
 **Étape 2. Lire la réflexion**
 *Où* : au-dessus de la réponse.

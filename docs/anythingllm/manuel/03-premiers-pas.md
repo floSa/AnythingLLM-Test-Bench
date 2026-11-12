@@ -47,7 +47,7 @@ Taper `Generic` dans le champ de recherche (pastille 1), puis cliquer sur « Gen
 Remplir dans l'ordre :
 
 - « Base URL » (pastille 1) : `http://llm-central:8080/v1` ;
-- « API Key » (pastille 2) : la clé du service central (masquée sur la capture) ;
+- « API Key » (pastille 2) : la clé du service central (masquée sur la capture) ; pour l'afficher, dans le terminal Ubuntu, dossier du dépôt : `grep LLM_CENTRAL_KEY .env` (la partie après `=`) ;
 - « Selected Model » (pastille 3) : dès que l'adresse et la clé sont bonnes, le champ devient une liste des modèles du service ; choisir `chat` ;
 - « Model context window » (pastille 4) : `16384`, la taille de contexte du service ;
 - « Max Tokens » (pastille 5) : `8192`, longueur maximale d'une réponse, réflexion comprise.
@@ -137,7 +137,7 @@ Cliquer sur « Ignorer l'enquête » (pastille 1), sans rien remplir.
 |---|---|---|
 | 1 | liste des espaces de travail | chaque espace a ses documents, ses conversations (fils) et ses réglages ; « New Thread » ouvre une nouvelle conversation |
 | 2 | « + » | crée un espace de travail (chapitre 04) |
-| 3 | flèche vers le haut | ouvre le fenêtre des documents de l'espace (chapitre 05) |
+| 3 | flèche vers le haut | ouvre la fenêtre des documents de l'espace (chapitre 05) |
 | 4 | « Envoyer un message » | zone où taper une question |
 | 5 | « Outils » | commandes abrégées (`/reset`…) et compétences de l'agent (chapitres 06 et 10) |
 | 6 | clé | ouvre les paramètres de l'instance |
@@ -165,7 +165,7 @@ Taper le mot de passe de l'instance (pastille 1), puis cliquer sur « Connexion 
 ## Régler la langue
 
 **Étape 10. Choisir le français**
-*Où* : clé en bas de la barre latérale › « Paramètres de l'instance » › Apparence › « Interface ».
+*Où* : clé en bas de la barre latérale › « Paramètres de l'instance » › Apparence › « Interface » (avec un navigateur en anglais : « Instance Settings » › « Appearance » › « Interface », champ « Display Language »). L'interface suit la langue du navigateur : avec un navigateur en anglais, les étapes 1 à 9 s'affichent en anglais (« Get started » pour « Commencer »).
 Dans « Langue d'affichage » (pastille 2), choisir « French ».
 
 ![Réglage de la langue](../img/03-premiers-pas/10-langue.png)

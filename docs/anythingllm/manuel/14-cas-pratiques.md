@@ -6,6 +6,8 @@
 
 ## Ce qu'il faut savoir
 
+Dans chaque cas, ouvrir un nouveau fil (« New Thread »), poser la question, puis renommer le fil comme indiqué (chapitre 06, étapes 8 et 9).
+
 Les trois cas utilisent les documents fictifs de l'entreprise Vélanor : une FAQ (page HTML), un contrat scanné (PDF image), un audit fournisseur en anglais (PDF), un message vocal (MP3), un rapport annuel, une procédure, un classeur de stocks. Chaque conversation est ouverte dans un **nouveau fil**, renommé d'après son sujet (chapitre 06, étapes 8 et 9) : les trois fils forment le jeu de démonstration laissé dans l'instance.
 
 ## Cas 1. Mettre en place une foire aux questions interne

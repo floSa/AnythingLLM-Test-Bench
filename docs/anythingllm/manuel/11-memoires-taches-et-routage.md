@@ -70,7 +70,7 @@ Cliquer sur « Nouvelle offre d'emploi » (pastille 1) : c'est la traduction app
 
 **Étape 5. Décrire la tâche**
 *Où* : formulaire de nouvelle tâche.
-Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pastille 2) avec `Résume l'état des stocks de pièces à partir des documents de l'espace Démo Vélanor.`, choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel » ; ici « hebdomadaire » conviendrait au nom, l'essai a gardé « quotidien »), puis cliquer sur « Créer un emploi » (pastille 4).
+Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pastille 2) avec une consigne, par exemple `Rédige un rappel des points à vérifier pour l'inventaire des pièces détachées.`, choisir la fréquence (pastille 3 : « chaque minute », « par heure », « quotidien », « hebdomadaire », « mensuel » ; ici « hebdomadaire » conviendrait au nom, l'essai a gardé « quotidien »), puis cliquer sur « Créer un emploi » (pastille 4).
 
 ![Nouvelle tâche](../img/11-memoires-taches-routage/05-nouvelle-tache.png)
 *Écran : formulaire de nouvelle tâche planifiée.*
@@ -82,7 +82,7 @@ Remplir le nom `Point stocks du lundi` (pastille 1), le champ « Demande » (pas
 | 3 | calendrier | fréquence d'exécution |
 | 4 | « Créer un emploi » | enregistre la tâche |
 
-*Résultat* : le message « Emploi créé » s'affiche. La tâche ne se rattache à aucun espace : la consigne est envoyée au modèle avec les compétences cochées dans « Outils (facultatifs) », sous la consigne. Pour qu'elle lise des documents, y cocher une compétence de recherche dans les documents si elle est proposée ; sans outil, le modèle répond sans lire les documents. Dans les essais, aucun outil n'a été coché et l'exécution n'a pas été observée : la tâche d'exemple montre le formulaire, pas un résultat.
+*Résultat* : le message « Emploi créé » s'affiche. La tâche ne se rattache à aucun espace : la consigne est envoyée au modèle avec les compétences cochées dans « Outils (facultatifs) », sous la consigne. Sans outil, le modèle répond avec ses seules connaissances, sans lire les documents : c'est le cas de l'exemple, qui montre le formulaire ; l'exécution n'a pas été observée pendant les essais.
 
 **Étape 6. Suivre la tâche**
 *Où* : « Tâches planifiées ».

@@ -4,23 +4,15 @@ Mon Espace de Travail
 
 Premier essai
 
-Quel est le chiffre d'…
+Démo Vélanor
 
-Thread
+Sources externes
 
-Thread
-
-Thread
-
-Thread
+Premier essai
 
 *New Thread
 
 New Thread
-
-Démo Vélanor
-
-Sources externes
 
 Documents
 Connecteurs de données
@@ -33,7 +25,11 @@ Name
 
 custom-documents
 
-(1)
+(2)
+
+rapport-annuel-2025.pdf
+
+Cached
 
 rapport-annuel-2025.pdf
 
@@ -67,12 +63,10 @@ Premier essai
 
 Name
 
-1
-
-rapport-annuel-2025.pdf
+Aucun document
 
 chat
-Prêt quand vous l'êtes.
+Bon après-midi
 Outils
 Envoyer le message au chatbot
 Créer un agent

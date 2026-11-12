@@ -72,17 +72,17 @@ La colonne de droite, au nom de l'espace (« Premier essai »), liste les docume
 
 **Étape 5. Envoyer le fichier**
 *Où* : fenêtre des documents, zone d'envoi.
-Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$` dans la barre d'adresse de cette fenêtre, ouvrir la distribution (son nom, par exemple `Ubuntu` ou `Ubuntu-24.04`, est donné par `wsl -l` dans PowerShell), puis `home\<utilisateur>\AnythingLLM-Test-Bench\corpus\documents` (le chemin du dépôt s'affiche avec `pwd` dans le terminal Ubuntu), et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
+Cliquer dans la zone d'envoi : la fenêtre de choix de fichier de Windows s'ouvre. Le dépôt est dans WSL : taper `\\wsl$` dans la barre d'adresse de cette fenêtre, ouvrir la distribution (son nom, par exemple `Ubuntu` ou `Ubuntu-24.04`, est donné par `wsl -l` dans PowerShell), puis le dossier du dépôt et `corpus\documents`. Le chemin du dépôt s'affiche avec `pwd` dans le terminal Ubuntu, par exemple `/home/camille/AnythingLLM-Test-Bench` : il devient `\\wsl$\Ubuntu\home\camille\AnythingLLM-Test-Bench` en remplaçant les `/` par des `\`. et choisir `rapport-annuel-2025.pdf` (ou le glisser depuis l'Explorateur dans la zone).
 
 ![Fichier envoyé](../img/04-premiere-question/05-document-televerse.png)
-*Écran : fenêtre des documents, fichier envoyé dans « custom-documents ».*
+*Écran : fenêtre des documents, fichier envoyé dans « custom-documents » (capture prise plus tard, sur une instance qui contient déjà les dossiers des chapitres suivants et un exemplaire du rapport marqué « Cached » ; la colonne de l'espace est vide, comme sur une installation neuve).*
 
 | N° | Élément | Rôle |
 |---|---|---|
 | 1 | `rapport-annuel-2025.pdf` | le fichier envoyé, rangé dans le dossier `custom-documents` |
 | 2 | croix | ferme la fenêtre |
 
-*Résultat* : le fichier apparaît dans « Mes documents », avec une coche verte dans la zone d'envoi. Il n'est **pas encore** dans l'espace. Fermer la fenêtre avec la croix (pastille 2), puis la rouvrir comme à l'étape 3 : dans la version 1.19.0, un fichier qu'on vient d'envoyer ne peut pas être placé dans l'espace tant que la fenêtre n'a pas été rouverte.
+*Résultat* : le fichier apparaît dans « Mes documents », dans le dossier `custom-documents`. La colonne de droite indique toujours « Aucun document » : il n'est **pas encore** dans l'espace. Fermer la fenêtre avec la croix (pastille 2), puis la rouvrir comme à l'étape 3 : dans la version 1.19.0, un fichier qu'on vient d'envoyer ne peut pas être placé dans l'espace tant que la fenêtre n'a pas été rouverte.
 
 **Étape 6. Placer le fichier dans l'espace**
 *Où* : fenêtre des documents rouverte, « Mes documents » › dossier `custom-documents`.

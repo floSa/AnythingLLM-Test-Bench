@@ -96,7 +96,9 @@ Pour l'espace « Démo Vélanor », choisir « Accuracy Optimized » dans « Sea
 | 1 | « Fournisseur LLM de l'agent de l'espace de travail » | modèle utilisé par l'agent de cet espace ; « System Default » reprend celui de l'instance |
 | 2 | « Configure Agent Skills » | ouvre la liste des compétences de l'agent (chapitre 10) |
 
-*Résultat* : l'agent de l'espace utilise le modèle choisi.
+Pour ce manuel, laisser « System Default » : l'agent utilise alors `chat`, comme le reste de l'instance.
+
+*Résultat* : un autre choix ne change que le modèle de l'agent de cet espace.
 
 ## Bon à savoir
 

@@ -160,9 +160,32 @@ def widget_fichier(s):
         s.cap_souple("16-widget-reponse", [(bulle, "réponse dans la page")])
 
 
+def envoi_vierge(s):
+    """Chapitre 04, capture 05, dans un espace temporaire vierge nommé comme celui du chapitre (supprimé ensuite)."""
+    p = s.page; s.chapitre = "04-premiere-question"
+    s.gestionnaire("premier-essai-86397990")
+    p.locator("input[type=file]").first.set_input_files("/depot/corpus/documents/rapport-annuel-2025.pdf")
+    p.wait_for_timeout(5000); s.sans_toasts()
+    item = p.locator('[data-tooltip-id="directory-item"]').filter(has_text="rapport-annuel-2025").first
+    if not item.is_visible():
+        p.get_by_text("custom-documents").first.click(); p.wait_for_timeout(1000)
+    p.evaluate("() => { const b = document.elementFromPoint(1366, 126).closest('button'); b.setAttribute('data-manuel', 'croix'); }")
+    s.cap_souple("05-document-televerse", [(item, "rapport-annuel-2025.pdf"), (p.locator("[data-manuel=croix]"), "croix (fermer)")])
+
+
+def github_form(s):
+    p = s.page; s.chapitre = "09-sources-externes"
+    s.gestionnaire("sources-externes")
+    p.get_by_text("Connecteurs de données").first.click(); p.wait_for_timeout(1000)
+    p.get_by_text("Dépôt GitHub", exact=False).first.click(); p.wait_for_timeout(800)
+    repo = p.locator("[name=repo]"); repo.fill("https://github.com/octocat/Hello-World")
+    sub = repo.locator("xpath=ancestor::form[1]").locator("button[type=submit]")
+    s.cap_souple("03-github", [(repo, "URL du dépôt GitHub"), (sub, "Submit")])
+
+
 if __name__ == "__main__":
     s = Scenario("reprises")
     try:
-        etapes([agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
+        etapes([envoi_vierge, github_form, agents, admin, experimental, widget, citation, ocr, envoi, croix_seule, citation2, ocr2, widget_fichier], s)
     finally:
         s.fermer()

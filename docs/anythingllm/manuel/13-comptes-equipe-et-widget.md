@@ -4,7 +4,7 @@
 > **Point de départ** : Paramètres de l'instance › « Sécurité », connecté avec le mot de passe de l'instance (chapitre 03).
 > **Durée** : environ 20 minutes. **Avant** : chapitres 03 à 07 ; faire le chapitre 11 avant, car les tâches planifiées disparaissent en multi-utilisateur.
 
-**Attention** : le passage en multi-utilisateur ne peut pas être annulé depuis l'interface. Avant l'étape 1, faire une sauvegarde (terminal Ubuntu, dossier du dépôt : `outils/anythingllm/sauvegarder.sh`) : la restaurer est le seul moyen de revenir en arrière. Le mot de passe de l'instance est remplacé par des comptes ; les pages « Tâches planifiées », « Canaux » (Telegram) et « Sécurité » disparaissent du menu.
+**Attention** : le passage en multi-utilisateur ne peut pas être annulé depuis l'interface. Avant l'étape 1, faire une sauvegarde (terminal Ubuntu, dossier du dépôt : `outils/anythingllm/sauvegarder.sh`) : la restaurer est le seul moyen de revenir en arrière (`outils/anythingllm/restaurer.sh donnees/sauvegardes/<archive>.tar.gz`, après arrêt automatique de l'application ; l'archive est nommée d'après la date et l'heure). Le mot de passe de l'instance est remplacé par des comptes ; les pages « Tâches planifiées », « Canaux » (Telegram) et « Sécurité » disparaissent du menu.
 
 ## Ce qu'il faut savoir
 
@@ -188,7 +188,7 @@ Cliquer sur « Download » (pastille 1), puis sur « Close ».
 
 **Étape 12. Créer le widget**
 *Où* : connecté avec `admin-velanor`, Paramètres de l'instance › Outils › « Widgets de chat intégrés » › « Créer un widget intégré ».
-En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), renseigner le domaine du site dans « Restrict requests from domains » (pastille 2 ; par exemple `intranet.velanor.fr` ; laissé vide dans l'essai, pour la page de test de l'étape 15), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
+En haut de la fenêtre, choisir l'espace « Démo Vélanor » ; plus bas, cocher le mode « Query » (pastille 1), laisser vide « Restrict requests from domains » (pastille 2) pour l'essai de l'étape 15, qui ouvre une page depuis un fichier et non depuis un site ; pour un vrai site, y mettre son nom de domaine (par exemple `intranet.velanor.fr`), une limite par jour (pastille 3, ici 200), puis « Create embed » (pastille 4).
 
 ![Nouveau widget](../img/13-comptes-et-widget/12-nouveau-widget.png)
 *Écran : fenêtre de création d'un widget.*
@@ -253,7 +253,7 @@ Cliquer sur la bulle en bas à droite (pastille 1), poser une question.
 
 - Pour revenir à une seule personne, il n'y a pas de bouton : il faudrait restaurer une sauvegarde faite avant le passage (annexe A4).
 - Un compte « Manager » peut modifier les espaces et leurs documents mais pas les modèles.
-- Un widget dont les domaines autorisés sont vides répond à n'importe quel site qui connaît son identifiant : renseigner le domaine du site.
+- Un widget dont les domaines autorisés sont vides répond à n'importe quel site qui connaît son identifiant : une fois l'essai fait, renseigner le domaine du vrai site (bouton d'édition du widget).
 
 ## En cas de problème
 

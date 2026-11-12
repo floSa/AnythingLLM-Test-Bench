@@ -1,16 +1,20 @@
+AD
+
 Mon Espace de Travail
 
 Premier essai
 
 Démo Vélanor
 
-Banc-bge-m3
-
 Sources externes
+
+Combien de techniciens…
 
 *New Thread
 
 New Thread
+
+Premier essai
 
 Documents
 Connecteurs de données
@@ -77,7 +81,7 @@ Créez un jeton d'accès personnel sur GitHub pour accéder aux dépôts privés
 
 Submit
 chat
-Prêt quand vous l'êtes.
+Sur quoi travaillons-nous ?
 Outils
 Envoyer le message au chatbot
 Créer un agent
