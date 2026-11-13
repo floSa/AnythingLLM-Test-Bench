@@ -53,3 +53,7 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 - `docs/README.md` remplacé par l'index commun aux cinq dépôts (Open Notebook, RAGFlow, AnythingLLM, Kotaemon, Open WebUI) : modèles utilisés, services déportables (OCR, audio, reranker), comparatif à deux lignes par solution (défaut, meilleur réglage). Chiffres repris des résultats bruts du 12 et du 13 novembre, aucun nouveau banc.
 - README : section « Résultats » au même format que les autres dépôts.
 - `verifier_docs.py` : 0 point.
+
+### 2026-11-13 — Index de la série : Docling déporté
+
+- `docs/README.md` mis à jour : résultats des bancs Docling déporté de RAGFlow (34/34) et de Kotaemon (29/34).
