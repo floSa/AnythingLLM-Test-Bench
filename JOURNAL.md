@@ -57,3 +57,7 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 ### 2026-11-13 — Index de la série : Docling déporté
 
 - `docs/README.md` mis à jour : résultats des bancs Docling déporté de RAGFlow (34/34) et de Kotaemon (29/34).
+
+### 2026-11-13 — Index de la série : procédures Docling déporté
+
+- `docs/README.md` : colonne « Procédure dans le manuel » (Open WebUI chapitre 08, RAGFlow chapitre 06, Kotaemon chapitre 05).
