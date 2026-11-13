@@ -77,3 +77,7 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 ### 2026-11-13 — Index de la série : technologies et résultats séparés
 
 - Tableaux OCR et Docling, audio, reranker : capacités seulement ; résultats déplacés dans « Résultats par cas » et « Détail du meilleur réglage » (scores par type de question). Cases vides quand la solution ne le fait pas.
+
+### 2026-11-13 — Index de la série : tableaux de même largeur, ligne Docling
+
+- Tableaux en HTML à largeurs fixes (200 px puis 5 × 150 px), tous de la même largeur. Lecture des PDF : une ligne « Docling » (conteneur, déporté) et une ligne « OCR intégré, autre que Docling » ; Docling expliqué ; ligne « OCR utilisé au banc » retirée (elle est dans le détail du meilleur réglage).
