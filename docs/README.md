@@ -1,69 +1,100 @@
 # Index de la série
 
-Manuels vérifiés de solutions de RAG local sous Windows 11 + WSL2. Chaque solution a son dépôt ; ce dépôt décrit AnythingLLM et reprend les résultats des solutions déjà passées au banc.
+Manuels vérifiés de cinq solutions de RAG local, alternatives auto-hébergées à NotebookLM. Chaque solution a son dépôt `https://github.com/floSa/<Solution>-Test-Bench` ; cette page est identique dans les cinq dépôts.
 
 ## Solutions décrites
 
-| Solution | Version décrite | Date des essais | Machine de test | Langue de l'interface | Manuels |
-|---|---|---|---|---|---|
-| Open Notebook | 1.15.1 | 2026-11-08, 2026-11-09 et 2026-11-12 | Intel Core Ultra 7 255H sans GPU NVIDIA, puis Ryzen 5 9600X, RTX 4060 Ti 16 Go | français (langue du navigateur) | dépôt https://github.com/floSa/Open-Notebook-Test-Bench |
-| RAGFlow | v1.0.0 | 2026-11-09 au 2026-11-12 | Ryzen 5 9600X, 32 Go (WSL), RTX 4060 Ti 16 Go | français (sélecteur de l'en-tête) | dépôt https://github.com/floSa/RAGFlow-Test-Bench |
-| AnythingLLM | 1.19.0 | 2026-11-12 | Ryzen 5 9600X, 32 Go (WSL), RTX 4060 Ti 16 Go ; service LLM central en profil `gpu` | français partiel (langue du navigateur, environ un quart des libellés en anglais) | [manuel utilisateur](anythingllm/README.md) |
+| Solution | Version décrite | Manuel utilisateur |
+|---|---|---|
+| Open Notebook | 1.15.1 | [Open-Notebook-Test-Bench](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/docs/open-notebook/README.md) |
+| RAGFlow | 1.0.0 | [RAGFlow-Test-Bench](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/docs/ragflow/README.md) |
+| AnythingLLM | 1.19.0 | [AnythingLLM-Test-Bench](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/docs/anythingllm/README.md) |
+| Kotaemon | 0.12.0 | [Kotaemon-Test-Bench](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/docs/kotaemon/README.md) |
+| Open WebUI | 0.13.3 | [OpenWebUI-Test-Bench](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/docs/open-webui/README.md) |
+
+Essais : novembre 2026. Machine : Ryzen 5 9600X, RTX 4060 Ti 16 Go, 64 Go de RAM (32 Go attribués à WSL2).
+
+## Modèles utilisés
+
+Les cinq solutions appellent le même service de modèles local (LiteLLM devant llama.cpp et un serveur Whisper), avec les mêmes modèles :
+
+| Rôle | Modèle |
+|---|---|
+| Réponse | Qwen3.5-4B (Q4_K_M), réflexion activée, 16 384 jetons par requête |
+| Embedding | bge-m3 (Q8_0) |
+| Reranker | bge-reranker-v2-m3 (Q8_0) |
+| Transcription audio | faster-whisper-small |
+
+## Services déportables
+
+Un service « déporté » tourne hors du conteneur de la solution et peut être partagé par plusieurs applications. Dans ce banc, le service de modèles ci-dessus est déporté pour toutes ; Docling (lecture des PDF et OCR) l'est pour Open WebUI, dans un conteneur `docling-serve` 1.38.2 à part.
+
+### Lecture des documents scannés (OCR)
+
+Le corpus contient un contrat scanné (PDF image, 4 questions). Sans OCR, il est illisible.
+
+| Solution | OCR utilisé dans le banc | Scan lu | Docling déporté possible | Docling déporté essayé |
+|---|---|---|---|---|
+| Open WebUI | Docling déporté | oui | oui | oui, banc complet |
+| RAGFlow | DeepDoc, l'OCR intégré de RAGFlow | oui | oui (réglage `DOCLING_SERVER_URL`) | non |
+| Kotaemon | Docling, dans le conteneur de Kotaemon | oui | oui (lecteur ajouté au conteneur) | oui, lecture du scan seulement |
+| AnythingLLM | Tesseract, l'OCR intégré d'AnythingLLM | oui | non | sans objet |
+| Open Notebook | Docling, dans le conteneur d'Open Notebook, sans moteur d'OCR dans l'image 1.15.1 | non | non | sans objet |
+
+DeepDoc est le lecteur de documents propre à RAGFlow (OCR, mise en page, tableaux) ; ses modèles sont dans l'image de RAGFlow et ne se déportent pas.
+
+### Audio et reranker
+
+| Solution | Transcription audio | Reranker bge-reranker-v2-m3 branchable | Reranker utilisé dans le meilleur réglage |
+|---|---|---|---|
+| Open WebUI | Whisper déporté | oui | bge-reranker-v2-m3 |
+| RAGFlow | Whisper déporté | oui | aucun (sans gain) |
+| Kotaemon | ne lit pas l'audio | oui | bge-reranker-v2-m3 |
+| AnythingLLM | Whisper déporté | non : seulement son reranker intégré (ms-marco-MiniLM-L-6-v2) | intégré |
+| Open Notebook | Whisper déporté | non : aucune étape de tri | sans objet |
 
 ## Comparatif du banc
 
-Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges), même corpus fictif de 9 documents, même machine.
+Mêmes 38 questions ([corpus/questions.json](../corpus/questions.json) : 34 avec réponse, 4 pièges sans réponse dans le corpus), même corpus fictif de 9 documents (dont le PDF scanné et un message vocal), mêmes modèles. Deux lignes par solution : le réglage livré par défaut, puis le meilleur réglage trouvé. Toutes les variantes essayées sont dans l'annexe A1 de chaque manuel.
 
-### Service LLM central (modèles `chat` Qwen3.5-4B avec réflexion, `embed` bge-m3) — comparables entre eux
+| Solution | Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Bon document cité /34 | Médiane | p95 | Pic RAM de l'application | Résultat brut |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Open WebUI | défaut | aucun : scan refusé | vecteurs | 10 | aucun | 28 | 4 | 30 | 60,1 s | 106,0 s | 2,3 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-defaut-sans-rerank.json) |
+| Open WebUI | meilleur | Docling déporté | hybride | 10 | bge-reranker-v2-m3 | 34 | 4 | 34 | 24,0 s ¹ | 86,9 s | 3,6 Go | [JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-taches.json) |
+| RAGFlow | défaut | DeepDoc | hybride, vecteurs 0,3 | 6 | aucun | 33 | 4 | 34 | 7,8 s | 50,0 s | 5,4 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-defaut.json) |
+| RAGFlow | meilleur | DeepDoc | hybride, vecteurs 0,7 | 8 | aucun | 34 | 4 | 34 | 7,8 s | 56,9 s | 5,1 Go | [JSON](https://github.com/floSa/RAGFlow-Test-Bench/blob/main/outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) |
+| AnythingLLM | défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 33 | 14,3 s | 27,8 s | 0,9 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) |
+| AnythingLLM | meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 34 | 10,7 s | 37,6 s | 1,6 Go | [JSON](https://github.com/floSa/AnythingLLM-Test-Bench/blob/main/outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) |
+| Kotaemon | défaut | aucun | hybride | 10 | aucun | 25 ² | 4 | 27 | 25,8 s | 38,2 s | 1,9 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-defaut-sans-rerank.json) |
+| Kotaemon | meilleur | Docling dans le conteneur | hybride | 3 | bge-reranker-v2-m3 | 31 | 4 | 32 | 22,0 s | 38,7 s | 1,7 Go | [JSON](https://github.com/floSa/Kotaemon-Test-Bench/blob/main/outils/resultats/kotaemon/banc-2026-11-12-docling-rerank-serre-top3.json) |
+| Open Notebook | défaut = meilleur | aucun (Docling sans OCR) | aucune : sources entières | toutes | aucun | 28 | 4 | 29 | 8,7 s | 27,9 s | 4,7 Go | [JSON](https://github.com/floSa/Open-Notebook-Test-Bench/blob/master/outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) |
 
-| Solution | Banc | Modèle | Réglages | Exactes | Refus pièges | Bon document cité | Bonne page | p50 (s) | p95 (s) | Indexation (s) | Pic RAM application (Mo) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| open-notebook | [central-chat](../outils/resultats/open-notebook/banc-2026-11-12-central-chat.json) | chat | mode chat, sources full content, Docling true | 28/34 | 4/4 | 29 | non exposée | 8.69 | 27.92 | 64.9 | 4696 |
-| ragflow | [defaut-reranker](../outils/resultats/ragflow/banc-2026-11-12-defaut-reranker.json) | chat (Qwen3.5-4B, service LLM central) | gabarit general, top_n 6, poids vecteurs 0.3, contexte 16384 | 34/34 | 4/4 | 33 | 23/23 | 8.31 | 58.31 | - | 5104 |
-| ragflow | [defaut](../outils/resultats/ragflow/banc-2026-11-12-defaut.json) | chat (Qwen3.5-4B, service LLM central) | gabarit general, top_n 6, poids vecteurs 0.3, contexte 16384 | 33/34 | 4/4 | 34 | 24/24 | 7.8 | 50.03 | 64.0 | 5407 |
-| ragflow | [hybride-vecteurs07-top8-reranker](../outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8-reranker.json) | chat (Qwen3.5-4B, service LLM central) | gabarit general, top_n 8, poids vecteurs 0.7, contexte 16384 | 34/34 | 4/4 | 34 | 24/24 | 8.78 | 55.04 | - | 5072 |
-| ragflow | [hybride-vecteurs07-top8](../outils/resultats/ragflow/banc-2026-11-12-hybride-vecteurs07-top8.json) | chat (Qwen3.5-4B, service LLM central) | gabarit general, top_n 8, poids vecteurs 0.7, contexte 16384 | 34/34 | 4/4 | 34 | 24/24 | 7.76 | 56.92 | - | 5076 |
-| AnythingLLM | [defaut-sans-rerank](../outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) | chat, embedder embed | mode query, topN 4, seuil 0.25, recherche default | 33/34 | 3/4 | 33 | non exposée | 14.25 | 27.78 | 8.5 | 887 |
-| AnythingLLM | [embedder-natif](../outils/resultats/anythingllm/banc-2026-11-12-embedder-natif.json) | chat, embedder Xenova/all-MiniLM-L6-v2 | mode query, topN 4, seuil 0.25, recherche default | 25/34 | 4/4 | 32 | non exposée | 11.97 | 45.18 | - | 617 |
-| AnythingLLM | [rerank-natif](../outils/resultats/anythingllm/banc-2026-11-12-rerank-natif.json) | chat, embedder embed | mode query, topN 4, seuil 0.25, recherche rerank | 34/34 | 4/4 | 34 | non exposée | 13.54 | 50.17 | - | 1560 |
-| AnythingLLM | [serre-top2](../outils/resultats/anythingllm/banc-2026-11-12-serre-top2.json) | chat, embedder embed | mode query, topN 2, seuil 0.25, recherche default | 31/34 | 4/4 | 32 | non exposée | 13.43 | 34.71 | 0.2 | 1568 |
-| AnythingLLM | [top8-rerank-natif](../outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) | chat, embedder embed | mode query, topN 8, seuil 0.25, recherche rerank | 34/34 | 4/4 | 34 | non exposée | 10.69 | 37.64 | - | 1573 |
-| AnythingLLM | [top8](../outils/resultats/anythingllm/banc-2026-11-12-top8.json) | chat, embedder embed | mode query, topN 8, seuil 0.25, recherche default | 34/34 | 4/4 | 34 | non exposée | 13.55 | 28.56 | - | 1559 |
-
-### Ancienne pile (Ollama ou vLLM, autres modèles) — modèles différents, non comparable tel quel
-
-| Solution | Banc | Modèle | Réglages | Exactes | Refus pièges | Bon document cité | Bonne page | p50 (s) | p95 (s) | Indexation (s) | Pic RAM application (Mo) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| open-notebook | [docling-qwen-fullcontent-ollama040](../outils/resultats/open-notebook/banc-2026-11-08-docling-qwen-fullcontent-ollama040.json) | qwen3:4b-instruct | mode chat, sources full content, num_ctx 16384, Docling true | 28/34 | 4/4 | 28 | non exposée | 7.44 | 24.19 | 84.3 | 3133 |
-| open-notebook | [gpu-vllm](../outils/resultats/open-notebook/banc-2026-11-09-gpu-vllm.json) | gemma4:e4b | mode chat, sources full content, Docling false | 27/34 | 4/4 | 24 | non exposée | 1.86 | 4.28 | 54.2 | 624 |
-| ragflow | [defaut](../outils/resultats/ragflow/banc-2026-11-09-defaut.json) | gemma4:e4b (vLLM, LLM-Service service-vllm) | gabarit general, top_n 6, poids vecteurs 0.3, contexte 16384 | 33/34 | 4/4 | 34 | 24/24 | 1.28 | 1.88 | 53.0 | 5394 |
-| ragflow | [hybride-vecteurs07-top8](../outils/resultats/ragflow/banc-2026-11-09-hybride-vecteurs07-top8.json) | gemma4:e4b (vLLM, LLM-Service service-vllm) | gabarit general, top_n 8, poids vecteurs 0.7, contexte 16384 | 34/34 | 4/4 | 34 | 24/24 | 1.36 | 1.83 | - | 5041 |
+¹ Génération des requêtes de recherche coupée ; laissée active (défaut), la médiane passe à 58 s. ² Le comptage automatique donne 26 : une réponse qui refuse (Q17) y est comptée juste à tort.
 
 Lecture :
 
-- « Bonne page » : seul RAGFlow expose la page du passage cité ; AnythingLLM et Open Notebook citent le document et le passage.
-- AnythingLLM atteint 34/34 et 4/4 avec son tri de précision intégré ou 8 passages, comme RAGFlow avec ses meilleurs réglages, pour environ 1,5 Gio de mémoire contre 5 Gio pour RAGFlow. Il n'accepte pas le reranker externe `rerank`, que RAGFlow utilise.
-- Avec l'embedder intégré d'AnythingLLM (surtout anglais), le résultat tombe à 25/34 : le modèle d'embedding du service central est indispensable sur ce corpus français.
-- Les temps de réponse sont du même ordre pour les trois solutions sur le service central (médiane 8 à 14 s), car le modèle `chat` réfléchit avant de répondre.
+- Le PDF scanné fait l'essentiel des écarts : les solutions qui le lisent atteignent 34/34 ; les autres perdent ses 4 questions et une ou deux questions multi-documents qui en dépendent.
+- Kotaemon ne lit pas l'audio : 2 questions perdues quel que soit le réglage.
+- La durée vient surtout de la réflexion du modèle et des appels supplémentaires de la solution (génération de requêtes, surlignage des citations). Open WebUI, réflexion coupée, donne 34/34 avec une médiane de 1,3 s ([JSON](https://github.com/floSa/OpenWebUI-Test-Bench/blob/main/outils/resultats/open-webui/banc-2026-11-13-sans-reflexion.json)).
+- Mémoire : RAGFlow est le plus lourd (environ 5 Go : Elasticsearch, MySQL, MinIO, DeepDoc), AnythingLLM le plus léger (0,9 à 1,6 Go). Le service de modèles, commun aux cinq, n'est pas compté.
 
 ## Parcours de lecture conseillés
 
 | Profil | Parcours |
 |---|---|
-| Découvrir le RAG local | [glossaire](glossaire.md), puis [Découvrir AnythingLLM](anythingllm/manuel/01-decouvrir-anythingllm.md), puis l'annexe [Fonctionnement interne](anythingllm/annexes/A5-fonctionnement-interne.md) |
-| Installer et essayer rapidement | chapitres [01 à 04 du manuel AnythingLLM](anythingllm/README.md#par-où-commencer) |
-| Choisir entre solutions | comparatif ci-dessus, puis annexes [Qualité et performances](anythingllm/annexes/A1-evaluation-qualite-et-performances.md) et [Matériel et modèles](anythingllm/annexes/A2-choisir-son-materiel-et-ses-modeles.md) |
-| Automatiser | [Automatiser par l'API](anythingllm/annexes/A3-automatiser-par-l-api.md) |
+| Découvrir le RAG local | [glossaire](glossaire.md), puis le chapitre 01 « Découvrir » de chaque manuel |
+| Installer et essayer rapidement | chapitres 01 à 04 de chaque manuel |
+| Choisir entre solutions | les tableaux ci-dessus, puis les annexes A1 (qualité et performances) et A2 (matériel et modèles) de chaque manuel |
 
 ## Conventions
 
 | Étiquette | Sens |
 |---|---|
-| [Vérifié] | observé ou mesuré sur la machine d'essai, à la date indiquée ; renvoie à un script et à un résultat brut de `outils/` |
+| [Vérifié] | observé ou mesuré sur la machine d'essai ; renvoie à un script et à un résultat brut de `outils/` |
 | [Source] | lu dans la documentation officielle ou le code source, non essayé |
 | [Estimation] | calcul non mesuré, avec son raisonnement |
 | [À tester] | ni documenté ni essayé |
 | [Testée] | commande exécutée pendant les essais |
 | [Aide] | commande lue dans l'aide, non exécutée |
 
-Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).
+Les étiquettes ne figurent que dans les annexes (partie 2) ; le manuel (partie 1) se lit sans elles. Les libellés de l'interface sont cités tels qu'affichés. Les données sont fictives (entreprise Vélanor).

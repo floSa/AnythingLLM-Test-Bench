@@ -47,3 +47,9 @@ Mission : `kit/PROMPT.md` pour la fiche `kit/fiches/04-anythingllm.md`. Une entr
 - Masquage étendu aux codes d'invitation (`ui.py`), texte nettoyé.
 - Jeu de démonstration rangé (`demo_ranger.py`) : « Démo Vélanor » avec ses trois conversations citées.
 - État : AnythingLLM en marche sur `http://127.0.0.1:3001`, `verifier_docs.py` à 0 point, dépôt poussé.
+
+### 2026-11-13 — Uniformisation de la série
+
+- `docs/README.md` remplacé par l'index commun aux cinq dépôts (Open Notebook, RAGFlow, AnythingLLM, Kotaemon, Open WebUI) : modèles utilisés, services déportables (OCR, audio, reranker), comparatif à deux lignes par solution (défaut, meilleur réglage). Chiffres repris des résultats bruts du 12 et du 13 novembre, aucun nouveau banc.
+- README : section « Résultats » au même format que les autres dépôts.
+- `verifier_docs.py` : 0 point.

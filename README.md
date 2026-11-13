@@ -173,16 +173,16 @@ Corpus `corpus/documents/` : rapport annuel PDF avec tableaux, contrat PDF scann
 
 ## Résultats
 
-| Solution | Banc | Modèle | Réglages | Exactes | Refus pièges | Bon document cité | Bonne page | p50 (s) | p95 (s) | Indexation (s) | Pic RAM application (Mo) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| AnythingLLM | [defaut-sans-rerank](outils/resultats/anythingllm/banc-2026-11-12-defaut-sans-rerank.json) | chat, embedder embed | mode query, topN 4, seuil 0.25, recherche default | 33/34 | 3/4 | 33 | non exposée | 14.25 | 27.78 | 8.5 | 887 |
-| AnythingLLM | [embedder-natif](outils/resultats/anythingllm/banc-2026-11-12-embedder-natif.json) | chat, embedder Xenova/all-MiniLM-L6-v2 | mode query, topN 4, seuil 0.25, recherche default | 25/34 | 4/4 | 32 | non exposée | 11.97 | 45.18 | - | 617 |
-| AnythingLLM | [rerank-natif](outils/resultats/anythingllm/banc-2026-11-12-rerank-natif.json) | chat, embedder embed | mode query, topN 4, seuil 0.25, recherche rerank | 34/34 | 4/4 | 34 | non exposée | 13.54 | 50.17 | - | 1560 |
-| AnythingLLM | [serre-top2](outils/resultats/anythingllm/banc-2026-11-12-serre-top2.json) | chat, embedder embed | mode query, topN 2, seuil 0.25, recherche default | 31/34 | 4/4 | 32 | non exposée | 13.43 | 34.71 | 0.2 | 1568 |
-| AnythingLLM | [top8-rerank-natif](outils/resultats/anythingllm/banc-2026-11-12-top8-rerank-natif.json) | chat, embedder embed | mode query, topN 8, seuil 0.25, recherche rerank | 34/34 | 4/4 | 34 | non exposée | 10.69 | 37.64 | - | 1573 |
-| AnythingLLM | [top8](outils/resultats/anythingllm/banc-2026-11-12-top8.json) | chat, embedder embed | mode query, topN 8, seuil 0.25, recherche default | 34/34 | 4/4 | 34 | non exposée | 13.55 | 28.56 | - | 1559 |
+Banc de 38 questions (34 avec réponse, 4 pièges), modèles du service central : Qwen3.5-4B avec réflexion, bge-m3, bge-reranker-v2-m3.
 
-Détail et lecture : [annexe A1](docs/anythingllm/annexes/A1-evaluation-qualite-et-performances.md).
+| Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Médiane | Pic RAM de l'application |
+|---|---|---|---|---|---|---|---|---|
+| défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 14,3 s | 0,9 Go |
+| meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 10,7 s | 1,6 Go |
+
+AnythingLLM n'accepte pas le reranker bge-reranker-v2-m3 : seul son reranker intégré est utilisable. Avec son embedder intégré au lieu de bge-m3, le score tombe à 25/34.
+
+Toutes les variantes : [annexe A1](docs/anythingllm/annexes/A1-evaluation-qualite-et-performances.md). Méthode et preuves : [annexe A6](docs/anythingllm/annexes/A6-rapport-d-essais.md). Bilan : [RAPPORT-anythingllm.md](RAPPORT-anythingllm.md). Comparaison avec les quatre autres solutions : [index de la série](docs/README.md).
 
 ## Versions
 
