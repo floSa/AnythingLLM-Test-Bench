@@ -2,7 +2,7 @@
 """Génère le corpus fictif (entreprise Vélanor) et banc-essai/corpus/MANIFEST.json (SHA-256).
 
 Graine fixe, sortie reproductible au contenu près (les PDF embarquent une date fixe).
-Usage : uv run --project banc-essai python banc-essai/communs/generer_corpus.py
+Usage : uv run python banc-essai/communs/generer_corpus.py
 """
 import hashlib, json, random
 from pathlib import Path
