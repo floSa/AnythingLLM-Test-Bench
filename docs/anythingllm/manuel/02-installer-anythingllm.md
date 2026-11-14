@@ -38,15 +38,15 @@ cd AnythingLLM-Test-Bench
 
 *Résultat* : le dossier `AnythingLLM-Test-Bench` existe ; toutes les commandes suivantes se lancent depuis ce dossier.
 
-**Étape 3. Déclarer la clé du service de modèles**
+**Étape 3. Créer la clé du banc pour le service de modèles**
 *Où* : terminal Ubuntu, dossier du dépôt.
 
 ```bash
 cp .env.example .env
-nano .env
+~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh creer anythingllm-test-bench --dans "$PWD/.env" --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY
 ```
 
-Dans le fichier ouvert, remplacer la valeur de `LLM_CENTRAL_KEY` par la clé du service LLM central (valeur de `LITELLM_MASTER_KEY` dans le `.env` de LLM-Service), enregistrer avec Ctrl+O puis quitter avec Ctrl+X. Ce fichier `.env` n'est jamais envoyé sur GitHub.
+Le script de LLM-Service crée une clé propre à ce banc (nom `anythingllm-test-bench`) et l'écrit, sans l'afficher, sur les lignes `LLM_CENTRAL_URL` et `LLM_CENTRAL_KEY` du fichier `.env`. La clé maîtresse de LLM-Service (`LITELLM_MASTER_KEY`) ne se recopie jamais ici. Si une clé existe déjà pour ce nom, le script refuse : la révoquer d'abord avec `~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh revoquer anythingllm-test-bench`, puis relancer la commande. Procédure complète : `docs/brancher-une-application.md` du dépôt LLM-Service. Ce fichier `.env` n'est jamais envoyé sur GitHub.
 
 *Résultat* : le fichier `.env` contient la clé ; il n'est lisible que sur le poste.
 

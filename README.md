@@ -71,10 +71,11 @@ Réseaux : `llm-net` (service de modèles, externe) et `rag-local` (captures Pla
 
 ## Démarrage
 
-**Prérequis :** Windows 11 avec WSL2 (Ubuntu 24.04) et Docker Desktop ; 16 Go de mémoire ; LLM-Service démarré ; la clé du service dans `.env` (copie de `.env.example`).
+**Prérequis :** Windows 11 avec WSL2 (Ubuntu 24.04) et Docker Desktop ; 16 Go de mémoire ; LLM-Service démarré ; la clé propre au banc dans `.env` (copie de `.env.example`), créée par `cle.sh` de LLM-Service.
 
 ```bash
-cp .env.example .env              # puis renseigner LLM_CENTRAL_KEY
+cp .env.example .env
+~/mes_projets/Projet-IA/LLM-Service/scripts/cle.sh creer anythingllm-test-bench --dans "$PWD/.env" --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY   # clé propre au banc, écrite sans affichage
 outils/communs/llm_central_sante.sh --essai
 outils/anythingllm/installer.sh
 ```
