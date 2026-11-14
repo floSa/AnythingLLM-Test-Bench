@@ -1,8 +1,8 @@
-# AnythingLLM — banc d'essai et manuels vérifiés
+# AnythingLLM
 
-**Interroger ses propres documents, faire travailler un agent et ouvrir le tout à une équipe, sur sa machine et sans service en ligne : AnythingLLM 1.19.0 installé, branché sur un service de modèles local, mesuré sur 38 questions et documenté en un manuel utilisateur de 16 chapitres suivis de 6 annexes, avec 133 captures d'écran annotées.**
+Interroger ses propres documents, faire travailler un agent et partager le tout avec une équipe, sur sa machine, sans service en ligne.
 
-Trois dossiers : `service/` pour lancer AnythingLLM, `banc-essai/` pour rejouer les tests, `documentations/` pour lire.
+Ce dépôt contient le service (`service/`, pour lancer AnythingLLM sous Docker), le banc d'essai (`banc-essai/`, 38 questions) et la documentation avec le manuel utilisateur (`documentations/`).
 
 ```text
 AnythingLLM-Test-Bench/
