@@ -10,11 +10,11 @@ __pycache__/
 *.safetensors
 *.zip
 *:Zone.Identifier
-# Sources de RAGFlow clonées au tag figé (récupérées par outils/ragflow/installer.sh)
+# Sources de RAGFlow clonées au tag figé (récupérées par banc-essai/ragflow/installer.sh)
 sources/
 # Consignes de mission distribuées à part (kit-manuels-rag-local.zip)
 kit/
 CLAUDE.md
 .claude/
-# Clés locales (copie de .env.example)
+# Clés locales (copie de service/.env.example)
 .env
