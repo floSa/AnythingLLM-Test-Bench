@@ -2,175 +2,68 @@
 
 **Interroger ses propres documents, faire travailler un agent et ouvrir le tout à une équipe, sur sa machine et sans service en ligne : AnythingLLM 1.19.0 installé, branché sur un service de modèles local, mesuré sur 38 questions et documenté en un manuel utilisateur de 16 chapitres suivis de 6 annexes, avec 133 captures d'écran annotées.**
 
-**Le manuel utilisateur commence ici : [documentations/README.md](documentations/README.md).**
+Trois dossiers : `service/` pour lancer AnythingLLM, `banc-essai/` pour rejouer les tests, `documentations/` pour lire.
 
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
-![AnythingLLM](https://img.shields.io/badge/AnythingLLM-1.19.0-111827)
-![LLM-Service](https://img.shields.io/badge/LLM--Service-LiteLLM%20%2B%20llama.cpp-6A1B9A)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![WSL2](https://img.shields.io/badge/Windows%2011-WSL2-0078D4)
-
-AnythingLLM 1.19.0 (édition Docker) branché sur le service LLM central (LLM-Service : `chat`, `embed`, `transcribe`), le corpus d'entreprise fictive de la série avec ses pièges (scan, tableaux, audio, document en anglais), un banc de 38 questions dont les réponses sont connues, et un manuel écrit à partir de ce qui a réellement tourné : chaque action de la partie 1 a été faite à la souris par Playwright et photographiée, chaque chiffre renvoie à un résultat brut dans `banc-essai/resultats/`.
-
-Troisième banc de la série après Open Notebook et RAGFlow : mêmes documents, mêmes questions, même machine. Le comparatif est dans [documentations/index-serie.md](documentations/index-serie.md).
-
-## Sommaire
-
-- [Le parcours](#le-parcours)
-- [Architecture](#architecture)
-- [Démarrage](#démarrage)
-- [Configuration](#configuration)
-- [API / Endpoints](#api--endpoints)
-- [Tests](#tests)
-- [Structure du projet](#structure-du-projet)
-- [Licences & composants](#licences--composants)
-- [Commandes utiles](#commandes-utiles)
-- [Données du banc](#données-du-banc)
-- [Les pièges que ce banc documente](#les-pièges-que-ce-banc-documente)
-- [Résultats](#résultats)
-- [Versions](#versions)
-- [Ressources](#ressources)
-
-## Le parcours
-
-| Manuel | Ce qu'on saura faire |
-|---|---|
-| [01 Découvrir](documentations/manuel/01-decouvrir-anythingllm.md) | dire à quoi sert l'outil et quelle machine prévoir (sans et avec carte graphique) |
-| [02 Installer](documentations/manuel/02-installer-anythingllm.md) | installer, ouvrir, arrêter, supprimer |
-| [03 Premiers pas](documentations/manuel/03-premiers-pas.md) | assistant de premier lancement, connexion, langue, modèles |
-| [04 Première question](documentations/manuel/04-premiere-question.md) | un espace, un document, une réponse citée |
-| [05 Documents](documentations/manuel/05-ajouter-et-organiser-ses-documents.md) à [09 Sources externes](documentations/manuel/09-sources-externes.md) | documents, questions et sources, réglages d'un espace, modèles, connecteurs |
-| [10 Agents](documentations/manuel/10-agents-et-outils.md) à [13 Comptes et widget](documentations/manuel/13-comptes-equipe-et-widget.md) | agents et MCP, mémoires et tâches, administration, équipe et widget |
-| [14 Cas pratiques](documentations/manuel/14-cas-pratiques.md), [15 En cas de problème](documentations/manuel/15-en-cas-de-probleme.md), [16 Glossaire](documentations/manuel/16-glossaire.md) | trois usages complets, erreurs réelles, vocabulaire |
-| [Annexes A1 à A6](documentations/README.md#partie-2--évaluation-et-compléments) | banc, matériel, API, exploitation, fonctionnement interne, preuves |
-
-Parcours conseillés : interroger ses documents seul (01 à 07, 14) ; équipe (01 à 07, 12, 13, A4) ; automatiser (01 à 04, 12, A3) ; choisir (01, A1, A2).
-
-## Architecture
-
-| Service | Conteneur | Image | Rôle |
-|---|---|---|---|
-| AnythingLLM | `rag-anythingllm` | `mintplexlabs/anythingllm:1.19.0` (figée par empreinte) | interface, API, collecteur de documents (OCR, transcription, pages web), base SQLite, vecteurs LanceDB |
-| Modèles | `llm-central`, `llm-swap`, `llm-speaches` | LiteLLM v1.109.0, llama-swap v272 (llama.cpp), speaches 0.8.3 | `chat`, `embed`, `rerank`, `transcribe`, servis par [LLM-Service](https://github.com/floSa/llm-service) (dépôt séparé, géré à part) |
-| Site de test | `rag-anythingllm-site` | `nginx:alpine` | trois pages fictives pour le connecteur « site web » et la page de test du widget (sans port publié) |
-
-```mermaid
-flowchart LR
-  nav[Navigateur Windows] -->|127.0.0.1:3001| app
-  subgraph app["rag-anythingllm"]
-    srv[Serveur : interface, API] --> col[Collecteur]
-    srv --> lance[(LanceDB)]
-    srv --> sql[(SQLite)]
-  end
-  srv -->|llm-net| llm[llm-central<br/>LLM-Service]
-  col -->|llm-net| llm
-  col -->|rag-local| site[rag-anythingllm-site]
+```text
+AnythingLLM-Test-Bench/
+├── README.md
+├── LICENSE
+│
+├── service/                 lancer AnythingLLM (Docker)
+│   ├── installer.sh         première installation
+│   ├── demarrer.sh
+│   ├── arreter.sh
+│   └── …                    état, sauvegarde, réglages
+│
+├── banc-essai/              rejouer les tests
+│   ├── corpus/              9 documents et 38 questions
+│   ├── anythingllm/         scripts du banc et des captures propres à AnythingLLM
+│   ├── communs/             outils partagés par les cinq bancs
+│   ├── exemples/            appels à l'API, avec leurs sorties vérifiées
+│   └── resultats/           scores et preuves brutes
+│
+└── documentations/          lire
+    ├── README.md            sommaire du manuel
+    ├── manuel/              le guide, chapitre par chapitre
+    ├── annexes/             évaluation, matériel, API, exploitation
+    ├── img/                 captures d'écran
+    ├── index-serie.md       comparaison des cinq solutions
+    ├── fiche-technique.md   architecture, réglages, versions, licences
+    ├── rapport.md           bilan
+    └── journal.md           avancement
 ```
 
-Réseaux : `llm-net` (service de modèles, externe) et `rag-local` (captures Playwright, site de test). Un seul port publié, sur `127.0.0.1`.
+Les fichiers locaux, ignorés par git, restent à la racine : `donnees/` (volumes et identifiants), `sources/` le cas échéant.
 
-## Démarrage
+## Lancer le service
 
-**Prérequis :** Windows 11 avec WSL2 (Ubuntu 24.04) et Docker Desktop ; 16 Go de mémoire ; LLM-Service démarré ; la clé propre au banc dans `service/.env` (copie de `service/.env.example`), créée par `cle.sh` de LLM-Service.
+Prérequis : Docker, le service de modèles LLM-Service en marche, sa clé dans `service/.env` (copie de `service/.env.example`).
 
 ```bash
-cp service/.env.example service/.env
-~/mes_projets/Projet-IA/LLM-Service/service/scripts/cle.sh creer anythingllm-test-bench --dans "$PWD/.env" --noms LLM_CENTRAL_URL,LLM_CENTRAL_KEY   # clé propre au banc, écrite sans affichage
-banc-essai/communs/llm_central_sante.sh --essai
-service/installer.sh
+cd service
+./installer.sh     # première fois seulement
+./demarrer.sh
+./arreter.sh
 ```
 
-| Service | URL | Note |
-|---|---|---|
-| AnythingLLM | http://127.0.0.1:3001 | compte et mot de passe fictifs : `donnees/IDENTIFIANTS-LOCAUX.txt` (non versionné) |
-| Documentation de l'API | http://127.0.0.1:3001/api/docs | clé d'API : `donnees/anythingllm/cle-api.txt` |
-| Service de modèles | http://127.0.0.1:8080/v1 | LLM-Service, clé dans `service/.env` |
+## Rejouer le banc
 
-Le compte, la langue et les modèles se règlent ensuite dans l'interface ([chapitre 03](documentations/manuel/03-premiers-pas.md)).
-
-## Configuration
-
-- Variables générées par `installer.sh` dans `donnees/anythingllm/storage/.env` : `SIG_KEY`, `SIG_SALT`, `DISABLE_TELEMETRY="true"` ; **pas** de `JWT_SECRET` (il ferait sauter l'assistant de premier lancement ; l'application le crée elle-même).
-- Options passées au conteneur : `donnees/anythingllm/options.env` (facultatif), ici `TARGET_OCR_LANG=fra,eng` pour lire les scans en français.
-- Écarts au compose officiel (`service/compose.yml`) : image officielle figée au lieu d'une construction locale, port sur `127.0.0.1`, un seul dossier de données `donnees/anythingllm/storage`, réseaux `llm-net` et `rag-local`. Relecture : `banc-essai/resultats/anythingllm/relecture.md`.
-- Branchement au service LLM central : fournisseur « Generic OpenAI », adresse `http://llm-central:8080/v1`, noms fixes `chat` (contexte 16384, « Max Tokens » 8192) et `embed` ; transcription « OpenAI Compatible » avec `transcribe`. AnythingLLM n'accepte pas de reranker externe : `rerank` n'est pas utilisé, le tri de précision intégré l'est.
-- Clé : `LLM_CENTRAL_KEY` dans `service/.env` (jamais versionné) ; AnythingLLM la recopie dans son propre `service/.env` sous `donnees/` (non versionné).
-
-## API / Endpoints
-
-| Route | Rôle |
-|---|---|
-| `GET /api/ping` | santé (sans clé) |
-| `GET /api/v1/auth` | vérifier une clé d'API |
-| `GET /api/v1/workspaces`, `POST /api/v1/workspace/new`, `POST /api/v1/workspace/{slug}/update` | espaces |
-| `POST /api/v1/document/upload` (`addToWorkspaces`) | envoyer et intégrer un document |
-| `POST /api/v1/workspace/{slug}/chat` (`mode` : `query`, `chat`, `automatic`) | poser une question |
-| `POST /api/v1/workspace/{slug}/vector-search` | chercher des passages sans le modèle |
-| `/api/v1/openai/chat/completions` | route compatible OpenAI (le modèle est le nom court de l'espace) |
-
-Exemples exécutés : [annexe A3](documentations/annexes/A3-automatiser-par-l-api.md).
-
-## Tests
+Le service doit tourner.
 
 ```bash
-python3 banc-essai/communs/verifier_docs.py          # 0 point
-bash banc-essai/exemples/lancer.sh              # 7 exemples, code 0, sortie dans sorties_verifiees.txt
 python3 banc-essai/anythingllm/banc.py --etiquette essai --espace Banc-bge-m3
 ```
 
-Sorties obtenues : `0 point(s)` ; `banc-essai/exemples/sorties_verifiees.txt` ; `banc-essai/resultats/anythingllm/banc-*.json`.
+## Lire la documentation
 
-## Structure du projet
-
-```text
-documentations/            manuel : README (sommaire), manuel/ (partie 1), annexes/ (partie 2), img/ (captures)
-documentations/index-serie.md, glossaire.md index de la série, comparatif, glossaire commun
-banc-essai/anythingllm/          installation, démarrage, arrêt, état, sauvegarde, banc, client de l'API, scénarios de captures, MCP d'exemple
-banc-essai/communs/              diagnostic, santé du service central, versions, banc commun, captures, vérification, nettoyage
-banc-essai/resultats/            résultats bruts (machine, socle, anythingllm et bancs précédents)
-banc-essai/exemples/        exemples d'API et sorties vérifiées
-banc-essai/corpus/                      9 documents fictifs et 38 questions de référence
-donnees/                     données, identifiants, sauvegardes (non versionné)
-```
-
-## Licences & composants
-
-| Composant | Licence |
+| Besoin | Page |
 |---|---|
-| AnythingLLM | MIT |
-| LiteLLM, llama.cpp, llama-swap, speaches (LLM-Service) | MIT |
-| Qwen3.5-4B (`chat`), bge-m3 (`embed`), faster-whisper-small (`transcribe`) | licences de leurs auteurs, voir LLM-Service |
-| Playwright (captures) | Apache 2.0 |
-
-Ce projet : MIT — Copyright (c) 2026 floSa ([LICENSE](LICENSE)).
-
-## Commandes utiles
-
-```bash
-service/etat.sh                        # état, ports, mémoire, service central
-service/arreter.sh                     # arrêt (données gardées)
-service/demarrer.sh                    # redémarrage
-service/sauvegarder.sh                 # archive dans donnees/sauvegardes/
-service/restaurer.sh <archive>         # restauration
-banc-essai/communs/nettoyer.sh anythingllm            # tout supprimer (demande confirmation)
-banc-essai/communs/captures/lancer.sh banc-essai/anythingllm/captures/c04_premiere_question.py   # rejouer un scénario de captures
-```
-
-## Données du banc
-
-Corpus `banc-essai/corpus/documents/` : rapport annuel PDF avec tableaux, contrat PDF scanné, procédure DOCX, présentation PPTX, classeur XLSX, FAQ HTML, compte rendu Markdown, audit en anglais, message vocal MP3 (empreintes dans `banc-essai/corpus/MANIFEST.json`). Questions `banc-essai/corpus/questions.json` : 34 avec réponse attendue, 4 pièges sans réponse dans le corpus.
-
-## Les pièges que ce banc documente
-
-- Un `JWT_SECRET` écrit d'avance fait sauter l'assistant de premier lancement.
-- « Max Tokens » vaut 1024 par défaut : trop peu pour un modèle qui réfléchit.
-- Un nouvel espace est en mode « Agent » : réponse vide, ou réponse tirée d'Internet, dans l'interface ; préférer « Requête ».
-- Un fichier envoyé ne peut être placé dans l'espace qu'après fermeture et réouverture de la fenêtre des documents.
-- L'embedder intégré, surtout anglais, perd 8 réponses sur 34 face à `embed`.
-- Pas de reranker externe ; le tri de précision intégré fait gagner la dernière question.
-- L'OCR est en anglais ; `TARGET_OCR_LANG` n'agit que passé au conteneur.
-- Une question de plus de 8 192 jetons échoue à l'embedding.
-- Télémétrie coupée, mais deux tables publiques restent téléchargées au démarrage.
+| Utiliser AnythingLLM pas à pas | [Manuel](documentations/README.md) |
+| Installer | [Chapitre 02](documentations/manuel/02-installer-anythingllm.md) |
+| Résultats détaillés du banc | [Annexe A1](documentations/annexes/A1-evaluation-qualite-et-performances.md) |
+| Comparer aux quatre autres solutions | [Index de la série](documentations/index-serie.md) |
+| Architecture, réglages, versions, licences | [Fiche technique](documentations/fiche-technique.md) |
+| Bilan | [Rapport](documentations/rapport.md) |
 
 ## Résultats
 
@@ -178,25 +71,9 @@ Banc de 38 questions (34 avec réponse, 4 pièges), modèles du service central 
 
 | Réglage | OCR | Recherche | Passages | Reranker | Exactes /34 | Pièges refusés /4 | Médiane | Pic RAM de l'application |
 |---|---|---|---|---|---|---|---|---|
-| défaut | Tesseract | vecteurs | 4 | aucun | 33 | 3 | 14,3 s | 0,9 Go |
+| défaut | Tesseract | vecteurs | 4 |  | 33 | 3 | 14,3 s | 0,9 Go |
 | meilleur | Tesseract | vecteurs | 8 | intégré (MiniLM) | 34 | 4 | 10,7 s | 1,6 Go |
 
 AnythingLLM n'accepte pas le reranker bge-reranker-v2-m3 : seul son reranker intégré est utilisable. Avec son embedder intégré au lieu de bge-m3, le score tombe à 25/34.
 
 Toutes les variantes : [annexe A1](documentations/annexes/A1-evaluation-qualite-et-performances.md). Méthode et preuves : [annexe A6](documentations/annexes/A6-rapport-d-essais.md). Bilan : [documentations/rapport.md](documentations/rapport.md). Comparaison avec les quatre autres solutions : [index de la série](documentations/index-serie.md).
-
-## Versions
-
-| Composant | Version |
-|---|---|
-| AnythingLLM | 1.19.0 (`sha256:daf5a6ae9d363ed578e7d41e2d0668c7eaa604bd90b0ff27435f893b0906833e`) |
-| Playwright (captures) | 1.65.1 (`mcr.microsoft.com/playwright/python:v1.65.1-noble`) |
-| LiteLLM / llama-swap / speaches | v1.109.0 / v272 (llama.cpp build 12282) / 0.8.3 |
-| Docker / Compose | 29.9.3 / 5.7.0 |
-
-Relevé : `banc-essai/resultats/anythingllm/versions-2026-11-12.json`.
-
-## Ressources
-
-- Dépôt : https://github.com/Mintplex-Labs/anything-llm — documentation : https://docs.anythingllm.com
-- Rapport de mission : [documentations/rapport.md](documentations/rapport.md) ; journal : [documentations/journal.md](documentations/journal.md)
