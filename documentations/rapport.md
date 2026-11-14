@@ -52,7 +52,7 @@ Versions relevées : `banc-essai/resultats/anythingllm/versions-2026-11-12.json`
 - Fichier envoyé non déplaçable tant que la fenêtre des documents n'est pas rouverte (bogue de la 1.19.0, documenté).
 - Mode « Agent » de l'interface : réponse vide, puis réponse tirée d'Internet sur une autre entreprise (documenté, mode « Requête » conseillé).
 - Clé d'API locale visible sur une capture et dans un texte enregistré : capture refaite, masquage automatique ajouté, textes nettoyés avant tout commit.
-- `TARGET_OCR_LANG` écrit dans le `service/.env` de l'application sans effet ; passé au conteneur par `donnees/anythingllm/options.env`.
+- `TARGET_OCR_LANG` écrit dans le `.env` de l'application sans effet ; passé au conteneur par `donnees/anythingllm/options.env`.
 - Arrêt du conteneur forcé par Docker au bout de 10 s (code 137), sans perte de données.
 
 ## Décisions en attente

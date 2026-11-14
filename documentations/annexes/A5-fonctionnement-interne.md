@@ -54,7 +54,7 @@ Tout est dans `donnees/anythingllm/storage/` (monté sur `/app/server/storage`).
 
 | Élément | Contenu |
 |---|---|
-| `service/.env` | réglages de l'instance, réécrits à chaque changement dans l'interface, **secrets compris** : clé du service de modèles, `SIG_KEY`, `SIG_SALT`, `JWT_SECRET` [Source] (`server/utils/helpers/updateENV.js`, lignes 1586-1715) |
+| `.env` | réglages de l'instance, réécrits à chaque changement dans l'interface, **secrets compris** : clé du service de modèles, `SIG_KEY`, `SIG_SALT`, `JWT_SECRET` [Source] (`server/utils/helpers/updateENV.js`, lignes 1586-1715) |
 | `anythingllm.db` | base SQLite : comptes, espaces, conversations, clés d'API, journaux d'événements |
 | `documents/` | texte extrait de chaque document téléversé (un fichier JSON par document), rangé par dossier |
 | `lancedb/` | vecteurs, un tableau par espace de travail |
